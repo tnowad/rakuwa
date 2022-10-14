@@ -6,18 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RaKuWa</title>
+    <style>
+        div {
+            border: 1px solid green;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-top">
-            <div class="container">
-            </div>
-        </div>
-        <div class="header-bottom">
-            <div class="container"></div>
-        </div>
-    </header>
+    <div class="header"></div>
+    <div class="footer"></div>
+    <script>
+        const fetchHTML = async (url) => {
+            const response = await fetch(url);
+            const data = await response.text();
+            return data
+        }
+        const appendHTML = (url, query) => {
+            fetchHTML(url).then(data => document.querySelector(query).innerHTML += data)
+        }
+        appendHTML('/pages/header.html', '.header')
+        appendHTML('/pages/footer.html', '.footer')
+    </script>
 </body>
 
 </html>
