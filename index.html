@@ -12,40 +12,134 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/header.css">
+    <style>
+        section {
+            height: 100vh;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="page-wrapper">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="/img/logo.png" alt=""></a>
+            </div>
+            <div class="nav">
+                <ul class="navigation">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Fruits</a></li>
+                            <li><a href="">Seafood</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Meat & Poultry</a></li>
+                            <li><a href="">Hot items</a></li>
+                            <li><a href="">Grocery</a></li>
+                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Contact Us</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="">About Us</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-icon">
+                <div class="nav-search dropdown">
+                    <em class="fa fa-search"></em>
+                    <button><em class=""></em></button>
+                    <form action="#" class="dropdown-content">
+                        <input type="text" class="search-box" placeholder="Search">
+                        <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
+                    </form>
+                </div>
+                <button class="menu-sidebar">
+                    <em class="fas fa-bars"></em>
+                </button>
+                <button class="cart">
+                    <em class="fa fa-cart-plus"></em>
+                </button>
+                <button class="user">
+                    <em class="far fa-user-circle"></em>
+                </button>
+            </div>
+        </div>
+        <div class="container">
 
-        <div class="header"></div>
-        <section class="slideshow-banners">
-            Slideshow banners
-        </section>
-        <section class="offer-banners">
-            Offer banners
-        </section>
-        <section class="product-category-area">
-            Product category
-        </section>
-        <section class="shop-area">
-            Popular Products
-        </section>
-        <section class="shop-area">
-            Best seller products
-        </section>
-        <div class="footer">Footer</div>
+            <ul class="navigation mobile-header">
+                <div class="container">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li class="dropdown-mobile">
+                        <a>Products</a>
+                        <ul>
+                            <li><a href="">Fruits</a></li>
+                            <li><a href="">Seafood</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Meat & Poultry</a></li>
+                            <li><a href="">Hot items</a></li>
+                            <li><a href="">Grocery</a></li>
+                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Contact Us</a>
+                    </li>
+                    <li class="dropdown-mobile">
+                        <a>About Us</a>
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
     </div>
+    <section class="slideshow-banners">
+        Slideshow banners
+    </section>
+    <section class="offer-banners">
+        Offer banners
+    </section>
+    <section class="product-category-area">
+        Product category
+    </section>
+    <section class="shop-area">
+        Popular Products
+    </section>
+    <section class="shop-area">
+        Best seller products
+    </section>
+    <div class="footer">Footer</div>
     <script>
-        const fetchHTML = async (url) => {
-            const response = await fetch(url);
-            const data = await response.text();
-            return data
-        }
-        const appendHTML = (url, query) => {
-            fetchHTML(url).then(data => document.querySelector(query).innerHTML += data)
-        }
-        appendHTML('/pages/header.html', '.header')
-        appendHTML('/pages/footer.html', '.footer')
+        const navSearchIcon = document.querySelector('.fa-search')
+        navSearchIcon.addEventListener("click", () => {
+            console.log("clicked")
+            document.querySelector('.nav-search').classList.toggle('active')
+        })
+        const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
+        dropDownMobile.forEach(element => {
+            element.addEventListener("click", () => {
+                element.classList.toggle('active')
+            })
+        })
+        const mobileNav = document.querySelector('.menu-sidebar')
+        mobileNav.addEventListener("click", () => {
+            console.log("clicked")
+            document.querySelector('.mobile-header').classList.toggle('active')
+        })
     </script>
 </body>
 

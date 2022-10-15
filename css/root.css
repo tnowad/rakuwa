@@ -23,10 +23,7 @@
 
     --breakpoint-smartphone: 576px;
     --breakpoint-tablet: 768px;
-    --breakpoint-pc: 1600px;
-
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    --breakpoint-pc: 1200px;
 }
 
 * {
@@ -49,15 +46,7 @@ ul {
 
 a {
     text-decoration: none;
-}
-
-.page-wrapper {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    min-width: 300px;
-    background: #FFFFFF;
+    color: inherit;
 }
 
 .container {
