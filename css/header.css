@@ -1,15 +1,57 @@
 .header {
     width: 100%;
+    margin-top: 20px;
+    margin-top: 20px;
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1200px) {
     .header {
         padding-left: 55px;
         padding-right: 55px;
     }
+}
+
+.logo img {
+    height: 55px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation>li {
+    padding: 28px 16px;
+}
+
+.dropdown>ul {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover>ul {
+    display: block;
+}
+
+.menu-icon {
+    display: flex;
+}
+
+.menu-icon>* {
+    margin-left: 38px;
+    background: transparent;
+}
+
+.nav-search>form {
+    display: none;
+    position: absolute;
+}
+
+.nav-search:hover>form {
+    display: blockz;
 }
