@@ -29,6 +29,29 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    min-width: 300px;
+    background: #FFFFFF;
+}
+
 .container {
     width: 100%;
     margin-left: auto;
