@@ -11,7 +11,7 @@
     --cyan: #17a2b8;
     --white: #fff;
     --gray: #6c757d;
-    --gray-dark: #343a40;
+    --gray-dark: #1F1F17;
     --primary: #007bff;
     --secondary: #6c757d;
     --success: #28a745;
@@ -19,7 +19,7 @@
     --warning: #ffc107;
     --danger: #dc3545;
     --light: #f8f9fa;
-    --dark: #343a40;
+    --dark: #0C0C0B;
 
     --breakpoint-smartphone: 576px;
     --breakpoint-tablet: 768px;
