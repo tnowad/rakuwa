@@ -1,0 +1,22 @@
+.offer-banners .container {
+    padding-left: 55px;
+    padding-right: 55px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer-banner-item {
+    margin-bottom: 30px;
+    height: 230px;
+    min-width: 300px;
+    width: 30%;
+    background: url('/img/offer-banner-bg4.jpg') no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.offer-banner-item .content {
+    width: 70%;
+}

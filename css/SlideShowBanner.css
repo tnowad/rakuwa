@@ -1,5 +1,6 @@
 .slideshow-banners {
     position: relative;
+    margin-bottom: 50px;
 }
 
 .slideshow-banners>.container {
