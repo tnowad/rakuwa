@@ -5,10 +5,17 @@
 .slideshow-banners>.container {
     padding-left: 55px;
     padding-right: 55px;
-    display: flex;
+}
+
+.slideshow-banners .banner {
+    display: none;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.slideshow-banners .banner.active {
+    display: flex;
 }
 
 .slideshow-banners .slide-content {

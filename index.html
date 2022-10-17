@@ -103,25 +103,44 @@
     </div>
     <section class="slideshow-banners">
         <div class="container">
-            <div class="slide-content">
-                <p>Welcome to RaKuWa</p>
-                <h1>Organic Foods & Vegetables</h1>
-                <p class="description">
-                    Laboris dolor commodo sit adipisicing exercitation eiusmod cillum fugiat.
-                </p>
-                <div class="slide-btn">
-                    <a href="">Shop now</a>
-                    <a href="">Learn more</a>
+            <div class="banner active">
+                <div class="slide-content">
+                    <p>Welcome to RaKuWa</p>
+                    <h1>Organic Foods & Vegetables</h1>
+                    <p class="description">
+                        Laboris dolor commodo sit adipisicing exercitation eiusmod cillum fugiat.
+                    </p>
+                    <div class="slide-btn">
+                        <a href="">Shop now</a>
+                        <a href="">Learn more</a>
+                    </div>
+                </div>
+                <div class="slide-image">
+                    <img class="image" src="img/slider-image1.png" alt="">
+                    <img src="/img/organic.png" alt="" class="offer">
                 </div>
             </div>
-            <div class="slide-image">
-                <img class="image" src="img/slider-image1.png" alt="">
-                <img src="/img/organic.png" alt="" class="offer">
+            <div class="banner">
+                <div class="slide-content">
+                    <p>Welcome to RaKuWa</p>
+                    <h1>Organic Foods & Vegetables</h1>
+                    <p class="description">
+                        Laboris dolor commodo sit adipisicing exercitation eiusmod cillum fugiat.
+                    </p>
+                    <div class="slide-btn">
+                        <a href="">Shop now</a>
+                        <a href="">Learn more</a>
+                    </div>
+                </div>
+                <div class="slide-image" style="order: -1;">
+                    <img class="image" src="img/slider-image1.png" alt="">
+                    <img src="/img/organic.png" alt="" class="offer">
+                </div>
             </div>
         </div>
         <div class="arrow">
-            <div class="left"><em class="fas fa-arrow-left"></em></div>
-            <div class="right"><em class="fas fa-arrow-right"></em></div>
+            <div class="left" onclick="plusBanners(1)"><em class="fas fa-arrow-left"></em></div>
+            <div class="right" onclick="plusBanners(-1)"><em class="fas fa-arrow-right"></em></div>
         </div>
     </section>
     <!-- <section class="offer-banners">
@@ -238,6 +257,8 @@
     </div>
     </div>
     <script>
+
+
         const navSearchIcon = document.querySelector('.fa-search')
         navSearchIcon.addEventListener("click", () => {
             console.log("clicked")
@@ -254,6 +275,34 @@
             console.log("clicked")
             document.querySelector('.mobile-header').classList.toggle('active')
         })
+
+        let bannerIndex = 1;
+        showBanners(bannerIndex);
+
+        function plusBanners(n) {
+            showBanners(bannerIndex += n);
+        }
+
+        function currentBanner(n) {
+            showBanners(bannerIndex = n);
+        }
+
+        function showBanners(n) {
+            let banners = document.querySelectorAll('.banner')
+
+            if (n > banners.length) {
+                bannerIndex = 1
+            } else if (n < 1) {
+                bannerIndex = banners.length
+            }
+
+            banners.forEach(element => {
+                element.classList.remove('active')
+            })
+
+            banners[bannerIndex - 1].classList.toggle('active')
+        }
+
     </script>
 </body>
 
