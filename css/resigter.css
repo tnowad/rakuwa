@@ -1,0 +1,72 @@
+/* * {
+    margin: auto;
+    padding: auto;
+} */
+
+body {
+    background: url("../img/resigter-picture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.resigter {
+    background-color: rgb(248, 99, 0);
+    opacity: 0.9;
+    margin: 100px 500px 100px 500px;
+    box-shadow: 20px 20px 20px rgba(180, 9, 9, 0.5);
+}
+
+.resigter .facebook-google {
+    display: flex;
+    justify-content: center;
+}
+
+.resigter .facebook-google #facebook {
+    margin-top: 50px;
+    padding: 40px;
+    font-size: 40px;
+    background-color: blue;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.resigter .facebook-google #google {
+    margin-top: 50px;
+    padding: 40px;
+    font-size: 40px;
+    background-color: brown;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.resigter p {
+    text-align: center;
+    font-size: 25px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input {
+    margin: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.first-lastname {
+    display: flex;
+    justify-content: center;
+}
+
+.first-lastname #firstname,
+#lastname {
+    font-size: 25px;
+    border-left: 3px solid rgb(60, 219, 94);
+}
