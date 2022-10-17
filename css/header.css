@@ -1,4 +1,5 @@
 .header {
+    z-index: 9;
     width: 100%;
     height: fit-content;
     font-size: 18px;

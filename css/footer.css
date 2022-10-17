@@ -37,8 +37,11 @@
 
 .newsletter-form {
     display: flex;
-    min-width: 390px;
     justify-content: space-between;
+}
+
+.newsletter-form>* {
+    margin-bottom: 20px;
 }
 
 .newsletter-form #email {
@@ -135,7 +138,7 @@
     flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 1045px) {
+@media only screen and (max-width: 1049px) {
     .newsletter .title {
         order: -1;
     }
@@ -164,6 +167,16 @@
 
     .newsletter {
         flex-direction: column;
+    }
+
+    .newsletter-form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .newsletter-form>* {
+        width: 100%;
     }
 
     .footer-center>.container {

@@ -19,6 +19,7 @@
     --warning: #ffc107;
     --danger: #dc3545;
     --light: #f8f9fa;
+    --light-dark: #d3d3d3;
     --dark: #0C0C0B;
 
     --breakpoint-smartphone: 576px;
@@ -38,6 +39,15 @@
 ::after,
 ::before {
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border-radius: 20px;
 }
 
 ul {
