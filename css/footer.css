@@ -9,27 +9,42 @@
     padding-left: 55px;
     padding-right: 55px;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
+.footer-center>.container {
+    justify-content: space-between;
+}
+
 .footer-center>.container>* {
-    width: 300px;
+    width: calc(25% - 40px);
     margin: 20px 10px;
 }
 
 .footer-bottom {
     background: var(--dark);
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 1200px) {
-
-    /* desktop */
-    .footer .container {
-        flex-wrap: nowrap;
-    }
+    
 }
 
 @media only screen and (max-width: 760px) {
-    /* Phone */
+    .footer-center .container {
+        flex-wrap: wrap;
+    }
+
+    .footer-center>.container>* {
+        width: calc(50% - 40px);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer-center>.container>* {
+        width: 100%;
+    }
 }
