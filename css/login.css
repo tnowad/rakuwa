@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-left {
+    background-image: url("../img/xanhdam.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-left h1 {
+    color: aliceblue;
+}
+
+.login-left p {
+    color: aliceblue;
+    padding: 20px;
+}
+
+.list-button a {
+    color: aliceblue;
+}
+
+li {
+    margin-bottom: 50px;
+}
+
+.facebook {
+    padding: 15px 72px;
+    background-color: blue;
+}
+
+
+
+.twitter {
+    padding: 15px 80px;
+    background-color: cadetblue
+}
+
+.google {
+    padding: 15px 80px;
+    background-color: red;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.login-form {
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.signup p {
+    display: inline;
+}
+
+.signup a {
+    color: rgb(127, 146, 255);
+}
+
+.form-group-email input[type="text"],
+.form-group-password input[type="password"] {
+    width: 300px;
+    height: 40px;
+    border: none;
+}
+
+.form-group-email,
+.form-group-password {
+    border: 1px solid rgb(96, 42, 224);
+    box-shadow: 0 0 10px rgb(55, 202, 10);
+}
+
+.form-group-checkbox a {
+    margin-left: 80px;
+}
+
+.form-group-login input {
+    width: 150px;
+    height: 30px;
+    border: 2px solid blue;
+    box-shadow: 0 0 5px rgb(80, 78, 77);
+    color: aliceblue;
+    background-color: blue;
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        height: 100vh;
+    }
+}
