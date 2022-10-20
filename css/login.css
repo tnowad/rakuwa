@@ -116,8 +116,13 @@ a {
 
 @media screen and (max-width: 650px) {
     .container {
+        padding: 20px;
         display: flex;
         flex-wrap: wrap-reverse;
         height: 100vh;
+    }
+
+    .login {
+        padding: 20px;
     }
 }
