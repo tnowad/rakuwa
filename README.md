@@ -1,4 +1,4 @@
-# Rakuwa
+# RaKuWa
 
 らくわ (RaKuWa): The main mission of the project is to bring a new wave of peace to the world,
 through healthy eating, promote health, end war, and bring independence to the new world.
