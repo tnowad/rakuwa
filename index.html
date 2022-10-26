@@ -8,12 +8,14 @@ t p
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     <title>RaKuWa</title>
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!-- <script src="/asset/fontawesome/js/all.js"></script> -->
+    <link rel="stylesheet" href="/asset/fontawesome/css/all.css">
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="css/SlideShowBanner.css">
     <link rel="stylesheet" href="/css/OfferBanner.css">
     <link rel="stylesheet" href="/css/ProductCategoryArea.css">
+    <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
 </head>
 
@@ -36,8 +38,8 @@ t p
                             <li><a href="">Vegetables</a></li>
                             <li><a href="">Meat & Poultry</a></li>
                             <li><a href="">Hot items</a></li>
-                            <li><a href="">Grocery</a></li>
                             <li><a href="">Fruits Basket / Fruits Box</a></li>
+                            <li><a href="">Grocery</a></li>
                         </ul>
                     </li>
                     <li>
@@ -87,7 +89,9 @@ t p
                             <li><a href="">Meat & Poultry</a></li>
                             <li><a href="">Hot items</a></li>
                             <li><a href="">Grocery</a></li>
-                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                            <li>
+                                <a href="">Fruits Basket / Fruits Box</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -104,7 +108,7 @@ t p
             </ul>
         </div>
     </div>
-    <section class="slideshow-banners">
+    <!-- <section class="slideshow-banners">
         <div class="container">
             <div class="banner active">
                 <div class="slide-content">
@@ -170,83 +174,54 @@ t p
                 </div>
             </div>
         </div>
-    </section>
-    <section class="product-category-area">
-        <div class="container">
-            <div class="product-category-inner">
-                <div class="product-category-item">
-                    <div class="image">
-                        <img src="/img/product28.png" alt="">
-                    </div>
-                    <div class="content">
-                        <a href="">Organic Fruits</a>
-                    </div>
-                </div>
-                <div class="product-category-item">
-                    <div class="image">
-                        <img src="/img/product28.png" alt="">
-                    </div>
-                    <div class="content">
-                        <a href="">Organic Fruits</a>
-                    </div>
-                </div>
-                <div class="product-category-item">
-                    <div class="image">
-                        <img src="/img/product28.png" alt="">
-                    </div>
-                    <div class="content">
-                        <a href="">Organic Fruits</a>
-                    </div>
-                </div>
-                <div class="product-category-item">
-                    <div class="image">
-                        <img src="/img/product28.png" alt="">
-                    </div>
-                    <div class="content">
-                        <a href="">Organic Fruits</a>
-                    </div>
-                </div>
-                <div class="product-category-item">
-                    <div class="image">
-                        <img src="/img/product28.png" alt="">
-                    </div>
-                    <div class="content">
-                        <a href="">Organic Fruits</a>
-                    </div>
-                </div>
-                <div class="product-category-item">
-                    <div class="image">
-                        <img src="/img/product28.png" alt="">
-                    </div>
-                    <div class="content">
-                        <a href="">Organic Fruits</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </section> -->
+
     <section class="shop-area">
         <div class="container">
-            <div class="shop-area-top">
-                <div class="shop-area-top-left">
-                    <p class="sub-title">
-                        Popular Products
-                    </p>
-                    <h2 class="title">
-                        Popular Products
-                    </h2>
+            <div class="product-tabs">
+                <div class="product-tabs-title">
+                    <h3>Popular Products</h3>
+                    <ul class="nav-tabs">
+                        <li class="nav-item">
+                            <button>All</button>
+                        </li>
+                        <li class="nav-item">
+                            <button>Fruits</button>
+                        </li>
+                        <li class="nav-item">
+                            <button>Seafood</button>
+                        </li>
+                        <li class="nav-item">
+                            <button>Vegetables</button>
+                        </li>
+                        <li class="nav-item">
+                            <button>Meat & Poultry</button>
+                        </li>
+                        <li class="nav-item">
+                            <button>Grocery</button>
+                        </li>
+                        <li class="nav-item">
+                            <button>Fruits Basket / Fruits Box</button>
+                        </li>
+                    </ul>
                 </div>
-                <div class="shop-area-top-right">
-
+                <div class="product-area">
+                    <script src="/js/AddItemToList.js"></script>
                 </div>
+                <ul class="product-pagination">
+                    <li class="page-item">
+                        <a class="fab fa-arrow-left"></a>
+                    </li>
+                </ul>
             </div>
+            <div class="primary-sidebar"></div>
         </div>
     </section>
     <!-- <section class="shop-area">
         Best seller products
     </section> -->
     <div class="footer">
-        <div class="footer-top">
+        <!-- <div class="footer-top">
             <div class="container">
                 <div class="newsletter">
                     <h1 class="title">
@@ -264,7 +239,7 @@ t p
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="footer-center">
             <div class="container">
                 <div class="about-us">
