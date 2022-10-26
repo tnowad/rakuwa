@@ -1,34 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .signup {
-    display: flex;
     height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(231, 72, 9);
 }
 
-.signup-content h2 {
-    text-align: center;
-}
-
-.signup .container {
-    /* background-image: url("../img/white.webp"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgb(124, 123, 120);
-    height: max-content;
-    box-sizing: border-box;
+.container {
+    height: 500px;
+    width: 600px;
+    border: 2px solid rgb(255, 81, 0);
+    box-shadow: 0px 0px 10px rgb(17, 190, 32);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.signup-form .form-group input{
-    /* border: 2px solid orange; */
-    border: none;
-    border-radius: 5px;
-    margin-top: 5px;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+
+    margin: 20px;
     font-size: 20px;
+    text-align: center;
+    height: 30px;
+    background-color: rgb(231, 72, 9);
+    border: none;
+    border-bottom: 1px solid rgb(166, 255, 0);
+    box-shadow: 0px px 10px rgb(212, 206, 206);
+    outline: none;
 }
 
-.signup-form .form-group:nth-child(5) input{
-    text-align: left;
+::placeholder {
+    color: black;
+}
+
+input[type="submit"] {
+    margin-right: 100px;
+    width: 100px;
+}
+
+p {
+    font-size: 20px;
+    display: inline;
+}
+
+.group-sign-login a {
+    color: rgb(25, 0, 255);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+input:hover {
+    border-bottom: 2px solid rgb(38, 0, 255);
+    transition: border-bottom 1s linear;
+}
+
+#submit:hover {
+    background-color: rgb(66, 66, 66);
+    color: aliceblue;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.group-sign-login a:hover {
+    color: rgb(13, 235, 13);
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.group-sign-login a:active {
+    font-size: 18px;
+    transition: font-size 0.2s linear;
 }
