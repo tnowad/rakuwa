@@ -4,15 +4,12 @@ const fetchJson = async (url) => {
     return result
 }
 const start = async () => {
-
     const productData = await fetchJson('/api/v1/product.json')
-
-    console.log(productData)
     const product = (data) => {
         return `<div class="product-item">
-    <span class="label ${data.label ? data.label : ''}">${data.label ? data.label : ''}</span>
-    <div class="container">
-        <div class="product-item-top">
+<span class="label ${data.label ? data.label : ''}">${data.label ? data.label : ''}</span>
+<div class="container">
+<div class="product-item-top">
             <img src="${data.image}" class="product-img">
         </div>
         <div class="product-item-center">
