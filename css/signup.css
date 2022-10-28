@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+
+
 .signup {
     height: 100vh;
     display: flex;
@@ -31,7 +33,6 @@ form {
 }
 
 input {
-
     margin: 20px;
     font-size: 20px;
     text-align: center;
@@ -64,8 +65,8 @@ p {
 }
 
 input:hover {
-    border-bottom: 2px solid rgb(38, 0, 255);
-    transition: border-bottom 1s linear;
+    border-bottom: 1px solid rgb(38, 0, 255);
+    transition: all 2s linear;
 }
 
 #submit:hover {

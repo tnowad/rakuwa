@@ -3,6 +3,12 @@
     margin: 0;
 }
 
+body {
+    font-family: sans-serif;
+    background: linear-gradient(rgb(245, 58, 1), rgb(6, 6, 68));
+    opacity: 0.7;
+}
+
 .login {
     height: 100vh;
     display: flex;
@@ -14,11 +20,15 @@
     display: flex;
     justify-content: center;
     height: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(189, 36, 36, 0.5);
+    background: rgb(14, 9, 82);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
 }
 
+/* Bên trái */
 .login-left {
-    background-image: url("../img/xanhdam.jpg");
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,16 +36,16 @@
 }
 
 .login-left h1 {
-    color: aliceblue;
+    color: rgb(242, 245, 247);
 }
 
 .login-left p {
-    color: aliceblue;
+    color: rgb(250, 250, 250);
     padding: 20px;
 }
 
 .list-button a {
-    color: aliceblue;
+    color: rgb(239, 244, 250);
 }
 
 li {
@@ -45,18 +55,21 @@ li {
 .facebook {
     padding: 15px 72px;
     background-color: blue;
+    border-radius: 5px;
 }
 
 
 
 .twitter {
-    padding: 15px 80px;
-    background-color: cadetblue
+    padding: 15px 83px;
+    background-color: rgb(13, 88, 228);
+    border-radius: 5px;
 }
 
 .google {
     padding: 15px 80px;
     background-color: red;
+    border-radius: 5px;
 }
 
 ul {
@@ -71,48 +84,150 @@ a {
     text-decoration: none;
 }
 
-.login-form {
-    padding: 10px;
-    height: 100%;
+/* Hiệu ứng bên trái */
+
+.facebook:hover {
+    background-color: rgb(16, 16, 136);
+    transition: background-color 0.5s linear 0.01s;
+}
+
+.twitter:hover {
+
+    background-color: rgb(19, 63, 146);
+    transition: background-color 0.5s linear 0.01s;
+}
+
+.google:hover {
+    background-color: rgb(143, 16, 16);
+    transition: background-color 0.5s linear 0.01s;
+}
+
+/* Ben phai */
+
+.login-right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    background: rgb(13, 9, 65);
+}
+
+.login-form {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-form h1 {
+    color: rgb(231, 229, 229);
+}
+
+.signup {
+    padding: 20px;
 }
 
 .signup p {
     display: inline;
+    color: aliceblue;
 }
 
-.signup a {
-    color: rgb(127, 146, 255);
-}
-
-.form-group-email input[type="text"],
-.form-group-password input[type="password"] {
-    width: 300px;
-    height: 40px;
-    border: none;
+.form-group {
+    padding: 20px;
 }
 
 .form-group-email,
 .form-group-password {
-    border: 1px solid rgb(96, 42, 224);
-    box-shadow: 0 0 10px rgb(55, 202, 10);
+    position: relative;
+}
+
+.form-group-email input,
+.form-group-password input {
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 300px;
+    background: rgb(13, 9, 65);
+    border-bottom: 1px solid;
+}
+
+.email-placeholder,
+.password-placeholder {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 14px;
+    padding: 0px 15px;
+    color: rgb(13, 9, 65);
+    transition: 1s;
+    pointer-events: none;
+}
+
+#email:hover+.email-placeholder,
+#password:hover+.password-placeholder {
+    top: -1px;
+    color: yellow;
+    background-color: rgb(13, 9, 65);
+}
+
+/* #email:hover,
+#password:hover {
+    top: -1px;
+    color: yellow;
+    background-color: rgb(13, 9, 65);
+} */
+
+.form-group-email input:hover,
+.form-group-password input:hover {
+    border-bottom: 1px solid yellow;
+    transition: all 5s linear 0.1s;
+}
+
+.form-group-checkbox input {
+    margin: 10px;
 }
 
 .form-group-checkbox a {
-    margin-left: 80px;
+    margin-left: 50px;
+    color: aliceblue;
+}
+
+p {
+    display: inline;
+    color: aliceblue;
 }
 
 .form-group-login input {
-    width: 150px;
+    width: 100px;
     height: 30px;
-    border: 2px solid blue;
-    box-shadow: 0 0 5px rgb(80, 78, 77);
-    color: aliceblue;
-    background-color: blue;
+    background-color: yellow;
+    border-radius: 10px;
+    border: 2px solid rgb(223, 11, 11);
+    /* animation-name: animation-login;
+    animation-duration: 10s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse; */
 }
+
+/* @keyframes animation-login {
+    0% {
+        border-left: 2px solid rgb(255, 255, 255);
+    }
+
+    25% {
+        border-top: 2px solid rgb(255, 255, 255);
+    }
+
+    50% {
+        border-right: 2px solid rgb(254, 254, 255);
+    }
+
+    100% {
+        border-bottom: 2px solid rgb(255, 255, 255);
+    }
+} */
 
 @media screen and (max-width: 650px) {
     .container {
