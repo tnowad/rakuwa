@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
+        "title": "Gói mì tôm hảo hảo",
         "price": "164",
         "oldPrice": "123",
         "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
@@ -11,190 +11,13 @@
         "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
     },
     {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
+        "id": 2,
+        "title": "Thùng mì hảo hảo",
         "price": "164",
         "oldPrice": "123",
         "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
+        "rating" : 5,
         "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
-    },
-    {
-        "id": 1,
-        "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg"
+        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920329170.jpg"
     }
 ]
