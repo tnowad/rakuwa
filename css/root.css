@@ -66,3 +66,7 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+.footer > .footer-center > .container,
+body > * > .container {
+    width: min(100%, 1200px) !important;
+}
