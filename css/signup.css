@@ -1,21 +1,78 @@
 .sign-up {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up .container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 40px;
 }
 
-.sign .container {
-    width: 600px;
-    height: 600px;
-    display: block;
-    justify-content: center;
-    align-items: center;
+.sign-up .container form h3 {
+    text-align: center;
+}
+
+.sign-up .container form #signup {
+    width: 500px;
+    background-color: red;
+    padding: 10px;
+    border: 0.2px solid black;
+    border-radius: 20px;
+    color: aliceblue;
+}
+
+.sign-up .container form p {
+    text-align: center;
+}
+
+.group-form {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: rgb(198, 196, 196);
+    box-sizing: content-box;
+}
+
+.group-form input {
+    margin-right: 10px;
+    background-color: rgb(198, 196, 196);
 
 }
 
-.sign-up .container form {}
+.form-group {
+    text-align: center;
+    margin: 20px;
+}
 
-.sign-up .container .group-form input {
-    margin: 700px;
+.form-group-google,
+.form-group-facebook,
+.form-group-twitter {
+    border: 0.1px solid black;
+    border-radius: 10px;
+}
+
+.sign-up .container form .form-group-google {
+    background-color: red;
+    color: aliceblue;
+}
+
+.sign-up .container form .form-group-facebook {
+    background-color: blue;
+    color: aliceblue;
+}
+
+.sign-up .container form .form-group-twitter {
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+
+.sign-up .container form .form-group-login p {
+    display: inline;
+}
+
+.form-group-login a {
+    color: red;
 }
