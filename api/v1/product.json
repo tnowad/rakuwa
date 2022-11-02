@@ -2,9 +2,8 @@
     {
         "id": 1,
         "title": "Thịt Bò",
-<<<<<<< HEAD
-        "price": "200 000",
-        "oldPrice": "130 000",
+        "price": "200000",
+        "oldPrice": "130000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
 =======
@@ -20,9 +19,8 @@
     {
         "id": 2,
         "title": "Thịt Heo",
-<<<<<<< HEAD
-        "price": "90 000",
-        "oldPrice": "110 000",
+        "price": "90000",
+        "oldPrice": "110000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
 =======
@@ -39,8 +37,8 @@
         "id": 3,
 <<<<<<< HEAD
         "title": "Thịt Gà",
-        "price": "180 000",
-        "oldPrice": "150 000",
+        "price": "180000",
+        "oldPrice": "150000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
 =======
@@ -57,9 +55,8 @@
     {
         "id": 4,
         "title": "Mùi Tàu",
-<<<<<<< HEAD
-        "price": "8 000",
-        "oldPrice": "6 000",
+        "price": "8000",
+        "oldPrice": "6000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -77,8 +74,8 @@
         "id": 5,
 <<<<<<< HEAD
         "title": "Hành Lá",
-        "price": "2 500",
-        "oldPrice": "2 000",
+        "price": "2500",
+        "oldPrice": "2000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -86,51 +83,10 @@
         "image": "/img/products/hanh-la.jpg"
     },
     {
-        "id": 5,
-        "title": "Rau Muống",
-        "price": "10 000",
-        "oldPrice": "7 000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Vegetables",
-=======
-        "title": "Ớt đỏ",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/ot-do.png"    },
-    {
-        "id": 6,
-        "title": "Ớt xanh",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/ot-xanh.jpg"
-    },
-    {
-        "id": 7,
-        "title": "Rau Muống",
-        "price": "164",
-        "oldPrice": "123",
-        "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
-        "rating" : 3.6,
-        "category": "Instant Noodle",
->>>>>>> 4bfca9fb (edit fakedata Bao)
-        "label": "hot",
-        "image": "/img/products/rau-muong.jpg"
-    },
-    {
-<<<<<<< HEAD
         "id": 6,
         "title": "Ớt đỏ",
         "price": "2500",
-        "oldPrice": "2 000",
+        "oldPrice": "2000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -140,8 +96,8 @@
     {
         "id": 7,
         "title": "Ớt Xanh",
-        "price": "3 000",
-        "oldPrice": "2 300",
+        "price": "3000",
+        "oldPrice": "2300",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -151,8 +107,8 @@
     {
         "id": 8,
         "title": "Bột Canh",
-        "price": "5 000",
-        "oldPrice": "4 000",
+        "price": "5000",
+        "oldPrice": "4000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -162,7 +118,7 @@
     {
         "id": 9,
         "title": "Muối Iot",
-        "price": "5 000",
+        "price": "5000",
         "oldPrice": "3 100",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
@@ -206,8 +162,8 @@
     {
         "id": 10,
         "title": "Đường",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -217,8 +173,8 @@
     {
         "id": 11,
         "title": "Dầu ăn Tường An",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -228,8 +184,8 @@
     {
         "id": 12,
         "title": " Dầu ăn Cái Lân",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -239,8 +195,8 @@
     {
         "id": 13,
         "title": "Dầu ăn simply",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -250,8 +206,8 @@
     {
         "id": 14,
         "title": "Nước mắm cần nam ngư",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -261,8 +217,8 @@
     {
         "id": 15,
         "title": "Nước Mắm Chinsu",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -272,8 +228,8 @@
     {
         "id": 16,
         "title": "Tương ớt Chinsu",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -283,8 +239,8 @@
     {
         "id": 17,
         "title": "Tương ớt Cholimex",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Vegetables",
@@ -294,8 +250,8 @@
     {
         "id": 18,
         "title": "Tương Cà",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "rating": 5,
         "category": "Instant Vegetables",
         "label": "hot",
@@ -304,8 +260,8 @@
     {
         "id": 19,
         "title": "Trứng Gà",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "rating": 5,
         "category": "Instant Vegetables",
         "label": "hot",
@@ -314,8 +270,8 @@
     {
         "id": 20,
         "title": "Trứng Vịt",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "rating": 5,
         "category": "Instant Vegetables",
         "label": "hot",
@@ -324,8 +280,8 @@
     {
         "id": 21,
         "title": "Muối Iot",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "rating": 5,
         "category": "Instant Vegetables",
         "label": "hot",
@@ -334,8 +290,8 @@
     {
         "id": 22,
         "title": "Tương Cà",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "rating": 5,
         "category": "Instant Vegetables",
         "label": "hot",
@@ -344,18 +300,18 @@
     {
         "id": 23,
         "title": "Omachi",
-        "price": "10 000",
-        "oldPrice": "7 000",
+        "price": "10000",
+        "oldPrice": "7000",
         "rating": 5,
-        "category": "Instant Vegetables",
+        "category": "Noodle",
         "label": "hot",
         "image": "/img/products/mi-omachi.jpg"
     },
     {
         "id": 24,
         "title": "Hao Hao Hot & Spicy Instant Noodle",
-        "price": "4 000",
-        "oldPrice": "3 000",
+        "price": "4000",
+        "oldPrice": "3000",
         "description": "Hao Hao Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
         "rating": 5,
         "category": "Instant Noodle",

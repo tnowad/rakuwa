@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <title>RaKuWa</title>
+    <link rel="stylesheet" href="/asset/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <!-- <link rel="stylesheet" href="css/SlideShowBanner.css"> -->
+    <link rel="stylesheet" href="/css/OfferBanner.css">
+    <link rel="stylesheet" href="/css/ProductCategoryArea.css">
+    <link rel="stylesheet" href="/css/ShopArea.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="/img/logo.png" alt=""></a>
+            </div>
+            <div class="nav">
+                <ul class="navigation">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Fruits</a></li>
+                            <li><a href="">Seafood</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Meat & Poultry</a></li>
+                            <li><a href="">Hot items</a></li>
+                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                            <li><a href="">Grocery</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Contact Us</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="">About Us</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-icon">
+                <div class="nav-search dropdown">
+                    <em class="fa fa-search"></em>
+                    <button><em class=""></em></button>
+                    <form action="#" class="dropdown-content">
+                        <input type="text" class="search-box" placeholder="Search">
+                        <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
+                    </form>
+                </div>
+                <button class="menu-sidebar">
+                    <em class="fas fa-bars"></em>
+                </button>
+                <button class="cart">
+                    <em class="fa fa-cart-plus"></em>
+                </button>
+                <button class="user">
+                    <em class="fas fa-user-circle"></em>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="navigation mobile-header">
+                <div class="container">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li class="dropdown-mobile">
+                        <a>Products</a>
+                        <ul>
+                            <li><a href="">Fruits</a></li>
+                            <li><a href="">Seafood</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Meat & Poultry</a></li>
+                            <li><a href="">Hot items</a></li>
+                            <li><a href="">Grocery</a></li>
+                            <li>
+                                <a href="">Fruits Basket / Fruits Box</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Contact Us</a>
+                    </li>
+                    <li class="dropdown-mobile">
+                        <a>About Us</a>
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <section class="product-info">
+        <script>
+            const { href } = window.location
+            const id = parseInt(href.substring(href.indexOf('id=') + 3)) - 1
+            const fetchJson = async (url) => {
+                const response = await fetch(url)
+                const result = await response.json()
+                return result
+            }
+            const start = async () => {
+                const productData = await fetchJson('/api/v1/product.json')
+                document.querySelector("body > section").innerText += JSON.stringify(productData[id])
+            }
+            start()
+        </script>
+    </section>
+    <div class="footer">
+        <div class="footer-center">
+            <div class="container">
+                <div class="about-us">
+                    <div class="logo"><img src="/img/logo.png" alt=""></div>
+                    <p class="description">Reprehenderit duis proident adipisicing cupidatat exercitation anim
+                        pariatur
+                        excepteur laboris do consequat. Anim minim nisi pariatur et est exercitation voluptate
+                        occaecat
+                        dolore. Incididunt dolor do magna nisi magna consequat. Sit quis enim deserunt mollit.
+                    </p>
+                    <ul class="list-icons">
+                        <li><em class="fab fa-facebook-f"></em></li>
+                        <li><em class="fab fa-twitter"></em></li>
+                        <li><em class="fab fa-linkedin"></em></li>
+                        <li><em class="fab fa-youtube"></em></li>
+                    </ul>
+                </div>
+                <div class="quick-links">
+                    <h1>Quick links</h1>
+                    <ul class="list-links">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Our projects</a></li>
+                        <li><a href="">Meet Farmers</a></li>
+                        <li><a href="">Later News</a></li>
+                        <li><a href="">Vegetables</a></li>
+                    </ul>
+                </div>
+                <div class="recent-news">
+                    <h1>Recent News</h1>
+                    <ul class="list-news">
+                        <li>
+                            <div class="news">
+                                <div class="news-image">
+                                    <img src="/img/news-widget1.jpg" alt="">
+                                </div>
+                                <div class="news-content">
+                                    <a href="" class="news-title">Et incididunt quis consectetur aute id</a>
+                                    <p class="author">By Nguyen</p>
+                                </div>
+                            </div>
+                            <div class="news">
+                                <div class="news-image">
+                                    <img src="/img/news-widget1.jpg" alt="">
+                                </div>
+                                <div class="news-content">
+                                    <a href="" class="news-title">Et incididunt quis consectetur aute id</a>
+                                    <p class="author">By Nguyen</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-us">
+                    <h1>Contact Us</h1>
+                    <ul class="list-info">
+                        <li>
+                            <p>Aliqua occaecat adipisicing occaecat deserunt reprehenderit.</p>
+                        </li>
+                        <li>
+                            <em class="fas fa-map-marker-alt"></em>
+                            <a>959 Sycamore Street, Santa Clara, California</a>
+                        </li>
+                        <li>
+                            <em class="far fa-envelope"></em>
+                            <a>FuckingShit@gmail.com</a>
+                        </li>
+                        <li>
+                            <em class="fa fa-phone"></em>
+                            <a>0379713541</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a>Copyright © 2022 RaKuWa. All Rights Reserved.</a>
+            <a>Privacy Policy Cookies Policy Terms of Use</a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
