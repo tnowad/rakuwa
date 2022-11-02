@@ -16,7 +16,7 @@ const start = async () => {
             <div class="product-category">
                 <a href="">${data.category}</a>
             </div>
-            <h2 class="product-name">${data.title}</h2>
+            <a class="product-name" href="/pages/product.html?id=${data.id}">${data.title}</a>
             <div class="product-rate">
                 ${((rating) => {
                 const star = Math.floor(rating)
