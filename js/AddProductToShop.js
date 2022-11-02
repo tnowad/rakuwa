@@ -36,8 +36,8 @@ const start = async () => {
                 </div>
                 <div class="product-item-bottom">
                     <div class="product-price">
-                        <span class="price">${data.price} VND</span><br/>
-                        <span class="old-price">${data.oldPrice ? data.oldPrice : ''} VND</span>
+                        <span class="price">${new Intl.NumberFormat().format(data.price)} VND</span>
+                        ${data.oldPrice ? `<br/><span class="old-price">${new Intl.NumberFormat().format(data.oldPrice)} VND</span>` : ''}
                     </div>
                     <div class="product-add-cart">
                         <span><a class="fa-solid fa-cart-shopping"></a>Add</span>
@@ -48,9 +48,18 @@ const start = async () => {
     }
 
     const shopArea = document.querySelector('.product-area')
-
-    productData.forEach(element => {
-        shopArea.innerHTML += product(element)
-    })
+    
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    const page = urlParams.get('page') ? urlParams.get('page') : 1
+    console.log(page)
+    // productData.forEach(element => {
+    //     shopArea.innerHTML += product(element)
+    // })
+    for(let i = ((page-1) * 12); i < 12*page; i++) {
+        if(productData[i])
+        shopArea.innerHTML += product(productData[i])
+    }
 }
 start()
+
