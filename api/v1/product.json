@@ -55,17 +55,6 @@
         "image": "/img/products/hanh-la.jpg"
     },
     {
-        "id": 5,
-        "title": "Rau Muống",
-        "price": "10 000",
-        "oldPrice": "7 000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Vegetables",
-        "label": "hot",
-        "image": "/img/products/rau-muong.jpg"
-    },
-    {
         "id": 6,
         "title": "Ớt đỏ",
         "price": "2500",

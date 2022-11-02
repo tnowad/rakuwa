@@ -51,12 +51,6 @@
     border: 0.5px solid rgb(233, 233, 233);
     overflow: hidden;
     position: relative;
-    transition: transform 0.2s;
-    transition-duration: 0.4s;
-}
-
-.product-item:hover {
-    transform: scale(1.01);
 }
 
 .product-item>.container {
@@ -83,10 +77,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 140px;
+    width: 100%;
 }
 
 .product-item-top .product-img {
-    width: 80%;
+    height: 80%;
     transition: transform 0.2s;
 }
 
@@ -126,7 +122,6 @@
     font-size: 17px;
     color: var(--green);
 }
-
 .product-item .old-price {
     text-decoration: line-through;
     color: var(--gray);

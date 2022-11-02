@@ -34,8 +34,8 @@ const start = async () => {
         </div>
         <div class="product-item-bottom">
             <div class="product-price">
-                <span class="price">${data.price}VND</span>
-                <span class="old-price">${data.oldPrice ? data.oldPrice : ''}</span>
+                <span class="price">${data.price} VND</span><br/>
+                <span class="old-price">${data.oldPrice ? data.oldPrice : ''} VND</span>
                 </div>
                 <div class="product-add-cart">
                 <span>
