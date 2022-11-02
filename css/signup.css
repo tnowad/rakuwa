@@ -32,14 +32,13 @@
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
-    background-color: rgb(198, 196, 196);
+    background-color: rgb(247, 247, 247);
     box-sizing: content-box;
 }
 
 .group-form input {
-    margin-right: 10px;
-    background-color: rgb(198, 196, 196);
-
+    margin: 0 10px 0 10px;
+    background-color: rgb(247, 247, 247);
 }
 
 .form-group {
