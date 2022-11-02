@@ -3,14 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(white, yellow, black);
 }
 
 .content .login-container {
     display: flex;
     justify-content: center;
     height: 50%;
-    box-shadow: 0 0 10px rgba(189, 36, 36, 0.5);
+    /* box-shadow: 0 0 10px rgba(189, 36, 36, 0.5); */
     /* background: rgb(235, 235, 235); */
     box-sizing: border-box;
     border-radius: 10px;
@@ -22,17 +21,17 @@
     justify-content: space-around;
     align-items: center;
     width: 50%;
-    background-color: #0c002b;
+    /* background-color: #0c002b; */
 }
 
 
 
 .login-container .login-left h1 {
-    color: yellow;
+    color: rgb(0, 0, 0);
 }
 
 .login-left p {
-    color: yellow;
+    color: rgb(0, 0, 0);
     padding: 20px;
 }
 
@@ -101,7 +100,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(13, 9, 65);
+    /* background: rgb(13, 9, 65); */
 }
 
 .login-form {
@@ -157,7 +156,7 @@ i {
     outline: none;
     height: 30px;
     width: 300px;
-    background: rgb(13, 9, 65);
+    /* background: rgb(13, 9, 65); */
     border-bottom: 1px solid;
 }
 
@@ -178,7 +177,7 @@ i {
 #password:hover+.password-placeholder {
     top: -1px;
     color: yellow;
-    background-color: rgb(13, 9, 65);
+    /* background-color: rgb(13, 9, 65); */
     opacity: 1;
 }
 

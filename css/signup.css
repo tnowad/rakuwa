@@ -1,97 +1,21 @@
-.content {
+.sign-up {
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: linear-gradient(white, yellow, black);
-}
-
-.content .signup-container {
-    display: flex;
     align-items: center;
-    padding: 50px;
-    height: 50%;
-    box-shadow: 0 0 10px rgba(189, 36, 36, 0.5);
-    background: yellow;
-    box-sizing: border-box;
-    border-radius: 10px;
 }
 
-.content .signup-container form {
-    display: flex;
-    justify-self: center;
+.sign .container {
+    width: 600px;
+    height: 600px;
+    display: block;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+
 }
 
-#firstname,
-#lastname,
-#username,
-#email,
-#password {
-    margin: 10px;
-    font-size: 20px;
-    text-align: center;
-    height: 30px;
-    background-color: yellow;
-    border: none;
-    border-bottom: 1px solid rgb(166, 255, 0);
-    box-shadow: 0px px 10px rgb(212, 206, 206);
-    outline: none;
-}
+.sign-up .container form {}
 
-::placeholder {
-    color: black;
-}
-
-
-#submit {
-    border: 1px solid rgba(255, 0, 0, 0.5);
-    background-color: black;
-    color: aliceblue;
-    border-radius: 3px;
-    margin-right: 100px;
-    width: 100px;
-    height: 20px;
-}
-
-.group-sign-login p {
-    font-size: 15px;
-    display: inline;
-}
-
-.group-sign-login a {
-    color: rgb(25, 0, 255);
-    font-size: 15px;
-    text-decoration: none;
-}
-
-
-#firstname:hover,
-#lastname:hover,
-#username:hover,
-#email:hover,
-#password:hover {
-    border-bottom: 1px solid red;
-    transition: all 1s linear;
-}
-
-#submit:hover {
-    background-color: rgb(255, 0, 0);
-    color: aliceblue;
-    transition-property: background-color, color;
-    transition-duration: 0.3s;
-    transition-timing-function: linear;
-}
-
-.group-sign-login a:hover {
-    color: rgb(255, 0, 0);
-    transition-property: color;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
-}
-
-.group-sign-login a:active {
-    font-size: 18px;
-    transition: font-size 0.2s linear;
+.sign-up .container .group-form input {
+    margin: 700px;
 }
