@@ -68,5 +68,5 @@ a {
 }
 .footer > .footer-center > .container,
 body > * > .container {
-    width: min(100%, 1400px) !important;
+    width: min(100%, 1500px) !important;
 }
