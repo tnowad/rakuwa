@@ -61,13 +61,26 @@
     left: 0;
     height: 30px;
     width: 60px;
-    background: var(--red);
     border-bottom-right-radius: 20px;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.product-item .label.hot {
+    background: var(--red);
+}
+.product-item .label.hot::after {
+    content: 'Hot';
+}
+
+.product-item .label.sale {
+    background: var(--green);
+}
+.product-item .label.sale::after {
+    content: 'Sale off';
 }
 
 .product-item-top {

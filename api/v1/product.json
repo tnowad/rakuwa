@@ -3,7 +3,6 @@
         "id": 1,
         "title": "Thịt Bò",
         "price": "200 000",
-        "oldPrice": "130 000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Noodle",
@@ -18,7 +17,7 @@
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Noodle",
-        "label": "hot",
+        "label": "sale",
         "image": "/img/products/thit-heo.jpg"
     },
     {
@@ -29,7 +28,6 @@
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
         "category": "Instant Noodle",
-        "label": "hot",
         "image": "/img/products/thit-ga.jpeg"
     },
     {
