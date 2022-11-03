@@ -1,235 +1,87 @@
-.content {
+.sign-in {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-in .container {
+    margin: 50px;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.content .login-container {
-    display: flex;
-    justify-content: center;
-    height: 50%;
-    /* box-shadow: 0 0 10px rgba(189, 36, 36, 0.5); */
-    /* background: rgb(235, 235, 235); */
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-
-.login-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    width: 50%;
-    /* background-color: #0c002b; */
+    line-height: 40px;
+}
+
+.sign-in-form h3 {
+    text-align: center;
+    font-size: 50px;
+    margin: 50px;
+}
+
+.group-forget-password {
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(193, 193, 193);
 }
 
 
-
-.login-container .login-left h1 {
-    color: rgb(0, 0, 0);
-}
-
-.login-left p {
-    color: rgb(0, 0, 0);
-    padding: 20px;
-}
-
-.list-button a {
-    color: yellow;
-}
-
-.login-left ul li {
-    margin-bottom: 50px;
-}
-
-.facebook {
-    padding: 15px 72px;
-    background-color: blue;
-    border-radius: 5px;
-}
-
-
-
-.twitter {
-    padding: 15px 83px;
-    background-color: rgb(13, 88, 228);
-    border-radius: 5px;
-}
-
-.google {
-    padding: 15px 80px;
+.sign-in-form #signin {
+    width: 500px;
     background-color: red;
-    border-radius: 5px;
-}
-
-.login-left ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-a {
-    text-decoration: none;
-}
-
-/* Hiệu ứng bên trái */
-
-.facebook:hover {
-    background-color: rgb(16, 16, 136);
-    transition: background-color 0.5s linear 0.01s;
-}
-
-.twitter:hover {
-
-    background-color: rgb(19, 63, 146);
-    transition: background-color 0.5s linear 0.01s;
-}
-
-.google:hover {
-    background-color: rgb(143, 16, 16);
-    transition: background-color 0.5s linear 0.01s;
-}
-
-/* Bên Phải */
-
-.login-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background: rgb(13, 9, 65); */
-}
-
-.login-form {
-    height: 100vh;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-i {
-    color: yellow;
-}
-
-.login-form h1 {
-    color: rgb(231, 229, 229);
-}
-
-.signup {
-    padding: 20px;
-}
-
-.signup p {
-    display: inline;
+    padding: 10px;
+    border: 0.2px solid black;
+    border-radius: 20px;
     color: aliceblue;
 }
 
-.signup a {
-    color: yellow;
+.sign-in-form p {
+    text-align: center;
 }
 
-.signup a:hover {
-    color: red;
-    border-bottom: 1px solid red;
-    transition: all 0.5s linear 0s;
+.group-form {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: rgb(247, 247, 247);
+    /* box-sizing: content-box; */
+}
+
+.group-form input {
+    margin: 0 10px 0 10px;
+    background-color: rgb(247, 247, 247);
 }
 
 .form-group {
-    padding: 20px;
+    text-align: center;
+    margin: 20px;
 }
 
-.form-group-email,
-.form-group-password {
-    display: flex;
-    position: relative;
+.form-group-google,
+.form-group-facebook,
+.form-group-twitter {
+    border: 0.1px solid black;
+    border-radius: 10px;
 }
 
-.form-group-email input,
-.form-group-password input {
-    color: aliceblue;
-    border: none;
-    outline: none;
-    height: 30px;
-    width: 300px;
-    /* background: rgb(13, 9, 65); */
-    border-bottom: 1px solid;
-}
-
-.email-placeholder,
-.password-placeholder {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    font-size: 14px;
-    padding: 0px 15px;
-    color: rgb(65, 9, 9);
-    transition: 1s;
-    pointer-events: none;
-    opacity: 0;
-}
-
-#email:hover+.email-placeholder,
-#password:hover+.password-placeholder {
-    top: -1px;
-    color: yellow;
-    /* background-color: rgb(13, 9, 65); */
-    opacity: 1;
-}
-
-.form-group-email input:hover,
-.form-group-password input:hover {
-    border-bottom: 1px solid yellow;
-    transition: all 5s linear 0.1s;
-}
-
-.form-group-checkbox input {
-    margin: 10px;
-}
-
-.form-group-checkbox a {
-    margin-left: 50px;
-    color: yellow;
-}
-
-
-p {
-    display: inline;
-    color: aliceblue;
-}
-
-.form-group-checkbox a:hover {
-    color: red;
-    border-bottom: 1px solid red;
-    transition: all 0.5s linear;
-}
-
-#login {
-    color: #fa0000;
-    background-color: yellow;
-    padding: 15px 15px;
-    border-radius: 2px;
-}
-
-#login:hover {
-    color: yellow;
+.sign-in-form .form-group-google {
     background-color: red;
-    transition: all 0.5s linear 0s;
+    color: aliceblue;
 }
 
-@media screen and (max-width: 650px) {
-    .container {
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap-reverse;
-        height: 100vh;
-    }
+.sign-in-form .form-group-facebook {
+    background-color: blue;
+    color: aliceblue;
+}
 
-    .login {
-        padding: 20px;
-    }
+.sign-in-form .form-group-twitter {
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+
+.sign-in-form .form-group-login p {
+    display: inline;
+}
+
+.form-group-login a {
+    color: red;
 }
