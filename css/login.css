@@ -25,12 +25,13 @@
 }
 
 
-.sign-in-form #signin {
-    width: 500px;
+.sign-in-form #sign-in {
+    width: 450px;
+    height: 50px;
     background-color: red;
     padding: 10px;
     border: 0.2px solid black;
-    border-radius: 20px;
+    border-radius: 50px;
     color: aliceblue;
 }
 
@@ -40,10 +41,9 @@
 
 .group-form {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 50px;
     margin: 10px;
     background-color: rgb(247, 247, 247);
-    /* box-sizing: content-box; */
 }
 
 .group-form input {
@@ -53,27 +53,33 @@
 
 .form-group {
     text-align: center;
-    margin: 20px;
+    margin: 50px;
 }
 
-.form-group-google,
-.form-group-facebook,
-.form-group-twitter {
+.form-group-google a,
+.form-group-facebook a,
+.form-group-twitter a {
     border: 0.1px solid black;
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
-.sign-in-form .form-group-google {
+.sign-in-form .form-group-google a {
+    padding: 20px;
+    font-size: 20px;
     background-color: red;
     color: aliceblue;
 }
 
-.sign-in-form .form-group-facebook {
+.sign-in-form .form-group-facebook a {
+    padding: 20px;
+    font-size: 20px;
     background-color: blue;
     color: aliceblue;
 }
 
-.sign-in-form .form-group-twitter {
+.sign-in-form .form-group-twitter a {
+    padding: 20px;
+    font-size: 20px;
     background-color: cornflowerblue;
     color: aliceblue;
 }
@@ -83,5 +89,37 @@
 }
 
 .form-group-login a {
+    color: rgb(193, 193, 193);
+}
+
+/* hover */
+
+.group-forget-password a:hover {
     color: red;
+    transition: all 0.5s linear 0.1s;
+}
+
+.sign-in-form #sign-in:hover {
+    background-color: rgb(200, 0, 0);
+    transition: all 0.5s linear 0.1s;
+}
+
+.sign-in-form .form-group-google :hover {
+    background-color: rgb(183, 0, 0);
+    transition: all 0.5s linear 0.1s;
+}
+
+.sign-in-form .form-group-facebook :hover {
+    background-color: rgb(0, 0, 182);
+    transition: all 0.5s linear 0.1s;
+}
+
+.sign-in-form .form-group-twitter :hover {
+    background-color: rgb(0, 123, 189);
+    transition: all 0.5s linear 0.1s;
+}
+
+.form-group-signin a:hover {
+    color: red;
+    transition: all 0.5s linear 0.1s;
 }
