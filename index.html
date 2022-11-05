@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="menu-icon">
-                    <form action="#" class="search-box">
+                    <form class="search-box">
                         <input type="text" class="search-text" placeholder="Search" required>
                         <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
                     </form>
@@ -359,12 +359,6 @@
     </div>
     </div>
     <script>
-
-        const navSearchIcon = document.querySelector('.fa-search')
-        navSearchIcon.addEventListener("click", () => {
-            console.log("clicked")
-            document.querySelector('.nav-search').classList.toggle('active')
-        })
         const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
         dropDownMobile.forEach(element => {
             element.addEventListener("click", () => {
