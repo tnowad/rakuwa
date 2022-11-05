@@ -86,27 +86,27 @@
 .menu-icon>* {
     /* margin-left: 38px; */
     background: transparent;
-    padding: 19px;
+    padding: 15px;
 }
-
 .search-box {
-    padding: 0 0 19 0;
+    border-radius: 30px;
 }
-
+.search-box:hover {
+    background-color: rgb(248, 248, 248);
+}
+.search-box .search-form {
+    display: flex;
+}
 .search-box .search-text {
-    position: absolute;
-    width: 0;
-    border-radius: 20px;
-    background: rgb(245, 245, 245);
-    margin-left: -200px;
-    margin-top: -8px;
-    transition: none 0.5s;
+    width: 0px;
+    height: 20px;
+    transition: width 1s;
+    background-color: transparent;
 }
-
+.search-box .search-box:focus,
 .search-box:hover .search-text,
 .search-box .search-text:valid {
-    padding: 10px 15px;
-    width: fit-content;
+    width: 120px;
 }
 
 .search-button {
