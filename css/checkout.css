@@ -1,0 +1,77 @@
+.checkout {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.checkout .container {
+    line-height: 100px;
+    /* background-color: brown; */
+}
+
+.checkout-text {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+
+
+
+.group-col h4 {
+    margin: 20px;
+}
+
+
+.fullname {
+    display: flex;
+    flex-direction: row;
+}
+
+.group-fullname {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-fullname input,
+.group-info-details input,
+.group-info-details select {
+    height: 23px;
+    margin: 8px;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+}
+
+.group-info-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.crossbar {
+    margin-top: 20px;
+    border-bottom: 0.5px solid rgb(128, 128, 128);
+    width: 600px;
+}
+
+.group-col form {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-col form button {
+    padding: 5px 100px 5px 100px;
+    color: aliceblue;
+    background-color: rgb(53, 107, 255);
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.group-col form div {
+    margin-bottom: 10px;
+}
