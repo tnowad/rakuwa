@@ -29,6 +29,7 @@
 }
 
 .logo {
+    display: flex;
     width: 20%;
 }
 
@@ -36,7 +37,19 @@
     height: 60px;
     padding-left: 20px;
 }
-
+.logo .mobile {
+    display: none;
+  }
+  /* when screen is less than 1010px wide
+     show mobile version and hide desktop */
+  @media (max-width: 1010px) {
+    .logo .mobile {
+      display: block;
+    }
+    .logo .desktop {
+      display: none;
+    }
+  }
 .nav {
     width: 60%;
 }
