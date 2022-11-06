@@ -131,7 +131,7 @@
 
 .footer-bottom {
     background: var(--dark);
-    height: 70px;
+    height: fit-content;
     display: flex;
     justify-content: space-around;
     align-items: center;
