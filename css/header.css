@@ -30,19 +30,20 @@
 
 .logo {
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo img {
-    height: 77px;
-    padding-left: 20px;
+    height: 50px;
 }
 
 .logo .mobile {
     display: none;
-  }
-  /* when screen is less than 1040px wide
-     show mobile version and hide desktop */
-  @media (max-width: 1040px) {
+}
+
+@media (max-width: 1040px) {
     .logo .mobile {
         display: block;
     }
