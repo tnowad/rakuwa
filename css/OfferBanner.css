@@ -1,22 +1,137 @@
-.offer-banners .container {
-    padding-left: 55px;
-    padding-right: 55px;
+.row {
+    display: -ms-flexbox;
+    display: grid;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
+.theme-btn,
+a.theme-btn {
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-weight: 700;
+  border-radius: 7px;
+  text-align: center;
+  padding: 11px 30px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-family: "Helvetica", sans-serif;
+  background: #ff7800; }
+  .theme-btn i,
+  a.theme-btn i {
+    font-size: 13px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    margin-left: 10px; }
+  .theme-btn:hover,
+  a.theme-btn:hover {
+    background: #76a713; }
+    .theme-btn:hover i,
+    a.theme-btn:hover i {
+      margin-left: 13px;
+      margin-right: -3px; }
+  .theme-btn.style-two,
+  a.theme-btn.style-two {
+    background: #76a713; }
+    .theme-btn.style-two:hover,
+    a.theme-btn.style-two:hover {
+      background: #ff7800; }
+  .theme-btn.style-three,
+  a.theme-btn.style-three {
+    color: #1a2428;
+    background: transparent;
+    border: 1px solid rgba(118, 167, 19, 0.15); }
+    .theme-btn.style-three:hover,
+    a.theme-btn.style-three:hover {
+      color: #ff7800;
+      border-color: #ff7800; }
+  .theme-btn.btn-white,
+  a.theme-btn.btn-white {
+    background: transparent;
+    border: 1px solid white; }
+  @media only screen and (max-width: 580px) {
+    .theme-btn,
+    a.theme-btn {
+      padding: 9px 25px; } }
 
-.offer-banner-item {
+@media only screen and (min-width: 1500px) {
+    .offer-banners-area {
+      padding-left: 10%;
+      padding-right: 10%; } }
+  
+  .offer-banner-item {
+    z-index: 1;
+    padding: 90px;
+    position: relative;
     margin-bottom: 30px;
-    height: 230px;
-    min-width: 300px;
-    width: 30%;
-    background: url('/img/offer-banner-bg4.jpg') no-repeat;
-    display: flex;
-    justify-content: flex-end;
+    background-size: cover;
+    height: calc(100% - 30px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-}
-
-.offer-banner-item .content {
-    width: 70%;
-}
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-position: center;
+    background-color: rgba(255, 120, 0, 0.07); }
+    @media only screen and (max-width: 475px) {
+      .offer-banner-item {
+        padding-left: 25px;
+        padding-right: 25px; } }
+    @media only screen and (max-width: 400px) {
+      .offer-banner-item {
+        display: block; } }
+    .offer-banner-item .content {
+      -webkit-box-flex: 0;
+      -ms-flex: none;
+      flex: none; }
+      @media only screen and (min-width: 376px) {
+        .offer-banner-item .content {
+          max-width: 80%; } }
+      @media only screen and (max-width: 375px) {
+        .offer-banner-item .content {
+          margin-bottom: 25px; } }
+      .offer-banner-item .content .sub-title {
+        margin-bottom: 10px; }
+      .offer-banner-item .content h4 {
+        font-size: 26px; }
+        @media only screen and (max-width: 991px) {
+          .offer-banner-item .content h4 {
+            font-size: 22px; } }
+      .offer-banner-item .content .theme-btn {
+        padding: 8px 25px; }
+    @media only screen and (min-width: 376px) {
+      .offer-banner-item .image {
+        max-width: 45%; } }
+    .offer-banner-item .offer-bg {
+      position: absolute;
+      max-width: 75%;
+      z-index: -1;
+      bottom: 0;
+      right: 0; }
+    .offer-banner-item.color-two {
+      background-color: rgba(118, 167, 19, 0.07); }
+      .offer-banner-item.color-two .sub-title {
+        color: #76a713; }
+    .offer-banner-item.color-three {
+      background-color: rgba(34, 114, 0, 0.07); }
+      .offer-banner-item.color-three .sub-title {
+        color: #227200; }
+      .offer-banner-item.color-three .theme-btn:not(:hover) {
+        background: #227200; }
+  
