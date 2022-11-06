@@ -27,6 +27,13 @@
         padding-right: 55px;
     }
 }
+.image-offer{
+    width: 20%;
+}
+.image-offer img{
+    height: 80px;
+    padding-left: 10px;
+}
 
 .logo {
     width: 20%;
