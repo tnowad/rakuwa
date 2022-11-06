@@ -36,19 +36,23 @@
     height: 80px;
     padding-left: 20px;
 }
+
 .logo .mobile {
     display: none;
-  }
-  /* when screen is less than 1150px wide
+}
+
+/* when screen is less than 1150px wide
      show mobile version and hide desktop */
-  @media (max-width: 1150px) {
+@media (max-width: 1150px) {
     .logo .mobile {
-      display: block;
+        display: block;
     }
+
     .logo .desktop {
-      display: none;
+        display: none;
     }
-  }
+}
+
 .nav {
     width: 60%;
 }
