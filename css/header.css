@@ -97,25 +97,29 @@
 }
 
 .menu-icon>* {
-    /* margin-left: 38px; */
     background: transparent;
     padding: 15px;
 }
+
 .search-box {
     border-radius: 30px;
 }
+
 .search-box:hover {
     background-color: rgb(248, 248, 248);
 }
+
 .search-box .search-form {
     display: flex;
 }
+
 .search-box .search-text {
     width: 0px;
     height: 20px;
     transition: width 1s;
     background-color: transparent;
 }
+
 .search-box .search-box:focus,
 .search-box:hover .search-text,
 .search-box .search-text:valid {
@@ -180,9 +184,5 @@
 
     .navigation {
         display: none;
-    }
-
-    .nav-search>.dropdown-content {
-        transform: translate(-40px, 65px);
     }
 }
