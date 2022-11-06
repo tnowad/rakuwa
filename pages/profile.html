@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/profile.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -97,7 +98,15 @@
         </div>
     </div>
     <section class="profile">
+        <div class="container">
+            <div class="menu-side">
+                <ul class="menu-list">
+                    <li class="nav">
 
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
     <div class="footer">
         <!-- <div class="footer-top">
@@ -239,6 +248,32 @@
 
             banners[bannerIndex - 1].classList.toggle('active')
         }
+            const body = document.querySelector('body'),
+                sidebar = body.querySelector('nav'),
+                toggle = body.querySelector(".toggle"),
+                searchBtn = body.querySelector(".search-box"),
+                modeSwitch = body.querySelector(".toggle-switch"),
+                modeText = body.querySelector(".mode-text");
+
+
+            toggle.addEventListener("click", () => {
+                sidebar.classList.toggle("close");
+            })
+
+            searchBtn.addEventListener("click", () => {
+                sidebar.classList.remove("close");
+            })
+
+            modeSwitch.addEventListener("click", () => {
+                body.classList.toggle("dark");
+
+                if (body.classList.contains("dark")) {
+                    modeText.innerText = "Light mode";
+                } else {
+                    modeText.innerText = "Dark mode";
+
+                }
+            })
     </script>
 </body>
 
