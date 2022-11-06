@@ -33,15 +33,15 @@
 }
 
 .logo img {
-    height: 80px;
+    height: 77px;
     padding-left: 20px;
 }
 .logo .mobile {
     display: none;
   }
-  /* when screen is less than 1150px wide
+  /* when screen is less than 1040px wide
      show mobile version and hide desktop */
-  @media (max-width: 1150px) {
+  @media (max-width: 1040px) {
     .logo .mobile {
       display: block;
     }
