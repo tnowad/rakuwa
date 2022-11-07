@@ -2,7 +2,7 @@
   color:var(--color-base-background-1)
 }
 .page-width-inner.two-banner .subbanner-description{
-  top:25%;
+  top:5%;
   left:5%
 }
 .page-width-inner{
@@ -13,12 +13,13 @@
 }
 .page-width-inner.one-banner .sub-banner{
   float:none;
-  width:31.7%;
+  width:fit-content;
   text-align:center;
   display:inline-block
 }
 .page-width-inner.one-banner .subbanner-description{
-  left:110px;top:40px
+  left:10%;
+  top:40px
 }
 .page-width-inner.one-banner .text-button{
   margin-top:25px;
@@ -121,8 +122,8 @@
 }
 @media screen and (max-width: 1269px){
   .page-width-inner.one-banner .subbanner-description{
-    left:30px;
-    top:25px
+    left:10%;
+    top:45px
   }
   .subbanner-description{
     top:13%
