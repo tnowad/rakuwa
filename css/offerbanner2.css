@@ -1,4 +1,233 @@
-.banner{
-    display: flex;
-    flex-wrap: wrap;
+.banner-3 .subbanner-custom{
+  color:var(--color-base-background-1)
+}
+.page-width-inner.two-banner .subbanner-description{
+  top:5%;
+  left:5%
+}
+.page-width-inner{
+  position:relative;
+  float:none;
+  width:100%;
+  text-align:center
+}
+.page-width-inner.one-banner .sub-banner{
+  float:none;
+  width:fit-content;
+  text-align:center;
+  display:inline-block
+}
+.page-width-inner.one-banner .subbanner-description{
+  left:10%;
+  top:40px
+}
+.page-width-inner.one-banner .text-button{
+  margin-top:25px;
+  float:left
+}
+.sub-banner{
+  position:relative;
+  display:inline-block
+}
+.subbanner-description{
+  position:absolute;
+  top:18%;
+  width:auto;
+  text-align:left;
+  left:11%
+}
+.page-width-inner.one-banner .sub-banner.banner-2{
+  margin:0 2%
+}
+.page-width-inner.three-banner .sub-banner{
+  width:48.5%;
+  float:none;
+  text-align:center;
+  display:inline-block
+}
+.sub-banner.banner-2{
+  margin-left:30px
+}
+.subbanner-custom{
+  text-transform:capitalize;
+  text-align:left;
+  float:left;
+  width:100%
+}
+.banner-title{
+  font-size:18px;
+  line-height:31px;
+  letter-spacing:-.2px
+}
+.banner-subtitle{
+  font-size:25px;
+  font-weight:700;
+  line-height:32px;
+  letter-spacing:-.1px
+}
+.text-button{
+  float:left
+}
+.button.btn{
+  background-color:white;
+  padding:10px 23px;
+  color:var(--color-base-text);
+  font-weight:500;
+  line-height:22px
+}
+.page-width-inner.two-banner .subbanner-description{
+  width:85%
+}
+.banner-title-two{
+  font-size:25px;color:var(--color-base-accent-1);
+  text-transform:capitalize;
+  text-align:left;
+  line-height:28px;
+  font-weight:400;
+  letter-spacing:0;
+  width:100%
+}
+.banner-subtitle-two{
+  font-size:40px;
+  font-weight:700;
+  text-align:left;
+  padding-top:15px;
+  line-height:33px;
+  letter-spacing:-.1px;
+  width:100%;
+  color:var(--color-base-background-1)
+}
+.page-width-inner.two-banner .text-button{
+  float:right;
+  margin-top:-50px
+}
+.banner-title-three{
+  font-size:16px;
+  line-height:20px;
+  text-transform:capitalize;
+  font-weight:400;
+  color:var(--color-base-accent-1);
+  letter-spacing:.2px
+}
+.banner-subtitle-three{
+  width:auto;
+  color:var(--color-base-background-1);
+  font-size:26px;
+  text-transform:capitalize;
+  font-weight:700;
+  padding:10px 0 22px;
+  float:left;
+  line-height:34px;
+  letter-spacing:-.1px
+}
+@media screen and (max-width: 1269px){
+  .page-width-inner.one-banner .subbanner-description{
+    left:10%;
+    top:45px
+  }
+  .subbanner-description{
+    top:13%
+  }
+  .page-width-inner.one-banner .text-button{
+    margin-top:15px
+  }
+  .sub-banner.banner-2{
+    margin-left:24px
+  }
+}
+@media screen and (max-width: 989px){
+  .page-width-inner.one-banner .sub-banner{
+    float:none;
+    width:auto;
+    text-align:center;
+    position:relative;
+    display:inline-block;
+    vertical-align:middle
+  }
+  .page-width-inner.one-banner .subbanner-description{
+    top:35px
+  }
+  .three-banner .subbanner-description{
+    top:20%;
+    left:15%
+  }
+  .subbanner-description{
+    top:15%;
+    left:28%
+  }
+  .page-width-inner.one-banner .sub-banner.banner-2{
+    margin:2% 0
+  }
+  .page-width-inner.two-banner .subbanner-description{
+    top:15%
+  }
+  .banner-subtitle-two{
+    font-size:35px;
+    padding-top:10px;
+    line-height:30px
+  }
+  .button.btn{
+    padding:7px 20px
+  }
+  .page-width-inner.three-banner .sub-banner{
+    width:auto;
+    float:none;
+    text-align:center;
+    position:relative;
+    vertical-align:middle
+  }
+  .sub-banner.banner-2{
+    margin-left:0;
+    margin-top:25px
+  }
+  .blog .blog__post.grid__item{
+    width:100%
+  }
+}
+@media screen and (max-width: 749px){
+  .banner-title-two{
+    font-size:17px;
+    line-height:20px
+  }
+  .banner-subtitle-three{
+    padding:10px 0
+  }
+  .banner-subtitle-two{
+    font-size:25px;
+    padding-top:0;
+    line-height:28px
+  }
+}
+@media screen and (max-width: 479px){
+  .page-width-inner.one-banner .subbanner-description{
+    top:15px;
+    left:20px
+  }
+  .banner-subtitle-three{
+    font-size:15px;
+    line-height:20px
+  }
+  .banner-subtitle-three{
+    padding:5px 0
+  }
+  .three-banner .subbanner-description{
+    top:9%;
+    left:6%
+  }
+  .banner-title-two{
+    font-size:14px;
+    line-height:18px
+  }
+  .banner-subtitle-two{
+    font-size:10px;
+    line-height:10px
+  }
+  .page-width-inner.two-banner .button.btn{
+    padding:3px 8px;
+    font-size:10px;
+    line-height:15px
+  }
+  .page-width-inner.two-banner .text-button{
+    margin-top:-28px
+  }
 }
