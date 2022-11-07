@@ -18,4 +18,5 @@
     width: 150px;
     border-radius: 50%;
     background: rgb(243, 238, 238);
+    border: 5px solid gray;
 }
