@@ -1,0 +1,17 @@
+.account .container {
+    display: flex;
+}
+
+.profile {
+    margin: 30px;
+    width: 20%;
+    text-align: center;
+    font-family: "Livvic", sans-serif;
+}
+
+.user img {
+    width: 150px;
+    border-radius: 50%;
+    background: rgb(243, 238, 238);
+    /* margin: 10px; */
+}
