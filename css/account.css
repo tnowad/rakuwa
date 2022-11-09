@@ -8,14 +8,13 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 200px;
-    margin:  70px 0 70px 70px;
-    margin-left: 70px;
+    width: 30%;
+    padding: 70px;
     text-align: center;
     font-family: "Livvic", sans-serif;
 }
 
-.user img {
+.user>img {
     width: 150px;
     border-radius: 50%;
     border: 5px solid var(--gray);
@@ -23,13 +22,20 @@
 
 .navbar ul li a{
     display: block;
-    padding: 10px 25px;
+    padding: 10px 30px;
     margin: 5px;
     border-radius: 20px;
+    box-shadow: 1px 1px 5px rgb(203, 200, 200);
     transition: 0.5s;
 }
 
 .navbar ul li a:hover {
     background: var(--gray);
     color: var(--white);
+    transform: scale(1.05);
+}
+
+.tabs {
+    width: 100%;
+    margin-top: 70px;
 }
