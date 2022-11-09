@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/css/ProductCategoryArea.css">
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
 <body>
@@ -102,17 +104,34 @@
         </div>
     </div>
     <section class="slideshow-banners">
+        <div class="w3-content w3-display-container" style="max-width:800px">
+            <img class="mySlides" src="img/banner-01.jpg" style="width:100%">
+            <img class="mySlides" src="img/banner-03.jpg" style="width:100%">
+            <img class="mySlides" src="img/cooking-banner.jpg" style="width:100%">
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+              <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+              <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+          </div>
+          <script src="js/Slideshow.js">
+        </script>
+      
+    <!--
+    <section class="slideshow-banners">
         <div class="container">
             <div class="banner active">
                 <div class="slide-content" style="width: 100%;">
                     <img src="img/cookingbanner.jpg" alt="" srcset="" style="width: 100%;">
                 </div>
-                <!-- <div class="slide-image">
+                 <div class="slide-image">
                     <img class="image" src="img/slider-image1.png" alt="">
                     <img src="/img/organic.png" alt="" class="offer">
-                </div> -->
+                </div> 
             </div>
-            <!-- <div class="banner">
+            <div class="banner">
                 <div class="slide-content">
                     <p>Welcome to RaKuWa</p>
                     <h1>Organic Foods & Vegetables</h1>
@@ -128,12 +147,12 @@
                     <img class="image" src="img/slider-image1.png" alt="">
                     <img src="/img/organic.png" alt="" class="offer">
                 </div>
-            </div> -->
+            </div> 
         </div>
         <div class="arrow">
             <div class="left" onclick="plusBanners(1)"><em class="fas fa-arrow-left"></em></div>
             <div class="right" onclick="plusBanners(-1)"><em class="fas fa-arrow-right"></em></div>
-        </div>
+        </div> -->
     </section>
 <!--
     <section class="offer-banners">
