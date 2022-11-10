@@ -207,6 +207,7 @@
             /* flex-wrap: wrap; */
             justify-content: center;
         }
+
         .sub-banner {
             position: relative;
             /* min-width: 250px; */
@@ -215,12 +216,14 @@
             display: flex;
             align-items: center;
         }
-        .sub-banner > * img {
+
+        .sub-banner>* img {
             object-fit: contain;
             width: 100%;
             min-height: 200px;
         }
-        .sub-banner > .subbanner-description {
+
+        .sub-banner>.subbanner-description {
             position: absolute;
             margin-left: 10%;
         }
@@ -289,13 +292,6 @@
             </a>
         </div>
         </div>
-
-
-
-
-
-
-
     </section>
 
     <a id="shop-area"></a>
@@ -305,7 +301,7 @@
                 <div class="product-tabs-title">
                     <h3>Popular Products</h3>
                     <ul class="nav-tabs">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <button>All</button>
                         </li>
                         <li class="nav-item">
@@ -332,9 +328,6 @@
                     <script src="/js/AddProductToShop.js"></script>
                 </div>
                 <ul class="product-pagination">
-                    <li class="page-item">
-                        <a class="fab fa-arrow-left"></a>
-                    </li>
                 </ul>
             </div>
             <div class="primary-sidebar"></div>
@@ -435,32 +428,6 @@
             document.querySelector('.mobile-header').classList.toggle('active')
         })
 
-        let bannerIndex = 1;
-        showBanners(bannerIndex);
-
-        function plusBanners(n) {
-            showBanners(bannerIndex += n);
-        }
-
-        function currentBanner(n) {
-            showBanners(bannerIndex = n);
-        }
-
-        function showBanners(n) {
-            let banners = document.querySelectorAll('.banner')
-
-            if (n > banners.length) {
-                bannerIndex = 1
-            } else if (n < 1) {
-                bannerIndex = banners.length
-            }
-
-            banners.forEach(element => {
-                element.classList.remove('active')
-            })
-
-            banners[bannerIndex - 1].classList.toggle('active')
-        }
     </script>
     </div>
 </body>
