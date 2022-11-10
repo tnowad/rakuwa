@@ -102,7 +102,7 @@
                 <div class="user">
                     <img src="/img/account/avt.png" alt="">
                     <h3 class="name">NICKNAME</h3>
-                    <i class="post">Something about you</i>
+                    <small><i>Something about you</i></small>
                 </div>
                 <div class="navbar">
                     <ul>
@@ -115,25 +115,80 @@
                 </div>
             </div>
             <div class="tabs">
-                <div class="prf" id="prf">
-                    <div class="header">
+                <div id="prf">
+                    <div class="heading">
                         <h1>My Profile</h1>
                         <p>Manage and protect your account</p>
-                        <hr>
                     </div>
-                    <div class="body"></div>
+                    <div class="info">
+                        <form action="">
+                            <div class="content">
+                                <label>Username</label>
+                                <span>
+                                    <input type="text" class="box" placeholder="Username">
+                                    <br>
+                                    <small><i>Username can only be changed once.</i></small>
+                                </span>
+                            </div>
+                            <div class="content">
+                                <div class="label"><label>Name</label></div>
+                                <div class="input">
+                                    <input type="text" class="box" placeholder="Your full name">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="label"><label>Email</label></div>
+                                <div class="input">
+                                    <input type="email" class="box" placeholder="Your email">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="label"><label>Phone Number</label></div>
+                                <div class="input">
+                                    <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        placeholder="Your phone number">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="label"><label>Gender</label></div>
+                                <div class="input">
+                                    <div class="menu">
+                                        <div class="choose">
+                                            <i class="far fa-circle"></i>
+                                            <p class="choose-label">Male</p>
+                                        </div>
+                                        <div class="choose">
+                                            <i class="far fa-circle"></i>
+                                            <p class="choose-label">Female</p>
+                                        </div>
+                                        <div class="choose">
+                                            <i class="far fa-circle"></i>
+                                            <p class="choose-label">Other</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="label"><label>Date of birth</label></div>
+                                <div class="input">
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <button type="button"><i class="fal fa-save"></i>Save</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="bnk-crd" id="bnk-crd">
-        
+                <div id="bnk-crd">
+
                 </div>
-                <div class="addr" id="addr">
-        
+                <div id="addr">
+
                 </div>
-                <div class="pwd" id="pwd">
-        
+                <div id="pwd">
+
                 </div>
-                <div class="help" id="help">
-        
+                <div id="help">
+
                 </div>
             </div>
         </div>
