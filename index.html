@@ -133,7 +133,8 @@
             justify-content: space-between;
             align-self: center;
         }
-        .nav-slide > * {
+
+        .nav-slide>* {
             color: white;
             display: flex;
             justify-content: center;
@@ -143,30 +144,36 @@
             border-radius: 50%;
             transition: all 0.5s;
         }
-        .nav-slide > *:hover {
+
+        .nav-slide>*:hover {
             background-color: aliceblue;
             color: rgb(56, 63, 63);
             box-shadow: 0px 0px 20px rgb(209, 209, 209);
         }
+
         .list-dot-slide {
             position: absolute;
             display: flex;
             justify-content: space-between;
             align-self: flex-end;
         }
-        .list-dot-slide-item{
+
+        .list-dot-slide-item {
             font-size: 50px;
             color: rgba(255, 255, 255, 0.582);
             transition: color 0.5s;
         }
+
         .list-dot-slide-item.active,
         .list-dot-slide-item:hover {
             color: gray;
         }
+
         @keyframes fade-in {
             0% {
                 opacity: 0.7;
             }
+
             100% {
                 opacity: 1;
             }
@@ -191,75 +198,96 @@
         </div>
         <script src="js/Slideshow.js">
         </script>
-
     </section>
 
-    <section id="offer-banners-area" class="banner">
-        <link href="css/OfferBanner2.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        .offer-banners-area>.container {
+            width: 100%;
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+        }
+        .sub-banner {
+            position: relative;
+            /* min-width: 250px; */
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .sub-banner > * img {
+            object-fit: contain;
+            width: 100%;
+            min-height: 200px;
+        }
+        .sub-banner > .subbanner-description {
+            position: absolute;
+            margin-left: 10%;
+        }
+    </style>
 
-        <div class="tm-banners">
-            <div class="page-width page-width-desktop">
-                <div class="page-width-inner one-banner">
-                    <a href="#shop-area" class="sub-banner banner-1">
-                        <div class="banner-inner">
-                            <img src="img/offerbanner/offer-banner-2.png" itemprop="banner">
-                        </div>
-                        <div class="subbanner-description">
-                            <div class="subbanner-custom">
-
-                                <div class="banner-subtitle">fresh <br>vegetables</div>
-                                <div class="banner-title">good for your meals</div>
-                            </div>
-
-                            <div class="text-button">
-                                <div class="button btn">
-                                    Shop Now
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                    <a href="#shop-area" class="sub-banner banner-2">
-                        <div class="banner-inner">
-                            <img src="img/offerbanner/offer-banner-4.png" itemprop="banner">
-                        </div>
-                        <div class="subbanner-description">
-                            <div class="subbanner-custom">
-                                <div class="banner-subtitle">fast<br>delivery</div>
-                                <div class="banner-title">come same day</div>
-                            </div>
-
-                            <div class="text-button">
-                                <div class="button btn">
-                                    Shop Now
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
-                    <a href="#shop-area" class="sub-banner banner-3">
-                        <div class="banner-inner">
-                            <img src="img/offerbanner/offer-banner-3.png" itemprop="banner">
-                        </div>
-                        <div class="subbanner-description">
-                            <div class="subbanner-custom">
-                                <div class="banner-subtitle">black friday<br>sale</div>
-                                <div class="banner-title">up to 50% off</div>
-                            </div>
-
-                            <div class="text-button">
-                                <div class="button btn">
-                                    Shop Now
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </a>
+    <section class="offer-banners-area">
+        <!-- <link href="css/OfferBanner2.css" rel="stylesheet" type="text/css" media="all"> -->
+        <div class="container">
+            <a href="#shop-area" class="sub-banner">
+                <div class="banner-inner">
+                    <img src="img/offerbanner/offer-banner-2.png" itemprop="banner">
                 </div>
-            </div>
+                <div class="subbanner-description">
+                    <div class="subbanner-custom">
+
+                        <div class="banner-subtitle">fresh <br>vegetables</div>
+                        <div class="banner-title">good for your meals</div>
+                    </div>
+
+                    <div class="text-button">
+                        <div class="button btn">
+                            Shop Now
+                        </div>
+                    </div>
+
+                </div>
+
+            </a>
+            <a href="#shop-area" class="sub-banner">
+                <div class="banner-inner">
+                    <img src="img/offerbanner/offer-banner-4.png" itemprop="banner">
+                </div>
+                <div class="subbanner-description">
+                    <div class="subbanner-custom">
+                        <div class="banner-subtitle">fast<br>delivery</div>
+                        <div class="banner-title">come same day</div>
+                    </div>
+
+                    <div class="text-button">
+                        <div class="button btn">
+                            Shop Now
+                        </div>
+                    </div>
+
+                </div>
+
+            </a>
+            <a href="#shop-area" class="sub-banner">
+                <div class="banner-inner">
+                    <img src="img/offerbanner/offer-banner-3.png" itemprop="banner">
+                </div>
+                <div class="subbanner-description">
+                    <div class="subbanner-custom">
+                        <div class="banner-subtitle">black friday<br>sale</div>
+                        <div class="banner-title">up to 50% off</div>
+                    </div>
+
+                    <div class="text-button">
+                        <div class="button btn">
+                            Shop Now
+                        </div>
+                    </div>
+
+                </div>
+
+            </a>
+        </div>
         </div>
 
 
