@@ -12,7 +12,6 @@ const showDiv = (n) => {
     else if (n == -1) {
         n = slide.length - 1;
     }
-    console.log(n)
     slideIndex = n
     slide[n].style.display = "block"
     slideDot[n].classList.add('active')
