@@ -95,29 +95,33 @@
 
 .tabs .content .menu .choose {
     display: flex;
+    cursor: pointer;
 }
 
-.tabs .content .menu .choose i {
-    opacity: 0.2;
+.tabs .content .menu .choose {
+    opacity: 0.5;
+}
+
+.tabs .content .menu .choose.active {
+    opacity: 1;
 }
 
 .tabs .btn {
-    display: flex;
     justify-content: center;
 }
 
-.tabs button {
+.tabs .btn button {
     background: var(--gray);
     padding: 10px;
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
+    color: rgb(204, 200, 200);
     transition: 1.2s;
 }
 
-.tabs button:hover {
-    background: rgb(7, 63, 20);
-    color: rgb(204, 200, 200);
+.tabs .btn button:hover {
+    background: rgb(79, 80, 79);
 }
 
 .tabs .tabcontent {
@@ -138,12 +142,12 @@
         margin-top: 50px;
     }
 
-    .tabs .tabcontent{
+    .tabs .tabcontent {
         width: 100%;
     }
 
     .tabs .content {
-        display: block;
+        flex-flow: column;
         margin: 10px 0;
     }
 }
