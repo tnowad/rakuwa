@@ -105,17 +105,15 @@
                     <small><i>Something about you</i></small>
                 </div>
                 <div class="navbar">
-                    <ul>
-                        <li><a href="#prf">Profile</a></li>
-                        <li><a href="#bnk-crd">Banks & Cards</a></li>
-                        <li><a href="#addr">Addresses</a></li>
-                        <li><a href="#pwd">Change Password</a></li>
-                        <li><a href="#help">Help</a></li>
-                    </ul>
+                    <button class="tablinks active" onclick="openTabs(event, 'prf')">Profile</button>
+                    <button class="tablinks" onclick="openTabs(event, 'bnk-crd')">Banks & Cards</button>
+                    <button class="tablinks" onclick="openTabs(event, 'addr')">Addresses</button>
+                    <button class="tablinks" onclick="openTabs(event, 'pwd')">Change Password</button>
+                    <button class="tablinks" onclick="openTabs(event, 'help')">Help</button>
                 </div>
             </div>
             <div class="tabs">
-                <div id="prf">
+                <div id="prf" class="tabcontent active">
                     <div class="heading">
                         <h1>My Profile</h1>
                         <p>Manage and protect your account</p>
@@ -131,55 +129,93 @@
                                 </span>
                             </div>
                             <div class="content">
-                                <div class="label"><label>Name</label></div>
-                                <div class="input">
-                                    <input type="text" class="box" placeholder="Your full name">
-                                </div>
+                                <label>Name</label>
+                                <input type="text" class="box" placeholder="Your full name">
                             </div>
                             <div class="content">
-                                <div class="label"><label>Email</label></div>
-                                <div class="input">
-                                    <input type="email" class="box" placeholder="Your email">
-                                </div>
+                                <label>Email</label>
+                                <input type="email" class="box" placeholder="Your email">
                             </div>
                             <div class="content">
-                                <div class="label"><label>Phone Number</label></div>
-                                <div class="input">
-                                    <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        placeholder="Your phone number">
-                                </div>
+                                <label>Phone Number</label>
+                                <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="Your phone number">
                             </div>
                             <div class="content">
-                                <div class="label"><label>Gender</label></div>
-                                <div class="input">
+                                <label>Gender</label>
+                                <div class="box input">
                                     <div class="menu">
                                         <div class="choose">
-                                            <i class="far fa-circle"></i>
-                                            <p class="choose-label">Male</p>
+                                            <p><i class="far fa-circle"></i> Male</p>
                                         </div>
                                         <div class="choose">
-                                            <i class="far fa-circle"></i>
-                                            <p class="choose-label">Female</p>
+                                            <p><i class="far fa-circle"></i> Female</p>
                                         </div>
                                         <div class="choose">
-                                            <i class="far fa-circle"></i>
-                                            <p class="choose-label">Other</p>
+                                            <p><i class="far fa-circle"></i> Other</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="content">
-                                <div class="label"><label>Date of birth</label></div>
-                                <div class="input">
-                                    <input type="date">
-                                </div>
+                                <label>Date of birth</label>
+                                <div class="box input"><input type="date" class="date"></div>
                             </div>
-                            <button type="button"><i class="fal fa-save"></i>Save</button>
+                            <button type="button"><i class="fal fa-save"></i> Save</button>
                         </form>
                     </div>
                 </div>
-                <div id="bnk-crd">
-
+                <div id="bnk-crd" class="tabcontent">
+                    <!-- <div class="heading">
+                        <h1>My Profile</h1>
+                        <p>Manage and protect your account</p>
+                    </div>
+                    <div class="info">
+                        <form action="">
+                            <div class="content">
+                                <label>Username</label>
+                                <span>
+                                    <input type="text" class="box" placeholder="Username">
+                                    <br>
+                                    <small><i>Username can only be changed once.</i></small>
+                                </span>
+                            </div>
+                            <div class="content">
+                                <label>Name</label>
+                                <input type="text" class="box" placeholder="Your full name">
+                            </div>
+                            <div class="content">
+                                <label>Email</label>
+                                <input type="email" class="box" placeholder="Your email">
+                            </div>
+                            <div class="content">
+                                <label>Phone Number</label>
+                                <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="Your phone number">
+                            </div>
+                            <div class="content">
+                                <label>Gender</label>
+                                <div class="box input">
+                                    <div class="menu">
+                                        <div class="choose">
+                                            <p><i class="far fa-circle"></i> Male</p>
+                                        </div>
+                                        <div class="choose">
+                                            <p><i class="far fa-circle"></i> Female</p>
+                                        </div>
+                                        <div class="choose">
+                                            <p><i class="far fa-circle"></i> Other</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <label>Date of birth</label>
+                                <div class="box input"><input type="date" class="date"></div>
+                            </div>
+                            <button type="button"><i class="fal fa-save"></i> Save</button>
+                        </form>
+                    </div> -->
                 </div>
                 <div id="addr">
 
@@ -329,6 +365,20 @@
             })
 
             banners[bannerIndex - 1].classList.toggle('active')
+        }
+
+        function openTabs(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
         }
     </script>
 </body>
