@@ -32,7 +32,7 @@
 .navbar ul li a:hover {
     background: var(--gray);
     color: var(--white);
-    transform: scale(1.05);
+    transform: scale(0.95);
 }
 
 .tabs {
