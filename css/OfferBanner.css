@@ -1,9 +1,12 @@
 
 .page-width-inner {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   float: none;
   width: 100%;
   text-align: center;
+  justify-content: center;
 }
 .blog .title-wrapper-with-link{
   text-align:left;
