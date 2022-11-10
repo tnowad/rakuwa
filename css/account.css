@@ -8,8 +8,8 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 30%;
-    padding: 70px;
+    width: 100%;
+    margin-top: 70px;
     text-align: center;
     font-family: "Livvic", sans-serif;
 }
@@ -20,16 +20,28 @@
     border: 5px solid var(--gray);
 }
 
-.navbar ul li a{
-    display: block;
+.account small {
+    opacity: 0.9;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+}
+
+.navbar .tablinks {
+    width: 200px;
     padding: 10px 30px;
     margin: 5px;
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgb(203, 200, 200);
     transition: 0.5s;
+    cursor: pointer;
 }
 
-.navbar ul li a:hover {
+.navbar .tablinks:hover,
+.navbar .tablinks.active {
     background: var(--gray);
     color: var(--white);
     transform: scale(0.95);
@@ -37,5 +49,73 @@
 
 .tabs {
     width: 100%;
-    margin-top: 70px;
+    padding: 0 140px;
+    font-family: "Livvic", sans-serif;
+}
+
+.tabs .heading {
+    height: 100px;
+    margin: 70px 0 50px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border-bottom: 1px solid rgba(118, 167, 19, 0.15);
+}
+
+.tabs .info {
+    width: 800px;
+}
+
+.tabs .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs .content label {
+    width: 150px;
+    padding: 0 10px;
+}
+
+.tabs .content .box {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid rgba(142, 142, 142, 0.15);
+}
+
+.tabs .content .input {
+    border: none;
+}
+
+.tabs .content .date {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.tabs .content .menu {
+    display: flex;
+}
+
+.tabs .content .menu .choose {
+    display: flex;
+    padding-right: 25px;
+}
+
+.tabs .content .menu .choose i {
+    opacity: 0.2;
+}
+
+.tabs button {
+    width: 100%;
+    position: center;
+    background: var(--white);
+    padding: 10px 0 70px 0;
+    font-size: 20px;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
 }
