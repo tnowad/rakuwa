@@ -1,15 +1,10 @@
+/*
 .banner-3 .subbanner-custom{
   color:var(--color-base-background-1)
 }
 .page-width-inner.two-banner .subbanner-description{
   top:5%;
   left:5%
-}
-.page-width-inner{
-  position:relative;
-  float:none;
-  width:100%;
-  text-align:center
 }
 .page-width-inner.one-banner .sub-banner{
   float:none;
@@ -37,16 +32,13 @@
   left:11%
 }
 .page-width-inner.one-banner .sub-banner.banner-2{
-  margin:0 2%
+  margin: 0%;
 }
 .page-width-inner.three-banner .sub-banner{
   width:48.5%;
   float:none;
   text-align:center;
   display:inline-block
-}
-.sub-banner.banner-2{
-  margin-left:30px
 }
 .subbanner-custom{
   text-transform:capitalize;
@@ -56,11 +48,13 @@
 }
 .banner-title{
   font-size:18px;
+  font-family: Arial, Helvetica, sans-serif;
   line-height:31px;
   letter-spacing:-.2px
 }
 .banner-subtitle{
   font-size:25px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight:700;
   line-height:32px;
   letter-spacing:-.1px
@@ -73,6 +67,7 @@
   padding:10px 23px;
   color:var(--color-base-text);
   font-weight:500;
+  font-family: Arial, Helvetica, sans-serif;
   line-height:22px
 }
 .page-width-inner.two-banner .subbanner-description{
@@ -132,7 +127,7 @@
     margin-top:15px
   }
   .sub-banner.banner-2{
-    margin-left:24px
+    margin-left: 00%
   }
 }
 @media screen and (max-width: 989px){
@@ -156,7 +151,7 @@
     left:28%
   }
   .page-width-inner.one-banner .sub-banner.banner-2{
-    margin:2% 0
+    margin:0% 
   }
   .page-width-inner.two-banner .subbanner-description{
     top:15%
@@ -177,8 +172,8 @@
     vertical-align:middle
   }
   .sub-banner.banner-2{
-    margin-left:0;
-    margin-top:25px
+    margin-left:30px;
+    margin-top:30px
   }
   .blog .blog__post.grid__item{
     width:100%
@@ -229,5 +224,82 @@
   }
   .page-width-inner.two-banner .text-button{
     margin-top:-28px
+  }
+}
+*/
+
+.slideshow-banners {
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.slideshow-banners .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.list-slide {
+  height: auto;
+}
+
+.slideshow-banners .slide {
+  width: 100%;
+  height: 100%;
+  animation: fade-in 500ms ease-in-out;
+}
+
+.nav-slide {
+  position: absolute;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.nav-slide>* {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.nav-slide>*:hover {
+  background-color: aliceblue;
+  color: rgb(56, 63, 63);
+  box-shadow: 0px 0px 20px rgb(209, 209, 209);
+}
+
+.list-dot-slide {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.list-dot-slide-item {
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.582);
+  transition: color 0.5s;
+}
+
+.list-dot-slide-item.active,
+.list-dot-slide-item:hover {
+  color: gray;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0.7;
+  }
+
+  100% {
+      opacity: 1;
   }
 }
