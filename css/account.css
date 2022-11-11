@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-around;
     padding: 70px;
-    width: 100%;
     font-family: "Livvic", sans-serif;
     font-size: 18px;
 }
@@ -68,6 +67,7 @@
 .tabs .content {
     display: flex;
     justify-content: space-around;
+    padding: 2.5px;
 }
 
 .tabs .content label {
