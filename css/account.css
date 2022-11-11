@@ -83,27 +83,13 @@
     border: none;
 }
 
+.tabs .content .gender {
+    font-size: 15px;
+}
+
 .tabs .content .date {
     font-size: 20px;
     opacity: 0.8;
-}
-
-.tabs .content .menu {
-    display: flex;
-    justify-content: space-between;
-}
-
-.tabs .content .menu .choose {
-    display: flex;
-    cursor: pointer;
-}
-
-.tabs .content .menu .choose {
-    opacity: 0.5;
-}
-
-.tabs .content .menu .choose.active {
-    opacity: 1;
 }
 
 .tabs .btn {
