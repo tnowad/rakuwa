@@ -106,22 +106,52 @@
             </ul>
         </div>
     </div>
-    <section class="product-info">
-        <script>
-            const { href } = window.location
-            const id = parseInt(href.substring(href.indexOf('id=') + 3)) - 1
-            const fetchJson = async (url) => {
-                const response = await fetch(url)
-                const result = await response.json()
-                return result
-            }
-            const start = async () => {
-                const productData = await fetchJson('/api/v1/product.json')
-                document.querySelector("body > section").innerText += JSON.stringify(productData[id])
-            }
-            start()
-        </script>
+    <style>
+        .product-details-top {
+            display: flex;
+        }
+    </style>
+    <section class="product-details-area">
+        <div class="container">
+            <div class="product-details-top">
+                <div class="product-details-top-right">
+                    <div class="product-detail-slide-show">
+                        <img src="/img/products/bot-canh.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-details-top-left">
+                    <span class="stock-status sale-off">Sale Off</span>
+                    <h2 class="title-detail">Mì tôm hảo hảo</h2>
+                    <div class="product-detail-rating">10 điểm </div>
+                    <span class="product-category">Mì</span>
+                    <div class="product-detail-price">
+                        <span class="product-detail-price-current">1000USD</span>
+                        <span class="product-detail-price-old">1USD</span>
+                    </div>
+                    <p class="product-detail-description"></p>
+                    <form action="" class="product-add-to-cart">
+                        <input type="number" name="" placeholder="1" id="" min="1" max="100">
+                        <input type="submit" value="Add to cart">
+                    </form>
+                </div>
+            </div>
+            <div class="product-details-bottom"></div>
+        </div>
     </section>
+    <script>
+        const { href } = window.location
+        const id = parseInt(href.substring(href.indexOf('id=') + 3)) - 1
+        const fetchJson = async (url) => {
+            const response = await fetch(url)
+            const result = await response.json()
+            return result
+        }
+        const start = async () => {
+            const productData = await fetchJson('/api/v1/product.json')
+            document.querySelector("body > section").innerText += JSON.stringify(productData[id])
+        }
+        // start()
+    </script>
     <div class="footer">
         <div class="footer-center">
             <div class="container">
