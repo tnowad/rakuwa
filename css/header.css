@@ -196,3 +196,7 @@
         display: none;
     }
 }
+
+.nav-slide {
+    cursor: pointer;;
+}
