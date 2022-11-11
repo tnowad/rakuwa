@@ -26,6 +26,6 @@ function startAuto() {
     clearInterval(Auto);
     Auto = setInterval(function () {
         plusDiv(1)
-    }, 30);
+    }, 5000);
 }
 startAuto()
