@@ -96,7 +96,8 @@
             </ul>
         </div>
     </div>
-    <section class="account">
+    <!-- TODO:Change name of class account to profile-info and rename of file to profile.html -->
+    <section class="account profile-info">
         <div class="container">
             <div class="profile">
                 <div class="user">
@@ -105,6 +106,16 @@
                     <small><i>Something about you</i></small>
                 </div>
                 <div class="navbar">
+                    <!--
+                        Manage My Account
+                            My Profile
+                            Address Book
+                            My Payment Options
+                        My Orders
+                            My Returns
+                            My Cancellations
+                        My Reviews
+                    -->
                     <button class="tablinks active" onclick="openTabs(event, 'prf')">Profile</button>
                     <button class="tablinks" onclick="openTabs(event, 'bnk-crd')">Banks & Cards</button>
                     <button class="tablinks" onclick="openTabs(event, 'addr')">Addresses</button>
@@ -112,7 +123,29 @@
                     <button class="tablinks" onclick="openTabs(event, 'help')">Help</button>
                 </div>
             </div>
-            <div class="tabs">
+            <!--
+                You shouldn't acronym (viết tắt) name of class or id
+                use father-child
+                Example:
+                    .profile-info
+                        .profile-details
+                        .profile-nav
+                            ul.profile-nav-list.active
+                                li.profile-nav-list-item#profile-account
+                                li.profile-nav-list-item#profile-address
+                                li.profile-nav-list-item#profile-payment
+                            ul.profile-nav-list
+                                li.profile-nav-list-item#profile-order-return
+                                li.profile-nav-list-item#profile-order-cancel
+                            a.profile-nav
+                        .profile-tabs
+                            .profile-tab-item.active#profile-tab-account
+                            .profile-tab-item#profile-tab-address
+                            .profile-tab-item#profile-tab-payment
+                            .profile-tab-item#profile-tab-order-return
+                            .profile-tab-item#profile-tab-order-cancel
+            -->
+            <div class="tabs#profile-nav-payment">
                 <div id="prf" class="tabcontent active">
                     <div class="heading">
                         <h1>My Profile</h1>
