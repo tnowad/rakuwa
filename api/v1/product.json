@@ -6,7 +6,8 @@
         "oldPrice": "130000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
-        "category": "Instant Noodle",
+        "amount": 1000,
+        "category": "noodle",
         "label": "hot",
         "image": "/img/products/thit-bo.png"
     },
