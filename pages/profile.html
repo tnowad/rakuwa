@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo2.png" type="image/x-icon">
+    <title>RaKuWa</title>
+    <link rel="stylesheet" href="/asset/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="css/SlideShowBanner.css">
+    <link rel="stylesheet" href="/css/OfferBanner.css">
+    <link rel="stylesheet" href="/css/ProductCategoryArea.css">
+    <link rel="stylesheet" href="/css/ShopArea.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/index.html"><img src="/img/logo1.png" class="desktop" alt="logo" /></a>
+                <a href="/index.html"><img src="/img/logo2.png" class="mobile" alt="RAKUWA" /></a>
+            </div>
+            <div class="nav">
+                <ul class="navigation">
+                    <li><a href="">Home</a></li>
+                    <li class="dropdown">
+                        <a href="">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Fruits</a></li>
+                            <li><a href="">Seafood</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Meat & Poultry</a></li>
+                            <li><a href="">Hot items</a></li>
+                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                            <li><a href="">Grocery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="">About Us</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-icon">
+                <div class="search-box">
+                    <form class="search-form">
+                        <input type="text" class="search-text" placeholder="Search" required>
+                        <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
+                    </form>
+                </div>
+                <button class="menu-sidebar">
+                    <em class="fas fa-bars"></em>
+                </button>
+                <button class="cart">
+                    <em class="fa fa-cart-plus"></em>
+                </button>
+                <button class="user">
+                    <em class="fas fa-user-circle"></em>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="navigation mobile-header">
+                <div class="container">
+                    <li><a href="">Home</a></li>
+                    <li class="dropdown-mobile">
+                        <a>Products</a>
+                        <ul>
+                            <li><a href="">Fruits</a></li>
+                            <li><a href="">Seafood</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Meat & Poultry</a></li>
+                            <li><a href="">Hot items</a></li>
+                            <li><a href="">Grocery</a></li>
+                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Contact Us</a></li>
+                    <li class="dropdown-mobile">
+                        <a>About Us</a>
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- TODO:Change name of class profile to profile-info and rename of file to profile.html -->
+    <section class="profile-info">
+        <div class="container">
+            <div class="profile">
+                <div class="user">
+                    <img src="/img/profile/avt.png" alt="">
+                    <h3 class="name">NICKNAME</h3>
+                    <small><i>Something about you</i></small>
+                </div>
+                <div class="navbar">
+                    <!--
+                        Manage My profile
+                            My Profile
+                            Address Book
+                            My Payment Options
+                        My Orders
+                            My Returns
+                            My Cancellations
+                        My Reviews
+                    -->
+                    <button class="tablinks active" onclick="openTabs(event, 'prf')">Profile</button>
+                    <button class="tablinks" onclick="openTabs(event, 'bnk-crd')">Banks & Cards</button>
+                    <button class="tablinks" onclick="openTabs(event, 'addr')">Addresses</button>
+                    <button class="tablinks" onclick="openTabs(event, 'pwd')">Change Password</button>
+                    <button class="tablinks" onclick="openTabs(event, 'help')">Help</button>
+                </div>
+            </div>
+            <!--
+                You shouldn't acronym (viết tắt) name of class or id
+                use father-child
+                Example:
+                    .profile-info
+                        .profile-details
+                        .profile-nav
+                            ul.profile-nav-list.active
+                                li.profile-nav-list-item#profile-profile
+                                li.profile-nav-list-item#profile-address
+                                li.profile-nav-list-item#profile-payment
+                            ul.profile-nav-list
+                                li.profile-nav-list-item#profile-order-return
+                                li.profile-nav-list-item#profile-order-cancel
+                            a.profile-nav
+                        .profile-tabs
+                            .profile-tab-item.active#profile-tab-profile
+                                I see you never use form id, so I suggest change to:
+                                form#profile-form-profile
+                            .profile-tab-item#profile-tab-address
+                            .profile-tab-item#profile-tab-payment
+                            .profile-tab-item#profile-tab-order-return
+                            .profile-tab-item#profile-tab-order-cancel
+            -->
+            <div class="tabs#profile-nav-payment">
+                <div id="prf" class="tabcontent active">
+                    <div class="heading">
+                        <h1>My Profile</h1>
+                        <p>Manage and protect your profile</p>
+                    </div>
+                    <div class="info">
+                        <form>
+                            <div class="content">
+                                <label>Username</label>
+                                <p>
+                                    <input type="text" class="box" placeholder="Username">
+                                    <br>
+                                    <small><i>Username can only be changed once.</i></small>
+                                </p>
+                            </div>
+                            <div class="content">
+                                <label>Name</label>
+                                <input type="text" class="box" placeholder="Your full name">
+                            </div>
+                            <div class="content">
+                                <label>Email</label>
+                                <input type="email" class="box" placeholder="Your email">
+                            </div>
+                            <div class="content">
+                                <label>Phone Number</label>
+                                <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="Your phone number">
+                            </div>
+                            <div class="content">
+                                <label>Gender</label>
+                                <div class="box input">
+                                    <select class="gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</button>
+                                        <option value="other">Other</button>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <label>Date of birth</label>
+                                <div class="box input"><input type="date" class="date"></div>
+                            </div>
+                            <div class="content btn">
+                                <button type="submit"><i class="fal fa-save"></i> Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="bnk-crd" class="tabcontent">
+                    <div class="form">
+                        <div class="content">
+                            <h1>Credit / Debit Card</h1>
+                            <button type="submit" class="btn"><i class="far fa-plus"></i> Add New Card</button>
+                        </div>
+                        <p>You don't have cards yet.</p>
+                    </div>
+                    <div class="form">
+                        <div class="content">
+                            <h1>My Bank profiles</h1>
+                            <button type="submit" class="btn"><i class="far fa-plus"></i> Add New Bank profile</button>
+                        </div>
+                        <p>You don't have bank profiles yet.</p>
+                    </div>
+                </div>
+
+                <div id="addr">
+
+                </div>
+
+                <div id="pwd" class="tabcontent">
+                    <div class="heading">
+                        <h1>Change Password</h1>
+                        <p>For your profile's security, do not share your password with anyone else</p>
+                    </div>
+                    <div class="info">
+                        <form>
+                            <div class="content">
+                                <label>Current Password</label>
+                                <p>
+                                    <input type="password" class="box" placeholder="Your password">
+                                    <br>
+                                    <a href=""><small><i>Forget your password?</i></small></a>
+                                </p>
+                            </div>
+                            <div class="content">
+                                <label>New Password</label>
+                                <input type="password" class="box" placeholder="Your new password">
+                            </div>
+                            <div class="content">
+                                <label>Confirm Password</label>
+                                <input type="password" class="box" placeholder="Repeat your new password">
+                            </div>
+                            <div class="content btn">
+                                <button type="submit"><i class="fas fa-check"></i> Confirm</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="help">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <!-- <div class="footer-top">
+            <div class="container">
+                <div class="newsletter">
+                    <h1 class="title">
+                        Newsletter Subscribe
+                    </h1>
+
+                    <form action="" class="newsletter-form">
+                        <input type="email" id="email" placeholder="Enter Email" pattern=".">
+                        <input type="button" value="Subscribe Now >>" id="submit">
+                    </form>
+
+                    <div class="count-clients">
+                        <p id="count">56384+</p>
+                        <p> Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="footer-center">
+            <div class="container">
+                <div class="about-us">
+                    <div class="logo"><img src="/img/logo2.png" alt=""></div>
+                    <p class="description">This website is made for educational purposes only, and has no commercial
+                        value. Any products listed on the website are random, not actual market figures
+                    </p>
+                    <ul class="list-icons">
+                        <li><em class="fab fa-facebook-f"></em></li>
+                        <li><em class="fab fa-twitter"></em></li>
+                        <li><em class="fab fa-linkedin"></em></li>
+                        <li><em class="fab fa-youtube"></em></li>
+                    </ul>
+                </div>
+                <div class="quick-links">
+                    <h1>Quick links</h1>
+                    <ul class="list-links">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Our projects</a></li>
+                        <li><a href="">Meet Farmers</a></li>
+                        <li><a href="">Later News</a></li>
+                        <li><a href="">Vegetables</a></li>
+                    </ul>
+                </div>
+                <div class="recent-news">
+                    <h1>Recent News</h1>
+                    <ul class="list-news">
+                        <li>
+                            <div class="news">
+                                <div class="news-image">
+                                    <img src="/img/news-widget1.jpg" alt="">
+                                </div>
+                                <div class="news-content">
+                                    <a href="" class="news-title">Trái cây thơm ngon, mời bạn ăn nha!</a>
+                                    <p class="author">By Nguyen</p>
+                                </div>
+                            </div>
+                            <div class="news">
+                                <div class="news-image">
+                                    <img src="/img/news-widget1.jpg" alt="">
+                                </div>
+                                <div class="news-content">
+                                    <a href="" class="news-title">tôi đây không chờ bạn nữa giờ tôi ăn liền!</a>
+                                    <p class="author">By Nguyen</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-us">
+                    <h1>Contact Us</h1>
+                    <ul class="list-info">
+                        <li>
+                            <p>Consultation time: 7h - 20h</p>
+                            <p>Delivery time: 7h30 - 20h</p>
+                        </li>
+                        <li>
+                            <em class="fas fa-map-marker-alt"></em>
+                            <a>273 An Duong Vuong Street, Ward 3, District 5, Ho Chi Minh City</a>
+                        </li>
+                        <li>
+                            <em class="far fa-envelope"></em>
+                            <a>cskh@help.rakuwa.vn</a>
+                        </li>
+                        <li>
+                            <em class="fa fa-phone"></em>
+                            <a>0379713541</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a>Copyright © 2022 RaKuWa. All Rights Reserved.</a>
+            <a>Privacy Policy • Cookies Policy • Terms of Use</a>
+        </div>
+    </div>
+    <script>
+        const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
+        dropDownMobile.forEach(element => {
+            element.addEventListener("click", () => {
+                element.classList.toggle('active')
+            })
+        })
+        const mobileNav = document.querySelector('.menu-sidebar')
+        mobileNav.addEventListener("click", () => {
+            console.log("clicked")
+            document.querySelector('.mobile-header').classList.toggle('active')
+        })
+
+        let bannerIndex = 1;
+        showBanners(bannerIndex);
+
+        function plusBanners(n) {
+            showBanners(bannerIndex += n);
+        }
+
+        function currentBanner(n) {
+            showBanners(bannerIndex = n);
+        }
+
+        function showBanners(n) {
+            let banners = document.querySelectorAll('.banner')
+
+            if (n > banners.length) {
+                bannerIndex = 1
+            } else if (n < 1) {
+                bannerIndex = banners.length
+            }
+
+            banners.forEach(element => {
+                element.classList.remove('active')
+            })
+
+            banners[bannerIndex - 1].classList.toggle('active')
+        }
+
+        function openTabs(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
