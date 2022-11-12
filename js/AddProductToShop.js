@@ -21,17 +21,17 @@ const start = async () => {
                     <a class="product-name" href="/pages/product.html?id=${data.id}">${data.title}</a>
                     <div class="product-rate">
                         ${((rating) => {
-                            const star = Math.floor(rating)
-                            let html = ''
-                            for (let i = 1; i <= 5; i++) {
-                                if (i <= star) {
-                                    html += '<em class="fas fa-star active"></em>'
-                                } else {
-                                    html += '<em class="fas fa-star"></em>'
-                                }
-                            }
-                            return html
-                        })(data.rating)}
+                const star = Math.floor(rating)
+                let html = ''
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= star) {
+                        html += '<em class="fas fa-star active"></em>'
+                    } else {
+                        html += '<em class="fas fa-star"></em>'
+                    }
+                }
+                return html
+            })(data.rating)}
                     </div>
                 </div>
                 <div class="product-item-bottom">
@@ -47,17 +47,40 @@ const start = async () => {
         </div>`
     }
 
+<<<<<<< HEAD
     const shopArea = document.querySelector('.product-area')  
+=======
+    const shopArea = document.querySelector('.product-area')
+
+>>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     const page = urlParams.get('page') ? urlParams.get('page') : 1
-    console.log(page)
     // productData.forEach(element => {
     //     shopArea.innerHTML += product(element)
     // })
-    for(let i = ((page-1) * 12); i < 12*page; i++) {
-        if(productData[i])
-        shopArea.innerHTML += product(productData[i])
+    for (let i = ((page - 1) * 12); i < 12 * page; i++) {
+        if (productData[i])
+            shopArea.innerHTML += product(productData[i])
+    }
+    const maxPage = productData.length / 12
+    const productPagination = document.querySelector('.product-pagination')
+    for (let i = 1; i <= maxPage; i++) {
+        if(i != page) {
+            productPagination.innerHTML += `<li class="page-item"><a href="?page=${i}">${i}</a></li>`
+        } else {
+            productPagination.innerHTML += `<li class="page-item active"><a href="?page=${i}">${i}</a></li>`
+        }
+    }
+    if(page == 1){
+        productPagination.innerHTML = `<li class="page-item"><a><i class="fas fa-chevron-left"></i></a></li>` + productPagination.innerHTML
+        productPagination.innerHTML += `<li class="page-item"><a href="?page=${parseInt(page)+1}"><i class="fas fa-chevron-right"></i></a></li>`
+    } else if(page == maxPage){
+        productPagination.innerHTML = `<li class="page-item"><a href="?page=${parseInt(page)-1}"><i class="fas fa-chevron-left"></i></a></li>` + productPagination.innerHTML
+        productPagination.innerHTML += `<li class="page-item"><a"><i class="fas fa-chevron-right"></i></a></li>`
+    } else {
+        productPagination.innerHTML = `<li class="page-item"><a href="?page=${parseInt(page)-1}"><i class="fas fa-chevron-left"></i></a></li>` + productPagination.innerHTML
+        productPagination.innerHTML += `<li class="page-item"><a href="?page=${parseInt(page)+1}"><i class="fas fa-chevron-right"></i></a></li>`
     }
 }
 start()

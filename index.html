@@ -22,12 +22,12 @@
     <div class="header">
         <div class="container">
             <div class="logo">
-                <a href=""><img src="/img/logo1.png" class="desktop" alt="logo" /></a>
-                <a href=""><img src="/img/logo2.png" class="mobile" alt="RAKUWA" /></a>
+                <a href="/index.html"><img src="/img/logo1.png" class="desktop" alt="logo" /></a>
+                <a href="/index.html"><img src="/img/logo2.png" class="mobile" alt="RAKUWA" /></a>
             </div>
             <div class="nav">
                 <ul class="navigation">
-                    <li><a href="">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li class="dropdown">
                         <a href="">Products</a>
                         <ul class="dropdown-content">
@@ -53,7 +53,7 @@
             <div class="menu-icon">
                 <div class="search-box">
                     <form class="search-form">
-                        <input type="text" class="search-text" placeholder="Search" required>
+                        <input type="search" class="search-text" placeholder="Search" required>
                         <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
                     </form>
                 </div>
@@ -65,7 +65,7 @@
                 </button>
                 <button class="user dropdown">
                     <em class="fas fa-user-circle"></em>
-                    <ul class="dropdown-content">
+                    <ul class="user-menu dropdown-content">
                         <li><a href="">Login / Sign up</a></li>
                         <li><a href="">Setting</a></li>
                         <li><a href="">Help</a></li>
@@ -102,34 +102,66 @@
         </div>
     </div>
     <section class="slideshow-banners">
+        <link href="css/SlideBanner.css" rel="stylesheet" type="text/css" media="all">
         <div class="container">
-            <div class="banner active">
-                <div class="slide-content" style="width: 100%;">
-                    <img src="img/cooking-banner-7166200__340.jpg" alt="" srcset="" style="width: 100%;">
-                </div>
-                <!-- <div class="slide-image">
-                    <img class="image" src="img/slider-image1.png" alt="">
-                    <img src="/img/organic.png" alt="" class="offer">
-                </div> -->
+            <div class="list-slide">
+                <img class="slide" src="img/banner-01.jpg">
+                <img class="slide" src="img/banner-03.jpg">
+                <img class="slide" src="img/cooking-banner.jpg">
             </div>
-            <!-- <div class="banner">
-                <div class="slide-content">
-                    <p>Welcome to RaKuWa</p>
-                    <h1>Organic Foods & Vegetables</h1>
-                    <p class="description">
-                        Laboris dolor commodo sit adipisicing exercitation eiusmod cillum fugiat.
-                    </p>
-                    <div class="slide-btn">
-                        <a href="">Shop now</a>
-                        <a href="">Learn more</a>
+            <div class="nav-slide">
+                <div class="nav-slide-left" onclick="plusDiv(-1)">&#10094;</div>
+                <div class="nav-slide-right" onclick="plusDiv(1)">&#10095;</div>
+            </div>
+            <div class="list-dot-slide">
+                <span class="list-dot-slide-item" onclick="showDiv(1)">•</span>
+                <span class="list-dot-slide-item" onclick="showDiv(2)">•</span>
+                <span class="list-dot-slide-item" onclick="showDiv(3)">•</span>
+            </div>
+        </div>
+        <script src="js/Slideshow.js"></script>
+    </section>
+
+    <section class="offer-banners-area">
+        <div class="container">
+            <a href="#shop-area" class="sub-banner">
+                <div class="banner-inner">
+                    <img src="img/offerbanner/offer-banner-2.png" itemprop="banner">
+                </div>
+                <div class="subbanner-description">
+                    <div class="subbanner-custom">
+                        <div class="banner-subtitle">fresh <br>vegetables</div>
+                        <div class="banner-title">from bio farm</div>
                     </div>
                 </div>
-                <div class="slide-image" style="order: -1;">
-                    <img class="image" src="img/slider-image1.png" alt="">
-                    <img src="/img/organic.png" alt="" class="offer">
+
+            </a>
+            <a href="#shop-area" class="sub-banner">
+                <div class="banner-inner">
+                    <img src="img/offerbanner/offer-banner-4.png" itemprop="banner">
                 </div>
-            </div> -->
+                <div class="subbanner-description">
+                    <div class="subbanner-custom">
+                        <div class="banner-subtitle">fast<br>delivery</div>
+                        <div class="banner-title">come same day</div>
+                    </div>
+                </div>
+
+            </a>
+            <a href="#shop-area" class="sub-banner">
+                <div class="banner-inner">
+                    <img src="img/offerbanner/offer-banner-3.png" itemprop="banner">
+                </div>
+                <div class="subbanner-description">
+                    <div class="subbanner-custom">
+                        <div class="banner-subtitle">black friday<br>sale</div>
+                        <div class="banner-title">up to 50% off</div>
+                    </div>
+                </div>
+
+            </a>
         </div>
+<<<<<<< HEAD
         <div class="arrow">
             <div class="left" onclick="plusBanners(1)"><em class="fas fa-arrow-left"></em></div>
             <div class="right" onclick="plusBanners(-1)"><em class="fas fa-arrow-right"></em></div>
@@ -215,13 +247,19 @@
     </section>
     -->
     <!-- <a id="shop-area"></a>
+=======
+        </div>
+    </section>
+
+    <a id="shop-area"></a>
+>>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
     <section class="shop-area">
         <div class="container">
             <div class="product-tabs">
                 <div class="product-tabs-title">
                     <h3>Popular Products</h3>
                     <ul class="nav-tabs">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <button>All</button>
                         </li>
                         <li class="nav-item">
@@ -245,6 +283,7 @@
                     </ul>
                 </div>
                 <div class="product-area">
+<<<<<<< HEAD
                     <!-- <script src="/js/AddProductToShop.js"></script> -->
     <div class="cart-icon">
         <p> <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>0</span><sup>$</sup></p>
@@ -253,6 +292,12 @@
         <div class="container">
             <div class="product-items">
 
+=======
+                    <script src="/js/AddProductToShop.js"></script>
+                </div>
+                <ul class="product-pagination">
+                </ul>
+>>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
             </div>
         </div>
     </section> -->
@@ -279,6 +324,7 @@
             <button>Thanh Toán</button>
         </form>
     </section>
+<<<<<<< HEAD
     </div>
     <ul class="product-pagination">
         <li class="page-item">
@@ -296,38 +342,21 @@
     <!-- <section class="shop-area">
         Best seller products
     </section> -->
+=======
+
+>>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
     <div class="footer">
-        <!-- <div class="footer-top">
-            <div class="container">
-                <div class="newsletter">
-                    <h1 class="title">
-                        Newsletter Subscribe
-                    </h1>
 
-                    <form action="" class="newsletter-form">
-                        <input type="email" id="email" placeholder="Enter Email" pattern=".">
-                        <input type="button" value="Subscribe Now >>" id="submit">
-                    </form>
-
-                    <div class="count-clients">
-                        <p id="count">56384+</p>
-                        <p> Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="footer-center">
             <div class="container">
                 <div class="about-us">
                     <div class="logo"><img src="/img/logo2.png" alt=""></div>
-                    <p class="description">Reprehenderit duis proident adipisicing cupidatat exercitation anim
-                        pariatur
-                        excepteur laboris do consequat. Anim minim nisi pariatur et est exercitation voluptate
-                        occaecat
-                        dolore. Incididunt dolor do magna nisi magna consequat. Sit quis enim deserunt mollit.
+                    <p class="description">This website is made for educational purposes only, and has no commercial
+                        value. Any products listed on the website are random, not actual market figures
                     </p>
                     <ul class="list-icons">
-                        <li><em class="fab fa-facebook-f"></em></li>
+                        <li><a href="https://www.facebook.com/rakuwa.raucuqua/"><em class="fab fa-facebook-f"></a></em>
+                        </li>
                         <li><em class="fab fa-twitter"></em></li>
                         <li><em class="fab fa-linkedin"></em></li>
                         <li><em class="fab fa-youtube"></em></li>
@@ -353,7 +382,7 @@
                                     <img src="/img/news-widget1.jpg" alt="">
                                 </div>
                                 <div class="news-content">
-                                    <a href="" class="news-title">Et incididunt quis consectetur aute id</a>
+                                    <a href="" class="news-title">Trái cây thơm ngon, mời bạn ăn nha!</a>
                                     <p class="author">By Nguyen</p>
                                 </div>
                             </div>
@@ -362,7 +391,7 @@
                                     <img src="/img/news-widget1.jpg" alt="">
                                 </div>
                                 <div class="news-content">
-                                    <a href="" class="news-title">Et incididunt quis consectetur aute id</a>
+                                    <a href="" class="news-title">tôi đây không chờ bạn nữa giờ tôi ăn liền!</a>
                                     <p class="author">By Nguyen</p>
                                 </div>
                             </div>
@@ -373,7 +402,8 @@
                     <h1>Contact Us</h1>
                     <ul class="list-info">
                         <li>
-                            <p>Aliqua occaecat adipisicing occaecat deserunt reprehenderit.</p>
+                            <p>Consultation time: 7h - 20h</p>
+                            <p>Delivery time: 7h30 - 20h</p>
                         </li>
                         <li>
                             <em class="fas fa-map-marker-alt"></em>
@@ -396,8 +426,13 @@
             <a>Privacy Policy • Cookies Policy • Terms of Use</a>
         </div>
     </div>
+<<<<<<< HEAD
     </div>
     <!-- <script>
+=======
+
+    <script>
+>>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
         const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
         dropDownMobile.forEach(element => {
             element.addEventListener("click", () => {
@@ -410,6 +445,7 @@
             document.querySelector('.mobile-header').classList.toggle('active')
         })
 
+<<<<<<< HEAD
         let bannerIndex = 1;
         showBanners(bannerIndex);
 
@@ -438,6 +474,10 @@
         }
     </script> -->
     <script src="/js/Cart.js"></script>
+=======
+    </script>
+    </div>
+>>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
 </body>
 
 </html>

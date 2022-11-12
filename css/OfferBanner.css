@@ -1,22 +1,42 @@
-.offer-banners .container {
-    padding-left: 55px;
-    padding-right: 55px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.offer-banners-area>.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.offer-banner-item {
-    margin-bottom: 30px;
-    height: 230px;
-    min-width: 300px;
-    width: 30%;
-    background: url('/img/offer-banner-bg4.jpg') no-repeat;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.sub-banner {
+  position: relative;
+  /* min-width: 250px; */
+  max-width: 385px;
+  display: flex;
+  align-items: center;
+  text-transform:capitalize;
+  text-align:left;
+  float:left;
+  width:100%
 }
 
-.offer-banner-item .content {
-    width: 70%;
+.sub-banner>* img {
+  object-fit: contain;
+  width: 100%;
+  /*min-height: 200px;*/
 }
+
+.sub-banner>.subbanner-description {
+  position: absolute;
+  margin-left: 6%;
+}
+  .banner-title{
+    font-size:25px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:90px;
+    letter-spacing:0
+  }
+  .banner-subtitle{
+    font-size:30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:700;
+    line-height: 40px;
+    letter-spacing:-.1px
+  }

@@ -131,8 +131,6 @@ function deleteCart(){
             var productT = document.querySelectorAll("tbody tr td .cart-delete");
             productT[i].addEventListener("click", (event)=>{
                 var cartDelete = event.target;
-                // .parentElement là để truy xuất đến thằng cha của nó , vì muốn xoá thì phải xoá cả thẻ tr mà 
-                // thẻ tr lại là cha của thẻ td mà td lại là cha của thẻ span nên ta phải truy xuất 2 lần parentElement
                 var cartItemDelete = cartDelete.parentElement.parentElement;        
                 cartItemDelete.remove();
                 // console.log(cartItemDelete);
