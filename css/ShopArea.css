@@ -178,7 +178,6 @@
 .product-pagination .page-item {
     margin: 5px;
 }
-<<<<<<< HEAD
 
 .product-pagination .page-item>* {
     display: flex;
@@ -186,9 +185,10 @@
     width: 40px;
     justify-content: center;
     align-items: center;
-=======
+}
+
 .product-pagination .page-item>*:hover,
-.product-pagination .page-item.active > * {
+.product-pagination .page-item.active>* {
     background-color: var(--green);
     color: white;
 }
@@ -199,7 +199,6 @@
     font-family: "Nunito", sans-serif;
     position: relative;
     display: block;
->>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
     border-radius: 50%;
     font-weight: 600;
     width: 40px;

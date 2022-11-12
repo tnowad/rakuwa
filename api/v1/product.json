@@ -6,12 +6,9 @@
         "oldPrice": "130000",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "rating": 5,
-<<<<<<< HEAD
         "category": "Instant Meat",
-=======
         "amount": 1000,
         "category": "noodle",
->>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
         "label": "hot",
         "image": "/img/products/thit-bo.png",
         "amount": 125
