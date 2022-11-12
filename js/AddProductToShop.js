@@ -47,12 +47,7 @@ const start = async () => {
         </div>`
     }
 
-<<<<<<< HEAD
     const shopArea = document.querySelector('.product-area')  
-=======
-    const shopArea = document.querySelector('.product-area')
-
->>>>>>> d52d42a5e07c2437759539f6ad9ca31afee4f48a
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     const page = urlParams.get('page') ? urlParams.get('page') : 1
