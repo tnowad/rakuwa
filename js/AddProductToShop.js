@@ -41,14 +41,13 @@ const start = async () => {
                     </div>
                     <div class="product-add-cart">
                         <span><a class="fa-solid fa-cart-shopping"></a>Add</span>
-                    </div>
+                </div>
                 </div>
             </div>
         </div>`
     }
 
-    const shopArea = document.querySelector('.product-area')
-    
+    const shopArea = document.querySelector('.product-area')  
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     const page = urlParams.get('page') ? urlParams.get('page') : 1
@@ -62,4 +61,6 @@ const start = async () => {
     }
 }
 start()
+
+
 

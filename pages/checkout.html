@@ -5,89 +5,279 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Out</title>
+    <link rel="shortcut icon" href="/img/logo2.png" type="image/x-icon">
+    <title>RaKuWa</title>
+    <link rel="stylesheet" href="/asset/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="../css/checkout.css">
 </head>
-<div class="checkout">
-    <div class="contaner">
-        <div class="checkout-text">
-            <h1>Check Out</h1>
-        </div>
-        <div class="row">
-            <div class="group-col info-customer">
-                <h4>Billing address</h4>
-                <form action="">
-                    <div class="fullname">
-                        <div class="group-fullname group-fistname">
-                            <label for="firstName" class="text-name">Fist name</label>
-                            <input type="text" id="firstName" size="40px" required>
-                        </div>
-                        <div class="group-fullname group-lastname">
-                            <label for="lastName" class="text-name">Last Name</label>
-                            <input type="text" id="lastName" size="40px" required>
-                        </div>
-                    </div>
-                    <div class="group-info-details group-username">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Username" required>
-                        <!-- <div class="invalid-feedback" style="width: 100% ;">Your username is required</div> -->
-                    </div>
-                    <div class="group-info-details group-email">
-                        <label for="email">Email</label>
-                        <input type="email" name="" id="email" placeholder="you@email.com" required>
-                    </div>
-                    <div class="group-info-details group-address">
-                        <label for="address">Address</label>
-                        <input type="text" id="address" placeholder="Address">
-                    </div>
-                    <div class="group-info-details group-hometown">
-                        <label for="countty">Country</label>
-                        <select name="" id="country" required>
-                            <option value="">Choose</option>
-                            <option value="">Ho Chi Minh</option>
-                            <option value="">Bien Hoa</option>
-                            <option value="">Long An</option>
-                            <option value="">Binh Phuoc</option>
-                            <option value="">Quang Ngai</option>
-                        </select>
-                        <hr class="crossbar">
-                    </div>
-                    <h4>Payment</h4>
-                    <div class="payment-methods">
-                        <div class="group-payment-methods group-bankcard">
-                            <input type="radio" id="bankcard">
-                            <label for="bank" class="text-bank">Bank Card</label>
-                        </div>
-                        <div class="group-payment-methods group-momo">
-                            <input type="radio" id="momo">
-                            <label for="momo" class="text-momo">Momo</label>
-                        </div>
-                    </div>
-                    <hr class="crossbar">
-                    <button type="submit">Continue to checkout</button>
-                </form>
-            </div>
-            <div class="group-col pay">
-                <h4>Your cart</h4>
-                <ul class="list-group">
-                    <li>SP1</li>
-                    <li>SP2</li>
-                    <li>SP3</li>
-                    <li class="list-group-items group-total">
-                        <span>Total(USD)</span>
-                        <strong>$20</strong>
-                    </li>
-                    <form action="">
 
-                    </form>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="/img/logo1.png" class="desktop" alt="logo" /></a>
+                <a href=""><img src="/img/logo2.png" class="mobile" alt="RAKUWA" /></a>
+            </div>
+            <div class="nav">
+                <ul class="navigation">
+                    <li><a href="">Home</a></li>
+                    <li class="dropdown">
+                        <a href="">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Fruits</a></li>
+                            <li><a href="">Seafood</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Meat & Poultry</a></li>
+                            <li><a href="">Hot items</a></li>
+                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                            <li><a href="">Grocery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="">About Us</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
                 </ul>
+            </div>
+            <div class="menu-icon">
+                <div class="search-box">
+                    <form class="search-form">
+                        <input type="text" class="search-text" placeholder="Search" required>
+                        <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
+                    </form>
+                </div>
+                <button class="menu-sidebar">
+                    <em class="fas fa-bars"></em>
+                </button>
+                <button class="cart">
+                    <em class="fa fa-cart-plus"></em>
+                </button>
+                <button class="user dropdown">
+                    <em class="fas fa-user-circle"></em>
+                    <ul class="dropdown-content">
+                        <li><a href="">Login / Sign up</a></li>
+                        <li><a href="">Setting</a></li>
+                        <li><a href="">Help</a></li>
+                    </ul>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="navigation mobile-header">
+                <div class="container">
+                    <li><a href="">Home</a></li>
+                    <li class="dropdown-mobile">
+                        <a>Products</a>
+                        <ul>
+                            <li><a href="">Fruits</a></li>
+                            <li><a href="">Seafood</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Meat & Poultry</a></li>
+                            <li><a href="">Hot items</a></li>
+                            <li><a href="">Grocery</a></li>
+                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Contact Us</a></li>
+                    <li class="dropdown-mobile">
+                        <a>About Us</a>
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="checkout">
+        <div class="contaner">
+            <div class="checkout-text">
+                <h1>Check Out</h1>
+            </div>
+            <div class="row">
+                <div class="group-col info-customer">
+                    <h4>Billing address</h4>
+                    <form action="">
+                        <div class="fullname">
+                            <div class="group-fullname group-fistname">
+                                <label for="firstName" class="text-name">Fist name</label>
+                                <input type="text" id="firstName" size="40px" placeholder="First Name" required>
+                            </div>
+                            <div class="group-fullname group-lastname">
+                                <label for="lastName" class="text-name">Last Name</label>
+                                <input type="text" id="lastName" size="40px" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="group-info-details group-username">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" placeholder="Username" required>
+                            <!-- <div class="invalid-feedback" style="width: 100% ;">Your username is required</div> -->
+                        </div>
+                        <div class="group-info-details group-email">
+                            <label for="email">Email</label>
+                            <input type="email" name="" id="email" placeholder="you@email.com" required>
+                        </div>
+                        <div class="group-info-details group-address">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" placeholder="Address">
+                        </div>
+                        <div class="group-info-details group-hometown">
+                            <label for="countty">Country</label>
+                            <select name="" id="country" required>
+                                <option value="">Choose</option>
+                                <option value="">Ho Chi Minh</option>
+                                <option value="">Bien Hoa</option>
+                                <option value="">Long An</option>
+                                <option value="">Binh Phuoc</option>
+                                <option value="">Quang Ngai</option>
+                            </select>
+                            <hr class="crossbar">
+                        </div>
+                        <h4>Payment</h4>
+                        <div class="payment-methods">
+                            <div class="group-payment-methods group-bankcard">
+                                <input type="radio" id="bankcard">
+                                <label for="bank" class="text-bank">Bank Card</label>
+                            </div>
+                            <div class="group-payment-methods group-momo">
+                                <input type="radio" id="momo">
+                                <label for="momo" class="text-momo">Momo</label>
+                            </div>
+                        </div>
+                        <hr class="crossbar">
+                        <button type="submit">Continue to checkout</button>
+                    </form>
+                </div>
+                <div class="group-col pay">
+                    <h4>Your cart</h4>
+                    <ul class="list-group">
+                        <li>SP1</li>
+                        <li>SP2</li>
+                        <li>SP3</li>
+                        <li class="list-group-items group-total">
+                            <span>Total(USD)</span>
+                            <strong>$20</strong>
+                        </li>
+                        <form action="">
+                            <script src="/js/CheckOut.js"></script>
+                        </form>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 
-<body>
+    <div class="footer">
+        <!-- <div class="footer-top">
+            <div class="container">
+                <div class="newsletter">
+                    <h1 class="title">
+                        Newsletter Subscribe
+                    </h1>
+
+                    <form action="" class="newsletter-form">
+                        <input type="email" id="email" placeholder="Enter Email" pattern=".">
+                        <input type="button" value="Subscribe Now >>" id="submit">
+                    </form>
+
+                    <div class="count-clients">
+                        <p id="count">56384+</p>
+                        <p> Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="footer-center">
+            <div class="container">
+                <div class="about-us">
+                    <div class="logo"><img src="/img/logo2.png" alt=""></div>
+                    <p class="description">Reprehenderit duis proident adipisicing cupidatat exercitation anim
+                        pariatur
+                        excepteur laboris do consequat. Anim minim nisi pariatur et est exercitation voluptate
+                        occaecat
+                        dolore. Incididunt dolor do magna nisi magna consequat. Sit quis enim deserunt mollit.
+                    </p>
+                    <ul class="list-icons">
+                        <li><em class="fab fa-facebook-f"></em></li>
+                        <li><em class="fab fa-twitter"></em></li>
+                        <li><em class="fab fa-linkedin"></em></li>
+                        <li><em class="fab fa-youtube"></em></li>
+                    </ul>
+                </div>
+                <div class="quick-links">
+                    <h1>Quick links</h1>
+                    <ul class="list-links">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Our projects</a></li>
+                        <li><a href="">Meet Farmers</a></li>
+                        <li><a href="">Later News</a></li>
+                        <li><a href="">Vegetables</a></li>
+                    </ul>
+                </div>
+                <div class="recent-news">
+                    <h1>Recent News</h1>
+                    <ul class="list-news">
+                        <li>
+                            <div class="news">
+                                <div class="news-image">
+                                    <img src="/img/news-widget1.jpg" alt="">
+                                </div>
+                                <div class="news-content">
+                                    <a href="" class="news-title">Et incididunt quis consectetur aute id</a>
+                                    <p class="author">By Nguyen</p>
+                                </div>
+                            </div>
+                            <div class="news">
+                                <div class="news-image">
+                                    <img src="/img/news-widget1.jpg" alt="">
+                                </div>
+                                <div class="news-content">
+                                    <a href="" class="news-title">Et incididunt quis consectetur aute id</a>
+                                    <p class="author">By Nguyen</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-us">
+                    <h1>Contact Us</h1>
+                    <ul class="list-info">
+                        <li>
+                            <p>Aliqua occaecat adipisicing occaecat deserunt reprehenderit.</p>
+                        </li>
+                        <li>
+                            <em class="fas fa-map-marker-alt"></em>
+                            <a>273 An Duong Vuong Street, Ward 3, District 5, Ho Chi Minh City</a>
+                        </li>
+                        <li>
+                            <em class="far fa-envelope"></em>
+                            <a>cskh@help.rakuwa.vn</a>
+                        </li>
+                        <li>
+                            <em class="fa fa-phone"></em>
+                            <a>0379713541</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a>Copyright © 2022 RaKuWa. All Rights Reserved.</a>
+            <a>Privacy Policy • Cookies Policy • Terms of Use</a>
+        </div>
+    </div>
 
 </body>
 

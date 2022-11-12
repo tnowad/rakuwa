@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/ProductCategoryArea.css">
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/Cart.css">
 </head>
 
 <body>
@@ -59,7 +60,7 @@
                 <button class="menu-sidebar">
                     <em class="fas fa-bars"></em>
                 </button>
-                <button class="cart">
+                <button class="cartt">
                     <em class="fa fa-cart-plus"></em>
                 </button>
                 <button class="user dropdown">
@@ -157,6 +158,9 @@
                     <a href="#shop-area" class="btn">Shop Now >></a>
                 </div>
             </div>
+            <div class="group-cart">
+
+            </div>
         </div>
     </section>
 
@@ -210,7 +214,7 @@
         </div>
     </section>
     -->
-    <a id="shop-area"></a>
+    <!-- <a id="shop-area"></a>
     <section class="shop-area">
         <div class="container">
             <div class="product-tabs">
@@ -241,17 +245,54 @@
                     </ul>
                 </div>
                 <div class="product-area">
-                    <script src="/js/AddProductToShop.js"></script>
-                </div>
-                <ul class="product-pagination">
-                    <li class="page-item">
-                        <a class="fab fa-arrow-left"></a>
-                    </li>
-                </ul>
+                    <!-- <script src="/js/AddProductToShop.js"></script> -->
+    <div class="cart-icon">
+        <p> <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>0</span><sup>$</sup></p>
+    </div>
+    <section class="product">
+        <div class="container">
+            <div class="product-items">
+
             </div>
-            <div class="primary-sidebar"></div>
         </div>
+    </section> -->
+    <section class="cart">
+        <i class="fa fa-close" aria-hidden="true"></i>
+        <h2>Cart</h2>
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div style="text-align: right;" class="price-total">
+                <p style="font-weight:bold ;">Tổng tiền: <span>0</span><sup>$</sup></p>
+            </div>
+            <button>Thanh Toán</button>
+        </form>
     </section>
+    </div>
+    <ul class="product-pagination">
+        <li class="page-item">
+            <a class="fab fa-arrow-left"></a>
+        </li>
+    </ul>
+    </div>
+    <div class="primary-sidebar">
+        <address></address>
+    </div>
+
+    <!-- </div> -->
+
+    <!-- </section> -->
     <!-- <section class="shop-area">
         Best seller products
     </section> -->
@@ -356,7 +397,7 @@
         </div>
     </div>
     </div>
-    <script>
+    <!-- <script>
         const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
         dropDownMobile.forEach(element => {
             element.addEventListener("click", () => {
@@ -395,7 +436,8 @@
 
             banners[bannerIndex - 1].classList.toggle('active')
         }
-    </script>
+    </script> -->
+    <script src="/js/Cart.js"></script>
 </body>
 
 </html>
