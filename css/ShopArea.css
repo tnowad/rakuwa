@@ -54,6 +54,7 @@
     display: flex;
     flex-direction: column;
     max-width: 250px;
+    width: unset !important;
     min-width: 210;
     margin: 10px 10px;
     border-radius: 20px;
