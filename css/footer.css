@@ -101,8 +101,8 @@
     align-items: center;
     margin-right: 10px;
     background: var(--secondary);
+    cursor: pointer;
 }
-
 
 .list-links {
     line-height: 35px;
