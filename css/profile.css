@@ -1,4 +1,4 @@
-.profile-info .container {
+.profile-info {
     display: flex;
     justify-content: space-around;
     padding: 70px;
@@ -6,7 +6,7 @@
     font-size: 18px;
 }
 
-.profile {
+.profile-details {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -14,23 +14,23 @@
     text-align: center;
 }
 
-.profile .user>img {
+.user>img {
     width: 150px;
     border-radius: 50%;
     border: 5px solid var(--gray);
 }
 
-.profile small {
+.profile-details small {
     opacity: 0.9;
 }
 
-.navbar {
+.profile-nav-list {
     display: flex;
     flex-flow: column;
     overflow: hidden;
 }
 
-.navbar .tablinks {
+.profile-nav-list .profile-nav-list-item {
     width: 200px;
     padding: 10px 30px;
     margin: 5px;
@@ -40,8 +40,8 @@
     cursor: pointer;
 }
 
-.navbar .tablinks:hover,
-.navbar .tablinks.active {
+.profile-nav-list .profile-nav-list-item:hover,
+.profile-nav-list .profile-nav-list-item.active {
     background: var(--gray);
     color: var(--white);
     transform: scale(0.95);
