@@ -1,30 +1,15 @@
 [
     {
-<<<<<<< HEAD
-        "id": 1,
-        "title": "Thịt Bò",
-        "price": "200000",
-        "oldPrice": "130000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Meat",
-=======
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
         "amount": 1000,
         "category": "noodle",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 1,
         "image": "/img/products/thit-bo.png",
         "label": "hot",
-<<<<<<< HEAD
-        "image": "/img/products/thit-bo.png",
-        "amount": 125
-=======
         "oldPrice": "130000",
         "price": "200000",
         "rating": 5,
         "title": "Thịt Bò"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
@@ -36,15 +21,7 @@
         "oldPrice": "110000",
         "price": "90000",
         "rating": 5,
-<<<<<<< HEAD
-        "category": "Instant Meat",
-        "label": "hot",
-        "image": "/img/products/thit-heo.jpg",
-        "amount": 184
-
-=======
         "title": "Thịt Heo"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
@@ -56,14 +33,7 @@
         "oldPrice": "150000",
         "price": "180000",
         "rating": 5,
-<<<<<<< HEAD
-        "category": "Instant Meat",
-        "label": "hot",
-        "image": "/img/products/thit-ga.jpeg",
-        "amount": 457
-=======
         "title": "Thịt Gà"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
@@ -75,14 +45,7 @@
         "oldPrice": "6000",
         "price": "8000",
         "rating": 5,
-<<<<<<< HEAD
-        "category": "Instant Vegetables",
-        "label": "hot",
-        "image": "/img/products/mui-tau.jpg",
-        "amount": 851
-=======
         "title": "Mùi Tàu"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
@@ -91,15 +54,10 @@
         "id": 5,
         "image": "/img/products/hanh-la.jpg",
         "label": "hot",
-<<<<<<< HEAD
-        "image": "/img/products/hanh-la.jpg",
-        "amount": 555
-=======
         "oldPrice": "2000",
         "price": "2500",
         "rating": 5,
         "title": "Hành Lá"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
@@ -111,14 +69,7 @@
         "oldPrice": "2000",
         "price": "2500",
         "rating": 5,
-<<<<<<< HEAD
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/ot-do.png",
-        "amount": 85
-=======
         "title": "Ớt đỏ"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
@@ -130,14 +81,7 @@
         "oldPrice": "2300",
         "price": "3000",
         "rating": 5,
-<<<<<<< HEAD
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/ot-xanh.jpg",
-        "amount": 44
-=======
         "title": "Ớt Xanh"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
@@ -147,19 +91,6 @@
         "image": "/img/products/bot-canh.jpg",
         "label": "hot",
         "oldPrice": "4000",
-<<<<<<< HEAD
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/bot-canh.jpg",
-        "amount": 125
-    },
-    {
-        "id": 9,
-        "title": "Muối Iot",
-=======
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
         "price": "5000",
         "rating": 5,
         "title": "Bột Canh"
@@ -174,338 +105,169 @@
         "oldPrice": "3 100",
         "price": "5000",
         "rating": 5,
-<<<<<<< HEAD
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/iot.jpg",
-        "amount": 182
-=======
         "title": "Muối Iot"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 10,
-<<<<<<< HEAD
-        "title": "Đường",
-        "price": "10000",
-        "oldPrice": "7000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/duong.jpg",
-        "amount": 457
-=======
         "image": "/img/products/duong.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Đường"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 11,
-<<<<<<< HEAD
-        "title": "Dầu ăn Tường An",
-        "price": "10000",
-        "oldPrice": "7000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/dauan-tuongan.jpg",
-        "amount": 154
-=======
         "image": "/img/products/dauan-tuongan.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Dầu ăn Tường An"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 12,
-<<<<<<< HEAD
-        "title": " Dầu ăn Cái Lân",
-        "price": "10000",
-        "oldPrice": "7000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/dauan-cailan.jpg",
-        "amount": 457
-=======
         "image": "/img/products/dauan-cailan.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": " Dầu ăn Cái Lân"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 13,
-<<<<<<< HEAD
-        "title": "Dầu ăn simply",
-        "price": "10000",
-        "oldPrice": "7000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/dauan-simply.jpg",
-        "amount": 457
-=======
         "image": "/img/products/dauan-simply.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Dầu ăn simply"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 14,
-<<<<<<< HEAD
-        "title": "Nước mắm cần nam ngư",
-        "price": "10000",
-        "oldPrice": "7000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/nuocmam-namngu.jpg",
-        "amount": 45
-=======
         "image": "/img/products/nuocmam-namngu.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Nước mắm cần nam ngư"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 15,
-<<<<<<< HEAD
-        "title": "Nước Mắm Chinsu",
-        "price": "10000",
-        "oldPrice": "7000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/nuocmam-chinsu.webp",
-        "amount": 25
-=======
         "image": "/img/products/nuocmam-chinsu.webp",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Nước Mắm Chinsu"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 16,
-<<<<<<< HEAD
-        "title": "Tương ớt Chinsu",
-        "price": "10000",
-        "oldPrice": "7000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/tuongot-chinsu.jpg",
-        "amount": 15
-=======
         "image": "/img/products/tuongot-chinsu.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Tương ớt Chinsu"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
         "id": 17,
-<<<<<<< HEAD
-        "title": "Tương ớt Cholimex",
-        "price": "10000",
-        "oldPrice": "7000",
-        "description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/tuongot-cholimex.jpg",
-        "amount": 12
-=======
         "image": "/img/products/tuongot-cholimex.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Tương ớt Cholimex"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "id": 18,
-<<<<<<< HEAD
-        "title": "Tương Cà",
-        "price": "10000",
-        "oldPrice": "7000",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/tuongca-phg.jpg",
-        "amount": 44
-=======
         "image": "/img/products/tuongca-phg.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Tương Cà"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "egg",
         "id": 19,
-<<<<<<< HEAD
-        "title": "Trứng Gà",
-        "price": "10000",
-        "oldPrice": "7000",
-        "rating": 5,
-        "category": "Instant Food",
-        "label": "hot",
-        "image": "/img/products/trungga.webp",
-        "amount": 84
-=======
         "image": "/img/products/trungga.webp",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Trứng Gà"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "egg",
         "id": 20,
-<<<<<<< HEAD
-        "title": "Trứng Vịt",
-        "price": "10000",
-        "oldPrice": "7000",
-        "rating": 5,
-        "category": "Instant Food",
-        "label": "hot",
-        "image": "/img/products/trungvit.png",
-        "amount": 113
-=======
         "image": "/img/products/trungvit.png",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Trứng Vịt"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "id": 21,
-<<<<<<< HEAD
-        "title": "Muối Iot",
-        "price": "10000",
-        "oldPrice": "7000",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/muoi-iot.jpg",
-        "amount": 127
-=======
         "image": "/img/products/muoi-iot.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Muối Iot"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "spice",
         "id": 22,
-<<<<<<< HEAD
-        "title": "Tương Cà",
-        "price": "10000",
-        "oldPrice": "7000",
-        "rating": 5,
-        "category": "Instant Spice",
-        "label": "hot",
-        "image": "/img/products/tuongca-phg.jpg",
-        "amount": 12
-=======
         "image": "/img/products/tuongca-phg.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Tương Cà"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
         "category": "noodle",
         "id": 23,
-<<<<<<< HEAD
-        "title": "Omachi",
-        "price": "10000",
-        "oldPrice": "7000",
-        "rating": 5,
-        "category": "Instant Noodle",
-        "label": "hot",
-        "image": "/img/products/mi-omachi.jpg",
-        "amount": 44
-=======
         "image": "/img/products/mi-omachi.jpg",
         "label": "hot",
         "oldPrice": "7000",
         "price": "10000",
         "rating": 5,
         "title": "Omachi"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     },
     {
         "amount": 1000,
@@ -514,14 +276,9 @@
         "id": 24,
         "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg",
         "label": "hot",
-<<<<<<< HEAD
-        "image": "/img/products/thung-30-goi-mi-hao-hao-tom-chua-cay-75g-202110110920304347.jpeg",
-        "amount": 212
-=======
         "oldPrice": "3000",
         "price": "4000",
         "rating": 5,
         "title": "Hao Hao Hot & Spicy Instant Noodle"
->>>>>>> 3bc573ee8aab2a76b847a3129ed8efb634a9afc3
     }
 ]
