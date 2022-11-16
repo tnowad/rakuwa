@@ -1,7 +1,11 @@
-let menu = document.getElementById('menu');
+let MenuRightClick = document.getElementById('menu');
 document.addEventListener('contextmenu', function(event){
     event.preventDefault();
-    menu.style.display ='block';
-    menu.style.top =event.y + 'px';
-    menu.style.left =event.x + 'px';
+    MenuRightClick.style.display ='block';
+    MenuRightClick.style.top =event.y + 'px';
+    MenuRightClick.style.left =event.x + 'px';
+})
+document.addEventListener('click', function(){
+    MenuRightClick.style.display='none';
+
 })
