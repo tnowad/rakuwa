@@ -1,7 +1,12 @@
 .offer-banners-area>.container {
+  margin-top: 5px;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.sub-banner:not(:last-child) {
+  margin-right: 5px;
 }
 
 .sub-banner>* img {
