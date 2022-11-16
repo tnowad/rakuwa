@@ -1,5 +1,5 @@
 import { fetchJson, getParams, renderHTML } from './util.js'
-const product = (data) => {
+const productHTML = (data) => {
     return `
     <div class="product-item">
         ${data.label ? `<span class="label ${data.label}"></span>` : ''}
@@ -39,36 +39,43 @@ const product = (data) => {
         </div>
     </div>`
 }
+const productPaginationHTML = (maxPage, currentPage) => {
+    let html = ""
+    for (let i = 1; i <= maxPage; i++) {
+        if (i != currentPage) {
+            html += `<li class="page-item"><a href="?page=${i}">${i}</a></li>`
+        } else {
+            html += `<li class="page-item active"><a href="?page=${i}">${i}</a></li>`
+        }
+    }
+    if (currentPage == 1) {
+        html = `<li class="page-item"><a><i class="fas fa-chevron-left"></i></a></li>` + html
+        html += `<li class="page-item"><a href="?page=${parseInt(currentPage) + 1}"><i class="fas fa-chevron-right"></i></a></li>`
+    } else if (currentPage == maxPage) {
+        html = `<li class="page-item"><a href="?page=${parseInt(currentPage) - 1}"><i class="fas fa-chevron-left"></i></a></li>` + html
+        html += `<li class="page-item"><a"><i class="fas fa-chevron-right"></i></a></li>`
+    } else {
+        html = `<li class="page-item"><a href="?page=${parseInt(currentPage) - 1}"><i class="fas fa-chevron-left"></i></a></li>` + html
+        html += `<li class="page-item"><a href="?page=${parseInt(currentPage) + 1}"><i class="fas fa-chevron-right"></i></a></li>`
+    }
+    return html
+}
 const main = async () => {
     const productData = await fetchJson('/api/v1/product.json')
 
     const shopArea = document.querySelector('.product-area')
-    const page = getParams('page') ? getParams('page') : 1
+    const productPagination = document.querySelector('.product-pagination')
+
+    const currentPage = getParams('page') ? getParams('page') : 1
     const maxPage = productData.length / 12
 
-    for (let i = ((page - 1) * 12); i < 12 * page; i++) {
-        if (productData[i]){
-            renderHTML(shopArea, product(productData[i]))
+    for (let i = ((currentPage - 1) * 12); i < 12 * currentPage; i++) {
+        if (productData[i]) {
+            renderHTML(shopArea, productHTML(productData[i]))
         }
     }
-    const productPagination = document.querySelector('.product-pagination')
-    for (let i = 1; i <= maxPage; i++) {
-        if (i != page) {
-            productPagination.innerHTML += `<li class="page-item"><a href="?page=${i}">${i}</a></li>`
-        } else {
-            productPagination.innerHTML += `<li class="page-item active"><a href="?page=${i}">${i}</a></li>`
-        }
-    }
-    if (page == 1) {
-        productPagination.innerHTML = `<li class="page-item"><a><i class="fas fa-chevron-left"></i></a></li>` + productPagination.innerHTML
-        productPagination.innerHTML += `<li class="page-item"><a href="?page=${parseInt(page) + 1}"><i class="fas fa-chevron-right"></i></a></li>`
-    } else if (page == maxPage) {
-        productPagination.innerHTML = `<li class="page-item"><a href="?page=${parseInt(page) - 1}"><i class="fas fa-chevron-left"></i></a></li>` + productPagination.innerHTML
-        productPagination.innerHTML += `<li class="page-item"><a"><i class="fas fa-chevron-right"></i></a></li>`
-    } else {
-        productPagination.innerHTML = `<li class="page-item"><a href="?page=${parseInt(page) - 1}"><i class="fas fa-chevron-left"></i></a></li>` + productPagination.innerHTML
-        productPagination.innerHTML += `<li class="page-item"><a href="?page=${parseInt(page) + 1}"><i class="fas fa-chevron-right"></i></a></li>`
-    }
+    renderHTML(productPagination, productPaginationHTML(maxPage, currentPage))
+    console.log(productPaginationHTML(maxPage, currentPage))
 }
 
 main()
