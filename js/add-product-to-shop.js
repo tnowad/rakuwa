@@ -75,7 +75,6 @@ const main = async () => {
         }
     }
     renderHTML(productPagination, productPaginationHTML(maxPage, currentPage))
-    console.log(productPaginationHTML(maxPage, currentPage))
 }
 
 main()

@@ -9,6 +9,15 @@ const getParams = (entries) => {
     return urlParams.get(entries)
 }
 const renderHTML = (element, HTMLString) => {
-    element.innerHTML +=  HTMLString
+    element.innerHTML += HTMLString
 }
-export { fetchJson, getParams, renderHTML }
+const addActive = (element) => {
+    element.classList.add('active')
+}
+const removeActive = (element) => {
+    element.classList.remove('active')
+}
+const toggleActive = (element) => {
+    element.classList.toggle('active')
+}
+export { fetchJson, getParams, renderHTML, addActive, removeActive, toggleActive }
