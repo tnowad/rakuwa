@@ -1,3 +1,80 @@
-#MenuRightClick {
-    display: none;
-}
+ #menu {
+    display: block;
+    position: fixed;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-secondary);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(64, 64, 64, 0.15);
+    top: 10;
+    left: 10;
+    width: 208px;
+    
+  }
+
+  .menu-list {
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 8px;
+  }
+  .menu-list, ul {
+      list-style-type: none;
+  }
+  .menu-list + .menu-list {
+    border-top: 1px solid #ddd;
+  }
+
+  .menu-button {
+    font: inherit;
+    color: inherit;
+    outline: none;
+    border: 0;
+    padding: 8px 8px;
+    width: 100%;
+    
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--color-bg-secondary);
+  }
+  .menu-button:hover {
+    background-color: var(--color-bg-primary-offset);
+  }
+  .menu-button:hover svg {
+    stroke: var(--color-text-primary);
+  }
+  .menu-button svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    stroke: var(--color-text-primary-offset);
+  }
+  .menu-button svg.fa {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      color: var(--color-text-primary-offset);
+    }
+  .context-button svg.fa {
+    height: 30px;
+    margin-right: 10px;
+    color: var(--color-text-primary-offset);
+  }
+  .menu-button span:nth-of-type(2) {
+      margin-right: 0;
+      position: absolute;
+      right: 8px;
+      font-size: x-small;
+    }
+    
+  
+
+  
+  
+  
+ 
+ 
