@@ -16,9 +16,13 @@
 }
 
 .slideshow-banners .slide {
+    width: fit-content;
+    height: fit-content;
+    display: none;
+}
+.slideshow-banners .slide img {
     width: 100%;
     height: 100%;
-    display: none;
 }
 .slideshow-banners .slide.active {
     display: block;

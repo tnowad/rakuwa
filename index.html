@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/YourCart.css">
-    <link rel="stylesheet" href="/css/menu.css">
 </head>
 
 <body>
@@ -103,24 +102,15 @@
         </div>
     </div>
     <section class="slideshow-banners">
-        <link href="css/SlideBanner.css" rel="stylesheet" type="text/css" media="all">
         <div class="container">
-            <div class="list-slide">
-                <img class="slide" src="img/banner-01.jpg">
-                <img class="slide" src="img/banner-03.jpg">
-                <img class="slide" src="img/cooking-banner.jpg">
-            </div>
+            <div class="list-slide"></div>
             <div class="nav-slide">
                 <div class="nav-slide-left">&#10094;</div>
                 <div class="nav-slide-right">&#10095;</div>
             </div>
-            <div class="list-dot-slide">
-                <span class="list-dot-slide-item">•</span>
-                <span class="list-dot-slide-item">•</span>
-                <span class="list-dot-slide-item">•</span>
-            </div>
+            <div class="list-dot-slide"></div>
         </div>
-        <script type="module" src="js/slide-show.js"></script>
+        <script type="module" src="js/active-slide-show.js"></script>
     </section>
 
     <section class="offer-banners-area">
@@ -262,7 +252,7 @@
                         <li>
                             <p>Consultation time: 7h - 20h</p>
                         </li>
-                            <p>Delivery time: 7h30 - 20h</p>
+                        <p>Delivery time: 7h30 - 20h</p>
                         <li>
                             <em class="fas fa-map-marker-alt"></em>
                             <a>273 An Duong Vuong Street, Ward 3, District 5, Ho Chi Minh City</a>
@@ -284,7 +274,6 @@
             <a>Privacy Policy • Cookies Policy • Terms of Use</a>
         </div>
     </div>
-    </div>
     <div class="context-menu"></div>
     <script>
         const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
@@ -298,37 +287,9 @@
             console.log("clicked")
             document.querySelector('.mobile-header').classList.toggle('active')
         })
-
-        let bannerIndex = 1;
-        showBanners(bannerIndex);
-
-        function plusBanners(n) {
-            showBanners(bannerIndex += n);
-        }
-
-        function currentBanner(n) {
-            showBanners(bannerIndex = n);
-        }
-
-        function showBanners(n) {
-            let banners = document.querySelectorAll('.banner')
-
-            if (n > banners.length) {
-                bannerIndex = 1
-            } else if (n < 1) {
-                bannerIndex = banners.length
-            }
-
-            banners.forEach(element => {
-                element.classList.remove('active')
-            })
-
-            banners[bannerIndex - 1].classList.toggle('active')
-        }
     </script>
     <!-- <script src="/js/YourCart.js"></script> -->
     <script type="module" src="/js/context-menu.js"></script>
-    </div>
 </body>
 
 </html>
