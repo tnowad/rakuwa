@@ -28,33 +28,21 @@ const btnNavRightSlide = document.querySelector('.nav-slide-right')
 
 btnNavLeftSlide.addEventListener('click', () => {
     plusSlide(-1)
-    timeOutChangeSlide(2000)
 })
+
 btnNavRightSlide.addEventListener('click', () => {
     plusSlide(1)
-    timeOutChangeSlide(2000)
 })
 
 dotSlides.forEach((element, index) => {
     element.addEventListener('click', () => {
         showSlide(index)
-        timeOutChangeSlide(2000)
     })
 })
 
-let interval
-const startSlideShow = () => {
+const startSlideShow = (time) => {
     showSlide(0)
-    interval = setInterval(plusSlide, 2000, 1)
+    window.setInterval(plusSlide, time, 1)
 }
 
-const stopSlideShow = () => {
-    clearInterval(interval)
-}
-
-const timeOutChangeSlide = (time) => {
-    stopSlideShow()
-    setTimeout(startSlideShow, time, time)
-}
-
-startSlideShow(2000)
+startSlideShow(4000)
