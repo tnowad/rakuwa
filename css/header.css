@@ -198,5 +198,8 @@
 }
 
 .nav-slide {
-    cursor: pointer;;
+    cursor: pointer;
+}
+.user-menu {
+    right: 0px;
 }
