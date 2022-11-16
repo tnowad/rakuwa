@@ -7,12 +7,12 @@ let slideIndex = 0
 
 const showDiv = (n) => {
     slides.forEach(element => {
-        element.style.display = 'none'
         removeActive(element)
     })
     slideDots.forEach(element => {
         removeActive(element)
     })
+
     if (n == slides.length) {
         n = 0;
     }
@@ -21,7 +21,8 @@ const showDiv = (n) => {
     }
 
     slideIndex = n
-    slides[n].style.display = "block"
+
+    addActive(slides[n])
     addActive(slideDots[n])
 }
 
@@ -36,6 +37,7 @@ const autoSlideShow = () => {
     clearInterval(Auto);
     Auto = setInterval(function () {
         plusDiv(1)
-    }, 200);
+    }, 2000);
 }
+
 autoSlideShow()
