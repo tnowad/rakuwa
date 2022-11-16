@@ -29,7 +29,7 @@
     --breakpoint-pc: 1200px;
 }
 
-html * {
+* {
     padding: 0;
     margin: 0;
     border: none;
@@ -40,7 +40,7 @@ html * {
 }
 
 body {
-    width: 100vw !important;
+    width: 100% !important;
     padding: 0;
     margin: 0;
     min-width: 400px !important;
@@ -66,5 +66,5 @@ a {
 
 .footer>.footer-center>.container,
 body>*>.container {
-    width: min(100%, 1500px) !important;
+    width: min(100%, 1200px) !important;
 }

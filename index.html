@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="/css/ProductCategoryArea.css">
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/YourCart.css">
 </head>
 
 <body>
@@ -27,9 +26,15 @@
             </div>
             <div class="nav">
                 <ul class="navigation">
+                    <script>
+                        const dropdown = document.querySelectorAll('.dropdown')
+                        dropdown.forEach(element => {
+                            element.addEventListener('')
+                        })
+                    </script>
                     <li><a href="/index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="/pages/product.html">Products</a>
+                        <a>Products</a>
                         <ul class="dropdown-content">
                             <li><a href="">Fruits</a></li>
                             <li><a href="">Seafood</a></li>
@@ -42,7 +47,7 @@
                     </li>
                     <li><a href="/pages/contact.html">Contact Us</a></li>
                     <li class="dropdown">
-                        <a href="">About Us</a>
+                        <a>About Us</a>
                         <ul class="dropdown-content">
                             <li><a href="">Privacy Policy</a></li>
                             <li><a href="">Terms & Conditions</a></li>
@@ -165,12 +170,16 @@
                     </ul>
                 </div>
                 <div class="product-area"></div>
+                <ul class="product-pagination">
+                    <li class="page-item"></li>
+                </ul>
             </div>
-            <ul class="product-pagination">
-                <li class="page-item"></li>
-            </ul>
+            <div class="primary-sidebar">
+                <div class="container">
+
+                </div>
+            </div>
         </div>
-        <div class="primary-sidebar"></div>
     </section>
     <script type="module" src="/js/add-product-to-shop.js"></script>
 
@@ -272,6 +281,7 @@
     </script>
     <!-- <script src="/js/YourCart.js"></script> -->
     <script type="module" src="/js/context-menu.js"></script>
+    <script type="module" src="/js/add-product-to-cart.js"></script>
 </body>
 
 </html>

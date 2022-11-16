@@ -13,7 +13,13 @@ const main = async () => {
     document.addEventListener('contextmenu', (event) => {
         event.preventDefault()
         addActive(contextMenu)
-        contextMenu.style.left = event.x + 'px'
+        if(window.innerWidth - event.x < 200) {
+            contextMenu.style.right = 0
+            contextMenu.style.left = ''
+        } else {
+            contextMenu.style.right = ''
+            contextMenu.style.left = event.x + 'px'
+        }
         contextMenu.style.top = event.y + 'px'
     })
 

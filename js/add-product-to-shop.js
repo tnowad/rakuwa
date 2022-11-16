@@ -60,24 +60,26 @@ const productPaginationHTML = (maxPage, currentPage) => {
     }
     return html
 }
-const main = async () => {
+let productItemArray = []
+const shopArea = document.querySelector('.product-area')
+const renderShopArea = async () => {
     const productData = await fetchJson('/api/v1/product.json')
 
-    const shopArea = document.querySelector('.product-area')
     const productPagination = document.querySelector('.product-pagination')
 
     const currentPage = getParams('page') ? getParams('page') : 1
     const maxPage = productData.length / 12
-
-    for (let i = ((currentPage - 1) * 12); i < 12 * currentPage; i++) {
-        if (productData[i]) {
-            renderHTML(shopArea, productHTML(productData[i]))
+        for (let i = ((currentPage - 1) * 12); i < 12 * currentPage; i++) {
+            if (productData[i]) {
+                renderHTML(shopArea, productHTML(productData[i]))
+                productItemArray.push(productData[i])
+            }
         }
-    }
-    renderHTML(productPagination, productPaginationHTML(maxPage, currentPage))
+        renderHTML(productPagination, productPaginationHTML(maxPage, currentPage))
 }
-
-main()
-
-
-
+let productItemElements
+await renderShopArea().then(()=> {
+    console.log(shopArea)
+    productItemElements = shopArea.querySelectorAll('.product-item')
+})
+export { productItemArray, productItemElements }
