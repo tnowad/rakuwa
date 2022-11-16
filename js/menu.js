@@ -7,5 +7,4 @@ document.addEventListener('contextmenu', function(event){
 })
 document.addEventListener('click', function(){
     menu.style.display='none';
-
 })
