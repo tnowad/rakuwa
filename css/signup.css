@@ -5,7 +5,7 @@
 
 .sign-up .container {
     margin: 50px;
-    height: 111vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,9 +17,11 @@
     font-size: 50px;
     margin: 50px 0 0 50px;
 }
-
+.sign-up .signup-button{
+text-align: center;
+}
 .sign-up .container form #sign-up {
-    width: 500px;
+    justify-content: center;
     background-color: red;
     padding: 10px;
     border: 0.2px solid black;
@@ -53,31 +55,17 @@
 .group-form-accept input {
     cursor: pointer;
 }
-
+.social-login{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .form-group-google a,
 .form-group-facebook a,
 .form-group-twitter a {
-    padding: 20px;
-    border: 0.1px solid black;
-    border-radius: 10px;
-    font-size: 20px;
+    font-size: 50px;
 }
-
-.sign-up .container form .form-group-google a {
-    background-color: red;
-    color: aliceblue;
-}
-
-.sign-up .container form .form-group-facebook a {
-    background-color: blue;
-    color: aliceblue;
-}
-
-.sign-up .container form .form-group-twitter a {
-    background-color: cornflowerblue;
-    color: aliceblue;
-}
-
 .sign-up .container form .form-group-login p {
     display: inline;
 }
