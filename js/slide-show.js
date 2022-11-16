@@ -2,6 +2,8 @@ import { addActive, removeActive } from "./util.js"
 
 const slides = document.querySelectorAll(".slide")
 const slideDots = document.querySelectorAll(".list-dot-slide-item")
+const btnNavSlideLeft = document.querySelector('.nav-slide-left')
+const btnNavSlideRight = document.querySelector('.nav-slide-right')
 
 let slideIndex = 0
 
@@ -24,6 +26,19 @@ const showDiv = (n) => {
 
     addActive(slides[n])
     addActive(slideDots[n])
+}
+
+btnNavSlideLeft.addEventListener('click', () => {
+    showDiv(slideIndex - 1)
+})
+btnNavSlideRight.addEventListener('click', () => {
+    showDiv(slideIndex + 1)
+})
+
+for(let i = 0; i < slideDots.length; i++) {
+    slideDots[i].addEventListener('click', () => {
+        showDiv(i)
+    })
 }
 
 function plusDiv(n) {
