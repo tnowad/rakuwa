@@ -261,6 +261,7 @@
 	{
 		"amount": 1000,
 		"category": "noodle",
+		"description": "Omachi Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
 		"id": 23,
 		"image": "/img/products/mi-omachi.jpg",
 		"label": "hot",
@@ -284,7 +285,7 @@
 	{
 		"amount": 600,
 		"category": "noodle",
-		"description": "Siu Cay Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
+		"description": "Super spicy noodles Vietnam instant noodles spicy shrimp taste 1 case (30 bags)",
 		"id": 25,
 		"image": "/img/products/mi-sieucay.jpg",
 		"label": "hot",
@@ -296,7 +297,7 @@
 	{
 		"amount": 400,
 		"category": "noodle",
-		"description": "Sieu Cay Korea instant noodles spicy shrimp taste 1 case (30 bags)",
+		"description": "Super spicy noodles Korea instant noodles spicy shrimp taste 1 case (30 bags)",
 		"id": 26,
 		"image": "/img/products/mi-sieucay-hanquoc.jpg",
 		"label": "hot",
@@ -308,7 +309,7 @@
 	{
 		"amount": 500,
 		"category": "vegetable",
-		"description": "Nho Thai is a very seriously",
+		"description": "Thai Grapes is a very seriously",
 		"id": 27,
 		"image": "/img/products/nho-thai.jpg",
 		"label": "hot",
@@ -320,7 +321,7 @@
 	{
 		"amount": 100,
 		"category": "vegetable",
-		"description": "NhoMy is very sweet",
+		"description": "American Grapes is very sweet",
 		"id": 28,
 		"image": "/img/products/nho-my.jpg",
 		"label": "hot",
@@ -332,7 +333,7 @@
 	{
 		"amount": 120,
 		"category": "noodle",
-		"description": "Dau tam is sour ",
+		"description": "Mulberry is sour ",
 		"id": 29,
 		"image": "/img/products/dau-tam.jpg",
 		"label": "hot",
@@ -356,7 +357,7 @@
 	{
 		"amount": 200,
 		"category": "vegetable",
-		"description": "",
+		"description": "Apple is a very delicious and cheap fruit, you can use it",
 		"id": 31,
 		"image": "/img/products/tao.jpg",
 		"label": "hot",
@@ -368,7 +369,7 @@
 	{
 		"amount": 400,
 		"category": "vegetable",
-		"description": "MangCut is sweet",
+		"description": "Mangosteen is sweet",
 		"id": 32,
 		"image": "/img/products/mang-cut.jpg",
 		"label": "hot",
@@ -380,7 +381,7 @@
 	{
 		"amount": 600,
 		"category": "vegetable",
-		"description": "Oi made in VietNam",
+		"description": "Cabbage can be sautéed and boiled, very delicious",
 		"id": 33,
 		"image": "/img/products/bapcai.webp",
 		"label": "hot",
@@ -392,7 +393,7 @@
 	{
 		"amount": 500,
 		"category": "vegetable",
-		"description": "Nho Thai is a very seriously",
+		"description": "Durian is a popular dish, very delicious with the price of raisins",
 		"id": 34,
 		"image": "/img/products/sau-rieng.webp",
 		"label": "hot",
@@ -404,7 +405,7 @@
 	{
 		"amount": 100,
 		"category": "vegetable",
-		"description": "NhoMy is very sweet",
+		"description": "Thang Long is very sweet",
 		"id": 35,
 		"image": "/img/products/thang-long.jpg",
 		"label": "hot",
@@ -416,7 +417,7 @@
 	{
 		"amount": 120,
 		"category": "noodle",
-		"description": "Dau tam is nice ",
+		"description": "Carrots make your eyes brighter",
 		"id": 36,
 		"image": "/img/products/ca-rot.webp",
 		"label": "hot",
@@ -428,7 +429,7 @@
 	{
 		"amount": 120,
 		"category": "noodle",
-		"description": "Dau tam is nice ",
+		"description": "White Cabbage is nice ",
 		"id": 37,
 		"image": "/img/products/cai-trang.jpg",
 		"label": "hot",
@@ -440,25 +441,25 @@
 	{
 		"amount": 1000,
 		"category": "vegetable",
-		"description": "Xoai is very sour",
+		"description": "Roasted corn is very nice ",
 		"id": 38,
-		"image": "/img/products/xoai-thai.jpeg",
+		"image": "/img/products/ngo.jpg",
 		"label": "hot",
 		"oldPrice": "15000",
 		"price": "25000",
 		"rating": 5,
-		"title": "Xoài Thái Lan"
+		"title": "Bắp Ngô"
 	},
 	{
 		"amount": 600,
 		"category": "vegetable",
-		"description": "Oi made in VietNam",
+		"description": "Peanuts are popular in a number of dishes",
 		"id": 26,
-		"image": "/img/products/oi.jpg",
+		"image": "/img/products/dau-phong.jpg",
 		"label": "hot",
 		"oldPrice": "10000",
 		"price": "12000",
 		"rating": 5,
-		"title": "Ổi Thái Lan"
+		"title": "Đậu Phộng"
 	}
 ]
