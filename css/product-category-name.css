@@ -1,3 +1,6 @@
 a.product-category.meat::after {
-    content: "thịt";
+    content: "Thịt";
+}
+a.product-category.vegetable::after {
+    content: "Rau củ";
 }
