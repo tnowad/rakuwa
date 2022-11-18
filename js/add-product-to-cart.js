@@ -1,6 +1,5 @@
 import { productItemArray, productItemElements } from './add-product-to-shop.js'
 
-
 const addProduct = (productData) => {
     let products = [];
     if (localStorage.getItem('products')) {
@@ -15,10 +14,12 @@ const removeProduct = (productId) => {
     let products = storageProducts.filter(product => product.productId !== productId);
     localStorage.setItem('products', JSON.stringify(products));
 }
+
 productItemElements.forEach((element, index) => {
-    element.addEventListener('click', () => {
-        addProduct(productItemArray[index]);
-        console.log(localStorage.getItem('products'))
-    })
-}
-)
+    element
+        .querySelector('.product-add-cart')
+        .addEventListener('click', () => {
+            addProduct(productItemArray[index]);
+        console.log(JSON.parse(localStorage.getItem('products')))
+        })
+})
