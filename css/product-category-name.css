@@ -4,3 +4,12 @@ a.product-category.meat::after {
 a.product-category.vegetable::after {
     content: "Rau củ";
 }
+a.product-category.spice::after {
+    content: "Gia vị";
+}
+a.product-category.noodle::after {
+    content: "Mì";
+}
+a.product-category.egg::after {
+    content: "Trứng";
+}
