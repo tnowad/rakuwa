@@ -461,5 +461,17 @@
 		"price": "12000",
 		"rating": 5,
 		"title": "Đậu Phộng"
+	},
+	{
+		"amount": 60,
+		"category": "seafood",
+		"description": "Head of salmon is the best thing to cook with sour soup",
+		"id": 26,
+		"image": "/img/products/dau-ca-hoi.jpg",
+		"label": "hot",
+		"oldPrice": "50000",
+		"price": "36000",
+		"rating": 5,
+		"title": "Đầu cá hồi"
 	}
 ]

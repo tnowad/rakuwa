@@ -1,3 +1,6 @@
+a.product-category {
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 a.product-category.meat::after {
     content: "Thịt";
 }
@@ -18,4 +21,7 @@ a.product-category.fruit::after {
 }
 a.product-category.seafood::after {
     content: "Hải sản";
+}
+a.product-category.fruit-box::after {
+    content: "Túi hoa quả";
 }
