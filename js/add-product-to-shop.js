@@ -9,7 +9,7 @@ const productHTML = (data) => {
             </div>
             <div class="product-item-center">
                 <div class="product-category">
-                    <a href="">${data.category}</a>
+                    <a href="" class="product-category ${data.category}"></a>
                 </div>
                 <a class="product-name" href="/pages/product.html?id=${data.id}">${data.title}</a>
                 <div class="product-rate">

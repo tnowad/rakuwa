@@ -5,6 +5,8 @@ const addProduct = (productData) => {
     if (localStorage.getItem('products')) {
         products = JSON.parse(localStorage.getItem('products'));
     }
+    // TODO check valid
+    
     products.push(productData);
     localStorage.setItem('products', JSON.stringify(products));
 }
