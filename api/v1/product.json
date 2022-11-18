@@ -1,7 +1,7 @@
 [
 	{
 		"amount": 1000,
-		"category": "noodle",
+		"category": "meat",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 1,
 		"image": "/img/products/thit-bo.png",
@@ -308,7 +308,7 @@
 	},
 	{
 		"amount": 500,
-		"category": "vegetable",
+		"category": "fruit",
 		"description": "Thai Grapes is a very seriously",
 		"id": 27,
 		"image": "/img/products/nho-thai.jpg",
@@ -320,7 +320,7 @@
 	},
 	{
 		"amount": 100,
-		"category": "vegetable",
+		"category": "fruit",
 		"description": "American Grapes is very sweet",
 		"id": 28,
 		"image": "/img/products/nho-my.jpg",
@@ -332,7 +332,7 @@
 	},
 	{
 		"amount": 120,
-		"category": "noodle",
+		"category": "fruit",
 		"description": "Mulberry is sour ",
 		"id": 29,
 		"image": "/img/products/dau-tam.jpg",
@@ -344,7 +344,7 @@
 	},
 	{
 		"amount": 1000,
-		"category": "vegetable",
+		"category": "fruit",
 		"description": "Thai mango is very sweet",
 		"id": 30,
 		"image": "/img/products/xoai-thai.jpeg",
@@ -356,7 +356,7 @@
 	},
 	{
 		"amount": 200,
-		"category": "vegetable",
+		"category": "fruit",
 		"description": "Apple is a very delicious and cheap fruit, you can use it",
 		"id": 31,
 		"image": "/img/products/tao.jpg",
@@ -368,7 +368,7 @@
 	},
 	{
 		"amount": 400,
-		"category": "vegetable",
+		"category": "fruit",
 		"description": "Mangosteen is sweet",
 		"id": 32,
 		"image": "/img/products/mang-cut.jpg",
@@ -392,7 +392,7 @@
 	},
 	{
 		"amount": 500,
-		"category": "vegetable",
+		"category": "fruit",
 		"description": "Durian is a popular dish, very delicious with the price of raisins",
 		"id": 34,
 		"image": "/img/products/sau-rieng.webp",
@@ -404,19 +404,19 @@
 	},
 	{
 		"amount": 100,
-		"category": "vegetable",
-		"description": "Thang Long is very sweet",
+		"category": "fruit",
+		"description": "Thanh Long is very sweet",
 		"id": 35,
-		"image": "/img/products/thang-long.jpg",
+		"image": "/img/products/thanh-long.jpg",
 		"label": "hot",
 		"oldPrice": "75000",
 		"price": "70000",
 		"rating": 5,
-		"title": "Thăng Long"
+		"title": "Thanh Long"
 	},
 	{
 		"amount": 120,
-		"category": "noodle",
+		"category": "vegetable",
 		"description": "Carrots make your eyes brighter",
 		"id": 36,
 		"image": "/img/products/ca-rot.webp",
@@ -428,7 +428,7 @@
 	},
 	{
 		"amount": 120,
-		"category": "noodle",
+		"category": "vegetable",
 		"description": "White Cabbage is nice ",
 		"id": 37,
 		"image": "/img/products/cai-trang.jpg",

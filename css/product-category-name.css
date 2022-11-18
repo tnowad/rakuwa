@@ -13,3 +13,9 @@ a.product-category.noodle::after {
 a.product-category.egg::after {
     content: "Trứng";
 }
+a.product-category.fruit::after {
+    content: "Trái cây";
+}
+a.product-category.seafood::after {
+    content: "Hải sản";
+}
