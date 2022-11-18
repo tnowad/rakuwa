@@ -41,7 +41,6 @@ const productHTML = (data) => {
 }
 const productPaginationHTML = (maxPage, currentPage) => {
     let html = ""
-    maxPage++;// thêm dòng này 
     for (let i = 1; i <= maxPage; i++) {
         if (i != currentPage) {
             html += `<li class="page-item"><a href="?page=${i}">${i}</a></li>`
@@ -85,14 +84,14 @@ const renderShopArea = async () => {
     const productPagination = document.querySelector('.product-pagination')
 
     const currentPage = getParams('page') ? getParams('page') : 1
-    const maxPage = productData.length / 12.1 // sửa dòng này 
+    const maxPage = productData.length / 12
     for (let i = ((currentPage - 1) * 12); i < 12 * currentPage; i++) {
         if (productData[i]) {
             renderHTML(shopArea, productHTML(productData[i]))
             productItemArray.push(productData[i])
         }
     }
-    renderHTML(productPagination, productPaginationHTML(maxPage, currentPage))
+    renderHTML(productPagination, productPaginationHTML(Math.ceil(maxPage), currentPage))
 }
 let productItemElements
 await renderShopArea().then(() => {
