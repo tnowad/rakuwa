@@ -29,15 +29,15 @@ const productHTML = (data) => {
             </div>
             <div class="product-item-bottom">
                 <div class="product-price">
-                    <span class="price">${new Intl.NumberFormat().format(data.price)} VND</span>
-                    ${data.oldPrice ? `<br/><span class="old-price">${new Intl.NumberFormat().format(data.oldPrice)} VND</span>` : ''}
+                    <span class="price">${new Intl.NumberFormat().format(data.price)} <sup>VND</sup></span>
+                    ${data.oldPrice ? `<br/><span class="old-price">${new Intl.NumberFormat().format(data.oldPrice)} <sup>VND</sup></span>` : ''}
                 </div>
                 <div class="product-add-cart">
                     <span><a class="fa-solid fa-cart-shopping"></a>Add</span>
             </div>
             </div>
         </div>
-    </div>`
+    </div>` 
 }
 const productPaginationHTML = (maxPage, currentPage) => {
     let html = ""
@@ -80,7 +80,8 @@ const renderShopArea = async () => {
 }
 let productItemElements
 await renderShopArea().then(()=> {
-    console.log(shopArea)
+    // console.log(shopArea)
     productItemElements = shopArea.querySelectorAll('.product-item')
 })
 export { productItemArray, productItemElements }
+// console.log(productItemArray)

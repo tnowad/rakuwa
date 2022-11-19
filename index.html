@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/ProductCategoryArea.css">
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/yourcart.css">
 </head>
 
 <body>
@@ -58,7 +59,8 @@
             <div class="menu-icon">
                 <div class="search-box">
                     <form class="search-form">
-                        <input type="search" class="search-text" placeholder="Search" required>
+                        <input type="search" class="search-text" placeholder="Search product" onkeyup="searchFunction()"
+                            required>
                         <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
                     </form>
                 </div>
@@ -176,7 +178,26 @@
             </div>
             <div class="primary-sidebar">
                 <div class="container">
+                    <h2>My Cart</h2>
+                    <div class="your-cart">
+                        <table border="5">
+                            <thead>
+                                <tr>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Xoá</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="text-align: right;" class="price-total">
+                        <p style="font-weight:bold ;">Tổng tiền: <span>0</span><sup>VND</sup></p>
+                    </div>
+                    <button>Thanh Toán</button>
                 </div>
             </div>
         </div>
@@ -279,9 +300,10 @@
             document.querySelector('.mobile-header').classList.toggle('active')
         })
     </script>
-    <!-- <script src="/js/YourCart.js"></script> -->
     <script type="module" src="/js/context-menu.js"></script>
     <script type="module" src="/js/add-product-to-cart.js"></script>
+    <script src="./js/Search.js"></script>
+
 </body>
 
 </html>
