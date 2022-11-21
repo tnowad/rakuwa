@@ -21,28 +21,6 @@
 </head>
 
 <body>
-    <div id="menu">
-        <script src="/js/menu.js"></script>
-        <script src="https://kit.fontawesome.com/cd5785f33e.js" crossorigin="anonymous"></script>
-        </li>
-        <ul class="menu-list">
-            <li class="menu-item"><button class="menu-button">
-                    <span><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></span>
-                </button></li>
-
-            <li class="menu-item"><button class="menu-button">
-                    <span><a href="/pages/product.html"><i class="fa-solid fa-leaf"></i> Product</a></span>
-                </button></li>
-            <li class="menu-item"><button class="menu-button">
-                    <span><a href="/pages/checkout.html"><i class="fa-solid fa-hand-holding-dollar"></i> Check
-                            Out</a></span>
-                </button></li>
-            <li class="menu-item"><button class="menu-button">
-                    <span><a href="/pages/contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a></span>
-                </button></li>
-
-        </ul>
-    </div>
     <div class="header">
         <div class="container">
             <div class="logo">
@@ -51,9 +29,15 @@
             </div>
             <div class="nav">
                 <ul class="navigation">
+                    <script>
+                        const dropdown = document.querySelectorAll('.dropdown')
+                        dropdown.forEach(element => {
+                            element.addEventListener('')
+                        })
+                    </script>
                     <li><a href="/index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="/pages/product.html">Products</a>
+                        <a>Products</a>
                         <ul class="dropdown-content">
                             <li><a href="">Fruits</a></li>
                             <li><a href="">Seafood</a></li>
@@ -66,7 +50,7 @@
                     </li>
                     <li><a href="/pages/contact.html">Contact Us</a></li>
                     <li class="dropdown">
-                        <a href="">About Us</a>
+                        <a>About Us</a>
                         <ul class="dropdown-content">
                             <li><a href="">Privacy Policy</a></li>
                             <li><a href="">Terms & Conditions</a></li>
@@ -77,7 +61,8 @@
             <div class="menu-icon">
                 <div class="search-box">
                     <form class="search-form">
-                        <input type="search" class="search-text" placeholder="Search" required>
+                        <input type="search" class="search-text" placeholder="Search product" onkeyup="searchFunction()"
+                            required>
                         <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
                     </form>
                 </div>
@@ -92,7 +77,7 @@
                     <ul class="user-menu dropdown-content">
                         <li><a href="/pages/login.html">Login</a> / <a href="/pages/signup.html">Sign up</a></li>
                         <li><a href="/pages/setting.html">Setting</a></li>
-                        <li><a href="">Help</a></li>
+                        <li><a href="/pages/help.html">Help</a></li>
                     </ul>
                 </button>
             </div>
@@ -100,20 +85,20 @@
         <div class="container">
             <ul class="navigation mobile-header">
                 <div class="container">
-                    <li><a href="">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li class="dropdown-mobile">
-                        <a>Products</a>
+                        <a href="/pages/product.html">Products</a>
                         <ul>
-                            <li><a href="">Fruits</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Meat & Poultry</a></li>
-                            <li><a href="">Hot items</a></li>
-                            <li><a href="">Grocery</a></li>
-                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                            <li><a href="/pages/product.html">Fruits</a></li>
+                            <li><a href="/pages/product.html">Seafood</a></li>
+                            <li><a href="/pages/product.html">Vegetables</a></li>
+                            <li><a href="/pages/product.html">Meat & Poultry</a></li>
+                            <li><a href="/pages/product.html">Hot items</a></li>
+                            <li><a href="/pages/product.html">Grocery</a></li>
+                            <li><a href="/pages/product.html">Fruits Basket / Fruits Box</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a href="/pages/contact.html">Contact Us</a></li>
                     <li class="dropdown-mobile">
                         <a>About Us</a>
                         <ul>
@@ -125,82 +110,40 @@
             </ul>
         </div>
     </div>
-    <!-- TODO:Change name of class profile to profile-info and rename of file to profile.html -->
+
     <section class="profile-info">
         <div class="profile-details">
-            <img src="/img/profile/avt.png" alt="">
+            <a href="/pages/profile.html"><img src="/img/profile/avt.png" alt=""></a>
             <h3 class="name">NICKNAME</h3>
             <small><i>Something about you</i></small>
         </div>
-        <div class="profile-nav">
-            <ul>
-                <li class="profile-nav-list">
-                    <button class="profile-nav-list-item">Manage My Profile</button>
-                    <ul>
-                        <li>
-                            <button class="profile-nav-list-item active"
-                                onclick="openTabs(event, 'profile-tab-profile')">My
-                                Profile</button>
-                        </li>
-                        <li>
-                            <button class="profile-nav-list-item" id="profile-profile">Address
-                                Book</button>
-                        </li>
-                        <li>
-                            <button class="profile-nav-list-item" id="profile-address">My Payment
-                                Options</button>
-                        </li>
-                    </ul>
-                </li>
-                <li class="profile-nav-list">
-                    <button class="profile-nav-list-item" id="profile-payment">My Orders</button>
-                    <ul>
-                        <li><button class="profile-nav-list-item" id="profile-order-return">My
-                                Returns</button>
-                        </li>
-                        <li><button class="profile-nav-list-item" id="profile-order-cancel">My
-                                Cancellations</button>
-                        </li>
-                    </ul>
-                </li>
-                <a class="profile-nav-list">
-                    <button class="profile-nav-list-item" id="profile-review">My Reviews</button>
-                </a>
-            </ul>
-        </div>
-        <!--
-                You shouldn't acronym name of class or id
-                use father-child
-                Example:
-                    .profile-info
-                        .profile-details
-                        .profile-nav
-                            ul.profile-nav-list.active
-                                li.profile-nav-list-item#profile-profile
-                                li.profile-nav-list-item#profile-address
-                                li.profile-nav-list-item#profile-payment
-                            ul.profile-nav-list
-                                li.profile-nav-list-item#profile-order-return
-                                li.profile-nav-list-item#profile-order-cancel
-                            a.profile-nav
-                        .profile-tabs
-                            .profile-tab-item.active#profile-tab-profile
-                                I see you never use form id, so I suggest change to:
-                                form#profile-form-profile
-                            .profile-tab-item#profile-tab-address
-                            .profile-tab-item#profile-tab-payment
-                            .profile-tab-item#profile-tab-order-return
-                            .profile-tab-item#profile-tab-order-cancel
-            -->
+        <ul class="profile-nav">
+            <li class="profile-nav-list">
+                <p class="profile-nav-list-menu-item show-menu">Manage My Profile</p>
+                <ul class="profile-nav-list-menu">
+                    <li class="profile-nav-list-menu-item active" id="profile-profile">My Profile</li>
+                    <li class="profile-nav-list-menu-item" id="profile-address">Address Book</li>
+                    <li class="profile-nav-list-menu-item" id="profile-payment">My Payment Options</li>
+                </ul>
+            </li>
+            <li class="profile-nav-list">
+                <p class="profile-nav-list-menu-item show-menu">My Orders</p>
+                <ul class="profile-nav-list-menu">
+                    <li class="profile-nav-list-menu-item" id="profile-order-return">My Return</li>
+                    <li class="profile-nav-list-menu-item" id="profile-order-cancel">My Cancellations</li>
+                </ul>
+            </li>
+            <li class="profile-nav-list profile-nav-list-menu-item" id="profile-review">My Reviews</li>
+        </ul>
         <div class="profile-tabs">
             <div id="profile-tab-profile" class="profile-tab-item active">
-                <div class="heading">
+                <div class="profile-tab-heading">
                     <h1>My Profile</h1>
                     <p>Manage and protect your profile</p>
                 </div>
-                <div class="info">
+                <div class="profile-tab-info">
                     <form id="profile-form-profile">
-                        <div class="content">
+                        <div class="profile-form-content">
                             <label>Username</label>
                             <p>
                                 <input type="text" class="box" placeholder="Username">
@@ -208,20 +151,20 @@
                                 <small><i>Username can only be changed once.</i></small>
                             </p>
                         </div>
-                        <div class="content">
+                        <div class="profile-form-content">
                             <label>Name</label>
                             <input type="text" class="box" placeholder="Your full name">
                         </div>
-                        <div class="content">
+                        <div class="profile-form-content">
                             <label>Email</label>
                             <input type="email" class="box" placeholder="Your email">
                         </div>
-                        <div class="content">
+                        <div class="profile-form-content">
                             <label>Phone Number</label>
                             <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 placeholder="Your phone number">
                         </div>
-                        <div class="content">
+                        <div class="profile-form-content">
                             <label>Gender</label>
                             <div class="box input">
                                 <select class="gender">
@@ -231,11 +174,11 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="content">
+                        <div class="profile-form-content">
                             <label>Date of birth</label>
                             <div class="box input"><input type="date" class="date"></div>
                         </div>
-                        <div class="content btn">
+                        <div class="profile-form-content btn">
                             <button type="submit"><i class="fal fa-save"></i> Save</button>
                         </div>
                     </form>
@@ -301,6 +244,7 @@
     <script type="module">
         import { removeActive, addActive } from '../js/util.js'
         const profileNav = document.querySelector('#profile-profile')
+
         const profileTabs = document.querySelectorAll('.profile-tab-item')
         profileNav.addEventListener('click', () => {
             profileTabs.forEach(element => {
@@ -309,35 +253,20 @@
             addActive(document.querySelector('#profile-tab-profile'))
         })
     </script>
+
     <div class="footer">
-        <!-- <div class="footer-top">
-            <div class="container">
-                <div class="newsletter">
-                    <h1 class="title">
-                        Newsletter Subscribe
-                    </h1>
-
-                    <form action="" class="newsletter-form">
-                        <input type="email" id="email" placeholder="Enter Email" pattern=".">
-                        <input type="button" value="Subscribe Now >>" id="submit">
-                    </form>
-
-                    <div class="count-clients">
-                        <p id="count">56384+</p>
-                        <p> Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="footer-center">
             <div class="container">
                 <div class="about-us">
                     <div class="logo"><img src="/img/logo2.png" alt=""></div>
-                    <p class="description">This website is made for educational purposes only, and has no commercial
-                        value. Any products listed on the website are random, not actual market figures
+                    <p class="description">This website is made for educational purposes only, and has no
+                        commercial
+                        value. Any products listed on the website are random, not actual market figures.
                     </p>
                     <ul class="list-icons">
-                        <li><em class="fab fa-facebook-f"></em></li>
+                        <li>
+                            <a href="https://www.facebook.com/rakuwa.raucuqua/"><em class="fab fa-facebook-f"></em></a>
+                        </li>
                         <li><em class="fab fa-twitter"></em></li>
                         <li><em class="fab fa-linkedin"></em></li>
                         <li><em class="fab fa-youtube"></em></li>
@@ -384,8 +313,8 @@
                     <ul class="list-info">
                         <li>
                             <p>Consultation time: 7h - 20h</p>
-                            <p>Delivery time: 7h30 - 20h</p>
                         </li>
+                        <p>Delivery time: 7h30 - 20h</p>
                         <li>
                             <em class="fas fa-map-marker-alt"></em>
                             <a>273 An Duong Vuong Street, Ward 3, District 5, Ho Chi Minh City</a>
@@ -395,7 +324,7 @@
                             <a>cskh@help.rakuwa.vn</a>
                         </li>
                         <li>
-                            <em class="fa fa-phone"></em>
+                            <em class="fas fa-phone"></em>
                             <a>0379713541</a>
                         </li>
                     </ul>
@@ -407,6 +336,7 @@
             <a>Privacy Policy • Cookies Policy • Terms of Use</a>
         </div>
     </div>
+    <div class="context-menu"></div>
     <script>
         const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
         dropDownMobile.forEach(element => {
@@ -419,34 +349,10 @@
             console.log("clicked")
             document.querySelector('.mobile-header').classList.toggle('active')
         })
-
-        let bannerIndex = 1;
-        showBanners(bannerIndex);
-
-        function plusBanners(n) {
-            showBanners(bannerIndex += n);
-        }
-
-        function currentBanner(n) {
-            showBanners(bannerIndex = n);
-        }
-
-        function showBanners(n) {
-            let banners = document.querySelectorAll('.banner')
-
-            if (n > banners.length) {
-                bannerIndex = 1
-            } else if (n < 1) {
-                bannerIndex = banners.length
-            }
-
-            banners.forEach(element => {
-                element.classList.remove('active')
-            })
-
-            banners[bannerIndex - 1].classList.toggle('active')
-        }
     </script>
+    <script type="module" src="/js/context-menu.js"></script>
+    <script type="module" src="/js/add-product-to-cart.js"></script>
+    <script src="./js/Search.js"></script>
 </body>
 
 </html>
