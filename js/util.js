@@ -30,4 +30,22 @@ const toggleActive = (element) => {
     element.classList.toggle('active')
 }
 
-export { fetchJson, fetchHTML, getParams, renderHTML, addActive, removeActive, toggleActive }
+const getItemLocalStorage = (key) => {
+    return JSON.parse(localStorage.getItem(key))
+}
+
+const setItemLocalStorage = (key, object) => {
+    localStorage.setItem(key, JSON.stringify(object))
+}
+
+export {
+    fetchJson,
+    fetchHTML,
+    getParams,
+    renderHTML,
+    addActive,
+    removeActive,
+    toggleActive,
+    getItemLocalStorage,
+    setItemLocalStorage
+}
