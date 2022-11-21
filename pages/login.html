@@ -113,6 +113,7 @@
     </div>
     <style>
         .login {
+            margin-top: 10vh;
             width: 100%;
         }
 
@@ -123,8 +124,21 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
+            align-items: center;
         }
-
+        .login-form {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-form > * {
+            width: 100%;
+        }
+        .login-form .login-form-title {
+            text-align: center;
+            font-size: 50px;
+        }
         .login-form {
             display: flex;
             flex-direction: column;
@@ -134,29 +148,34 @@
         .form-input {
             position: relative;
             height: 60px;
-            ;
             box-sizing: border-box;
             padding: 10px 10px;
         }
-
+        
         .form-input input {
+            border: 2px solid gray;
             height: 100%;
+            border-radius: 5px;
             width: 100%;
-            background: grey;
         }
 
         .form-input label {
             position: absolute;
             left: 20px;
-            top: 20%;
+            top: 25%;
+            padding: 5px;
             transition: 0.5s all;
         }
 
         .form-input input:not(:placeholder-shown)~label,
         .form-input input:focus~label {
+            background: white;
             top: 0%;
         }
-        
+        .login-form input[type="submit"] {
+            width: 150px;
+            height: 40px;
+        }
     </style>
     <section class="login">
         <div class="container">
