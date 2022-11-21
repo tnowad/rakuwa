@@ -117,75 +117,79 @@
             <h3 class="name">NICKNAME</h3>
             <small><i>Something about you</i></small>
         </div>
-        <ul class="profile-nav">
-            <li class="profile-nav-list">
-                <p class="profile-nav-list-menu-item show-menu">Manage My Profile</p>
-                <ul class="profile-nav-list-menu">
-                    <li class="profile-nav-list-menu-item active" id="profile-profile">My Profile</li>
-                    <li class="profile-nav-list-menu-item" id="profile-address">Address Book</li>
-                    <li class="profile-nav-list-menu-item" id="profile-payment">My Payment Options</li>
-                </ul>
-            </li>
-            <li class="profile-nav-list">
-                <p class="profile-nav-list-menu-item show-menu">My Orders</p>
-                <ul class="profile-nav-list-menu">
-                    <li class="profile-nav-list-menu-item" id="profile-order-return">My Return</li>
-                    <li class="profile-nav-list-menu-item" id="profile-order-cancel">My Cancellations</li>
-                </ul>
-            </li>
-            <li class="profile-nav-list profile-nav-list-menu-item" id="profile-review">My Reviews</li>
-        </ul>
+        <div class="profile-nav">
+            <ul class="container">
+                <li class="profile-nav-list active">
+                    <p id="profile-profile" class="show-menu">Manage My Profile</p>
+                    <ul class="profile-nav-list-menu">
+                        <li class="profile-nav-list-menu-item active" id="profile-profile">My Profile</li>
+                        <li class="profile-nav-list-menu-item" id="profile-address">Address Book</li>
+                        <li class="profile-nav-list-menu-item" id="profile-payment">My Payment Options</li>
+                    </ul>
+                </li>
+                <li class="profile-nav-list">
+                    <p id="profile-order-return" class="show-menu">My Orders</p>
+                    <ul class="profile-nav-list-menu">
+                        <li class="profile-nav-list-menu-item" id="profile-order-return">My Return</li>
+                        <li class="profile-nav-list-menu-item" id="profile-order-cancel">My Cancellations</li>
+                    </ul>
+                </li>
+                <li class="profile-nav-list show-menu profile-nav-list-menu-item" id="profile-review">My Reviews</li>
+            </ul>
+        </div>
         <div class="profile-tabs">
-            <div id="profile-tab-profile" class="profile-tab-item active">
+            <div id="profile-profile-tab" class="profile-tab-item active">
                 <div class="profile-tab-heading">
                     <h1>My Profile</h1>
                     <p>Manage and protect your profile</p>
                 </div>
-                <div class="profile-tab-info">
-                    <form id="profile-form-profile">
-                        <div class="profile-form-content">
-                            <label>Username</label>
-                            <p>
-                                <input type="text" class="box" placeholder="Username">
-                                <br>
-                                <small><i>Username can only be changed once.</i></small>
-                            </p>
+                <form class="profile-tab-item" id="profile-form-profile">
+                    <div class="profile-form-content">
+                        <label>Username</label>
+                        <p>
+                            <input type="text" class="box" placeholder="Username">
+                            <br>
+                            <small><i>Username can only be changed once.</i></small>
+                        </p>
+                    </div>
+                    <div class="profile-form-content">
+                        <label>Name</label>
+                        <input type="text" class="box" placeholder="Your full name">
+                    </div>
+                    <div class="profile-form-content">
+                        <label>Email</label>
+                        <input type="email" class="box" placeholder="Your email">
+                    </div>
+                    <div class="profile-form-content">
+                        <label>Phone Number</label>
+                        <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder="Your phone number">
+                    </div>
+                    <div class="profile-form-content">
+                        <label>Gender</label>
+                        <div class="box input">
+                            <select class="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</button>
+                                <option value="other">Other</button>
+                            </select>
                         </div>
-                        <div class="profile-form-content">
-                            <label>Name</label>
-                            <input type="text" class="box" placeholder="Your full name">
-                        </div>
-                        <div class="profile-form-content">
-                            <label>Email</label>
-                            <input type="email" class="box" placeholder="Your email">
-                        </div>
-                        <div class="profile-form-content">
-                            <label>Phone Number</label>
-                            <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                placeholder="Your phone number">
-                        </div>
-                        <div class="profile-form-content">
-                            <label>Gender</label>
-                            <div class="box input">
-                                <select class="gender">
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</button>
-                                    <option value="other">Other</button>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="profile-form-content">
-                            <label>Date of birth</label>
-                            <div class="box input"><input type="date" class="date"></div>
-                        </div>
-                        <div class="profile-form-content btn">
-                            <button type="submit"><i class="fal fa-save"></i> Save</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="profile-form-content">
+                        <label>Date of birth</label>
+                        <div class="box input"><input type="date" class="date"></div>
+                    </div>
+                    <div class="profile-form-content btn">
+                        <button type="submit"><i class="fal fa-save"></i> Save</button>
+                    </div>
+                </form>
             </div>
 
-            <div id="profile-tab-payment" class="profile-tab-item">
+            <div id="profile-address-tab" class="profile-tab-item">
+
+            </div>
+
+            <div id="profile-payment-tab" class="profile-tab-item">
                 <div class="form">
                     <div class="content">
                         <h1>Credit / Debit Card</h1>
@@ -202,11 +206,11 @@
                 </div>
             </div>
 
-            <div id="profile-tab-order-return">
+            <div id="profile-order-return-tab" class="profile-tab-item">
 
             </div>
 
-            <div id="profile-tab-order-cancel" class="profile-tab-item">
+            <div id="profile-order-cancel-tab" class="profile-tab-item">
                 <div class="heading">
                     <h1>Change Password</h1>
                     <p>For your profile's security, do not share your password with anyone else</p>
@@ -236,21 +240,35 @@
                 </div>
             </div>
 
-            <div id="profile-tab-review" class="profile-tab-item">
+            <div id="profile-review-tab" class="profile-tab-item">
 
             </div>
         </div>
     </section>
     <script type="module">
-        import { removeActive, addActive } from '../js/util.js'
-        const profileNav = document.querySelector('#profile-profile')
-
-        const profileTabs = document.querySelectorAll('.profile-tab-item')
-        profileNav.addEventListener('click', () => {
-            profileTabs.forEach(element => {
-                removeActive(element)
+        import { addActive, removeActive } from '/js/util.js'
+        const profileNavLists = document.querySelectorAll('.profile-nav-list')
+        const profileTabLists = document.querySelectorAll('.profile-tab-item')
+        profileNavLists.forEach(element => {
+            element.addEventListener('click', () => {
+                profileNavLists.forEach(element => {
+                    removeActive(element)
+                })
+                addActive(element)
             })
-            addActive(document.querySelector('#profile-tab-profile'))
+        })
+        const profileNavListItems = document.querySelectorAll('.profile-nav-list-menu-item')
+        profileNavListItems.forEach(element => {
+            element.addEventListener('click', () => {
+                profileNavListItems.forEach(element => {
+                    removeActive(element)
+                })
+                profileTabLists.forEach(element => {
+                    removeActive(element)
+                })
+                addActive(document.querySelector(`#${element.id}-tab`))
+                addActive(element)
+            })
         })
     </script>
 
