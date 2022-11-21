@@ -1,6 +1,8 @@
 import { productItemArray, productItemElements } from './add-product-to-shop.js'
-updateProduct();
 
+const productCart = document.querySelector('.product-cart')
+
+updateProduct();
 
 const addProduct = (productData,productName) => {
     let products = [];
