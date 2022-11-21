@@ -18,6 +18,7 @@
 </head>
 <script type="module">
     import { getParams, fetchJson } from '/js/util.js'
+    // import { addProductToCart } from '/js/add-product-to-cart.js'
     let idProduct = getParams('id')
     let productDetailHTML = (data) => {
         return `<div class="product-details-top-right">
@@ -36,11 +37,9 @@
                         <span class="product-detail-price-current">${data.price}</span>
                         <span class="product-detail-price-old">${data.oldPrice}</span>
                     </div>
-                    <form action="" class="product-add-to-cart">
-                        <input type="number" name="" placeholder="1" id="" min="1" max="100">
-                        <!-- todo check localStorage if valid then show input number -->
+                    <div action="" class="product-add-to-cart">
                         <input type="submit" value="Add to cart">
-                    </form>
+                    </div>
                     <h2>Thông tin sản phẩm</h2>
                     <p class="product-detail-description">${data.description}</p>
                 </div>`
@@ -48,6 +47,15 @@
     let productData = await fetchJson('/api/v1/product.json')
     let productDetailsTop = document.querySelector('.product-details-top')
     productDetailsTop.innerHTML = productDetailHTML(productData[idProduct])
+    const addProductToCart = (product) => {
+        console.log(product)
+    }
+    setTimeout(() => {
+        document.querySelector('.product-add-to-cart input').addEventListener('click', () => {
+            addProductToCart(productData[idProduct])
+        })
+    }, 200)
+    preventDefault();
 </script>
 
 <body>

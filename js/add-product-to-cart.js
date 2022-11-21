@@ -181,3 +181,9 @@ const pay = () => {
 
 updateProduct()
 showAndCloseCart()
+
+// pls don't do that :(
+
+export {
+    addProductToCart
+}
