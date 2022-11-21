@@ -10,13 +10,45 @@
     <link rel="stylesheet" href="/asset/fontawesome/css/all.css">
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="css/SlideShowBanner.css">
     <link rel="stylesheet" href="/css/OfferBanner.css">
     <link rel="stylesheet" href="/css/ProductCategoryArea.css">
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/yourcart.css">
 </head>
+<script type="module">
+    import { getParams, fetchJson } from '/js/util.js'
+    let idProduct = getParams('id')
+    let productDetailHTML = (data) => {
+        return `<div class="product-details-top-right">
+                    <div class="product-detail-slide-show">
+                        <img src="${data.image}" alt="">
+                    </div>
+                </div>
+                <div class="product-details-top-left">
+                    <span class="stock-status ${data.label}"></span>
+                    <h2 class="title-detail">${data.title}</h2>
+                    <div class="product-detail-rating"><a class="product-rate">
+                                    <em class="fas fa-star active"></em><em class="fas fa-star active"></em><em class="fas fa-star active"></em><em class="fas fa-star active"></em><em class="fas fa-star"></em>
+                                </a></div>
+                    <span class="product-category ${data.category}"></span>
+                    <div class="product-detail-price">
+                        <span class="product-detail-price-current">${data.price}</span>
+                        <span class="product-detail-price-old">${data.oldPrice}</span>
+                    </div>
+                    <form action="" class="product-add-to-cart">
+                        <input type="number" name="" placeholder="1" id="" min="1" max="100">
+                        <!-- todo check localStorage if valid then show input number -->
+                        <input type="submit" value="Add to cart">
+                    </form>
+                    <h2>Thông tin sản phẩm</h2>
+                    <p class="product-detail-description">${data.description}</p>
+                </div>`
+    }
+    let productData = await fetchJson('/api/v1/product.json')
+    let productDetailsTop = document.querySelector('.product-details-top')
+    productDetailsTop.innerHTML = productDetailHTML(productData[idProduct])
+</script>
 
 <body>
     <div class="header">
@@ -272,7 +304,8 @@
                             <a class="comment-paid"> <span><i class="fas fa-check"></i></span> Đã mua</a>
                         </div>
                         <div class="comment-center">
-                            <a class="comment-content">Nước màu mật ong xài rất đáng tiền luôn, hôm đi dã ngoại vợ mình, Hoàng Dung
+                            <a class="comment-content">Nước màu mật ong xài rất đáng tiền luôn, hôm đi dã ngoại vợ mình,
+                                Hoàng Dung
                                 ướp cánh gà bằng chai này nè, nướng ăn bao ngon, nghe mùi thơm, thịt mềm và lên màu
                                 đẹp.</a>
                         </div>
@@ -295,7 +328,8 @@
                             <a class="comment-paid"> <span><i class="fas fa-check"></i></span> Đã mua</a>
                         </div>
                         <div class="comment-center">
-                            <a class="comment-content">Hôm rồi sinh nhật con gái, vợ mình trổ tài làm món gà nướng cho cả
+                            <a class="comment-content">Hôm rồi sinh nhật con gái, vợ mình trổ tài làm món gà nướng cho
+                                cả
                                 nhà. Mình thấy vợ ướp bằng chai nước màu mật ong, gà nướng lên thơm lắm mà ăn rất là
                                 ngon.</a>
                         </div>
