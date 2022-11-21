@@ -1,7 +1,7 @@
 [
 	{
-		"amount": 1000,
-		"category": "noodle",
+		"amount": 72,
+		"category": "meat",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 1,
 		"image": "/img/products/thit-bo.png",
@@ -12,7 +12,7 @@
 		"title": "Thịt Bò"
 	},
 	{
-		"amount": 1000,
+		"amount": 104,
 		"category": "meat",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 2,
@@ -24,7 +24,7 @@
 		"title": "Thịt Heo"
 	},
 	{
-		"amount": 1000,
+		"amount": 95,
 		"category": "meat",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 3,
@@ -36,7 +36,7 @@
 		"title": "Thịt Gà"
 	},
 	{
-		"amount": 1000,
+		"amount": 805,
 		"category": "vegetable",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 4,
@@ -48,7 +48,7 @@
 		"title": "Mùi Tàu"
 	},
 	{
-		"amount": 1000,
+		"amount": 710,
 		"category": "vegetable",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 5,
@@ -60,7 +60,7 @@
 		"title": "Hành Lá"
 	},
 	{
-		"amount": 1000,
+		"amount": 650,
 		"category": "vegetable",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 6,
@@ -72,7 +72,7 @@
 		"title": "Ớt đỏ"
 	},
 	{
-		"amount": 1000,
+		"amount": 455,
 		"category": "vegetable",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 7,
@@ -96,7 +96,7 @@
 		"title": "Bột Canh"
 	},
 	{
-		"amount": 1000,
+		"amount": 200,
 		"category": "spice",
 		"description": "Ex esse aliquip cillum esse excepteur dolor cillum ullamco. Exercitation dolore proident enim sint veniam culpa pariatur laboris. Pariatur aliquip cillum amet minim aute.",
 		"id": 9,

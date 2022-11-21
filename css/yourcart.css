@@ -1,4 +1,27 @@
-.primary-sidebar .container {}
+.primary-sidebar .container {
+    background-color: white;
+    position: fixed;
+    /* right: 20px;*/
+    right: -100%;
+    top: 79px;
+    box-shadow: 1px 1px 3px 2px red;
+    border-radius: 5px;
+    width: 500px;
+    z-index: 1;
+}
+
+.primary-sidebar .container i {
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.primary-sidebar .container i:hover {
+    font-size: 22px;
+    transition: all 0.2s ease;
+}
 
 .primary-sidebar .container h2 {
     text-align: center;
@@ -12,7 +35,7 @@
 .primary-sidebar .container .your-cart {
     overflow-y: scroll;
     min-height: 20vh;
-    max-height: 130vh;
+    max-height: 50vh;
 }
 
 .primary-sidebar .container .your-cart table thead tr th,
@@ -32,6 +55,12 @@
 
 .primary-sidebar .container button:hover {
     background-color: tomato;
+}
+
+.primary-sidebar .container .your-cart table tbody h2 {
+    position: relative;
+    top: 20px;
+    left: 100px;
 }
 
 .primary-sidebar .container .your-cart table tbody tr td .cart-delete {
