@@ -10,35 +10,15 @@
     <link rel="stylesheet" href="/asset/fontawesome/css/all.css">
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="css/SlideShowBanner.css">
+    <link rel="stylesheet" href="/css/OfferBanner.css">
+    <link rel="stylesheet" href="/css/ProductCategoryArea.css">
+    <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="../css/checkout.css">
-    <!-- <link rel="stylesheet" href="../css/menu.css"> -->
     <link rel="stylesheet" href="/css/yourcart.css">
 </head>
 
-
 <body>
-    <!-- <div id="menu">
-        <script src="/js/menu.js"></script>
-        <script src="https://kit.fontawesome.com/cd5785f33e.js" crossorigin="anonymous"></script>
-        </li>
-        <ul class="menu-list">
-            <li class="menu-item"><button class="menu-button">
-                <span><a href="/index.html"><i class ="fa-solid fa-house"></i> Home</a></span>
-                </button></li>
-              
-                <li class="menu-item"><button class="menu-button">
-                    <span><a href="/pages/product.html"><i class="fa-solid fa-leaf"></i> Product</a></span>
-                    </button></li>
-            <li class="menu-item"><button class="menu-button">
-                <span><a href="/pages/checkout.html"><i class="fa-solid fa-hand-holding-dollar"></i> Check Out</a></span>
-                </button></li>
-            <li class="menu-item"><button class="menu-button">
-                <span><a href="/pages/contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a></span>
-                </button></li>
-
-        </ul>
-    </div> -->
     <div class="header">
         <div class="container">
             <div class="logo">
@@ -87,7 +67,7 @@
                 <button class="menu-sidebar">
                     <em class="fas fa-bars"></em>
                 </button>
-                <button class="cartt">
+                <button class="btn-cart">
                     <em class="fa fa-cart-plus"></em>
                 </button>
                 <button class="user dropdown">
@@ -128,197 +108,14 @@
             </ul>
         </div>
     </div>
-
-    <div class="checkout">
+    <section class="check-out">
         <div class="container">
-            <div class="checkout-text">
-                <h1>Check Out</h1>
-            </div>
-            <div class="row">
-                <div class="group-col info-customer">
-                    <h4>Billing address</h4>
-                    <form action="">
-                        <div class="fullname">
-                            <div class="group-fullname group-fistname">
-                                <label for="firstName" class="text-name">Fist name</label>
-                                <input type="text" id="firstName" size="40px" placeholder="First Name" required>
-                            </div>
-                            <div class="group-fullname group-lastname">
-                                <label for="lastName" class="text-name">Last Name</label>
-                                <input type="text" id="lastName" size="40px" placeholder="Last Name" required>
-                            </div>
-                        </div>
-                        <div class="group-info-details group-username">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" placeholder="Username" required>
-                            <!-- <div class="invalid-feedback" style="width: 100% ;">Your username is required</div> -->
-                        </div>
-                        <div class="group-info-details group-email">
-                            <label for="email">Email</label>
-                            <input type="email" name="" id="email" placeholder="you@email.com" required>
-                        </div>
-                        <div class="group-info-details group-address">
-                            <label for="address">Address</label>
-                            <input type="text" id="address" placeholder="Address">
-                        </div>
-                        <div class="group-info-details group-hometown">
-                            <label for="countty">Country</label>
-                            <select name="" id="country" required>
-                                <option value="">Choose</option>
-                                <option value="">Ho Chi Minh</option>
-                                <option value="">Bien Hoa</option>
-                                <option value="">Long An</option>
-                                <option value="">Binh Phuoc</option>
-                                <option value="">Quang Ngai</option>
-                            </select>
-                            <hr class="crossbar">
-                        </div>
-                        <h4>Payment</h4>
-                        <div class="payment-methods">
-                            <div class="group-payment-methods group-bankcard">
-                                <input type="radio" id="bankcard">
-                                <label for="bank" class="text-bank">Bank Card</label>
-                            </div>
-                            <div class="group-payment-methods group-momo">
-                                <input type="radio" id="momo">
-                                <label for="momo" class="text-momo">Momo</label>
-                            </div>
-                        </div>
-                        <button type="submit">Continue to checkout</button>
-                    </form>
-                </div>
-                <div class="group-col pay">
-                    <div class="list-product">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Your Cart</th>
-                                    <th>Số lượng</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Tên sản phẩm</td>
-                                    <td>Giá</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <button class="to-pay">Thành tiền</button>
-                    <!-- <div class="primary-sidebar">
-                        <div class="container">
-                            <h2>My Cart</h2>
-                            <div class="your-cart">
-                                <table border="5">
-                                    <thead>
-                                        <tr>
-                                            <th>Tên sản phẩm</th>
-                                            <th>Giá</th>
-                                            <th>Số lượng</th>
-                                            <th>Xoá</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div style="text-align: right;" class="price-total">
-                                <p style="font-weight:bold ;">Tổng tiền: <span>0</span><sup>VND</sup></p>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
+            <!-- show all product selected -->
+            <div class="product-cart"></div>
+            <!-- show payments detail -->
+            <!-- btn pay -->
         </div>
-    </div>
-
-    <div class="footer">
-        <div class="footer">
-            <div class="footer-center">
-                <div class="container">
-                    <div class="about-us">
-                        <div class="logo"><img src="/img/logo2.png" alt=""></div>
-                        <p class="description">This website is made for educational purposes only, and has no
-                            commercial
-                            value. Any products listed on the website are random, not actual market figures.
-                        </p>
-                        <ul class="list-icons">
-                            <li>
-                                <a href="https://www.facebook.com/rakuwa.raucuqua/"><em
-                                        class="fab fa-facebook-f"></em></a>
-                            </li>
-                            <li><em class="fab fa-twitter"></em></li>
-                            <li><em class="fab fa-linkedin"></em></li>
-                            <li><em class="fab fa-youtube"></em></li>
-                        </ul>
-                    </div>
-                    <div class="quick-links">
-                        <h1>Quick links</h1>
-                        <ul class="list-links">
-                            <li><a href="">About Us</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">Our projects</a></li>
-                            <li><a href="">Meet Farmers</a></li>
-                            <li><a href="">Later News</a></li>
-                            <li><a href="">Vegetables</a></li>
-                        </ul>
-                    </div>
-                    <div class="recent-news">
-                        <h1>Recent News</h1>
-                        <ul class="list-news">
-                            <li>
-                                <div class="news">
-                                    <div class="news-image">
-                                        <img src="/img/news-widget1.jpg" alt="">
-                                    </div>
-                                    <div class="news-content">
-                                        <a href="" class="news-title">Trái cây thơm ngon, mời bạn ăn nha!</a>
-                                        <p class="author">By Nguyen</p>
-                                    </div>
-                                </div>
-                                <div class="news">
-                                    <div class="news-image">
-                                        <img src="/img/news-widget1.jpg" alt="">
-                                    </div>
-                                    <div class="news-content">
-                                        <a href="" class="news-title">tôi đây không chờ bạn nữa giờ tôi ăn liền!</a>
-                                        <p class="author">By Nguyen</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="contact-us">
-                        <h1>Contact Us</h1>
-                        <ul class="list-info">
-                            <li>
-                                <p>Consultation time: 7h - 20h</p>
-                                <p>Delivery time: 7h30 - 20h</p>
-                            </li>
-                            <li>
-                                <em class="fas fa-map-marker-alt"></em>
-                                <a>273 An Duong Vuong Street, Ward 3, District 5, Ho Chi Minh City</a>
-                            </li>
-                            <li>
-                                <em class="far fa-envelope"></em>
-                                <a>cskh@help.rakuwa.vn</a>
-                            </li>
-                            <li>
-                                <em class="fa fa-phone"></em>
-                                <a>0379713541</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <a>Copyright © 2022 RaKuWa. All Rights Reserved.</a>
-                <a>Privacy Policy • Cookies Policy • Terms of Use</a>
-            </div>
-        </div>
-    </div>
-    <script src="/js/CheckOut.js"></script>
+    </section>
 </body>
 
 </html>
