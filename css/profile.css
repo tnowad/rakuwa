@@ -102,6 +102,8 @@
     border-bottom: 1px solid rgba(118, 167, 19, 0.15);
     padding-bottom: 10px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
     grid-area: 1 / 1 / 2 / 6;
 }
 
@@ -141,7 +143,6 @@
 
 .profile-tabs button {
     padding: 10px;
-    margin-top: 20px;
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
@@ -174,20 +175,25 @@
     }
 }
 
-/* .profile-tabs .profile-form-profile {
-    padding: 50px;
+.profile-tab-nav>* {
+    height: 250px;
+    text-align: center;
 }
 
-.profile-tabs .profile-form-profile .profile-form-content {
-    display: flex;
-    border-bottom: 1px solid rgba(118, 167, 19, 0.15);
-    margin-bottom: 50px;
-    padding-bottom: 10px;
+#profile-payment-tab>.profile-tab-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
-.profile-tabs .profile-form-profile .profile-form-content button {
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    transition: 1.2s;
-} */
+
+.profile-payment-card {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+
+.profile-payment-bank {
+    grid-area: 2 / 1 / 3 / 2;
+}
