@@ -44,7 +44,7 @@
                             <li><a href="">Vegetables</a></li>
                             <li><a href="">Meat & Poultry</a></li>
                             <li><a href="">Hot items</a></li>
-                            <li><a href="">Fruits Basket / Fruits Box</a></li>
+                            <li><a href="">Fruits Basket / Fruits profile-form-box</a></li>
                             <li><a href="">Grocery</a></li>
                         </ul>
                     </li>
@@ -95,7 +95,7 @@
                             <li><a href="/pages/product.html">Meat & Poultry</a></li>
                             <li><a href="/pages/product.html">Hot items</a></li>
                             <li><a href="/pages/product.html">Grocery</a></li>
-                            <li><a href="/pages/product.html">Fruits Basket / Fruits Box</a></li>
+                            <li><a href="/pages/product.html">Fruits Basket / Fruits profile-form-box</a></li>
                         </ul>
                     </li>
                     <li><a href="/pages/contact.html">Contact Us</a></li>
@@ -137,52 +137,55 @@
                 <li class="profile-nav-list show-menu profile-nav-list-menu-item" id="profile-review">My Reviews</li>
             </ul>
         </div>
+
         <div class="profile-tabs">
             <div id="profile-profile-tab" class="profile-tab-item active">
-                <div class="profile-tab-heading">
-                    <h1>My Profile</h1>
-                    <p>Manage and protect your profile</p>
-                </div>
-                <form class="profile-tab-item" id="profile-form-profile">
-                    <div class="profile-form-content">
-                        <label>Username</label>
-                        <p>
-                            <input type="text" class="box" placeholder="Username">
-                            <br>
-                            <small><i>Username can only be changed once.</i></small>
-                        </p>
+                <div class="container">
+                    <div class="profile-tab-heading">
+                        <h1>My Profile</h1>
+                        <p>Manage and protect your profile</p>
                     </div>
-                    <div class="profile-form-content">
-                        <label>Name</label>
-                        <input type="text" class="box" placeholder="Your full name">
-                    </div>
-                    <div class="profile-form-content">
-                        <label>Email</label>
-                        <input type="email" class="box" placeholder="Your email">
-                    </div>
-                    <div class="profile-form-content">
-                        <label>Phone Number</label>
-                        <input type="tel" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            placeholder="Your phone number">
-                    </div>
-                    <div class="profile-form-content">
-                        <label>Gender</label>
-                        <div class="box input">
-                            <select class="gender">
-                                <option value="male">Male</option>
-                                <option value="female">Female</button>
-                                <option value="other">Other</button>
-                            </select>
+                    <form class="profile-tab-form">
+                        <div class="profile-form-content">
+                            <label>Username</label>
+                            <p>
+                                <input type="text" class="profile-form-box" placeholder="Username">
+                                <br>
+                                <small><i>Username can only be changed once.</i></small>
+                            </p>
                         </div>
-                    </div>
-                    <div class="profile-form-content">
-                        <label>Date of birth</label>
-                        <div class="box input"><input type="date" class="date"></div>
-                    </div>
-                    <div class="profile-form-content btn">
-                        <button type="submit"><i class="fal fa-save"></i> Save</button>
-                    </div>
-                </form>
+                        <div class="profile-form-content">
+                            <label>Name</label>
+                            <input type="text" class="profile-form-box" placeholder="Your full name">
+                        </div>
+                        <div class="profile-form-content">
+                            <label>Email</label>
+                            <input type="email" class="profile-form-box" placeholder="Your email">
+                        </div>
+                        <div class="profile-form-content">
+                            <label>Phone Number</label>
+                            <input type="tel" class="profile-form-box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="Your phone number">
+                        </div>
+                        <div class="profile-form-content">
+                            <label>Gender</label>
+                            <div class="profile-form-box input">
+                                <select class="profile-form-box-gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</button>
+                                    <option value="other">Other</button>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="profile-form-content">
+                            <label>Date of birth</label>
+                            <div class="profile-form-box input"><input type="date" class="profile-form-box-date"></div>
+                        </div>
+                        <div class="profile-form-content">
+                            <button type="submit"><i class="fal fa-save"></i> Save</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
             <div id="profile-address-tab" class="profile-tab-item">
@@ -193,14 +196,14 @@
                 <div class="form">
                     <div class="content">
                         <h1>Credit / Debit Card</h1>
-                        <button type="submit" class="btn"><i class="far fa-plus"></i> Add New Card</button>
+                        <button type="submit"><i class="far fa-plus"></i> Add New Card</button>
                     </div>
                     <p>You don't have cards yet.</p>
                 </div>
                 <div class="form">
                     <div class="content">
-                        <h1>My Bank profiles</h1>
-                        <button type="submit" class="btn"><i class="far fa-plus"></i> Add New Bank profile</button>
+                        <h1>My Bank Accounts</h1>
+                        <button type="submit"><i class="far fa-plus"></i> Add New Bank Account</button>
                     </div>
                     <p>You don't have bank profiles yet.</p>
                 </div>
@@ -211,33 +214,7 @@
             </div>
 
             <div id="profile-order-cancel-tab" class="profile-tab-item">
-                <div class="heading">
-                    <h1>Change Password</h1>
-                    <p>For your profile's security, do not share your password with anyone else</p>
-                </div>
-                <div class="info">
-                    <form>
-                        <div class="content">
-                            <label>Current Password</label>
-                            <p>
-                                <input type="password" class="box" placeholder="Your password">
-                                <br>
-                                <a href=""><small><i>Forget your password?</i></small></a>
-                            </p>
-                        </div>
-                        <div class="content">
-                            <label>New Password</label>
-                            <input type="password" class="box" placeholder="Your new password">
-                        </div>
-                        <div class="content">
-                            <label>Confirm Password</label>
-                            <input type="password" class="box" placeholder="Repeat your new password">
-                        </div>
-                        <div class="content btn">
-                            <button type="submit"><i class="fas fa-check"></i> Confirm</button>
-                        </div>
-                    </form>
-                </div>
+
             </div>
 
             <div id="profile-review-tab" class="profile-tab-item">
@@ -245,32 +222,6 @@
             </div>
         </div>
     </section>
-    <script type="module">
-        import { addActive, removeActive } from '/js/util.js'
-        const profileNavLists = document.querySelectorAll('.profile-nav-list')
-        const profileTabLists = document.querySelectorAll('.profile-tab-item')
-        profileNavLists.forEach(element => {
-            element.addEventListener('click', () => {
-                profileNavLists.forEach(element => {
-                    removeActive(element)
-                })
-                addActive(element)
-            })
-        })
-        const profileNavListItems = document.querySelectorAll('.profile-nav-list-menu-item')
-        profileNavListItems.forEach(element => {
-            element.addEventListener('click', () => {
-                profileNavListItems.forEach(element => {
-                    removeActive(element)
-                })
-                profileTabLists.forEach(element => {
-                    removeActive(element)
-                })
-                addActive(document.querySelector(`#${element.id}-tab`))
-                addActive(element)
-            })
-        })
-    </script>
 
     <div class="footer">
         <div class="footer-center">
@@ -329,10 +280,8 @@
                 <div class="contact-us">
                     <h1>Contact Us</h1>
                     <ul class="list-info">
-                        <li>
-                            <p>Consultation time: 7h - 20h</p>
-                        </li>
-                        <p>Delivery time: 7h30 - 20h</p>
+                        <li>Consultation time: 7:00 AM - 8:00 PM</li>
+                        <li>Delivery time: 7:30 AM - 8:00 PM</li>
                         <li>
                             <em class="fas fa-map-marker-alt"></em>
                             <a>273 An Duong Vuong Street, Ward 3, District 5, Ho Chi Minh City</a>
@@ -371,6 +320,32 @@
     <script type="module" src="/js/context-menu.js"></script>
     <script type="module" src="/js/add-product-to-cart.js"></script>
     <script src="./js/Search.js"></script>
+    <script type="module">
+        import { addActive, removeActive } from '/js/util.js'
+        const profileNavLists = document.querySelectorAll('.profile-nav-list')
+        const profileTabLists = document.querySelectorAll('.profile-tab-item')
+        profileNavLists.forEach(element => {
+            element.addEventListener('click', () => {
+                profileNavLists.forEach(element => {
+                    removeActive(element)
+                })
+                addActive(element)
+            })
+        })
+        const profileNavListItems = document.querySelectorAll('.profile-nav-list-menu-item')
+        profileNavListItems.forEach(element => {
+            element.addEventListener('click', () => {
+                profileNavListItems.forEach(element => {
+                    removeActive(element)
+                })
+                profileTabLists.forEach(element => {
+                    removeActive(element)
+                })
+                addActive(document.querySelector(`#${element.id}-tab`))
+                addActive(element)
+            })
+        })
+    </script>
 </body>
 
 </html>
