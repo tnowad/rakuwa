@@ -182,8 +182,20 @@ const pay = () => {
 updateProduct()
 showAndCloseCart()
 
-// pls don't do that :(
+// // pls don't do that :(
 
-export {
-    addProductToCart
-}
+// const renderCart = () => {
+//     // update html
+// }
+// const getDetailCart = () => {
+//     return JSON.parse(localStorage.getItem('cart'))
+// }
+// const updateQuantityProduct = (id, number) => {
+//     // 
+// }
+// export {
+//     addProductToCart,
+//     removeProductFormCart,
+//     changeProductQuantity,
+//     getDetailCart
+// }
