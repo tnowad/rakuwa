@@ -142,8 +142,11 @@
             <div id="profile-profile-tab" class="profile-tab-item active">
                 <div class="container">
                     <div class="profile-tab-heading">
-                        <h1>My Profile</h1>
-                        <p>Manage and protect your profile</p>
+                        <div>
+                            <h1>My Profile</h1>
+                            <p>Manage and protect your profile</p>
+                        </div>
+                        <button type="submit"><i class="fal fa-key"></i></button>
                     </div>
                     <form class="profile-tab-form">
                         <div class="profile-form-content">
@@ -189,23 +192,35 @@
             </div>
 
             <div id="profile-address-tab" class="profile-tab-item">
-
+                <div class="profile-payment-card">
+                    <div class="profile-tab-nav">
+                        <div class="container">
+                            <div class="profile-tab-heading">
+                                <h1>Credit / Debit Card</h1>
+                                <button type="submit"><i class="fal fa-map-marker-alt"></i></button>
+                            </div>
+                            <p>Save your shipping and billing address here.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="profile-payment-tab" class="profile-tab-item">
-                <div class="form">
-                    <div class="content">
-                        <h1>Credit / Debit Card</h1>
-                        <button type="submit"><i class="far fa-plus"></i> Add New Card</button>
+                <div class="profile-tab-nav">
+                    <div class="profile-payment-card">
+                        <div class="profile-tab-heading">
+                            <h1>Credit / Debit Card</h1>
+                            <button type="submit"><i class="fal fa-plus"></i></button>
+                        </div>
+                        <p>You don't have cards yet.</p>
                     </div>
-                    <p>You don't have cards yet.</p>
-                </div>
-                <div class="form">
-                    <div class="content">
-                        <h1>My Bank Accounts</h1>
-                        <button type="submit"><i class="far fa-plus"></i> Add New Bank Account</button>
+                    <div class="profile-payment-bank">
+                        <div class="profile-tab-heading">
+                            <h1>My Bank Accounts</h1>
+                            <button type="submit"><i class="fal fa-plus"></i></button>
+                        </div>
+                        <p>You don't have bank profiles yet.</p>
                     </div>
-                    <p>You don't have bank profiles yet.</p>
                 </div>
             </div>
 
