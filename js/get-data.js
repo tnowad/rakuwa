@@ -8,7 +8,8 @@ import { fetchJson } from "./util"
  */
 
 const updateDataFromServer = () => {
+    let users = []
     if (localStorage.getItem('users')) {
-
+        users = fetchJson('/api/v1/users.json')
     }
 }
