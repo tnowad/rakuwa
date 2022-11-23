@@ -11,6 +11,7 @@
     <script src="/asset/fontawesome/js/brands.js"></script>
     <!-- <link rel="stylesheet" href="/asset/fontawesome/css/brands.css"> -->
     <!-- <link rel="stylesheet" href="/asset/fontawesome/css/all.css"> -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="css/SlideShowBanner.css">
@@ -149,13 +150,13 @@
             justify-content: center;
         }
         .form-input {
-            position: relative;
             height: 60px;
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
             padding: 10px 10px;
         }
         
         .form-input input {
+            padding-left: 20px;
             border: 2px solid gray;
             height: 100%;
             border-radius: 5px;
@@ -163,41 +164,57 @@
         }
 
         .form-input label {
-            position: absolute;
-            left: 20px;
-            top: 25%;
-            padding: 5px;
-            transition: 0.5s all;
         }
 
-        .form-input input:not(:placeholder-shown)~label,
-        .form-input input:focus~label {
-            background: white;
-            top: 0%;
-        }
         .login-form input[type="submit"] {
             width: 150px;
             height: 40px;
         }
+
+        .login-form a {
+            width: 107px;
+            position: relative;
+            top:20px;
+            left: -230px;
+            color: rgba(88, 88, 88, 0.747);
+        }
+
+        .login-form a:hover {
+            color: red;
+            transition: all 0.3s linear;
+        }
+
+        .login-form input[type="submit"]{
+            margin-top: 50px;
+            background-color:rgb(17, 207, 0);
+            border-radius: 5px;
+        }
+
+        .login-form input[type="submit"]:hover{
+            background-color: var(--green);
+            transition: all 300ms linear;
+            cursor: pointer;
+        }
+
     </style>
     <section class="login">
         <div class="container">
             <form class="login-form">
                 <h2 class="login-form-title">Login</h2>
-                <div class="form-input">
-                    <input type="text" name="" placeholder=" " id="login-username">
+                <div class="form-input">         
                     <label for="">Username</label>
+                    <input type="text" name="" placeholder="Enter username" id="login-username">
                 </div>
                 <div class="form-input">
-                    <input type="password" name="" placeholder=" " id="login-password">
                     <label for="">Password</label>
+                    <input type="password" name="" placeholder="Enter password" id="login-password">
                 </div>
                 <a href="">Forgot password</a>
                 <input type="submit" value="Đăng cm nhập đi">
             </form>
             <span>or login using</span>
             <div class="login-other-way">
-                <i>G</i>
+                <i class="fa-brands fa-google">G</i>
                 <i>F</i>
                 <i>T</i>
             </div>
