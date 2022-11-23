@@ -15,48 +15,8 @@
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/yourcart.css">
+    <script type="module" src="/js/show-product-detail.js"></script>
 </head>
-<script type="module">
-    import { getParams, fetchJson } from '/js/util.js'
-    import { addProductToCart } from '/js/add-product-to-cart.js'
-    let idProduct = getParams('id')
-    let productDetailHTML = (data) => {
-        return `<div class="product-details-top-right">
-                    <div class="product-detail-slide-show">
-                        <img src="${data.image}" alt="">
-                    </div>
-                </div>
-                <div class="product-details-top-left">
-                    <span class="stock-status ${data.label}"></span>
-                    <h2 class="title-detail">${data.title}</h2>
-                    <div class="product-detail-rating"><a class="product-rate">
-                                    <em class="fas fa-star active"></em><em class="fas fa-star active"></em><em class="fas fa-star active"></em><em class="fas fa-star active"></em><em class="fas fa-star"></em>
-                                </a></div>
-                    <span class="product-category ${data.category}"></span>
-                    <div class="product-detail-price">
-                        <span class="product-detail-price-current">${data.price}</span>
-                        <span class="product-detail-price-old">${data.oldPrice}</span>
-                    </div>
-                    <div action="" class="product-add-to-cart">
-                        <input type="submit" value="Add to cart">
-                    </div>
-                    <h2>Thông tin sản phẩm</h2>
-                    <p class="product-detail-description">${data.description}</p>
-                </div>`
-    }
-    let productData = await fetchJson('/api/v1/product.json')
-    let productDetailsTop = document.querySelector('.product-details-top')
-    productDetailsTop.innerHTML = productDetailHTML(productData[idProduct])
-    // const addProductToCart = (product) => {
-    //     console.log(product)
-    // }
-    setTimeout(() => {
-        document.querySelector('.product-add-to-cart input').addEventListener('click', () => {
-            addProductToCart(productData[idProduct])
-        })
-    }, 200)
-    preventDefault();
-</script>
 
 <body>
     <div class="header">
@@ -221,32 +181,6 @@
     <section class="product-details-area">
         <div class="container">
             <div class="product-details-top">
-                <div class="product-details-top-right">
-                    <div class="product-detail-slide-show">
-                        <img src="/img/products/bot-canh.jpg" alt="">
-                    </div>
-                </div>
-                <div class="product-details-top-left">
-                    <span class="stock-status sale-off">Sale Off</span>
-                    <h2 class="title-detail">Mì tôm hảo hảo</h2>
-                    <div class="product-detail-rating">10 điểm </div>
-                    <span class="product-category">Mì</span>
-                    <div class="product-detail-price">
-                        <span class="product-detail-price-current">1000USD</span>
-                        <span class="product-detail-price-old">1USD</span>
-                    </div>
-                    <p class="product-detail-description"></p>
-                    <form action="" class="product-add-to-cart">
-                        <input type="number" name="" placeholder="1" id="" min="1" max="100">
-                        <!-- todo check localStorage if valid then show input number -->
-                        <input type="submit" value="Add to cart">
-                    </form>
-                    <h2>Thông tin sản phẩm</h2>
-                    <p>Dolorem voluptatem minus non autem. Provident aliquid accusamus quidem eius ipsa consequatur. Qui
-                        neque temporibus. Consequatur et ut similique a nesciunt. Impedit mollitia voluptatem autem id
-                        quod
-                        natus. Eum ipsam omnis.</p>
-                </div>
             </div>
             <div class="product-details-bottom">
                 <style>
@@ -348,7 +282,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <style>
                     .comment-form .comment-input {
                         color: #333;
@@ -419,21 +353,6 @@
             </div>
         </div>
     </section>
-    <script>
-        const { href } = window.location
-        const id = parseInt(href.substring(href.indexOf('id=') + 3)) - 1
-        const fetchJson = async (url) => {
-            const response = await fetch(url)
-            const result = await response.json()
-            return result
-        }
-        const start = async () => {
-            const productData = await fetchJson('/api/v1/product.json')
-            document.querySelector("body > section").innerText += JSON.stringify(productData[id])
-        }
-        // start()
-    </script>
-
 </body>
 
 </html>

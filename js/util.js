@@ -31,7 +31,10 @@ const toggleActive = (element) => {
 }
 
 const getItemLocalStorage = (key) => {
-    return JSON.parse(localStorage.getItem(key))
+    if (localStorage.getItem(key))
+        return JSON.parse(localStorage.getItem(key))
+    else
+        return []
 }
 
 const setItemLocalStorage = (key, object) => {

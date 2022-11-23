@@ -95,7 +95,7 @@ const renderShopArea = async () => {
 }
 let productItemElements
 await renderShopArea().then(()=> {
-    // console.log(shopArea)
+    console.log(shopArea)
     productItemElements = shopArea.querySelectorAll('.product-item')
 })
 export { productItemArray, productItemElements }
