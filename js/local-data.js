@@ -5,7 +5,7 @@ import { fetchJson } from "./util.js"
  * type: user {id, username, password, email, address, image, payment, role, name, dateOfBirth, phoneNumber}
  * type: product {id, title, price, quantity, description, image, rating {rate, count}}
  * type: comment {productId, userId, body}
- * type: cart {id, userId, products[id, quantity, price], amount}
+ * type: cart {userId, products[id, quantity, price], amount}
  */
 
 const updateLocalDataFromServer = async () => {
