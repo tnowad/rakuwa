@@ -1,6 +1,13 @@
 [
     {
-        "id":1,
-        "user"
+        "id": 0,
+        "username": "admin",
+        "password": "admin",
+        "email": "admin@gov.vn",
+        "address": "Quan 5, Ho Chi Minh, VN",
+        "role": "admin",
+        "dateOfBirth": "10-12-2003",
+        "phoneNumber": "0379713541",
+        "image": ""
     }
 ]

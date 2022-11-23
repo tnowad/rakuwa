@@ -2,7 +2,7 @@ import { fetchJson } from "./util.js"
 /**
  * Get data from server add store local
  * key: users, products, comments, carts
- * type: user {id, username, password, email, address, payment, role, name, dateOfBirth, phoneNumber}
+ * type: user {id, username, password, email, address, image, payment, role, name, dateOfBirth, phoneNumber}
  * type: product {id, title, price, quantity, description, image, rating {rate, count}}
  * type: comment {productId, userId, body}
  * type: cart {id, userId, products[id, quantity, price], amount}
@@ -29,23 +29,22 @@ const updateLocalDataFromServer = async () => {
         carts = await fetchJson('/api/v1/carts.json')
         localStorage.setItem('carts', JSON.stringify(carts))
     }
+    if (!localStorage.getItem('currentUser')) {
+        let currentUser = {}
+        localStorage.setItem('currentUser', JSON.stringify(currentUser))
+    }
 }
-
-const getDataFromLocal = () => {
+// Use for update data variable
+const getDataFromLocal = async () => {
+    await updateLocalDataFromServer()
     let users = JSON.parse(localStorage.getItem('users'))
     let products = JSON.parse(localStorage.getItem('products'))
     let comments = JSON.parse(localStorage.getItem('comments'))
     let carts = JSON.parse(localStorage.getItem('carts'))
-    return { users, products, comments, carts }
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    return { users, products, comments, carts, currentUser }
 }
-
-let { users, products, comments, carts } = await (async () => {
-    await updateLocalDataFromServer()
-    return getDataFromLocal()
-})()
 export {
-    users,
-    products,
-    comments,
-    carts
+    updateLocalDataFromServer,
+    getDataFromLocal
 }
