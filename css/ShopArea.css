@@ -159,6 +159,11 @@
     background: var(--green-light);
     color: var(--green);
     transition: all 0.5s;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    cursor: pointer;
+    
 }
 
 .product-add-cart>span:hover {
