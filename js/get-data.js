@@ -1,4 +1,4 @@
-import { fetchJson } from "./util"
+import { fetchJson } from "./util.js"
 /**
  * Get data from server add store local
  * key: users, products, comments, carts
@@ -13,21 +13,21 @@ const updateLocalDataFromServer = async () => {
     let products = []
     let comments = []
     let carts = []
-    if (localStorage.getItem('users')) {
+    if (!localStorage.getItem('users')) {
         users = await fetchJson('/api/v1/users.json')
         localStorage.setItem('users', JSON.stringify(users))
     }
-    if (localStorage.getItem('products')) {
+    if (!localStorage.getItem('products')) {
         products = await fetchJson('/api/v1/products.json')
         localStorage.setItem('products', JSON.stringify(products))
     }
-    if (localStorage.getItem('comments')) {
+    if (!localStorage.getItem('comments')) {
         comments = await fetchJson('/api/v1/comments.json')
         localStorage.setItem('comments', JSON.stringify(comments))
     }
-    if (localStorage.getItem('carts')) {
+    if (!localStorage.getItem('carts')) {
         carts = await fetchJson('/api/v1/carts.json')
-        localStorage.setItem('comments', JSON.stringify(carts))
+        localStorage.setItem('carts', JSON.stringify(carts))
     }
 }
 
@@ -39,11 +39,10 @@ const getDataFromLocal = () => {
     return { users, products, comments, carts }
 }
 
-let { users, products, comments, carts } = async () => {
+let { users, products, comments, carts } = await (async () => {
     await updateLocalDataFromServer()
     return getDataFromLocal()
-}
-
+})()
 export {
     users,
     products,
