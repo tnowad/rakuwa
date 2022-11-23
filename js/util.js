@@ -30,15 +30,8 @@ const toggleActive = (element) => {
     element.classList.toggle('active')
 }
 
-const getItemLocalStorage = (key) => {
-    if (localStorage.getItem(key))
-        return JSON.parse(localStorage.getItem(key))
-    else
-        return []
-}
-
-const setItemLocalStorage = (key, object) => {
-    localStorage.setItem(key, JSON.stringify(object))
+const clearLocalStorage = () => {
+    localStorage.clear()
 }
 
 export {
@@ -49,6 +42,5 @@ export {
     addActive,
     removeActive,
     toggleActive,
-    getItemLocalStorage,
-    setItemLocalStorage
+    clearLocalStorage
 }
