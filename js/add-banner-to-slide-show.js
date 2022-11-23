@@ -5,7 +5,7 @@ const slideHTML = (data) => {
     html = `<img src="${data.image}">`
     return html
 }
-
+ 
 const renderSlideShow = async () => {
     let slides = []
     let dotSlides = []
