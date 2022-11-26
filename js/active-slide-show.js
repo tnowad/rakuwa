@@ -1,4 +1,4 @@
-import { addActive, removeActive } from './util.js'
+import { addActive, removeActive } from './util/util.js'
 import { slides, dotSlides } from './add-banner-to-slide-show.js'
 
 let currentSlide = 0
