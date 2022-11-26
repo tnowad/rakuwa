@@ -33,6 +33,10 @@ const updateLocalDataFromServer = async () => {
         let currentUser = {}
         localStorage.setItem('currentUser', JSON.stringify(currentUser))
     }
+    if(!localStorage.getItem('currentCart')) {
+        let currentCart = []
+        localStorage.setItem('currentCart', JSON.stringify(currentCart))
+    }
 }
 // Use for update data variable
 const getDataFromLocal = async () => {
