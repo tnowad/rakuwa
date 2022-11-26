@@ -1,4 +1,4 @@
-import { fetchJson } from "./util.js"
+import { fetchJson } from "../util/util.js"
 /**
  * Get data from server add store local
  * key: users, products, comments, carts

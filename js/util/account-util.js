@@ -1,4 +1,4 @@
-import { getDataFromLocal } from './local-data.js'
+import { getDataFromLocal } from '../server/local-data.js'
 
 let { users } = await getDataFromLocal()
 
