@@ -4,9 +4,11 @@ let { users } = await getDataFromLocal()
 
 const login = (username, password) => {
     const currentUser = users.filter(user => user.username == username && user.password == password)
-    console.log(currentUser)
-    if (currentUser.length > 0)
+    if (currentUser.length > 0) {
         localStorage.setItem('currentUser', JSON.stringify(currentUser[0]))
+        return true
+    }
+    return false
 }
 const logout = () => {
     localStorage.setItem('currentUser', '{}')

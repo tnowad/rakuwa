@@ -34,6 +34,15 @@ const clearLocalStorage = () => {
     localStorage.clear()
 }
 
+const createNewId = (list) => {
+    let id = 0
+    try {
+        id = list[list.length-1].id + 1
+    } catch (error) {
+    }
+    return id
+}
+
 export {
     fetchJson,
     fetchHTML,
@@ -42,5 +51,6 @@ export {
     addActive,
     removeActive,
     toggleActive,
-    clearLocalStorage
+    clearLocalStorage,
+    createNewId
 }
