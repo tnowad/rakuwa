@@ -1,4 +1,4 @@
-import { html, render } from './plugins/lit-html.js'
+import { html, render } from '/node_modules/lit-html/lit-html.js'
 
 // Define a template
 const myTemplate = (name) =>
