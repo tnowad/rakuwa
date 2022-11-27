@@ -1,4 +1,15 @@
-import { createProduct, updateProduct, getCategory, getProducts, removeProduct } from "./util/product.js"
-console.log(await getProducts())
-console.log(await getProducts({name:"thịt bò meat"}))
-console.log(await getProducts())
+import { html, render } from './plugins/lit-html.js'
+
+// Define a template
+const myTemplate = (name) =>
+	html`
+		<p>Hello ${name}</p>
+		<p>Hello ${name}</p>
+		<p>Hello ${name}</p>
+		<p>Hello ${name}</p>
+		<p>Hello ${name}</p>
+		<p>Hello ${name}</p>
+	`
+
+// Render the template to the document
+render(myTemplate('World'), document.body)
