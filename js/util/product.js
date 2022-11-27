@@ -1,19 +1,21 @@
 import { getDataFromLocal } from './local-data.js'
 import { createNewId } from '../util/util.js'
-let { products } = await getDataFromLocal()
 
-const createProduct = (product) => {
+const createProduct = async (product) => {
+    let { products } = await getDataFromLocal()
     product.id = createNewId(products)
     products.push(product)
     localStorage.setItem('products', JSON.stringify(products))
 }
 
-const removeProduct = (productId) => {
+const removeProduct = async (productId) => {
+    let { products } = await getDataFromLocal()
     products = products.filter(product => product.id != productId)
     localStorage.setItem('products', JSON.stringify(products))
 }
 
-const updateProduct = (product) => {
+const updateProduct = async (product) => {
+    let { products } = await getDataFromLocal()
     for (const i = 0; i < products.length; i++) {
         if (products[i].id == product.id) {
             products[i] = product
@@ -24,20 +26,28 @@ const updateProduct = (product) => {
     localStorage.setItem('products', JSON.stringify(products))
 }
 
-const getProducts = (category, price) => {
-    if (category != undefined)
-        products = products.filter(product => product.category === category)
-    if (price != undefined) {
-        if (price.low != undefined)
-            products = products.filter(product => product.price >= price.low)
-        if (price.high != undefined)
-            products = products.filter(product => product.price <= price.high)
+const getProducts = async (options) => {
+    let { products } = await getDataFromLocal()
+    if (options != undefined) {
+        if (options.category != undefined)
+            products = products.filter(product => product.category === options.category)
+        if (options.price != undefined) {
+            if (options.price.low != undefined)
+                products = products.filter(product => product.price >= options.price.low)
+            if (options.price.high != undefined)
+                products = products.filter(product => product.price <= options.price.high)
+        }
+        if (options.name != undefined) {
+            products = products.filter(
+                product => product.title.includes(options.name) || product.category.includes(options.name)
+            )
+        }
     }
-
     return products
 }
 
-const getCategory = () => {
+const getCategory = async () => {
+    let { products } = await getDataFromLocal()
     let category = {}
     products.forEach((value) => {
         category[value.category] = category[value.category] ? category[value.category] + 1 : 1
