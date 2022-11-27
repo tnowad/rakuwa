@@ -18,5 +18,4 @@ icon.addEventListener("click", () => {
         icon.classList.add("fa-eye");
         icon.classList.remove("fa-eye-slash");
     }
-
 })

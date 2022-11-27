@@ -1,6 +1,5 @@
-import { getDataFromLocal } from "../util/local-data.js"
 import { getParams, renderHTML } from '../util/util.js'
-
+import { getProducts } from '../util/product.js'
 const productHTML = (data) => {
     return `
     <div class="product-item">
@@ -64,25 +63,10 @@ const productPaginationHTML = (maxPage, currentPage) => {
 }
 let productItemArray = []
 const shopArea = document.querySelector('.product-area')
-const filterData = (productData) => {
-    productData = productData.filter((value) => {
-        // Todo: price, sale, name
-        // test with /index.html?page=1&category=vegetable
-        if (getParams('category')) {
-            return value.category == getParams('category')
-        } else {
-            return true
-        }
-    })
-    return productData
-}
+
 const renderShopArea = async () => {
-    let { products } = await getDataFromLocal()
-
-    // TODO: filter data
-
-    products = filterData(products)
-
+    let products = await getProducts()
+    console.log(products)
     const productPagination = document.querySelector('.product-pagination')
 
     const currentPage = getParams('page') ? getParams('page') : 1
@@ -95,3 +79,4 @@ const renderShopArea = async () => {
     }
     renderHTML(productPagination, productPaginationHTML(Math.ceil(maxPage), currentPage))
 }
+renderShopArea()
