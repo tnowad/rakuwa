@@ -9,6 +9,9 @@
     <title>RaKuWa</title>
     <script src="/asset/fontawesome/js/all.js"></script>
     <script src="/asset/fontawesome/js/brands.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="/asset/fontawesome/css/brands.css"> -->
     <!-- <link rel="stylesheet" href="/asset/fontawesome/css/all.css"> -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
@@ -20,6 +23,7 @@
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/yourcart.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
@@ -112,111 +116,32 @@
             </ul>
         </div>
     </div>
-    <style>
-        .login {
-            margin-top: 10vh;
-            width: 100%;
-        }
-
-        .login .container {
-            display: flex;
-            justify-content: center;
-            width: min(100%, 600px) !important;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            align-items: center;
-        }
-        .login .container > * {
-            margin-bottom: 20px;
-        }
-        .login-form {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-        }
-        .login-form > * {
-            width: 100%;
-        }
-        .login-form .login-form-title {
-            text-align: center;
-            font-size: 50px;
-        }
-        .login-form {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            justify-content: center;
-        }
-        .form-input {
-            height: 60px;
-            /* box-sizing: border-box; */
-            padding: 10px 10px;
-        }
-        
-        .form-input input {
-            padding-left: 20px;
-            border: 2px solid gray;
-            height: 100%;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        .form-input label {
-        }
-
-        .login-form input[type="submit"] {
-            width: 150px;
-            height: 40px;
-        }
-
-        .login-form a {
-            width: 107px;
-            position: relative;
-            top:20px;
-            left: -230px;
-            color: rgba(88, 88, 88, 0.747);
-        }
-
-        .login-form a:hover {
-            color: red;
-            transition: all 0.3s linear;
-        }
-
-        .login-form input[type="submit"]{
-            margin-top: 50px;
-            background-color:rgb(17, 207, 0);
-            border-radius: 5px;
-        }
-
-        .login-form input[type="submit"]:hover{
-            background-color: var(--green);
-            transition: all 300ms linear;
-            cursor: pointer;
-        }
-
-    </style>
     <section class="login">
         <div class="container">
             <form class="login-form">
                 <h2 class="login-form-title">Login</h2>
-                <div class="form-input">         
+                <div class="form-input">
                     <label for="">Username</label>
-                    <input type="text" name="" placeholder="Enter username" id="login-username">
+                    <label action="" class="username-form">
+                        <i class="fa fa-user" id="icon"></i>
+                        <input type="text" name="" placeholder="Enter username" id="login-username">
+                    </label>
                 </div>
                 <div class="form-input">
                     <label for="">Password</label>
-                    <input type="password" name="" placeholder="Enter password" id="login-password">
+                    <label action="" class="username-form">
+                        <i class="fa fa-lock" id="icon"></i>
+                        <input type="password" name="" placeholder="Enter password" id="login-password">
+                    </label>
                 </div>
-                <a href="">Forgot password</a>
-                <input type="submit" value="Đăng cm nhập đi">
+                <a href="">Forgot password ?</a>
+                <input type="submit" value="Đăng nhập">
             </form>
-            <span>or login using</span>
+            <span>OR</span>
             <div class="login-other-way">
-                <i class="fa-brands fa-google">G</i>
-                <i>F</i>
-                <i>T</i>
+                <i class="fa-brands fa-facebook-f fbicon"></i>
+                <i class="fa-brands fa-google ggicon"></i>
+                <i class="fa-brands fa-twitter twicon"></i>
             </div>
         </div>
     </section>
