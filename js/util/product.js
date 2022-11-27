@@ -38,8 +38,19 @@ const getProducts = async (options) => {
                 products = products.filter(product => product.price <= options.price.high)
         }
         if (options.name != undefined) {
+            options.name = options.name.toLowerCase()
+
             products = products.filter(
-                product => product.title.includes(options.name) || product.category.includes(options.name)
+                (product) => {
+                    if (product.title.toLowerCase().includes(options.name) ||
+                        options.name.includes(product.title.toLowerCase())) {
+                        return true;
+                    }
+                    if (product.category.toLowerCase().includes(options.name) ||
+                        options.name.includes(product.category.toLowerCase())) {
+                        return true;
+                    }
+                }
             )
         }
     }
