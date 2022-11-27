@@ -26,20 +26,24 @@ const updateProduct = async (product) => {
     localStorage.setItem('products', JSON.stringify(products))
 }
 
+const getProductById = async (productId) => {
+    let { products } = await getDataFromLocal()
+    return products.find(product => product.id == productId)
+}
+
 const getProducts = async (options) => {
     let { products } = await getDataFromLocal()
-    if (options != undefined) {
-        if (options.category != undefined)
+    if (options != undefined && options != null) {
+        if (options.category != undefined && options.category != null)
             products = products.filter(product => product.category === options.category)
-        if (options.price != undefined) {
-            if (options.price.low != undefined)
+        if (options.price != undefined && options.price != null) {
+            if (options.price.low != undefined && options.price.low != null)
                 products = products.filter(product => product.price >= options.price.low)
-            if (options.price.high != undefined)
+            if (options.price.high != undefined && options.price.high != null)
                 products = products.filter(product => product.price <= options.price.high)
         }
-        if (options.name != undefined) {
+        if (options.name != undefined && options.name != null && options.name != 'null') {
             options.name = options.name.toLowerCase()
-
             products = products.filter(
                 (product) => {
                     if (product.title.toLowerCase().includes(options.name) ||
@@ -71,5 +75,6 @@ export {
     updateProduct,
     getProducts,
     getCategory,
-    removeProduct
+    removeProduct,
+    getProductById
 }

@@ -1,5 +1,6 @@
-import { getDataFromLocal } from "../util/local-data.js"
 import { getParams, renderHTML } from '../util/util.js'
+import { getProducts } from '../util/product.js'
+import { addProductIdToCart } from '../util/cart.js'
 
 const productHTML = (data) => {
     return `
@@ -41,6 +42,7 @@ const productHTML = (data) => {
         </div>
     </div>`
 }
+
 const productPaginationHTML = (maxPage, currentPage) => {
     let html = ""
     for (let i = 1; i <= maxPage; i++) {
@@ -62,27 +64,20 @@ const productPaginationHTML = (maxPage, currentPage) => {
     }
     return html
 }
+
 let productItemArray = []
 const shopArea = document.querySelector('.product-area')
-const filterData = (productData) => {
-    productData = productData.filter((value) => {
-        // Todo: price, sale, name
-        // test with /index.html?page=1&category=vegetable
-        if (getParams('category')) {
-            return value.category == getParams('category')
-        } else {
-            return true
-        }
-    })
-    return productData
-}
+
 const renderShopArea = async () => {
-    let { products } = await getDataFromLocal()
+    const category = getParams('category')
+    const price = {
+        low: parseInt(getParams('priceLow')) | 0,
+        high: parseInt(getParams('priceHigh')) | 999999999
+    }
+    // todo: use in search encodeURIComponent()
+    const name = decodeURIComponent(getParams('name'))
 
-    // TODO: filter data
-
-    products = filterData(products)
-
+    let products = await getProducts({ category: category, price: price, name: name })
     const productPagination = document.querySelector('.product-pagination')
 
     const currentPage = getParams('page') ? getParams('page') : 1
@@ -95,3 +90,6 @@ const renderShopArea = async () => {
     }
     renderHTML(productPagination, productPaginationHTML(Math.ceil(maxPage), currentPage))
 }
+renderShopArea()
+
+window.addProductIdToCart = addProductIdToCart

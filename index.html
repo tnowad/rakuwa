@@ -16,30 +16,6 @@
     <link rel="stylesheet" href="/css/ShopArea.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/yourcart.css">
-    <script type="module" src="/js/render/home-page-products.js"></script>
-    <script type="module" src="js/active-slide-show.js"></script>
-    <script>
-        const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
-        dropDownMobile.forEach(element => {
-            element.addEventListener("click", () => {
-                element.classList.toggle('active')
-            })
-        })
-        const mobileNav = document.querySelector('.menu-sidebar')
-        mobileNav.addEventListener("click", () => {
-            console.log("clicked")
-            document.querySelector('.mobile-header').classList.toggle('active')
-        })
-    </script>
-    <script type="module" src="/js/context-menu.js"></script>
-    <script type="module" src="/js/add-product-to-cart.js"></script>
-    <script type="module" src="/js/add-product-to-shop.js"></script>
-    <script>
-        const dropdown = document.querySelectorAll('.dropdown')
-        dropdown.forEach(element => {
-            element.addEventListener('')
-        })
-    </script>
 </head>
 
 <body>
@@ -305,7 +281,32 @@
             <a>Privacy Policy • Cookies Policy • Terms of Use</a>
         </div>
     </div>
+
     <div class="context-menu"></div>
+
+    <script type="module" src="/js/render/home-page-products.js"></script>
+
+    <!-- <script type="module" src="js/active-slide-show.js"></script>
+    <script>
+        const dropDownMobile = document.querySelectorAll(".dropdown-mobile")
+        dropDownMobile.forEach(element => {
+            element.addEventListener("click", () => {
+                element.classList.toggle('active')
+            })
+        })
+        const mobileNav = document.querySelector('.menu-sidebar')
+        mobileNav.addEventListener("click", () => {
+            console.log("clicked")
+            document.querySelector('.mobile-header').classList.toggle('active')
+        })
+    </script> -->
+    <script type="module" src="/js/render/context-menu.js"></script>
+    <!-- <script>
+        const dropdown = document.querySelectorAll('.dropdown')
+        dropdown.forEach(element => {
+            // element.addEventListener('')
+        })
+    </script> -->
 </body>
 
 </html>

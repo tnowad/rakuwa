@@ -37,12 +37,20 @@ const clearLocalStorage = () => {
 const createNewId = (list) => {
     let id = 0
     try {
-        id = list[list.length-1].id + 1
+        id = list[list.length - 1].id + 1
     } catch (error) {
     }
     return id
 }
 
+const splitArrayByPage = (array, elementPerPage, currentPage) => {
+    const maxPage = array.length / elementPerPage
+    let newArray = []
+    for (let i = ((currentPage - 1) * elementPerPage); i < elementPerPage * currentPage; i++) {
+        newArray.push(array[i])
+    }
+    return newArray
+}
 
 export {
     fetchJson,
@@ -53,5 +61,6 @@ export {
     removeActive,
     toggleActive,
     clearLocalStorage,
-    createNewId
+    createNewId,
+    splitArrayByPage
 }
