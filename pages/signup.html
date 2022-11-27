@@ -108,7 +108,7 @@
                 <h3>Sign up</h3>
                 <div class="group-form group-form-phone">
                     <i class="fa fa-phone" aria-hidden="true"></i>
-                    <input type="text" id="phone" placeholder="Phone number">
+                    <input type="number" id="phone" placeholder="Phone number" maxlength="10" pattern="[0-9]">
                 </div>
                 <div class="group-form group-form-email">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -119,19 +119,20 @@
                     <input type="text" id="username" placeholder="Username">
                 </div>
                 <div class="group-form group-form-password">
-                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    <i class="fa fa-lock"></i>
                     <input type="password" id="password" placeholder="Password">
                 </div>
                 <div class="group-form group-form-confirmpassword">
                     <input type="password" id="confirmpassword" placeholder="Confirm Password">
                 </div>
                 <div class="group-form-accept">
-                    <input type="checkbox">I agree to the terms of privacy
+                    <input type="checkbox">
+                    <span>I agree to the terms of privacy</span>
                 </div>
                 <div class="signup-button">
-                <input type="submit" id="sign-up" value="Sign Up">
+                    <input type="submit" id="sign-up" value="Sign Up">
+                    <span>OR</span>
                 </div>
-                <p>Or <span></span></p>
                 <ul class="social-login">
                     <div class="form-group form-group-google">
                         <li>
