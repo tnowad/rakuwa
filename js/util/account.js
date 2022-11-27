@@ -1,17 +1,32 @@
-import { getDataFromLocal } from '../server/local-data.js'
-
-let { users } = await getDataFromLocal()
-
-const login = (username, password) => {
+import { getDataFromLocal } from '../util/local-data.js'
+import { getParams } from './util.js'
+const login = async (username, password) => {
+    let { users } = await getDataFromLocal()
     const currentUser = users.filter(user => user.username == username && user.password == password)
-    console.log(currentUser)
-    if (currentUser.length > 0)
+    if (currentUser.length > 0) {
         localStorage.setItem('currentUser', JSON.stringify(currentUser[0]))
+        return true
+    }
+    return false
 }
+
+const updateUser = async (user) => {
+    let { users } = await getDataFromLocal()
+    for (const i = 0; i < users.length; i++) {
+        if (users[i].id == user.id) {
+            users[i] = user
+            break
+        }
+    }
+    localStorage.setItem('products', JSON.stringify(products))
+}
+
 const logout = () => {
     localStorage.setItem('currentUser', '{}')
 }
-const isUsernameValid = (username) => {
+
+const isUsernameValid = async (username) => {
+    let { users } = await getDataFromLocal()
     const usernameRegex = /^[a-z0-9_.]+$/
     if (!usernameRegex.test(username)) {
         return false
@@ -21,13 +36,15 @@ const isUsernameValid = (username) => {
     }
     return true
 }
+
 const idPasswordValid = (password) => {
     const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/
     return passwordRegex.test(password)
 }
-const register = (user) => {
-    // TODO: Check valid user
-    if (!isUsernameValid(user.username)) {
+
+const register = async (user) => {
+    let { users } = await getDataFromLocal()
+    if (!await isUsernameValid(user.username)) {
         return false
     } else {
         users.push(user)
@@ -35,8 +52,31 @@ const register = (user) => {
         return true
     }
 }
+
+const getUsers = (options) => {
+    if (options != undefined) {
+        if(options.id != null) {
+            // todo filter data
+        }
+    }
+}
+
+const checkLoginAlert = () => {
+    const loginSuccessfully = getParams('loginSuccessfully')
+    if (loginSuccessfully == 'false') {
+        alert("Đăng nhập thất bại!")
+    } else if (loginSuccessfully == 'true') {
+        alert("Đăng nhập thành công!")
+    }
+}
+
 export {
     login,
     register,
-    logout
+    isUsernameValid,
+    idPasswordValid,
+    updateUser,
+    logout,
+    getUsers,
+    checkLoginAlert
 }
