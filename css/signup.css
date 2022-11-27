@@ -29,7 +29,7 @@
 
 .sign-up .container form #sign-up {
     width: 95%;
-    background-color: greenyellow;
+    background-color: rgb(122, 175, 42);
     padding: 10px;
     font-weight: 600;
     font-size: 18px;
@@ -44,8 +44,8 @@
     content: '';
     width: 206px;
     height: 2px;
-    background-color: #a3de83;
-    top: 80%;
+    background-color: rgb(94, 134, 33);
+    top: 78%;
     left: 7px;
 }
 .container form .signup-button > span::after{
@@ -53,14 +53,14 @@
     content: '';
     width: 207px;
     height: 2px;
-    background-color: #a3de83;
-    top: 80%;
+    background-color: rgb(94, 134, 33);
+    top: 78%;
     right: 7px;
 }
 .container form .signup-button > span{
     display: inline-block;
     margin-top: 20px;
-    color: #2eb872;
+    color: rgb(47, 68, 16);
 }
 
 .group-form {
@@ -77,7 +77,8 @@
     background-color: rgb(247, 247, 247);
 }
 .group-form i{
-    color: greenyellow;
+    color: rgb(105, 145, 46);
+
 }
 .form-group {
     text-align: center;
