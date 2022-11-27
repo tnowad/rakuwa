@@ -8,11 +8,16 @@ const createProduct = (product) => {
     localStorage.setItem('products', JSON.stringify(products))
 }
 
+const removeProduct = (productId) => {
+    products = products.filter(product => product.id != productId)
+    localStorage.setItem('products', JSON.stringify(products))
+}
+
 const updateProduct = (product) => {
     for (const i = 0; i < products.length; i++) {
         if (products[i].id == product.id) {
-            products[i] == product
-            console.log(products[i], pro)
+            products[i] = product
+            console.log(products[i], product)
             break
         }
     }
@@ -44,5 +49,6 @@ export {
     createProduct,
     updateProduct,
     getProducts,
-    getCategory
+    getCategory,
+    removeProduct
 }
