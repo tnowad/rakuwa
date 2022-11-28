@@ -16,30 +16,18 @@
     align-items: center;
 }
 
-.profile-details img {
+.profile-details .photo, .profile-details img {
     width: 150px;
-    border-radius: 50%;
+    height: 150px;
+}
+
+.profile-details>.photo {
+    object-fit: cover;
+}
+
+.profile-details img {
     border: 5px solid var(--gray);
-}
-
-#file{
-    display: none;
-}
-
-#uploadBtn {
-    height: 40px;
-    width: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    color: wheat;
-    line-height: 30px;
-    font-family: sans-serif;
-    font-size: 15px;
-    cursor: pointer;
-    display: none;
+    border-radius: 50%;
 }
 
 .profile-info small {
