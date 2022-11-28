@@ -37,38 +37,38 @@ const changeTabs = async () => {
 }
 
 const changeAvt = async () => {
-    const imgDiv = document.querySelector('.profile-details');
-    const img = document.querySelector('#photo');
-    const file = document.querySelector('#file');
-    const uploadBtn = document.querySelector('#uploadBtn');
+    // const imgDiv = document.querySelector('.profile-details');
+    // const img = document.querySelector('#photo');
+    // const file = document.querySelector('#file');
+    // const uploadBtn = document.querySelector('#uploadBtn');
 
-    //if user hover on img div
+    // //if user hover on img div
 
-    imgDiv.addEventListener('mouseenter', function(){
-        uploadBtn.style.display = "block";
-    });
+    // imgDiv.addEventListener('mouseenter', function(){
+    //     uploadBtn.style.display = "block";
+    // });
 
-    //if we hover out from img div
+    // //if we hover out from img div
 
-    imgDiv.addEventListener('mouseleave', function(){
-        uploadBtn.style.display = "none";
-    });
+    // imgDiv.addEventListener('mouseleave', function(){
+    //     uploadBtn.style.display = "none";
+    // });
 
-    file.addEventListener('change', function(){
-        //this refers to file
-        const choosedFile = this.files[0];
+    // file.addEventListener('change', function(){
+    //     //this refers to file
+    //     const choosedFile = this.files[0];
 
-        if (choosedFile) {
+    //     if (choosedFile) {
 
-            const reader = new FileReader(); //FileReader is a predefined function of JS
+    //         const reader = new FileReader(); //FileReader is a predefined function of JS
 
-            reader.addEventListener('load', function(){
-                img.setAttribute('src', reader.result);
-            });
+    //         reader.addEventListener('load', function(){
+    //             img.setAttribute('src', reader.result);
+    //         });
 
-            reader.readAsDataURL(choosedFile);
-        }
-    });
+    //         reader.readAsDataURL(choosedFile);
+    //     }
+    // });
 }
 
 showProfileMenu()
