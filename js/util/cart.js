@@ -3,7 +3,11 @@ import { getProductById } from "./product.js"
 const addProductIdToCart = async (productId, quantity) => {
     let { currentCart } = await getDataFromLocal()
     let product = await getProductById(productId)
-    product.quantity = quantity
+
+    console.log(product)
+
+    product.quantity = product.quantity ? product.quantity + 1 : 0
+
     currentCart.push(product)
     localStorage.setItem('currentCart', JSON.stringify(currentCart))
 }
