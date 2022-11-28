@@ -113,9 +113,10 @@
 
     <section class="profile-info">
         <div class="profile-details">
-            <a href="/pages/profile.html"><img src="/img/profile/avt.png" alt=""></a>
-            <h3 class="name">NICKNAME</h3>
-            <small><i>Something about you</i></small>
+            <img src="/img/profile/avt.png" alt="" id="photo">
+            <h3 id="nickname">NICKNAME</h3>
+            <input type="file" id="file">
+            <small id="uploadBtn"><i class="fal fa-pen"></i><i> Edit profile</i></small>
         </div>
         <div class="profile-nav">
             <ul class="container">
@@ -357,32 +358,7 @@
     <script type="module" src="/js/context-menu.js"></script>
     <script type="module" src="/js/add-product-to-cart.js"></script>
     <script src="./js/Search.js"></script>
-    <script type="module">
-        import { addActive, removeActive } from '/js/util.js'
-        const profileNavLists = document.querySelectorAll('.profile-nav-list')
-        const profileTabLists = document.querySelectorAll('.profile-tab-item')
-        profileNavLists.forEach(element => {
-            element.addEventListener('click', () => {
-                profileNavLists.forEach(element => {
-                    removeActive(element)
-                })
-                addActive(element)
-            })
-        })
-        const profileNavListItems = document.querySelectorAll('.profile-nav-list-menu-item')
-        profileNavListItems.forEach(element => {
-            element.addEventListener('click', () => {
-                profileNavListItems.forEach(element => {
-                    removeActive(element)
-                })
-                profileTabLists.forEach(element => {
-                    removeActive(element)
-                })
-                addActive(document.querySelector(`#${element.id}-tab`))
-                addActive(element)
-            })
-        })
-    </script>
+    <script type="module" src="/js/render/profile.js"></script>
 </body>
 
 </html>
