@@ -1,0 +1,255 @@
+.shop-area {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.shop-area > .container {
+	padding: 0px 55px;
+	width: 100%;
+	display: flex;
+}
+
+.product-tabs {
+	width: 100%;
+}
+
+.product-tabs-title {
+	width: 100%;
+	margin: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-tabs {
+	display: inline-flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	width: 70%;
+	margin-right: 50px;
+}
+
+.nav-tabs .nav-item > * {
+	background: transparent;
+	font-size: 15px;
+	margin: 3px 5px;
+}
+
+.nav-tabs .nav-item.active > * {
+	color: var(--green);
+	font-weight: 700;
+	font-size: 18px;
+}
+
+/* .product-area {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} */
+.product-area {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+/* Product item */
+.product-item {
+	display: flex;
+	flex-direction: column;
+	max-width: 250px;
+	width: unset !important;
+	min-width: 210;
+	margin: 10px 10px;
+	border-radius: 20px;
+	border: 0.5px solid rgb(233, 233, 233);
+	overflow: hidden;
+	position: relative;
+}
+
+.product-item > .container {
+	padding: 20px;
+}
+
+.product-item .label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 30px;
+	width: 60px;
+	border-bottom-right-radius: 20px;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.product-item .label.hot {
+	background: var(--red);
+}
+
+.product-item .label.hot::after {
+	content: 'Hot';
+}
+
+.product-item .label.sale {
+	background: var(--green);
+}
+
+.product-item .label.sale::after {
+	content: 'Sale off';
+}
+
+.product-item-top {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 140px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.product-item-top .product-img {
+	max-width: 150px;
+	min-width: 140px;
+	/* height: 80%; */
+	object-fit: cover;
+	transition: transform 0.2s;
+}
+
+.product-item:hover .product-img {
+	transform: scale(1.05);
+}
+
+.product-rate > * {
+	color: var(--light-dark);
+}
+
+.product-rate > *.active {
+	color: var(--yellow);
+}
+
+.product-item-center .product-category {
+	color: var(--gray);
+	font-size: 13px;
+}
+
+.product-item-center .product-name {
+	font-size: 18px;
+	display: inline-block;
+	height: 40px;
+}
+
+.product-item-bottom {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 15px 0px;
+}
+
+.product-price > * {
+	white-space: nowrap;
+}
+
+.product-price .price {
+	font-size: 17px;
+	color: var(--green);
+}
+
+.product-item .old-price {
+	text-decoration: line-through;
+	color: var(--gray);
+	font-size: 13px;
+}
+
+.product-add-cart > span {
+	width: 100%;
+	text-align: center;
+	padding: 15px 30px;
+	display: inline-block;
+	border-radius: 5px;
+	background: var(--green-light);
+	color: var(--green);
+	transition: all 0.5s;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+	cursor: pointer;
+}
+
+.product-add-cart > span:hover {
+	background: var(--green);
+	color: var(--green-light);
+}
+
+.product-pagination {
+	display: flex;
+	justify-content: center;
+	margin: 30px;
+}
+
+.product-pagination .page-item {
+	margin: 5px;
+}
+
+.product-pagination .page-item > * {
+	display: flex;
+	height: 40px;
+	width: 40px;
+	justify-content: center;
+	align-items: center;
+}
+
+.product-pagination .page-item > *:hover,
+.product-pagination .page-item.active > * {
+	background-color: var(--green);
+	color: white;
+}
+
+.product-pagination .page-item > * {
+	transition: 0.2s all;
+	font-size: 16px;
+	font-family: 'Nunito', sans-serif;
+	position: relative;
+	display: block;
+	border-radius: 50%;
+	font-weight: 600;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #1a2428;
+	border: 1px solid rgba(118, 167, 19, 0.15);
+}
+
+@media only screen and (max-width: 1049px) {
+	.shop-area .container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 870px) {
+	.product-area {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	.product-item {
+		margin: 5px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.product-area {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.shop-area .container {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.product-item {
+		margin: 3px;
+	}
+}

@@ -1,0 +1,30 @@
+.product-category-area {
+    margin-bottom: 50px;
+}
+
+.product-category-area .container {
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.product-category-inner {
+    width: 100%;
+    padding-left: 55px;
+    padding-right: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid var(--green);
+    border-radius: 20px;
+}
+
+.product-category-item {
+    width: min(300px, 100%);
+    height: 200px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-yellow);
+    margin: 20px 10px;
+}

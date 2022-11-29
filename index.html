@@ -9,10 +9,10 @@
 		<link rel="stylesheet" href="/css/all.css" />
 		<link rel="stylesheet" href="/css/shop/root.css" />
 		<link rel="stylesheet" href="/css/shop/header.css" />
-		<link rel="stylesheet" href="css/shop/SlideShowBanner.css" />
-		<link rel="stylesheet" href="/css/shop/OfferBanner.css" />
-		<link rel="stylesheet" href="/css/shop/ProductCategoryArea.css" />
-		<link rel="stylesheet" href="/css/shop/ShopArea.css" />
+		<link rel="stylesheet" href="/css/shop/SlideShowBanner.css" />
+		<link rel="stylesheet" href="/css/shop/offer-banner.css" />
+		<link rel="stylesheet" href="/css/shop/product-category-area.css" />
+		<link rel="stylesheet" href="/css/shop/shop-area.css" />
 		<link rel="stylesheet" href="/css/shop/footer.css" />
 		<link rel="stylesheet" href="/css/shop/yourcart.css" />
 	</head>
@@ -61,8 +61,8 @@
 							<input
 								type="search"
 								class="search-text"
+								name="name"
 								placeholder="Search product"
-								onkeyup="searchFunction()"
 								required
 							/>
 							<button type="submit" class="search-button">
@@ -179,31 +179,12 @@
 		<section class="shop-area">
 			<div class="container">
 				<div class="product-tabs">
+					<script
+						type="module"
+						src="./js/render/home-page-nav-tabs.js"
+					></script>
 					<div class="product-tabs-title">
 						<h3>Popular Products</h3>
-						<ul class="nav-tabs">
-							<li class="nav-item active">
-								<button>All</button>
-							</li>
-							<li class="nav-item">
-								<button>Fruits</button>
-							</li>
-							<li class="nav-item">
-								<button>Seafood</button>
-							</li>
-							<li class="nav-item">
-								<button>Vegetables</button>
-							</li>
-							<li class="nav-item">
-								<button>Meat & Poultry</button>
-							</li>
-							<li class="nav-item">
-								<button>Grocery</button>
-							</li>
-							<li class="nav-item">
-								<button>Fruits Basket / Fruits Box</button>
-							</li>
-						</ul>
 					</div>
 					<div class="product-area"></div>
 					<ul class="product-pagination">

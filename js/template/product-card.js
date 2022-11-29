@@ -38,8 +38,8 @@ const productCart = (product) => /* html */ `
 					}
                 </div>
             </div>
-            <div class="product-add-cart">
-                <span>
+            <div class="product-add-cart" >
+                <span onclick="location.assign='123'">
                     <a class="fa-solid fa-cart-shopping"></a>Add
                 </span>
             </div>
