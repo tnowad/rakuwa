@@ -2,40 +2,7 @@ import { getParams, renderHTML } from '../util/util.js'
 import { getProducts } from '../util/product.js'
 import { addProductIdToCart } from '../util/cart.js'
 import { productCart } from '../template/product-card.js'
-
-const productPaginationHTML = (maxPage, currentPage) => {
-	let html = ''
-	for (let i = 1; i <= maxPage; i++) {
-		if (i != currentPage) {
-			html += `<li class="page-item"><a href="?page=${i}">${i}</a></li>`
-		} else {
-			html += `<li class="page-item active"><a href="?page=${i}">${i}</a></li>`
-		}
-	}
-	if (currentPage == 1) {
-		html =
-			`<li class="page-item"><a><i class="fas fa-chevron-left"></i></a></li>` +
-			html
-		html += `<li class="page-item"><a href="?page=${
-			parseInt(currentPage) + 1
-		}"><i class="fas fa-chevron-right"></i></a></li>`
-	} else if (currentPage == maxPage) {
-		html =
-			`<li class="page-item"><a href="?page=${
-				parseInt(currentPage) - 1
-			}"><i class="fas fa-chevron-left"></i></a></li>` + html
-		html += `<li class="page-item"><a"><i class="fas fa-chevron-right"></i></a></li>`
-	} else {
-		html =
-			`<li class="page-item"><a href="?page=${
-				parseInt(currentPage) - 1
-			}"><i class="fas fa-chevron-left"></i></a></li>` + html
-		html += `<li class="page-item"><a href="?page=${
-			parseInt(currentPage) + 1
-		}"><i class="fas fa-chevron-right"></i></a></li>`
-	}
-	return html
-}
+import { pagination as productPaginationHTML } from '../template/pagination.js'
 
 const shopArea = document.querySelector('.product-area')
 
