@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="/css/shop/ShopArea.css" />
 		<link rel="stylesheet" href="/css/shop/footer.css" />
 		<link rel="stylesheet" href="/css/shop/yourcart.css" />
+		<link rel="stylesheet" href="/css/shop/product-detail.css">
 		<script type="module" src="/js/render/product-detail.js"></script>
 	</head>
 
@@ -142,146 +143,23 @@
 				</ul>
 			</div>
 		</div>
-		<style>
-			.product-details-area .container {
-				padding: 50px 20px;
-			}
-
-			.product-details-top {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-			}
-
-			.product-details-top-right {
-				width: max(400px, 50%);
-			}
-
-			.product-details-top-left {
-				width: max(400px, 50%);
-			}
-
-			.product-details-top-left > * {
-				margin-bottom: 13px;
-			}
-
-			.product-detail-slide-show {
-				width: 100%;
-				overflow: hidden;
-				display: flex;
-				justify-content: center;
-			}
-
-			.title-detail {
-				color: #4a4a4a;
-				font-size: 22px;
-			}
-
-			.product-details-price {
-				font-size: 18px;
-			}
-
-			.product-detail-price-current {
-				color: #c10017;
-				font-size: 25px;
-				font-weight: bold;
-				display: inline-block;
-			}
-
-			.product-detail-price-old {
-				color: #999;
-				text-decoration: line-through;
-			}
-
-			.product-add-to-cart {
-				position: relative;
-				height: 50px;
-				width: 400px;
-			}
-
-			.product-add-to-cart > * {
-				position: absolute;
-			}
-
-			.product-add-to-cart input[type='submit'] {
-				/* display: inline-block; */
-				width: 100%;
-				height: 100%;
-				background: var(--green);
-				color: white;
-				font-size: 20px;
-			}
-		</style>
 		<section class="product-details-area">
 			<div class="container">
 				<div class="product-details-top"></div>
 				<div class="product-details-bottom">
-					<style>
-						.product-comments {
-							margin-top: 30px;
-						}
-
-						.product-comments .comment {
-							/* width: 500px; */
-							height: max-content;
-							margin-bottom: 20px;
-						}
-
-						.product-comments .comment:not(:last-child) {
-							border-bottom: 1px solid #999;
-						}
-
-						.comment-top {
-							font-size: 20px;
-							margin-bottom: 20px;
-						}
-
-						.comment-top .comment-name {
-							font-weight: 600;
-						}
-
-						.comment-top .comment-rating {
-							margin-left: 20px;
-						}
-
-						.comment-top .comment-paid {
-							color: var(--blue);
-						}
-
-						.comment-top .comment-paid span {
-							color: var(--green);
-						}
-
-						.comment-center {
-							margin-bottom: 20px;
-						}
-
-						.comment-bottom {
-							padding-bottom: 20px;
-						}
-
-						.comment-bottom *:not(:last-child) {
-							color: var(--blue);
-							margin-right: 15px;
-						}
-					</style>
 					<div class="product-comments">
 						<div class="comment">
 							<div class="comment-top">
 								<a class="comment-name">Quách Tĩnh</a>
-								<a class="comment-rating">
-									<a class="product-rate">
-										<em class="fas fa-star active"></em
-										><em class="fas fa-star active"></em
-										><em class="fas fa-star active"></em
-										><em class="fas fa-star active"></em
-										><em class="fas fa-star"></em>
+									<a class="comment-rating">
+										<a class="product-rate">
+											<em class="fas fa-star active"></em
+											><em class="fas fa-star active"></em
+											><em class="fas fa-star active"></em
+											><em class="fas fa-star active"></em
+											><em class="fas fa-star"></em>
+										</a>
 									</a>
-								</a>
-								<a class="comment-paid">
-									<span><i class="fas fa-check"></i></span> Đã
-									mua</a
-								>
 							</div>
 							<div class="comment-center">
 								<a class="comment-content"
@@ -301,7 +179,7 @@
 						</div>
 						<div class="comment">
 							<div class="comment-top">
-								<a class="comment-name">Trương Vô Kỵ</a>
+								<a class="comment-name">Trương Vô Dụng</a>
 								<a class="comment-rating">
 									<a class="product-rate">
 										<em class="fas fa-star active"></em
@@ -311,10 +189,6 @@
 										><em class="fas fa-star"></em>
 									</a>
 								</a>
-								<a class="comment-paid">
-									<span><i class="fas fa-check"></i></span> Đã
-									mua</a
-								>
 							</div>
 							<div class="comment-center">
 								<a class="comment-content"
@@ -333,64 +207,6 @@
 							</div>
 						</div>
 					</div>
-
-					<style>
-						.comment-form .comment-input {
-							color: #333;
-							margin-top: 20px;
-							box-sizing: border-box;
-							margin-bottom: 20px;
-							height: 100px;
-							width: 100%;
-							padding: 10px 10px 20px 10px;
-							min-height: 80px;
-							max-height: 80px;
-							overflow: hidden;
-							border: 1px solid #ccc;
-						}
-
-						.comment-form input[type='text'] {
-							color: #333;
-							border: 1px solid #ccc;
-							padding: 7px;
-							border-radius: 3px;
-							box-sizing: border-box;
-							min-height: 48px;
-							max-height: 48px;
-							text-indent: 10px;
-							margin-right: 10px;
-							height: 48px;
-							width: min(100%, 350px);
-							margin-bottom: 16px;
-						}
-
-						.comment-form-box {
-							display: grid;
-							box-sizing: border-box;
-							padding-left: 30px;
-							grid-template-columns: repeat(4, 23%);
-							gap: 10px;
-							text-align: center;
-						}
-
-						@media only screen and (max-width: 800px) {
-							.comment-form-box {
-								grid-template-columns: repeat(2, 40%);
-							}
-						}
-
-						@media only screen and (max-width: 500px) {
-							.comment-form-box {
-								grid-template-columns: repeat(1, 90%);
-							}
-						}
-
-						.comment-form input[type='submit'] {
-							height: 50px;
-							background: var(--green);
-							color: white;
-						}
-					</style>
 					<div class="comment-form">
 						<label for="">Mời bạn bình luận hoặc đặt câu hỏi</label>
 						<textarea
