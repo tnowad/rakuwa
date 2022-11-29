@@ -8,6 +8,10 @@
 	display: flex;
 }
 
+.product-tabs {
+	width: 100%;
+}
+
 .product-tabs-title {
 	width: 100%;
 	margin: 20px;

@@ -247,7 +247,8 @@
 
 .user-menu.dropdown-content {
     margin: 32px;
-    transform: translateX(-70%);
+    top:47px;
+    right: -30px;
 }
 
 .user-menu.dropdown-content>* {
