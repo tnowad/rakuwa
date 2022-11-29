@@ -1,358 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="/img/logo2.png" type="image/x-icon" />
+		<title>RaKuWa</title>
+		<link rel="stylesheet" href="/css/all.css" />
+		<link rel="stylesheet" href="/css/shop/root.css" />
+		<link rel="stylesheet" href="/css/shop/header.css" />
+		<link rel="stylesheet" href="/css/shop/OfferBanner.css" />
+		<link rel="stylesheet" href="/css/shop/ProductCategoryArea.css" />
+		<link rel="stylesheet" href="/css/shop/ShopArea.css" />
+		<link rel="stylesheet" href="/css/shop/footer.css" />
+		<link rel="stylesheet" href="/css/shop/yourcart.css" />
+		<script type="module" src="/js/render/product-detail.js"></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/logo2.png" type="image/x-icon">
-    <title>RaKuWa</title>
-    <link rel="stylesheet" href="/asset/fontawesome/css/all.css">
-    <link rel="stylesheet" href="/css/shop/root.css">
-    <link rel="stylesheet" href="/css/shop/header.css">
-    <link rel="stylesheet" href="/css/shop/OfferBanner.css">
-    <link rel="stylesheet" href="/css/shop/ProductCategoryArea.css">
-    <link rel="stylesheet" href="/css/shop/ShopArea.css">
-    <link rel="stylesheet" href="/css/shop/footer.css">
-    <link rel="stylesheet" href="/css/shop/yourcart.css">
-    <script type="module" src="/js/render/product-detail.js"></script>
-</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<a href="/index.html"
+						><img src="/img/logo1.png" class="desktop" alt="logo"
+					/></a>
+					<a href="/index.html"
+						><img src="/img/logo2.png" class="mobile" alt="RAKUWA"
+					/></a>
+				</div>
+				<div class="nav">
+					<ul class="navigation">
+						<script>
+							const dropdown =
+								document.querySelectorAll('.dropdown')
+							dropdown.forEach((element) => {
+								element.addEventListener('')
+							})
+						</script>
+						<li><a href="/index.html">Home</a></li>
+						<li class="dropdown">
+							<a>Products</a>
+							<ul class="dropdown-content">
+								<li><a href="">Fruits</a></li>
+								<li><a href="">Seafood</a></li>
+								<li><a href="">Vegetables</a></li>
+								<li><a href="">Meat & Poultry</a></li>
+								<li><a href="">Hot items</a></li>
+								<li>
+									<a href="">Fruits Basket / Fruits Box</a>
+								</li>
+								<li><a href="">Grocery</a></li>
+							</ul>
+						</li>
+						<li><a href="/pages/contact.html">Contact Us</a></li>
+						<li class="dropdown">
+							<a>About Us</a>
+							<ul class="dropdown-content">
+								<li><a href="">Privacy Policy</a></li>
+								<li><a href="">Terms & Conditions</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="menu-icon">
+					<div class="search-box">
+						<form class="search-form">
+							<input
+								type="search"
+								class="search-text"
+								placeholder="Search product"
+								onkeyup="searchFunction()"
+								required
+							/>
+							<button type="submit" class="search-button">
+								<em class="fas fa-search"></em>
+							</button>
+						</form>
+					</div>
+					<button class="menu-sidebar">
+						<em class="fas fa-bars"></em>
+					</button>
+					<button class="btn-cart">
+						<em class="fa fa-cart-plus"></em>
+					</button>
+					<button class="user dropdown">
+						<em class="fas fa-user-circle"></em>
+						<ul class="user-menu dropdown-content">
+							<li>
+								<a href="/pages/login.html">Login</a> /
+								<a href="/pages/signup.html">Sign up</a>
+							</li>
+							<li><a href="/pages/setting.html">Setting</a></li>
+							<li><a href="">Help</a></li>
+						</ul>
+					</button>
+				</div>
+			</div>
+			<div class="container">
+				<ul class="navigation mobile-header">
+					<div class="container">
+						<li><a href="/index.html">Home</a></li>
+						<li class="dropdown-mobile">
+							<a href="/pages/product.html">Products</a>
+							<ul>
+								<li>
+									<a href="/pages/product.html">Fruits</a>
+								</li>
+								<li>
+									<a href="/pages/product.html">Seafood</a>
+								</li>
+								<li>
+									<a href="/pages/product.html">Vegetables</a>
+								</li>
+								<li>
+									<a href="/pages/product.html"
+										>Meat & Poultry</a
+									>
+								</li>
+								<li>
+									<a href="/pages/product.html">Hot items</a>
+								</li>
+								<li>
+									<a href="/pages/product.html">Grocery</a>
+								</li>
+								<li>
+									<a href="/pages/product.html"
+										>Fruits Basket / Fruits Box</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li><a href="/pages/contact.html">Contact Us</a></li>
+						<li class="dropdown-mobile">
+							<a>About Us</a>
+							<ul>
+								<li><a href="">Privacy Policy</a></li>
+								<li><a href="">Terms & Conditions</a></li>
+							</ul>
+						</li>
+					</div>
+				</ul>
+			</div>
+		</div>
+		<style>
+			.product-details-area .container {
+				padding: 50px 20px;
+			}
 
-<body>
-    <div class="header">
-        <div class="container">
-            <div class="logo">
-                <a href="/index.html"><img src="/img/logo1.png" class="desktop" alt="logo" /></a>
-                <a href="/index.html"><img src="/img/logo2.png" class="mobile" alt="RAKUWA" /></a>
-            </div>
-            <div class="nav">
-                <ul class="navigation">
-                    <script>
-                        const dropdown = document.querySelectorAll('.dropdown')
-                        dropdown.forEach(element => {
-                            element.addEventListener('')
-                        })
-                    </script>
-                    <li><a href="/index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a>Products</a>
-                        <ul class="dropdown-content">
-                            <li><a href="">Fruits</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Meat & Poultry</a></li>
-                            <li><a href="">Hot items</a></li>
-                            <li><a href="">Fruits Basket / Fruits Box</a></li>
-                            <li><a href="">Grocery</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/pages/contact.html">Contact Us</a></li>
-                    <li class="dropdown">
-                        <a>About Us</a>
-                        <ul class="dropdown-content">
-                            <li><a href="">Privacy Policy</a></li>
-                            <li><a href="">Terms & Conditions</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="menu-icon">
-                <div class="search-box">
-                    <form class="search-form">
-                        <input type="search" class="search-text" placeholder="Search product" onkeyup="searchFunction()"
-                            required>
-                        <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
-                    </form>
-                </div>
-                <button class="menu-sidebar">
-                    <em class="fas fa-bars"></em>
-                </button>
-                <button class="btn-cart">
-                    <em class="fa fa-cart-plus"></em>
-                </button>
-                <button class="user dropdown">
-                    <em class="fas fa-user-circle"></em>
-                    <ul class="user-menu dropdown-content">
-                        <li><a href="/pages/login.html">Login</a> / <a href="/pages/signup.html">Sign up</a></li>
-                        <li><a href="/pages/setting.html">Setting</a></li>
-                        <li><a href="">Help</a></li>
-                    </ul>
-                </button>
-            </div>
-        </div>
-        <div class="container">
-            <ul class="navigation mobile-header">
-                <div class="container">
-                    <li><a href="/index.html">Home</a></li>
-                    <li class="dropdown-mobile">
-                        <a href="/pages/product.html">Products</a>
-                        <ul>
-                            <li><a href="/pages/product.html">Fruits</a></li>
-                            <li><a href="/pages/product.html">Seafood</a></li>
-                            <li><a href="/pages/product.html">Vegetables</a></li>
-                            <li><a href="/pages/product.html">Meat & Poultry</a></li>
-                            <li><a href="/pages/product.html">Hot items</a></li>
-                            <li><a href="/pages/product.html">Grocery</a></li>
-                            <li><a href="/pages/product.html">Fruits Basket / Fruits Box</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/pages/contact.html">Contact Us</a></li>
-                    <li class="dropdown-mobile">
-                        <a>About Us</a>
-                        <ul>
-                            <li><a href="">Privacy Policy</a></li>
-                            <li><a href="">Terms & Conditions</a></li>
-                        </ul>
-                    </li>
-                </div>
-            </ul>
-        </div>
-    </div>
-    <style>
-        .product-details-area .container {
-            padding: 50px 20px;
-        }
+			.product-details-top {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
 
-        .product-details-top {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+			.product-details-top-right {
+				width: max(400px, 50%);
+			}
 
-        .product-details-top-right {
-            width: max(400px, 50%);
-        }
+			.product-details-top-left {
+				width: max(400px, 50%);
+			}
 
-        .product-details-top-left {
-            width: max(400px, 50%);
-        }
+			.product-details-top-left > * {
+				margin-bottom: 13px;
+			}
 
-        .product-details-top-left>* {
-            margin-bottom: 13px;
-        }
+			.product-detail-slide-show {
+				width: 100%;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+			}
 
-        .product-detail-slide-show {
-            width: 100%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-        }
+			.title-detail {
+				color: #4a4a4a;
+				font-size: 22px;
+			}
 
-        .title-detail {
-            color: #4a4a4a;
-            font-size: 22px;
-        }
+			.product-details-price {
+				font-size: 18px;
+			}
 
-        .product-details-price {
-            font-size: 18px;
-        }
+			.product-detail-price-current {
+				color: #c10017;
+				font-size: 25px;
+				font-weight: bold;
+				display: inline-block;
+			}
 
-        .product-detail-price-current {
-            color: #c10017;
-            font-size: 25px;
-            font-weight: bold;
-            display: inline-block;
-        }
+			.product-detail-price-old {
+				color: #999;
+				text-decoration: line-through;
+			}
 
-        .product-detail-price-old {
-            color: #999;
-            text-decoration: line-through;
-        }
+			.product-add-to-cart {
+				position: relative;
+				height: 50px;
+				width: 400px;
+			}
 
-        .product-add-to-cart {
-            position: relative;
-            height: 50px;
-            width: 400px;
-        }
+			.product-add-to-cart > * {
+				position: absolute;
+			}
 
-        .product-add-to-cart>* {
-            position: absolute;
-        }
+			.product-add-to-cart input[type='submit'] {
+				/* display: inline-block; */
+				width: 100%;
+				height: 100%;
+				background: var(--green);
+				color: white;
+				font-size: 20px;
+			}
+		</style>
+		<section class="product-details-area">
+			<div class="container">
+				<div class="product-details-top"></div>
+				<div class="product-details-bottom">
+					<style>
+						.product-comments {
+							margin-top: 30px;
+						}
 
-        .product-add-to-cart input[type="submit"] {
-            /* display: inline-block; */
-            width: 100%;
-            height: 100%;
-            background: var(--green);
-            color: white;
-            font-size: 20px;
-        }
-    </style>
-    <section class="product-details-area">
-        <div class="container">
-            <div class="product-details-top">
-            </div>
-            <div class="product-details-bottom">
-                <style>
-                    .product-comments {
-                        margin-top: 30px;
-                    }
+						.product-comments .comment {
+							/* width: 500px; */
+							height: max-content;
+							margin-bottom: 20px;
+						}
 
-                    .product-comments .comment {
-                        /* width: 500px; */
-                        height: max-content;
-                        margin-bottom: 20px;
-                    }
+						.product-comments .comment:not(:last-child) {
+							border-bottom: 1px solid #999;
+						}
 
-                    .product-comments .comment:not(:last-child) {
-                        border-bottom: 1px solid #999;
-                    }
+						.comment-top {
+							font-size: 20px;
+							margin-bottom: 20px;
+						}
 
-                    .comment-top {
-                        font-size: 20px;
-                        margin-bottom: 20px;
-                    }
+						.comment-top .comment-name {
+							font-weight: 600;
+						}
 
-                    .comment-top .comment-name {
-                        font-weight: 600;
-                    }
+						.comment-top .comment-rating {
+							margin-left: 20px;
+						}
 
-                    .comment-top .comment-rating {
-                        margin-left: 20px;
-                    }
+						.comment-top .comment-paid {
+							color: var(--blue);
+						}
 
-                    .comment-top .comment-paid {
-                        color: var(--blue);
-                    }
+						.comment-top .comment-paid span {
+							color: var(--green);
+						}
 
-                    .comment-top .comment-paid span {
-                        color: var(--green);
-                    }
+						.comment-center {
+							margin-bottom: 20px;
+						}
 
-                    .comment-center {
-                        margin-bottom: 20px;
-                    }
+						.comment-bottom {
+							padding-bottom: 20px;
+						}
 
-                    .comment-bottom {
-                        padding-bottom: 20px;
-                    }
+						.comment-bottom *:not(:last-child) {
+							color: var(--blue);
+							margin-right: 15px;
+						}
+					</style>
+					<div class="product-comments">
+						<div class="comment">
+							<div class="comment-top">
+								<a class="comment-name">Quách Tĩnh</a>
+								<a class="comment-rating">
+									<a class="product-rate">
+										<em class="fas fa-star active"></em
+										><em class="fas fa-star active"></em
+										><em class="fas fa-star active"></em
+										><em class="fas fa-star active"></em
+										><em class="fas fa-star"></em>
+									</a>
+								</a>
+								<a class="comment-paid">
+									<span><i class="fas fa-check"></i></span> Đã
+									mua</a
+								>
+							</div>
+							<div class="comment-center">
+								<a class="comment-content"
+									>Nước màu mật ong xài rất đáng tiền luôn,
+									hôm đi dã ngoại vợ mình, Hoàng Dung ướp cánh
+									gà bằng chai này nè, nướng ăn bao ngon, nghe
+									mùi thơm, thịt mềm và lên màu đẹp.</a
+								>
+							</div>
+							<div class="comment-bottom">
+								<a href="" class="comment-discuss">Thảo luận</a>
+								<a href="" class="comment-like"
+									><i class="fas fa-thumbs-up"></i> Thích</a
+								>
+								<a>hơn 2 phút trước</a>
+							</div>
+						</div>
+						<div class="comment">
+							<div class="comment-top">
+								<a class="comment-name">Trương Vô Kỵ</a>
+								<a class="comment-rating">
+									<a class="product-rate">
+										<em class="fas fa-star active"></em
+										><em class="fas fa-star active"></em
+										><em class="fas fa-star active"></em
+										><em class="fas fa-star active"></em
+										><em class="fas fa-star"></em>
+									</a>
+								</a>
+								<a class="comment-paid">
+									<span><i class="fas fa-check"></i></span> Đã
+									mua</a
+								>
+							</div>
+							<div class="comment-center">
+								<a class="comment-content"
+									>Hôm rồi sinh nhật con gái, vợ mình trổ tài
+									làm món gà nướng cho cả nhà. Mình thấy vợ
+									ướp bằng chai nước màu mật ong, gà nướng lên
+									thơm lắm mà ăn rất là ngon.</a
+								>
+							</div>
+							<div class="comment-bottom">
+								<a href="" class="comment-discuss">Thảo luận</a>
+								<a href="" class="comment-like"
+									><i class="fas fa-thumbs-up"></i> Thích</a
+								>
+								<a>hơn 2 phút trước</a>
+							</div>
+						</div>
+					</div>
 
-                    .comment-bottom *:not(:last-child) {
-                        color: var(--blue);
-                        margin-right: 15px;
-                    }
-                </style>
-                <div class="product-comments">
-                    <div class="comment">
-                        <div class="comment-top">
-                            <a class="comment-name">Quách Tĩnh</a>
-                            <a class="comment-rating">
-                                <a class="product-rate">
-                                    <em class="fas fa-star active"></em><em class="fas fa-star active"></em><em
-                                        class="fas fa-star active"></em><em class="fas fa-star active"></em><em
-                                        class="fas fa-star"></em>
-                                </a>
-                            </a>
-                            <a class="comment-paid"> <span><i class="fas fa-check"></i></span> Đã mua</a>
-                        </div>
-                        <div class="comment-center">
-                            <a class="comment-content">Nước màu mật ong xài rất đáng tiền luôn, hôm đi dã ngoại vợ mình,
-                                Hoàng Dung
-                                ướp cánh gà bằng chai này nè, nướng ăn bao ngon, nghe mùi thơm, thịt mềm và lên màu
-                                đẹp.</a>
-                        </div>
-                        <div class="comment-bottom">
-                            <a href="" class="comment-discuss">Thảo luận</a>
-                            <a href="" class="comment-like"><i class="fas fa-thumbs-up"></i> Thích</a>
-                            <a>hơn 2 phút trước</a>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <div class="comment-top">
-                            <a class="comment-name">Trương Vô Kỵ</a>
-                            <a class="comment-rating">
-                                <a class="product-rate">
-                                    <em class="fas fa-star active"></em><em class="fas fa-star active"></em><em
-                                        class="fas fa-star active"></em><em class="fas fa-star active"></em><em
-                                        class="fas fa-star"></em>
-                                </a>
-                            </a>
-                            <a class="comment-paid"> <span><i class="fas fa-check"></i></span> Đã mua</a>
-                        </div>
-                        <div class="comment-center">
-                            <a class="comment-content">Hôm rồi sinh nhật con gái, vợ mình trổ tài làm món gà nướng cho
-                                cả
-                                nhà. Mình thấy vợ ướp bằng chai nước màu mật ong, gà nướng lên thơm lắm mà ăn rất là
-                                ngon.</a>
-                        </div>
-                        <div class="comment-bottom">
-                            <a href="" class="comment-discuss">Thảo luận</a>
-                            <a href="" class="comment-like"><i class="fas fa-thumbs-up"></i> Thích</a>
-                            <a>hơn 2 phút trước</a>
-                        </div>
-                    </div>
-                </div>
+					<style>
+						.comment-form .comment-input {
+							color: #333;
+							margin-top: 20px;
+							box-sizing: border-box;
+							margin-bottom: 20px;
+							height: 100px;
+							width: 100%;
+							padding: 10px 10px 20px 10px;
+							min-height: 80px;
+							max-height: 80px;
+							overflow: hidden;
+							border: 1px solid #ccc;
+						}
 
-                <style>
-                    .comment-form .comment-input {
-                        color: #333;
-                        margin-top: 20px;
-                        box-sizing: border-box;
-                        margin-bottom: 20px;
-                        height: 100px;
-                        width: 100%;
-                        padding: 10px 10px 20px 10px;
-                        min-height: 80px;
-                        max-height: 80px;
-                        overflow: hidden;
-                        border: 1px solid #ccc;
-                    }
+						.comment-form input[type='text'] {
+							color: #333;
+							border: 1px solid #ccc;
+							padding: 7px;
+							border-radius: 3px;
+							box-sizing: border-box;
+							min-height: 48px;
+							max-height: 48px;
+							text-indent: 10px;
+							margin-right: 10px;
+							height: 48px;
+							width: min(100%, 350px);
+							margin-bottom: 16px;
+						}
 
-                    .comment-form input[type="text"] {
-                        color: #333;
-                        border: 1px solid #ccc;
-                        padding: 7px;
-                        border-radius: 3px;
-                        box-sizing: border-box;
-                        min-height: 48px;
-                        max-height: 48px;
-                        text-indent: 10px;
-                        margin-right: 10px;
-                        height: 48px;
-                        width: min(100%, 350px);
-                        margin-bottom: 16px;
-                    }
+						.comment-form-box {
+							display: grid;
+							box-sizing: border-box;
+							padding-left: 30px;
+							grid-template-columns: repeat(4, 23%);
+							gap: 10px;
+							text-align: center;
+						}
 
-                    .comment-form-box {
-                        display: grid;
-                        box-sizing: border-box;
-                        padding-left: 30px;
-                        grid-template-columns: repeat(4, 23%);
-                        gap: 10px;
-                        text-align: center;
-                    }
+						@media only screen and (max-width: 800px) {
+							.comment-form-box {
+								grid-template-columns: repeat(2, 40%);
+							}
+						}
 
-                    @media only screen and (max-width: 800px) {
-                        .comment-form-box {
-                            grid-template-columns: repeat(2, 40%);
-                        }
-                    }
+						@media only screen and (max-width: 500px) {
+							.comment-form-box {
+								grid-template-columns: repeat(1, 90%);
+							}
+						}
 
-                    @media only screen and (max-width: 500px) {
-                        .comment-form-box {
-                            grid-template-columns: repeat(1, 90%);
-                        }
-                    }
-
-                    .comment-form input[type="submit"] {
-                        height: 50px;
-                        background: var(--green);
-                        color: white;
-                    }
-                </style>
-                <div class="comment-form">
-                    <label for="">Mời bạn bình luận hoặc đặt câu hỏi</label>
-                    <textarea name="" id="" class="comment-input"></textarea>
-                    <div class="comment-form-box">
-                        <input type="text" name="" id="" placeholder="Nhập tên của bạn" class="comment-form-name">
-                        <input type="text" name="" id="" placeholder="Nhập số điện thoại" class="comment-form-name">
-                        <input type="text" name="" id="" placeholder="Nhập email" class="comment-form-name">
-                        <input type="submit" value="Gửi">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-
+						.comment-form input[type='submit'] {
+							height: 50px;
+							background: var(--green);
+							color: white;
+						}
+					</style>
+					<div class="comment-form">
+						<label for="">Mời bạn bình luận hoặc đặt câu hỏi</label>
+						<textarea
+							name=""
+							id=""
+							class="comment-input"
+						></textarea>
+						<div class="comment-form-box">
+							<input
+								type="text"
+								name=""
+								id=""
+								placeholder="Nhập tên của bạn"
+								class="comment-form-name"
+							/>
+							<input
+								type="text"
+								name=""
+								id=""
+								placeholder="Nhập số điện thoại"
+								class="comment-form-name"
+							/>
+							<input
+								type="text"
+								name=""
+								id=""
+								placeholder="Nhập email"
+								class="comment-form-name"
+							/>
+							<input type="submit" value="Gửi" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>

@@ -1,23 +1,24 @@
-import { getDataFromLocal } from "./local-data.js"
-import { getProductById } from "./product.js"
+import { getDataFromLocal } from './local-data.js'
+import { getProductById } from './product.js'
 const addProductIdToCart = async (productId, quantity) => {
-    let { currentCart } = await getDataFromLocal()
-    let product = await getProductById(productId)
+	let { currentCart } = await getDataFromLocal()
 
-    console.log(product)
+    let product;
 
-    product.quantity = product.quantity ? product.quantity + 1 : 0
+	product = await getProductById(productId)
 
-    currentCart.push(product)
-    localStorage.setItem('currentCart', JSON.stringify(currentCart))
+
+	product.quantity = product.quantity ? product.quantity + 1 : 1
+
+
+
+	currentCart.push(product)
+	localStorage.setItem('currentCart', JSON.stringify(currentCart))
 }
 
 const getCurrentCart = async () => {
-    let { currentCart } = await getDataFromLocal()
-    return currentCart
+	let { currentCart } = await getDataFromLocal()
+	return currentCart
 }
 
-export {
-    getCurrentCart,
-    addProductIdToCart
-}
+export { getCurrentCart, addProductIdToCart }
