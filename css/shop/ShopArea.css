@@ -100,10 +100,14 @@
 	align-items: center;
 	height: 140px;
 	width: 100%;
+	overflow: hidden;
 }
 
 .product-item-top .product-img {
-	height: 80%;
+	max-width: 150px;
+	min-width: 140px;
+	/* height: 80%; */
+	object-fit: cover;
 	transition: transform 0.2s;
 }
 

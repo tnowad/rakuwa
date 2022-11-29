@@ -37,7 +37,6 @@ const productPaginationHTML = (maxPage, currentPage) => {
 	return html
 }
 
-let productItemArray = []
 const shopArea = document.querySelector('.product-area')
 
 const renderShopArea = async () => {
@@ -61,7 +60,6 @@ const renderShopArea = async () => {
 	for (let i = (currentPage - 1) * 12; i < 12 * currentPage; i++) {
 		if (products[i]) {
 			renderHTML(shopArea, productCart(products[i]))
-			productItemArray.push(products[i])
 		}
 	}
 	renderHTML(
