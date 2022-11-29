@@ -285,7 +285,7 @@ svg:not(:root).svg-inline--fa {
 	padding-left: 0;
 }
 
-.fa-ul>li {
+.fa-ul > li {
 	position: relative;
 }
 
