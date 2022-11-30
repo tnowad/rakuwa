@@ -1,4 +1,4 @@
-import { fetchJson } from "../util/util.js"
+import { fetchJson } from '../util/util.js'
 /**
  * Get data from server add store local
  * key: users, products, comments, carts
@@ -49,7 +49,4 @@ const getDataFromLocal = async () => {
     let currentCart = JSON.parse(localStorage.getItem('currentCart'))
     return { users, products, comments, carts, currentUser, currentCart }
 }
-export {
-    updateLocalDataFromServer,
-    getDataFromLocal
-}
+export { updateLocalDataFromServer, getDataFromLocal }

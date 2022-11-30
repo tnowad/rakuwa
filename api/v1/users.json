@@ -1,24 +1,24 @@
 [
-	{
-		"id": 0,
-		"username": "admin",
-		"password": "admin",
-		"email": "admin@google.com",
-		"address": "Quan 5, Ho Chi Minh, VN",
-		"role": "admin",
-		"dateOfBirth": "10-12-2003",
-		"phoneNumber": "0379713541",
-		"image": ""
-	},
-	{
-		"id": 1,
-		"username": "user",
-		"password": "user",
-		"email": "user@google.com",
-		"address": "Quan 5, Ho Chi Minh, VN",
-		"role": "user",
-		"dateOfBirth": "10-12-2003",
-		"phoneNumber": "0379713541",
-		"image": ""
-	}
+    {
+        "id": 0,
+        "username": "admin",
+        "password": "admin",
+        "email": "admin@google.com",
+        "address": "Quan 5, Ho Chi Minh, VN",
+        "role": "admin",
+        "dateOfBirth": "10-12-2003",
+        "phoneNumber": "0379713541",
+        "image": ""
+    },
+    {
+        "id": 1,
+        "username": "user",
+        "password": "user",
+        "email": "user@google.com",
+        "address": "Quan 5, Ho Chi Minh, VN",
+        "role": "user",
+        "dateOfBirth": "10-12-2003",
+        "phoneNumber": "0379713541",
+        "image": ""
+    }
 ]

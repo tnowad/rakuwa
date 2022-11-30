@@ -15,9 +15,12 @@ window.onload = async () => {
         direction = 'index.html'
     }
     checkLoginAlert()
-    if (username && password && (await login(username, password)) || await checkLogin()) {
-		location.assign(`/${direction}?loginSuccessfully=true`)
-	} else if (username && password) {
-		location.assign('/pages/login.html?loginSuccessfully=false')
-	}
+    if (
+        (username && password && (await login(username, password))) ||
+        (await checkLogin())
+    ) {
+        location.assign(`/${direction}?loginSuccessfully=true`)
+    } else if (username && password) {
+        location.assign('/pages/login.html?loginSuccessfully=false')
+    }
 }

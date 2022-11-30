@@ -14,4 +14,4 @@ We are masochistic coders, who don't use any framework
 
 ## Looking for help?
 
-Bro, I'm stuck with this shit too :(( 
+Bro, I'm stuck with this shit too :((

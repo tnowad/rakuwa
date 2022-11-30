@@ -9,7 +9,7 @@ const showSlide = (index) => {
     })
 
     if (index < 0) {
-        index = slides.length - 1;
+        index = slides.length - 1
     } else if (index >= slides.length) {
         index = 0
     }

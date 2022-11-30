@@ -1,6 +1,6 @@
-import { getCategories } from "../util/product.js"
-import { renderHTML } from "../util/util.js"
-import { navTabs as navTabsHTML } from "../template/nav-tabs.js"
+import { getCategories } from '../util/product.js'
+import { renderHTML } from '../util/util.js'
+import { navTabs as navTabsHTML } from '../template/nav-tabs.js'
 let categories = await getCategories()
 
 const render = () => {

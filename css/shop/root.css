@@ -6,14 +6,14 @@
     --red: #dc3545;
     --orange: #fd7e14;
     --yellow: #ffc107;
-    --light-yellow: #F9F6EF;
+    --light-yellow: #f9f6ef;
     --green: #28a745;
-    --green-light: #DEF9EC;
+    --green-light: #def9ec;
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #fff;
     --gray: #6c757d;
-    --gray-dark: #1F1F17;
+    --gray-dark: #1f1f17;
     --primary: #007bff;
     --secondary: #6c757d;
     --success: #28a745;
@@ -22,7 +22,7 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --light-dark: #d3d3d3;
-    --dark: #0C0C0B;
+    --dark: #0c0c0b;
 
     --breakpoint-smartphone: 576px;
     --breakpoint-tablet: 768px;
@@ -46,8 +46,6 @@ body {
     min-width: 400px !important;
 }
 
-
-
 ul {
     list-style-type: none;
 }
@@ -64,7 +62,7 @@ a {
     box-sizing: border-box;
 }
 
-.footer>.footer-center>.container,
-body>*>.container {
+.footer > .footer-center > .container,
+body > * > .container {
     width: min(100%, 1200px) !important;
 }
