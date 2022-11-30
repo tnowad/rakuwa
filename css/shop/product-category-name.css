@@ -1,27 +1,27 @@
 a.product-category {
-font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a.product-category.meat::after {
-    content: "Thịt";
+    content: 'Thịt';
 }
 a.product-category.vegetable::after {
-    content: "Rau củ";
+    content: 'Rau củ';
 }
 a.product-category.spice::after {
-    content: "Gia vị";
+    content: 'Gia vị';
 }
 a.product-category.noodle::after {
-    content: "Mì";
+    content: 'Mì';
 }
 a.product-category.egg::after {
-    content: "Trứng";
+    content: 'Trứng';
 }
 a.product-category.fruit::after {
-    content: "Trái cây";
+    content: 'Trái cây';
 }
 a.product-category.seafood::after {
-    content: "Hải sản";
+    content: 'Hải sản';
 }
 a.product-category.fruit-box::after {
-    content: "Túi hoa quả";
+    content: 'Túi hoa quả';
 }

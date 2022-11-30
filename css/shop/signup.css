@@ -17,9 +17,8 @@
     font-size: 50px;
     margin-bottom: 50px;
     color: rgb(115, 192, 0);
-    font-family: "Livvic", sans-serif;
+    font-family: 'Livvic', sans-serif;
     font-weight: 700;
-
 }
 
 .sign-up .signup-button {
@@ -39,7 +38,7 @@
     cursor: pointer;
 }
 
-.container form .signup-button > span::before{
+.container form .signup-button > span::before {
     position: absolute;
     content: '';
     width: 206px;
@@ -48,7 +47,7 @@
     top: 78%;
     left: 7px;
 }
-.container form .signup-button > span::after{
+.container form .signup-button > span::after {
     position: absolute;
     content: '';
     width: 207px;
@@ -57,7 +56,7 @@
     top: 78%;
     right: 7px;
 }
-.container form .signup-button > span{
+.container form .signup-button > span {
     display: inline-block;
     margin-top: 20px;
     color: rgb(47, 68, 16);
@@ -76,9 +75,8 @@
     margin: 0 10px;
     background-color: rgb(247, 247, 247);
 }
-.group-form i{
+.group-form i {
     color: rgb(105, 145, 46);
-
 }
 .form-group {
     text-align: center;
@@ -88,19 +86,19 @@
 #phone::-webkit-inner-spin-button {
     display: none;
 }
-.group-form-accept{
+.group-form-accept {
     margin: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     /* text-align: right; */
 }
-.group-form-accept input[type="checkbox"] {
+.group-form-accept input[type='checkbox'] {
     cursor: pointer;
     width: 20px;
     height: 20px;
 }
-.group-form-accept span{
+.group-form-accept span {
     font-size: 18px;
     margin-left: 10px;
 }
@@ -109,7 +107,7 @@
     /* flex-wrap: wrap; */
     justify-content: center;
 }
-.social-login .form-group{
+.social-login .form-group {
     width: 50px;
     height: 50px;
 }
@@ -127,10 +125,10 @@
 .form-group-google a {
     background-color: #fa4659;
 }
-.form-group-twitter a{
+.form-group-twitter a {
     background-color: #0583d2;
 }
-.form-group-facebook a{
+.form-group-facebook a {
     background-color: #16558f;
 }
 .sign-up .container form .form-group-login p {
@@ -140,7 +138,6 @@
 .form-group-login a {
     color: rgb(181, 181, 181);
 }
-
 
 /* hover */
 

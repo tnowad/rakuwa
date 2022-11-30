@@ -1,4 +1,4 @@
-import { fetchHTML, renderHTML, addActive, removeActive } from "../util/util.js"
+import { fetchHTML, renderHTML, addActive, removeActive } from '../util/util.js'
 
 const main = async () => {
     const contextMenu = document.createElement('div')
@@ -13,7 +13,7 @@ const main = async () => {
     document.addEventListener('contextmenu', (event) => {
         event.preventDefault()
         addActive(contextMenu)
-        if(window.innerWidth - event.x < 200) {
+        if (window.innerWidth - event.x < 200) {
             contextMenu.style.right = 0
             contextMenu.style.left = ''
         } else {

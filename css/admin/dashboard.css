@@ -43,33 +43,27 @@ th {
     align-items: center;
     gap: 10px;
     color: var(--blue);
-
 }
 
 .body-table td:nth-child(2) {
     color: var(--teal);
-
 }
 
 .body-table td:nth-child(3) {
     color: var(--cyan);
-
 }
 
 .body-table td:nth-child(4) {
     color: var(--info);
-
 }
 
 .body-table td:nth-child(5) {
     color: var(--pink);
 }
-
 .body-table td:nth-child(5) i {
     margin-right: 20px;
     cursor: pointer;
 }
-
 .body-table td:nth-child(5) i:nth-child(1) {
     color: rgb(77, 195, 235);
 }

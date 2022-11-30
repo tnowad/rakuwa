@@ -12,7 +12,6 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-
 }
 
 .header .container {
@@ -21,7 +20,7 @@
     align-items: center;
 }
 
-.header .container>* {
+.header .container > * {
     height: 77px;
 }
 
@@ -75,36 +74,37 @@
     justify-content: center;
 }
 
-.navigation>li {
+.navigation > li {
     padding: 28px 16px;
     cursor: pointer;
 }
 
 .navigation a {
     font-weight: 600;
-    font-family: "Livvic", sans-serif;
+    font-family: 'Livvic', sans-serif;
 }
 
 .dropdown {
     height: 100%;
 }
 
-.dropdown>.dropdown-content {
+.dropdown > .dropdown-content {
     margin-top: 29px;
     display: none;
     position: absolute;
     background: var(--white);
-    box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 5%), -2px 0px 5px 1px rgb(0 0 0 / 5%);
+    box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 5%),
+        -2px 0px 5px 1px rgb(0 0 0 / 5%);
 }
 
-.dropdown>.dropdown-content>li {
+.dropdown > .dropdown-content > li {
     width: 250px;
     padding: 7px 20px;
 }
 
-.dropdown>a:focus~.dropdown-content,
-.dropdown:focus>.dropdown-content,
-.dropdown:hover>.dropdown-content {
+.dropdown > a:focus ~ .dropdown-content,
+.dropdown:focus > .dropdown-content,
+.dropdown:hover > .dropdown-content {
     display: block;
 }
 
@@ -141,8 +141,6 @@
     }
 }
 
-
-
 .menu-icon {
     display: flex;
     justify-content: flex-end;
@@ -150,7 +148,7 @@
     width: 20%;
 }
 
-.menu-icon>* {
+.menu-icon > * {
     background: transparent;
     padding: 15px;
 }
@@ -209,25 +207,26 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 5%), -2px 0px 5px 1px rgb(0 0 0 / 5%);
+    box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 5%),
+        -2px 0px 5px 1px rgb(0 0 0 / 5%);
 }
 
-.mobile-header .container>li {
+.mobile-header .container > li {
     width: 100%;
     height: max-content;
     padding: 10px;
 }
 
-.mobile-header .container>li>ul {
+.mobile-header .container > li > ul {
     display: none;
     padding-left: 20px;
 }
 
-.mobile-header .container>li>ul>* {
+.mobile-header .container > li > ul > * {
     padding: 10px;
 }
 
-.dropdown-mobile.active>ul {
+.dropdown-mobile.active > ul {
     display: block !important;
 }
 
@@ -244,13 +243,15 @@
 .nav-slide {
     cursor: pointer;
 }
-
+.user.dropdown {
+    position: relative;
+}
 .user-menu.dropdown-content {
-    margin: 32px;
-    top:47px;
-    right: -30px;
+    position: absolute;
+    right: 0;
+    top: 50px;
 }
 
-.user-menu.dropdown-content>* {
+.user-menu.dropdown-content > * {
     width: 150px !important;
 }

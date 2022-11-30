@@ -5,7 +5,7 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     padding: 70px;
-    font-family: "Livvic", sans-serif;
+    font-family: 'Livvic', sans-serif;
     font-size: 18px;
 }
 
@@ -16,12 +16,13 @@
     align-items: center;
 }
 
-.profile-details .photo, .profile-details img {
+.profile-details .photo,
+.profile-details img {
     width: 150px;
     height: 150px;
 }
 
-.profile-details>.photo {
+.profile-details > .photo {
     object-fit: cover;
 }
 
@@ -47,7 +48,7 @@
     display: none;
 }
 
-.profile-nav-list>* {
+.profile-nav-list > * {
     text-align: center;
 }
 
@@ -57,7 +58,7 @@
     align-items: center;
 }
 
-.profile-nav-list.active>* {
+.profile-nav-list.active > * {
     display: block;
 }
 
@@ -67,7 +68,7 @@
     margin: 5px;
     box-shadow: 1px 1px 5px var(--gray);
     cursor: pointer;
-    background: var(--light-dark)
+    background: var(--light-dark);
 }
 
 .profile-nav-list-menu-item {
@@ -90,11 +91,11 @@
     margin-top: 30px;
 }
 
-.profile-tabs>* {
+.profile-tabs > * {
     display: none;
 }
 
-.profile-tabs>*.active {
+.profile-tabs > *.active {
     display: block;
 }
 
@@ -163,12 +164,12 @@
     background: var(--gray);
 }
 
-.profile-tab-nav>* {
+.profile-tab-nav > * {
     height: 250px;
     text-align: center;
 }
 
-#profile-payment-tab>.profile-tab-nav {
+#profile-payment-tab > .profile-tab-nav {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);

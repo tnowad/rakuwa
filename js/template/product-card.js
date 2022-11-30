@@ -26,21 +26,22 @@ const productCart = (product) => /* html */ `
                         ${new Intl.NumberFormat().format(product.price)} VND
                     </span>
                     ${
-						product.oldPrice
-							? /* html */ `
+                        product.oldPrice
+                            ? /* html */ `
                                 <br/>
                                 <span class="old-price">
                                     ${new Intl.NumberFormat().format(
-										product.oldPrice
-									)} VND
+                                        product.oldPrice,
+                                    )} VND
                                 </span>`
-							: ''
-					}
+                            : ''
+                    }
                 </div>
             </div>
             <div class="product-add-cart" >
-                <span onclick="location.assign='123'">
-                    <a class="fa-solid fa-cart-shopping"></a>Add
+                <span >
+                    <a href="/pages/product.html?id=${product.id}"
+                        >Mua</a>
                 </span>
             </div>
         </div>

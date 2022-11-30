@@ -25,13 +25,12 @@
 }
 
 .pay {
-    flex: 1
+    flex: 1;
 }
 
 .group-col h4 {
     margin: 20px;
 }
-
 
 .fullname {
     display: flex;
@@ -56,7 +55,6 @@
 .group-lastname #lastName,
 .group-lastname label {
     margin-left: 10px;
-
 }
 
 .group-info-details label {
