@@ -80,6 +80,18 @@ const loginRequired = async () => {
 	}
 }
 
+const checkLogin = async () => {
+	// const { currentUser } = await getDataFromLocal()
+	console.log(localStorage.getItem('currentUser') != '{}')
+	return localStorage.getItem('currentUser') != '{}'
+}
+
+const checkPermission = async () => {
+	const { currentUser } = await getDataFromLocal()
+	console.log(currentUser)
+	return currentUser.role == 'admin'
+}
+
 export {
 	login,
 	register,
@@ -90,4 +102,6 @@ export {
 	getUsers,
 	checkLoginAlert,
 	loginRequired,
+	checkLogin,
+	checkPermission,
 }
