@@ -7,21 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logo2.png" type="image/x-icon">
     <title>RaKuWa</title>
-    <script src="/asset/fontawesome/js/all.js"></script>
-    <script src="/asset/fontawesome/js/brands.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="/asset/fontawesome/css/brands.css"> -->
-    <!-- <link rel="stylesheet" href="/asset/fontawesome/css/all.css"> -->
-    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/css/shop/root.css">
     <link rel="stylesheet" href="/css/shop/header.css">
-    <link rel="stylesheet" href="/css/shop/OfferBanner.css">
-    <link rel="stylesheet" href="/css/shop/ProductCategoryArea.css">
-    <link rel="stylesheet" href="/css/shop/ShopArea.css">
-    <link rel="stylesheet" href="/css/shop/footer.css">
-    <link rel="stylesheet" href="/css/shop/yourcart.css">
     <link rel="stylesheet" href="/css/shop/login.css">
     <script type="module" src="/js/server/login.js"></script>
 </head>
@@ -35,23 +23,31 @@
             </div>
             <div class="nav">
                 <ul class="navigation">
-                    <script>
-                        const dropdown = document.querySelectorAll('.dropdown')
-                        dropdown.forEach(element => {
-                            element.addEventListener('')
-                        })
-                    </script>
                     <li><a href="/index.html">Home</a></li>
                     <li class="dropdown">
                         <a>Products</a>
                         <ul class="dropdown-content">
-                            <li><a href="">Fruits</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Meat & Poultry</a></li>
-                            <li><a href="">Hot items</a></li>
-                            <li><a href="">Fruits Basket / Fruits Box</a></li>
-                            <li><a href="">Grocery</a></li>
+                            <li>
+                                <a href="?category=all">All</a>
+                            </li>
+                            <li>
+                                <a href="?category=meat">Meat</a>
+                            </li>
+                            <li>
+                                <a href="?category=vegetable">Vegetable</a>
+                            </li>
+                            <li>
+                                <a href="?category=spice">Spice</a>
+                            </li>
+                            <li>
+                                <a href="?category=egg">Egg</a>
+                            </li>
+                            <li>
+                                <a href="?category=noodle">Noodle</a>
+                            </li>
+                            <li>
+                                <a href="?category=fruit">Fruit</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="/pages/contact.html">Contact Us</a></li>
@@ -67,23 +63,27 @@
             <div class="menu-icon">
                 <div class="search-box">
                     <form class="search-form">
-                        <input type="search" class="search-text" placeholder="Search product" onkeyup="searchFunction()"
-                            required>
-                        <button type="submit" class="search-button"><em class="fas fa-search"></em></button>
+                        <input type="search" class="search-text" name="name" placeholder="Search product" required />
+                        <button type="submit" class="search-button">
+                            <em class="fas fa-search"></em>
+                        </button>
                     </form>
                 </div>
                 <button class="menu-sidebar">
                     <em class="fas fa-bars"></em>
                 </button>
-                <button class="cartt">
+                <button class="btn-cart">
                     <em class="fa fa-cart-plus"></em>
                 </button>
                 <button class="user dropdown">
                     <em class="fas fa-user-circle"></em>
                     <ul class="user-menu dropdown-content">
-                        <li><a href="/pages/login.html">Login</a> / <a href="/pages/signup.html">Sign up</a></li>
-                        <li><a href="/pages/setting.html">Setting</a></li>
-                        <li><a href="">Help</a></li>
+                        <li>
+                            <a href="/pages/login.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="/pages/signup.html">Sign up</a>
+                        </li>
                     </ul>
                 </button>
             </div>
@@ -95,13 +95,27 @@
                     <li class="dropdown-mobile">
                         <a href="/pages/product.html">Products</a>
                         <ul>
-                            <li><a href="/pages/product.html">Fruits</a></li>
-                            <li><a href="/pages/product.html">Seafood</a></li>
-                            <li><a href="/pages/product.html">Vegetables</a></li>
-                            <li><a href="/pages/product.html">Meat & Poultry</a></li>
-                            <li><a href="/pages/product.html">Hot items</a></li>
-                            <li><a href="/pages/product.html">Grocery</a></li>
-                            <li><a href="/pages/product.html">Fruits Basket / Fruits Box</a></li>
+                            <li>
+                                <a href="?category=all">All</a>
+                            </li>
+                            <li>
+                                <a href="?category=meat">Meat</a>
+                            </li>
+                            <li>
+                                <a href="?category=vegetable">Vegetable</a>
+                            </li>
+                            <li>
+                                <a href="?category=spice">Spice</a>
+                            </li>
+                            <li>
+                                <a href="?category=egg">Egg</a>
+                            </li>
+                            <li>
+                                <a href="?category=noodle">Noodle</a>
+                            </li>
+                            <li>
+                                <a href="?category=fruit">Fruit</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="/pages/contact.html">Contact Us</a></li>
@@ -141,13 +155,13 @@
             </form>
             <span>OR</span>
             <div class="login-other-way">
-                <i class="fa-brands fa-facebook-f fbicon"></i>
-                <i class="fa-brands fa-google ggicon"></i>
-                <i class="fa-brands fa-twitter twicon"></i>
+                <i class="fab fa-facebook-f fbicon"></i>
+                <i class="fab fa-google ggicon"></i>
+                <i class="fab fa-twitter twicon"></i>
             </div>
         </div>
     </section>
 
 </body>
-<script src="../js/login.js"></script>
+
 </html>

@@ -88,7 +88,6 @@ const checkLogin = async () => {
 
 const checkPermission = async () => {
 	const { currentUser } = await getDataFromLocal()
-	console.log(currentUser)
 	return currentUser.role == 'admin'
 }
 
