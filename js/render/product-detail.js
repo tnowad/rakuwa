@@ -8,6 +8,7 @@ const render = async () => {
     const product = await getProductById(productId)
 
     let productDetailsTop = document.querySelector('.product-details-top')
+    console.log(product)
     renderHTML(productDetailsTop, productDetail(product))
 }
 

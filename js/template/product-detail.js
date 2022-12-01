@@ -23,7 +23,7 @@ let productDetail = (product) => /* html */ `
                 ${product.price}
             </span>
             <span class="product-detail-price-old">
-                ${product.oldPrice}
+                ${product.oldPrice || ''}
             </span>
         </div>
         <div action="" class="product-add-to-cart">
