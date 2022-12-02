@@ -44,23 +44,12 @@ const idPasswordValid = (password) => {
 	return passwordRegex.test(password)
 }
 
-const getNewId = async () => {
-	let { users } = await getDataFromLocal()
-
-	/**
-	 *
-	 * todo: lấy element id của cuối cùng sau đó + 1
-	 * rồi kiểm tra id có tồn tại trong mảng đó hay không (find)
-	 * trả về id,
-	 */
-}
-
 const register = async (user) => {
 	let { users } = await getDataFromLocal()
 	if (!(await isUsernameValid(user.username))) {
 		return false
 	} else {
-		user.id = await getNewId()
+		
 		users.push(user)
 		localStorage.setItem('users', JSON.stringify(users))
 		return true
