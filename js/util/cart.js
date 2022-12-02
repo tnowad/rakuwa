@@ -49,8 +49,6 @@ const cleanCart = async () => {
 	localStorage.setItem('currentCart', JSON.stringify(currentCart))
 }
 
-
-
 export {
 	getCurrentCart,
 	cleanCart,

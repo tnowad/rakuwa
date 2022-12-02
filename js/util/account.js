@@ -1,5 +1,5 @@
 import { getDataFromLocal } from '../util/local-data.js'
-import { getParams } from './util.js'
+import { createNewId, getParams } from './util.js'
 const login = async (username, password) => {
 	let { users } = await getDataFromLocal()
 	const currentUser = users.filter(
@@ -49,7 +49,7 @@ const register = async (user) => {
 	if (!(await isUsernameValid(user.username))) {
 		return false
 	} else {
-		
+		user.id = createNewId(users)	
 		users.push(user)
 		localStorage.setItem('users', JSON.stringify(users))
 		return true
