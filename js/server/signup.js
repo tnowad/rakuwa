@@ -24,6 +24,7 @@ window.onload = async  () => {
 		"image": "",
 		"status": "active"
     }
+    
     if(
         username && 
         password &&
