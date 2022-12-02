@@ -9,7 +9,8 @@
 		"role": "admin",
 		"dateOfBirth": "2003-12-10",
 		"phoneNumber": "0379713541",
-		"image": ""
+		"image": "",
+		"status": "normal"
 	},
 	{
 		"id": 1,
@@ -21,6 +22,33 @@
 		"role": "user",
 		"dateOfBirth": "2003-05-29",
 		"phoneNumber": "0379713541",
-		"image": ""
+		"image": "",
+		"status": "active"
+	},
+	{
+		"id": 2,
+		"username": "userBan",
+		"fullName": "Floyd Toy",
+		"password": "1234",
+		"email": "Linnea@gmail.com",
+		"address": "Biên Hòa, Đồng Nai, Việt Nam",
+		"role": "user",
+		"dateOfBirth": "2003-05-29",
+		"phoneNumber": "0379713541",
+		"image": "",
+		"status": "banned"
+	},
+	{
+		"id": 2,
+		"username": "userDeleted",
+		"fullName": "Ada Corker",
+		"password": "1234",
+		"email": "Sebastian@gmail.com",
+		"address": "Biên Hòa, Đồng Nai, Việt Nam",
+		"role": "user",
+		"dateOfBirth": "2003-05-29",
+		"phoneNumber": "0379713541",
+		"image": "",
+		"status": "deleted"
 	}
 ]
