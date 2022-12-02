@@ -31,4 +31,6 @@ Nguyễn Minh Tuấn - 3121410559
         + Đăng kí (phải đăng kí trở thành khách hàng mới được phép mua hàng) 5% (Đã code phần javascript chờ hoàn thiện UI để kết nối)
         + Khách hàng chọn mua sản phẩm 2.5% (Thiếu UI cho giỏ hàng)
 
-Hoàng Gia Bảo - 3121410
+Hoàng Gia Bảo - 3121410070
+    Các chức năng cho người dùng cuối (end-user)
+        + Đăng kí (phải đăng kí trở thành khách hàng mới được phép mua hàng) 5% (InComing)

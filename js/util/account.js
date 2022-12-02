@@ -49,6 +49,7 @@ const register = async (user) => {
 	if (!(await isUsernameValid(user.username))) {
 		return false
 	} else {
+		
 		users.push(user)
 		localStorage.setItem('users', JSON.stringify(users))
 		return true
@@ -82,7 +83,6 @@ const loginRequired = async () => {
 
 const checkLogin = async () => {
 	// const { currentUser } = await getDataFromLocal()
-	console.log(localStorage.getItem('currentUser') != '{}')
 	return localStorage.getItem('currentUser') != '{}'
 }
 
