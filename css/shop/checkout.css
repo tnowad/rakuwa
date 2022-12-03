@@ -1,97 +1,97 @@
 .checkout {
-    height: 120vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+	height: 120vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
 }
 
 .checkout .container {
-    line-height: 30px;
-    background-color: white;
+	line-height: 30px;
+	background-color: white;
 }
 
 .checkout-text h1 {
-    text-align: center;
-    margin: 20px;
+	text-align: center;
+	margin: 20px;
 }
 
 .row {
-    display: flex;
+	display: flex;
 }
 
 .info-customer {
-    flex: 2;
+	flex: 2;
 }
 
 .pay {
-    flex: 1;
+	flex: 1;
 }
 
 .group-col h4 {
-    margin: 20px;
+	margin: 20px;
 }
 
 .fullname {
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-around; */
+	display: flex;
+	flex-direction: row;
+	/* justify-content: space-around; */
 }
 
 .group-fullname {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .group-fullname input,
 .group-info-details input,
 .group-info-details select {
-    height: 23px;
-    margin: 8px 0 0 0;
-    border: 1px solid rgb(225, 225, 225);
-    border-radius: 5px;
+	height: 23px;
+	margin: 8px 0 0 0;
+	border: 1px solid rgb(225, 225, 225);
+	border-radius: 5px;
 }
 
 .group-lastname #lastName,
 .group-lastname label {
-    margin-left: 10px;
+	margin-left: 10px;
 }
 
 .group-info-details label {
-    display: inline-block;
-    min-width: 100px;
+	display: inline-block;
+	min-width: 100px;
 }
 
 .group-info-details input {
-    width: 500px;
+	width: 500px;
 }
 
 .crossbar {
-    margin-top: 20px;
-    border-bottom: 0.5px solid rgb(128, 128, 128);
-    width: 600px;
+	margin-top: 20px;
+	border-bottom: 0.5px solid rgb(128, 128, 128);
+	width: 600px;
 }
 
 .group-col form {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .group-col form button {
-    padding: 5px 100px 5px 100px;
-    color: aliceblue;
-    background-color: rgb(53, 107, 255);
-    border: 1px solid blue;
-    border-radius: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    max-width: 600px;
+	padding: 5px 100px 5px 100px;
+	color: aliceblue;
+	background-color: rgb(53, 107, 255);
+	border: 1px solid blue;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	max-width: 600px;
 }
 
 .group-col form button:hover {
-    color: #000;
-    background-color: tomato;
-    transition: all 0.3s ease;
+	color: #000;
+	background-color: tomato;
+	transition: all 0.3s ease;
 }
 
 /* .group-col form div {
@@ -100,32 +100,32 @@
 
 /* ----------------------Pay-------- */
 .pay .list-product {
-    border: 1px solid green;
-    height: 425px;
+	border: 1px solid green;
+	height: 425px;
 }
 
 .pay table thead tr th {
-    min-width: 150px;
+	min-width: 150px;
 }
 
 .pay table tbody tr td {
-    min-width: 150px;
-    text-align: center;
+	min-width: 150px;
+	text-align: center;
 }
 
 .pay .to-pay {
-    margin-top: 10px;
-    padding: 5px;
-    color: aliceblue;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(53, 107, 255);
-    border: 1px solid blue;
+	margin-top: 10px;
+	padding: 5px;
+	color: aliceblue;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(53, 107, 255);
+	border: 1px solid blue;
 }
 
 .pay .to-pay:hover {
-    color: black;
-    background-color: tomato;
-    transition: all 0.3s ease;
+	color: black;
+	background-color: tomato;
+	transition: all 0.3s ease;
 }

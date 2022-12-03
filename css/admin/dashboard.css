@@ -1,83 +1,83 @@
 .table-container {
-    /* border: 1px solid black; */
-    /* width: 100%; */
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.719);
-    border-radius: 10px;
+	/* border: 1px solid black; */
+	/* width: 100%; */
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.719);
+	border-radius: 10px;
 }
 
 th {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .table-container .head-table th {
-    /* width: 90%; */
-    font-size: 20px;
-    padding: 15px 0;
-    font-weight: 200;
+	/* width: 90%; */
+	font-size: 20px;
+	padding: 15px 0;
+	font-weight: 200;
 }
 
 .table-container .head-table th:nth-child(1) {
-    color: var(--blue);
+	color: var(--blue);
 }
 
 .table-container .head-table th:nth-child(2) {
-    color: var(--teal);
+	color: var(--teal);
 }
 
 .table-container .head-table th:nth-child(3) {
-    color: var(--cyan);
+	color: var(--cyan);
 }
 
 .table-container .head-table th:nth-child(4) {
-    color: var(--info);
+	color: var(--info);
 }
 
 .table-container .head-table th:nth-child(5) {
-    color: var(--pink);
+	color: var(--pink);
 }
 
 .body-table td:nth-child(1) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: var(--blue);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	color: var(--blue);
 }
 
 .body-table td:nth-child(2) {
-    color: var(--teal);
+	color: var(--teal);
 }
 
 .body-table td:nth-child(3) {
-    color: var(--cyan);
+	color: var(--cyan);
 }
 
 .body-table td:nth-child(4) {
-    color: var(--info);
+	color: var(--info);
 }
 
 .body-table td:nth-child(5) {
-    color: var(--pink);
+	color: var(--pink);
 }
 .body-table td:nth-child(5) i {
-    margin-right: 20px;
-    cursor: pointer;
+	margin-right: 20px;
+	cursor: pointer;
 }
 .body-table td:nth-child(5) i:nth-child(1) {
-    color: rgb(77, 195, 235);
+	color: rgb(77, 195, 235);
 }
 
 .body-table td:nth-child(1) .img {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .body-table td:nth-child(1) .img img {
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
 }

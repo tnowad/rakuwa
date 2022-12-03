@@ -4,12 +4,12 @@ import { getProductById } from '../util/product.js'
 import { addProductIdToCart } from '../util/cart.js'
 
 const render = async () => {
-    let productId = getParams('id')
-    const product = await getProductById(productId)
+	let productId = getParams('id')
+	const product = await getProductById(productId)
 
-    let productDetailsTop = document.querySelector('.product-details-top')
-    console.log(product)
-    renderHTML(productDetailsTop, productDetail(product))
+	let productDetailsTop = document.querySelector('.product-details-top')
+	console.log(product)
+	renderHTML(productDetailsTop, productDetail(product))
 }
 
 render()

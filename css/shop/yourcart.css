@@ -1,84 +1,84 @@
 .primary-sidebar .container {
-    background-color: white;
-    position: fixed;
-    /* right: 20px;*/
-    right: -100%;
-    top: 79px;
-    box-shadow: 1px 1px 3px 2px red;
-    border-radius: 5px;
-    width: 500px;
-    z-index: 1;
+	background-color: white;
+	position: fixed;
+	/* right: 20px;*/
+	right: -100%;
+	top: 79px;
+	box-shadow: 1px 1px 3px 2px red;
+	border-radius: 5px;
+	width: 500px;
+	z-index: 1;
 }
 
 .primary-sidebar .container i {
-    cursor: pointer;
-    font-size: 20px;
-    position: relative;
-    left: 20px;
-    top: 20px;
+	cursor: pointer;
+	font-size: 20px;
+	position: relative;
+	left: 20px;
+	top: 20px;
 }
 
 .primary-sidebar .container i:hover {
-    font-size: 22px;
-    transition: all 0.2s ease;
+	font-size: 22px;
+	transition: all 0.2s ease;
 }
 
 .primary-sidebar .container h2 {
-    text-align: center;
-    margin: 20px;
+	text-align: center;
+	margin: 20px;
 }
 
 .your-cart table {
-    width: 100%;
+	width: 100%;
 }
 
 .primary-sidebar .container .your-cart {
-    overflow-y: scroll;
-    min-height: 20vh;
-    max-height: 50vh;
+	overflow-y: scroll;
+	min-height: 20vh;
+	max-height: 50vh;
 }
 
 .primary-sidebar .container .your-cart table thead tr th,
 .primary-sidebar .container .your-cart table tbody tr td {
-    padding: 5px;
+	padding: 5px;
 }
 
 .primary-sidebar .container button {
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
-    background-color: aliceblue;
-    border: 1px solid white;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	background-color: aliceblue;
+	border: 1px solid white;
+	border-radius: 10px;
+	transition: all 0.3s ease;
 }
 
 .primary-sidebar .container button:hover {
-    background-color: tomato;
+	background-color: tomato;
 }
 
 .primary-sidebar .container .your-cart table tbody h2 {
-    position: relative;
-    top: 20px;
-    left: 100px;
+	position: relative;
+	top: 20px;
+	left: 100px;
 }
 
 .primary-sidebar .container .your-cart table tbody tr td .cart-delete {
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
+	padding: 10px;
+	border: none;
+	border-radius: 20px;
 }
 
 .primary-sidebar .container .your-cart table tbody tr td .cart-delete:hover {
-    background-color: tomato;
-    transition: all 0.2s ease;
+	background-color: tomato;
+	transition: all 0.2s ease;
 }
 
 .price-total {
-    border-top: 2px solid rgba(255, 99, 71, 0.89);
-    margin: 20px 0 20px;
+	border-top: 2px solid rgba(255, 99, 71, 0.89);
+	margin: 20px 0 20px;
 }
 
 .price-total p {
-    margin-top: 20px;
+	margin-top: 20px;
 }

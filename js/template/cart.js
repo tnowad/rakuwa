@@ -1,8 +1,15 @@
+import {
+	addProductIdToCart,
+	removeProductByIdFromCart,
+	getCurrentCart,
+	getTotalPriceCart,
+	getTotalPriceCart,
+	cleanCart,
+} from '../util/cart.js'
 
 const cart = (item) => {
-
-    const product = document.querySelector(".cart-detail-table tbody")
-    product.innerHTML += `
+	const product = document.querySelector('.cart-detail-table tbody')
+	product.innerHTML += `
                         <tr>
                             <td>${item.img}</td>
                             <td>${item.title}</td>
@@ -13,7 +20,7 @@ const cart = (item) => {
                             </td>
                         </tr>        
         `
-        return product
+	return product
 }
 
-export{cart}
+export { cart }

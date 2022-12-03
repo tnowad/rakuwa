@@ -1,68 +1,68 @@
 :root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --light-yellow: #f9f6ef;
-    --green: #28a745;
-    --green-light: #def9ec;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #1f1f17;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --light-dark: #d3d3d3;
-    --dark: #0c0c0b;
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #e83e8c;
+	--red: #dc3545;
+	--orange: #fd7e14;
+	--yellow: #ffc107;
+	--light-yellow: #f9f6ef;
+	--green: #28a745;
+	--green-light: #def9ec;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--white: #fff;
+	--gray: #6c757d;
+	--gray-dark: #1f1f17;
+	--primary: #007bff;
+	--secondary: #6c757d;
+	--success: #28a745;
+	--info: #17a2b8;
+	--warning: #ffc107;
+	--danger: #dc3545;
+	--light: #f8f9fa;
+	--light-dark: #d3d3d3;
+	--dark: #0c0c0b;
 
-    --breakpoint-smartphone: 576px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-pc: 1200px;
+	--breakpoint-smartphone: 576px;
+	--breakpoint-tablet: 768px;
+	--breakpoint-pc: 1200px;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
-    width: 100% !important;
-    padding: 0;
-    margin: 0;
-    min-width: 400px !important;
+	width: 100% !important;
+	padding: 0;
+	margin: 0;
+	min-width: 400px !important;
 }
 
 ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
 }
 
 .footer > .footer-center > .container,
 body > * > .container {
-    width: min(100%, 1200px) !important;
+	width: min(100%, 1200px) !important;
 }

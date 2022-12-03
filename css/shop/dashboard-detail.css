@@ -1,172 +1,168 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
 }
 
 body {
-    /* background-color: #85FFBD;
+	/* background-color: #85FFBD;
     background-image: linear-gradient(45deg, #85FFBD 0%, #bbf7ff 100%); */
-    background-image: url('/img/mountain.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
+	background-image: url('/img/mountain.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .content {
-    display: flex;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    padding-top: 10px;
+	display: flex;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	padding-top: 10px;
 }
 
 .content .content-left {
-    width: 25%;
+	width: 25%;
 }
 
 .content .content-left .content-left-top {
-    border-bottom: 1px solid rgb(150, 150, 150);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* margin-bottom: 10px; */
-    padding: 20px;
+	border-bottom: 1px solid rgb(150, 150, 150);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* margin-bottom: 10px; */
+	padding: 20px;
 }
 
 .content .content-left .content-left-top .icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 20px 20px 20px;
-    font-size: 24px;
-    cursor: pointer;
-
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 20px 20px 20px;
+	font-size: 24px;
+	cursor: pointer;
 }
 
 .content .content-left .content-left-top .img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-top: 30px;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	margin-top: 30px;
 }
 
 .content .content-left-top .img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 }
 
-.content-left-top>.content-left-name {
-    font-size: 20px;
-    margin-top: 10px;
+.content-left-top > .content-left-name {
+	font-size: 20px;
+	margin-top: 10px;
 }
 
 .content-left-middle .content-left-middle-header {
-    padding: 20px;
-    border-left: 10px solid #757575;
+	padding: 20px;
+	border-left: 10px solid #757575;
 }
 
 .content-left-middle .content-left-middle-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    /* background: gold; */
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	/* background: gold; */
 }
 
-.content-left-middle .content-left-middle-content p>a {
-    margin-left: 20px;
-
+.content-left-middle .content-left-middle-content p > a {
+	margin-left: 20px;
 }
 
 .content-left-middle .content-left-middle-content p {
-    padding: 20px;
+	padding: 20px;
 }
 
 .content-left-middle .content-left-middle-content p.active {
-    background-color: rgba(255, 255, 255, 0.212);
+	background-color: rgba(255, 255, 255, 0.212);
 }
 
 .content .content-right {
-    padding: 10px;
+	padding: 10px;
 }
 
 .content-right .content-right-header {
-    margin-bottom: 22px;
+	margin-bottom: 22px;
 }
 
 .content .content-right .content-right-grid {
-    margin-left: 20px;
-    display: grid;
-    grid-template-columns: 280px 280px 280px;
-    grid-template-rows: 100px;
-    column-gap: 10px;
-    text-align: left;
+	margin-left: 20px;
+	display: grid;
+	grid-template-columns: 280px 280px 280px;
+	grid-template-rows: 100px;
+	column-gap: 10px;
+	text-align: left;
 }
 
 .content-right-grid .content-right-box {
-    background-color: rgba(255, 255, 255, 0.719);
-    /* gap: 10px; */
-    /* height: 100px; */
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: var(--gray-dark);
+	background-color: rgba(255, 255, 255, 0.719);
+	/* gap: 10px; */
+	/* height: 100px; */
+	padding: 5px 10px;
+	border-radius: 10px;
+	color: var(--gray-dark);
 }
 
 .content-right-grid .content-right-box .number {
-    margin: 10px 0;
+	margin: 10px 0;
 }
 
 .content-right-box .title {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--info);
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--info);
 }
 
 .content-right-revuene .title {
-    color: var(--yellow) !important;
+	color: var(--yellow) !important;
 }
 
 .content-right-new-user .title {
-    color: var(--red) !important;
+	color: var(--red) !important;
 }
-.content-right .content-right-middle{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.content-right .content-right-middle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-.content-right .content-right-middle .input-search{
-    width: fit-content;
-    margin: 10px 0px 10px 20px;
-    background-color: rgba(255, 255, 255, 0.719);
-    border-radius: 10px;
-    
+.content-right .content-right-middle .input-search {
+	width: fit-content;
+	margin: 10px 0px 10px 20px;
+	background-color: rgba(255, 255, 255, 0.719);
+	border-radius: 10px;
 }
-.content-right-middle i{
-    padding: 5px 10px;
+.content-right-middle i {
+	padding: 5px 10px;
 }
-.content-right .content-right-middle .input-search input[type="text"]{
-    font-size: 20px;
-    padding: 5px 10px;
-    border-radius: 10px 0px 0px 10px;
+.content-right .content-right-middle .input-search input[type='text'] {
+	font-size: 20px;
+	padding: 5px 10px;
+	border-radius: 10px 0px 0px 10px;
 }
-.content-right-middle .btn .add-btn{
-    font-size: 20px;
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: white;
-    background-color: var(--info);
-    border: none;
+.content-right-middle .btn .add-btn {
+	font-size: 20px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	color: white;
+	background-color: var(--info);
+	border: none;
 }
-.content-right .content-right-table{
-    /* margin-top: 15px; */
-    width: 100%;
-    padding: 0px 0px 20px 20px;
+.content-right .content-right-table {
+	/* margin-top: 15px; */
+	width: 100%;
+	padding: 0px 0px 20px 20px;
 }

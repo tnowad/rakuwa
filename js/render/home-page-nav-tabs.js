@@ -4,7 +4,7 @@ import { navTabs as navTabsHTML } from '../template/nav-tabs.js'
 let categories = await getCategories()
 
 const render = () => {
-    const navTabs = document.querySelector('.product-tabs-title')
-    renderHTML(navTabs, navTabsHTML(Object.keys(categories)))
+	const navTabs = document.querySelector('.product-tabs-title')
+	renderHTML(navTabs, navTabsHTML(Object.keys(categories)))
 }
 render()

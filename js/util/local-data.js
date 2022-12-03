@@ -9,46 +9,44 @@ import { fetchJson } from '../util/util.js'
  */
 
 const updateLocalDataFromServer = async () => {
-    let users = []
-    let products = []
-    let comments = []
-    let carts = []
-    if (!localStorage.getItem('users')) {
-        users = await fetchJson('/api/v1/users.json')
-        localStorage.setItem('users', JSON.stringify(users))
-    }
-    if (!localStorage.getItem('products')) {
-        products = await fetchJson('/api/v1/products.json')
-        localStorage.setItem('products', JSON.stringify(products))
-    }
-    if (!localStorage.getItem('comments')) {
-        comments = await fetchJson('/api/v1/comments.json')
-        localStorage.setItem('comments', JSON.stringify(comments))
-    }
-    if (!localStorage.getItem('carts')) {
-        carts = await fetchJson('/api/v1/carts.json')
-        localStorage.setItem('carts', JSON.stringify(carts))
-    }
-    if (!localStorage.getItem('currentUser')) {
-        let currentUser = {}
-        localStorage.setItem('currentUser', JSON.stringify(currentUser))
-    }
-    if (!localStorage.getItem('currentCart')) {
-        let currentCart = []
-        localStorage.setItem('currentCart', JSON.stringify(currentCart))
-    }
+	let users = []
+	let products = []
+	let comments = []
+	let carts = []
+	if (!localStorage.getItem('users')) {
+		users = await fetchJson('/api/v1/users.json')
+		localStorage.setItem('users', JSON.stringify(users))
+	}
+	if (!localStorage.getItem('products')) {
+		products = await fetchJson('/api/v1/products.json')
+		localStorage.setItem('products', JSON.stringify(products))
+	}
+	if (!localStorage.getItem('comments')) {
+		comments = await fetchJson('/api/v1/comments.json')
+		localStorage.setItem('comments', JSON.stringify(comments))
+	}
+	if (!localStorage.getItem('carts')) {
+		carts = await fetchJson('/api/v1/carts.json')
+		localStorage.setItem('carts', JSON.stringify(carts))
+	}
+	if (!localStorage.getItem('currentUser')) {
+		let currentUser = {}
+		localStorage.setItem('currentUser', JSON.stringify(currentUser))
+	}
+	if (!localStorage.getItem('currentCart')) {
+		let currentCart = []
+		localStorage.setItem('currentCart', JSON.stringify(currentCart))
+	}
 }
 // Use for update data variable
 const getDataFromLocal = async () => {
-    await updateLocalDataFromServer()
-    let users = JSON.parse(localStorage.getItem('users'))
-    let products = JSON.parse(localStorage.getItem('products'))
-    let comments = JSON.parse(localStorage.getItem('comments'))
-    let carts = JSON.parse(localStorage.getItem('carts'))
-    let currentUser = JSON.parse(localStorage.getItem('currentUser'))
-    let currentCart = JSON.parse(localStorage.getItem('currentCart'))
-    return { users, products, comments, carts, currentUser, currentCart }
+	await updateLocalDataFromServer()
+	let users = JSON.parse(localStorage.getItem('users'))
+	let products = JSON.parse(localStorage.getItem('products'))
+	let comments = JSON.parse(localStorage.getItem('comments'))
+	let carts = JSON.parse(localStorage.getItem('carts'))
+	let currentUser = JSON.parse(localStorage.getItem('currentUser'))
+	let currentCart = JSON.parse(localStorage.getItem('currentCart'))
+	return { users, products, comments, carts, currentUser, currentCart }
 }
 export { updateLocalDataFromServer, getDataFromLocal }
-
-

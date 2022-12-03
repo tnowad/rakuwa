@@ -208,13 +208,13 @@
 @media only screen and (max-width: 500px) {
 	.comment-form-box {
 		/* grid-template-columns: repeat(1, 100%); */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
-    .comment-form-box > * {
-        width: 100%;
-    }
+	.comment-form-box > * {
+		width: 100%;
+	}
 }
 
 .comment-form input[type='submit'] {

@@ -1,92 +1,89 @@
 *,
 ::before,
 ::after {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .cart-detail .container {
-    /* height: 100vh; */
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    /* background-color: rgb(247, 247, 247); */
-    width: 100%;
+	/* height: 100vh; */
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	/* background-color: rgb(247, 247, 247); */
+	width: 100%;
 }
 
 .container .cart-detail-table {
-    /* margin: 20px 180px 0 180px; */
-    /* padding: 10px 20px 10px 20px; */
-    width: 65%;
-    height: 80%;
-    /* box-shadow: 0px 0px 0px 2px rgb(139, 139, 139); */
-    border-radius: 5px;
+	/* margin: 20px 180px 0 180px; */
+	/* padding: 10px 20px 10px 20px; */
+	width: 65%;
+	height: 80%;
+	/* box-shadow: 0px 0px 0px 2px rgb(139, 139, 139); */
+	border-radius: 5px;
 }
 
 .cart-detail-table h2 {
-    text-align: left;
-    position: relative;
-    left: 120px;
+	text-align: left;
+	position: relative;
+	left: 120px;
 }
 
 .container .cart-detail-table table {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
 }
 
-
 .cart-detail-table tr {
-    border-bottom: 2px solid var(--green-light);
+	border-bottom: 2px solid var(--green-light);
 }
 
 .cart-detail-table thead,
 .cart-detail-table tbody {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .cart-detail-table th,
 .cart-detail-table td {
-    padding: 20px;
-    width: 20vh;
-    text-align: center;
-    line-height: 25px;
+	padding: 20px;
+	width: 20vh;
+	text-align: center;
+	line-height: 25px;
 }
 
 .cart-detail-table th:first-child,
 .cart-detail-table td:first-child {
-    width: 30%;
+	width: 30%;
 }
 
 .cart-detail-table th:nth-child(4) {
-    width: 25%px;
-
+	width: 25%px;
 }
 
 .cart-detail-table td .price,
 .cart-detail-table td .delete {
-    margin: 5px;
+	margin: 5px;
 }
 
 .cart-detail-table tbody {
-    max-height: 300px;
-    overflow-y: scroll;
+	max-height: 300px;
+	overflow-y: scroll;
 }
 
-
 .cart-detail-table .totalPrice {
-    display: flex;
-    margin: 5% 10% 1% 65%;
+	display: flex;
+	margin: 5% 10% 1% 65%;
 }
 
 .cart-detail-table .group-option {
-    margin: 20px;
-    display: flex;
-    justify-content: space-around;
+	margin: 20px;
+	display: flex;
+	justify-content: space-around;
 }
 
 .group-option .group-form-option {

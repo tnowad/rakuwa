@@ -1,18 +1,18 @@
 .offer-banners-area > .container {
-    margin-top: 5px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+	margin-top: 5px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 .sub-banner:not(:last-child) {
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
 .sub-banner > * img {
-    object-fit: contain;
-    width: 100%;
+	object-fit: contain;
+	width: 100%;
 }

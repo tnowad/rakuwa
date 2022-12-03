@@ -1,158 +1,158 @@
 .login {
-    margin-top: 10vh;
-    width: 100%;
+	margin-top: 10vh;
+	width: 100%;
 }
 
 .login .container {
-    display: flex;
-    justify-content: center;
-    width: min(100%, 600px) !important;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	width: min(100%, 600px) !important;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	align-items: center;
 }
 .login .container > * {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 .login-form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
 }
 .login-form > * {
-    width: 100%;
+	width: 100%;
 }
 .login-form .login-form-title {
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Livvic', sans-serif;
-    color: rgb(115, 192, 0);
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Livvic', sans-serif;
+	color: rgb(115, 192, 0);
 
-    font-weight: 700;
-    margin-bottom: 20px;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 .login-form {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	justify-content: center;
 }
 .form-input {
-    height: 60px;
-    /* box-sizing: border-box; */
-    padding: 10px 10px;
-    margin-bottom: 20px;
+	height: 60px;
+	/* box-sizing: border-box; */
+	padding: 10px 10px;
+	margin-bottom: 20px;
 }
 .form-input .form {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 12px;
-    position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 12px;
+	position: relative;
 }
 .form-input .form #icon {
-    position: absolute;
-    left: 2px;
-    bottom: 7px;
-    color: rgb(122, 175, 42);
+	position: absolute;
+	left: 2px;
+	bottom: 7px;
+	color: rgb(122, 175, 42);
 }
 .form-input input {
-    /* margin-top: 10px; */
-    padding-left: 25px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-    height: 100%;
-    /* border-radius: 5px; */
-    width: 100%;
+	/* margin-top: 10px; */
+	padding-left: 25px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+	height: 100%;
+	/* border-radius: 5px; */
+	width: 100%;
 }
 .form-input .form #eyeicon {
-    position: absolute;
-    right: 0;
-    display: none;
-    cursor: pointer;
+	position: absolute;
+	right: 0;
+	display: none;
+	cursor: pointer;
 }
 .form-input .form #eyeicon.active {
-    display: block;
+	display: block;
 }
 .login-form input[type='submit'] {
-    width: 100%;
-    height: 40px;
+	width: 100%;
+	height: 40px;
 }
 
 .login-form a {
-    width: 120px;
-    color: rgba(88, 88, 88, 0.747);
-    position: relative;
-    left: 160px;
+	width: 120px;
+	color: rgba(88, 88, 88, 0.747);
+	position: relative;
+	left: 160px;
 }
 
 .login-form a:hover {
-    color: rgb(0, 0, 0);
-    transition: all 0.3s linear;
+	color: rgb(0, 0, 0);
+	transition: all 0.3s linear;
 }
 
 .login-form input[type='submit'] {
-    margin-top: 30px;
-    background-color: rgb(122, 175, 42);
-    border-radius: 5px;
-    font-size: 18px;
-    color: white;
-    border-radius: 5px;
+	margin-top: 30px;
+	background-color: rgb(122, 175, 42);
+	border-radius: 5px;
+	font-size: 18px;
+	color: white;
+	border-radius: 5px;
 }
 
 .login-form input[type='submit']:hover {
-    /* background-color: var(--green); */
+	/* background-color: var(--green); */
 
-    transition: all 300ms linear;
-    cursor: pointer;
+	transition: all 300ms linear;
+	cursor: pointer;
 }
 .container span::before {
-    position: absolute;
-    content: '';
-    width: 207px;
-    height: 2px;
-    background-color: rgb(94, 134, 33);
-    top: 40%;
-    right: 24px;
+	position: absolute;
+	content: '';
+	width: 207px;
+	height: 2px;
+	background-color: rgb(94, 134, 33);
+	top: 40%;
+	right: 24px;
 }
 .container span::after {
-    position: absolute;
-    content: '';
-    width: 207px;
-    height: 2px;
-    background-color: rgb(94, 134, 33);
-    top: 40%;
-    left: 24px;
+	position: absolute;
+	content: '';
+	width: 207px;
+	height: 2px;
+	background-color: rgb(94, 134, 33);
+	top: 40%;
+	left: 24px;
 }
 .container span {
-    position: relative;
-    text-transform: capitalize;
-    font-weight: 500;
-    margin: 15px 0;
-    color: rgb(47, 68, 16);
+	position: relative;
+	text-transform: capitalize;
+	font-weight: 500;
+	margin: 15px 0;
+	color: rgb(47, 68, 16);
 }
 .container .login-other-way {
-    display: flex;
-    gap: 30px;
+	display: flex;
+	gap: 30px;
 }
 .login-other-way i {
-    background-color: red;
-    padding: 15px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+	background-color: red;
+	padding: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
 }
 .login-other-way i.fbicon {
-    background-color: #3b5998 !important;
+	background-color: #3b5998 !important;
 }
 .login-other-way i.twicon {
-    background-color: #1da1f2 !important;
+	background-color: #1da1f2 !important;
 }
