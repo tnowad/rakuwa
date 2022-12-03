@@ -1,148 +1,98 @@
-* {
+*,
+::before,
+::after {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.cart-icon {
-    margin: 20px;
-}
-
-.cart-icon i {
-    margin: 5px;
-    cursor: pointer;
-}
-
-.product-items {
+.cart-detail .container {
+    /* height: 100vh; */
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
-    background-color: white;
-    padding: 12px;
-    flex-wrap: wrap;
-}
-
-.product-item {
-    width: 17%;
-    border: 0.5px solid rgba(0, 0, 0, 0.194);
-    border-radius: 10px 50px 10px 50px;
-    margin: 30px 30px;
-    padding: 30px;
-    text-align: center;
-}
-
-.product-item .label.hot {
-    background-color: red;
-}
-
-.product-item-top img {
-    width: 60%;
-    margin-bottom: 50px;
-}
-
-.product-item-center .product-rate {
-    color: rgb(209, 209, 5);
-}
-
-.product-item-text {
-    display: flex;
-    justify-content: space-between;
-}
-
-.product-item .container button {
-    background-color: rgba(0, 128, 0, 0.541);
-    margin: 12px 0 0 20px;
-    height: 30px;
-    padding: 0 12px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.product-item button:hover {
-    background-color: tomato;
-}
-
-.product-item .container .product-item-center a {
-    text-decoration: none;
-}
-
-.product-item-bottom {
-    display: flex;
-    flex-direction: row;
-}
-
-/* --------------------cart--------------------- */
-.cart i {
-    position: relative;
-    cursor: pointer;
-    margin-bottom: 30px;
-    right: 170px;
-}
-
-.cart {
-    width: 50%;
-    margin: auto;
-    padding-top: 30px;
-    text-align: center;
-}
-
-.cart h2 {
-    margin-bottom: 20px;
-}
-
-.cart table {
+    justify-content: center;
+    /* background-color: rgb(247, 247, 247); */
     width: 100%;
 }
 
-.cart table thead tr th:first-child {
-    text-align: left;
-}
-
-.cart table tr td {
-    border-bottom: 1px solid #ddd;
-    padding: 12px 0px;
-}
-
-.cart table thead tr th:last-child {
-    text-align: right;
-}
-
-.cart table tbody tr td:last-child {
-    text-align: right;
-}
-
-/* ----------------------- */
-.cart button {
-    margin-top: 12px;
-    height: 30px;
-    padding: 0 12px;
-    cursor: pointer;
-    border: none;
+.container .cart-detail-table {
+    /* margin: 20px 180px 0 180px; */
+    /* padding: 10px 20px 10px 20px; */
+    width: 65%;
+    height: 80%;
+    /* box-shadow: 0px 0px 0px 2px rgb(139, 139, 139); */
     border-radius: 5px;
-    transition: all 0.3s ease;
 }
 
-.cart button:hover {
-    background-color: tomato;
+.cart-detail-table h2 {
+    text-align: left;
+    position: relative;
+    left: 120px;
 }
 
-.cart {
-    position: fixed;
-    height: 100vh;
-    width: 400px;
-    right: 0;
-    top: 50px;
-    bottom: 50px;
-    background-color: rgba(209, 185, 185, 0.91);
-    padding: 12px 20px;
+.container .cart-detail-table table {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.cart-detail-table tr {
+    border-bottom: 2px solid var(--green-light);
+}
+
+.cart-detail-table thead,
+.cart-detail-table tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-detail-table th,
+.cart-detail-table td {
+    padding: 20px;
+    width: 20vh;
+    text-align: center;
+    line-height: 25px;
+}
+
+.cart-detail-table th:first-child,
+.cart-detail-table td:first-child {
+    width: 30%;
+}
+
+.cart-detail-table th:nth-child(4) {
+    width: 25%px;
+
+}
+
+.cart-detail-table td .price,
+.cart-detail-table td .delete {
+    margin: 5px;
+}
+
+.cart-detail-table tbody {
+    max-height: 300px;
     overflow-y: scroll;
-    right: -100%;
-    z-index: 1;
-    transition: all 0.3s ease;
+}
+
+
+.cart-detail-table .totalPrice {
+    display: flex;
+    margin: 5% 10% 1% 65%;
+}
+
+.cart-detail-table .group-option {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.group-option .group-form-option {
+    cursor: pointer;
+    padding: 5px;
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: var(--cyan);
 }
