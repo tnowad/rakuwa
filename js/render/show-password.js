@@ -3,7 +3,7 @@ let password = document.getElementById('login-password')
 
 password.addEventListener('keypress', (event) => {
     icon.style.display = 'block'
-    console.log(event.key)
+    // console.log(event.key)
 })
 icon.addEventListener('click', () => {
     if (icon.classList.contains('fa-eye')) {

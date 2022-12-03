@@ -43,7 +43,7 @@ const createNewId = (list) => {
 }
 
 const splitArrayByPage = (array, elementPerPage, currentPage) => {
-    const maxPage = array.length / elementPerPage
+    // const maxPage = array.length / elementPerPage
     let newArray = []
     for (
         let i = (currentPage - 1) * elementPerPage;
