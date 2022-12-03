@@ -18,6 +18,7 @@
 			type="module"
 			src="/js/render/auto-update-cart-quantity.js"
 		></script>
+		<script type="module" src="/js/render/cart-detail.js"></script>
 	</head>
 
 	<body>
@@ -153,150 +154,27 @@
 			<div class="container">
 				<div class="cart-detail-table">
 					<table>
-						<caption>
+						<!-- <caption>
 							<h2>My cart</h2>
-						</caption>
+						</caption> -->
 						<thead>
 							<tr>
 								<th class="group-form group-form-image">
 									<img src="" alt="" /> Hình ảnh
 								</th>
-								<th class="group-form group-form-name">Tên</th>
+								<th class="group-form group-form-name">
+									Tên sản phẩm
+								</th>
+								<th class="group-form group-form-price">Giá</th>
 								<th class="group-form group-form-amount">
 									Số lượng
 								</th>
-								<th class="group-form group-form-price">Giá</th>
+								<th class="group-form group-form-price">
+									Tổng tiền
+								</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Ảnh1</td>
-								<td>Tên 8</td>
-								<td>1</td>
-								<td>
-									<span class="price">5</span>VND
-									<button class="delete">Xoá</button>
-								</td>
-							</tr>
-						</tbody>
+						<tbody class="cart-detail-body"></tbody>
 					</table>
 					<div class="totalPrice">
 						<p>Tổng:</p>
@@ -319,6 +197,5 @@
 				</div>
 			</div>
 		</section>
-		<script src="/js/template/cart.js"></script>
 	</body>
 </html>
