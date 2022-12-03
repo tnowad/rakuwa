@@ -7,8 +7,16 @@ const login = async (username, password) => {
 	)
 	if (currentUser.length > 0) {
 		localStorage.setItem('currentUser', JSON.stringify(currentUser[0]))
-		return true
+		const statusUser = await getStatusUser(currentUser[0].id)
+		if (statusUser == 'active') {
+			return true
+		} else if (statusUser == 'banned') {
+			alert('Người dùng đã bị ban!')
+		} else if (statusUser == 'deleted') {
+			alert('Người dùng đã bị xóa!')
+		}
 	}
+	logout()
 	return false
 }
 
@@ -49,7 +57,7 @@ const register = async (user) => {
 	if (!(await isUsernameValid(user.username))) {
 		return false
 	} else {
-		user.id = createNewId(users)	
+		user.id = createNewId(users)
 		users.push(user)
 		localStorage.setItem('users', JSON.stringify(users))
 		return true
@@ -92,7 +100,7 @@ const checkPermission = async () => {
 }
 
 const getStatusUser = async (userId) => {
-	const { users } = await getUsers()
+	const { users } = await getDataFromLocal()
 	return users.find((user) => user.id == userId).status || 'deleted'
 }
 
