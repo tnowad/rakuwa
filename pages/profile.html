@@ -26,29 +26,31 @@
 				</div>
 				<div class="nav">
 					<ul class="navigation">
-						<script>
-							const dropdown =
-								document.querySelectorAll('.dropdown')
-							dropdown.forEach((element) => {
-								element.addEventListener('')
-							})
-						</script>
 						<li><a href="/index.html">Home</a></li>
 						<li class="dropdown">
 							<a>Products</a>
 							<ul class="dropdown-content">
-								<li><a href="">Fruits</a></li>
-								<li><a href="">Seafood</a></li>
-								<li><a href="">Vegetables</a></li>
-								<li><a href="">Meat & Poultry</a></li>
-								<li><a href="">Hot items</a></li>
 								<li>
-									<a href=""
-										>Fruits Basket / Fruits
-										profile-form-box</a
-									>
+									<a href="?category=all">All</a>
 								</li>
-								<li><a href="">Grocery</a></li>
+								<li>
+									<a href="?category=meat">Meat</a>
+								</li>
+								<li>
+									<a href="?category=vegetable">Vegetable</a>
+								</li>
+								<li>
+									<a href="?category=spice">Spice</a>
+								</li>
+								<li>
+									<a href="?category=egg">Egg</a>
+								</li>
+								<li>
+									<a href="?category=noodle">Noodle</a>
+								</li>
+								<li>
+									<a href="?category=fruit">Fruit</a>
+								</li>
 							</ul>
 						</li>
 						<li><a href="/pages/contact.html">Contact Us</a></li>
@@ -67,8 +69,8 @@
 							<input
 								type="search"
 								class="search-text"
+								name="name"
 								placeholder="Search product"
-								onkeyup="searchFunction()"
 								required
 							/>
 							<button type="submit" class="search-button">
@@ -79,18 +81,21 @@
 					<button class="menu-sidebar">
 						<em class="fas fa-bars"></em>
 					</button>
-					<button class="cartt">
-						<em class="fa fa-cart-plus"></em>
+					<button class="btn-cart">
+						<a href="/pages/cart.html">
+							<em class="fa fa-cart-plus"></em>
+							<span id="auto-update-cart-quantity"></span>
+						</a>
 					</button>
 					<button class="user dropdown">
 						<em class="fas fa-user-circle"></em>
 						<ul class="user-menu dropdown-content">
 							<li>
-								<a href="/pages/login.html">Login</a> /
+								<a href="/pages/login.html">Login</a>
+							</li>
+							<li>
 								<a href="/pages/signup.html">Sign up</a>
 							</li>
-							<li><a href="/pages/setting.html">Setting</a></li>
-							<li><a href="/pages/help.html">Help</a></li>
 						</ul>
 					</button>
 				</div>
@@ -103,30 +108,25 @@
 							<a href="/pages/product.html">Products</a>
 							<ul>
 								<li>
-									<a href="/pages/product.html">Fruits</a>
+									<a href="?category=all">All</a>
 								</li>
 								<li>
-									<a href="/pages/product.html">Seafood</a>
+									<a href="?category=meat">Meat</a>
 								</li>
 								<li>
-									<a href="/pages/product.html">Vegetables</a>
+									<a href="?category=vegetable">Vegetable</a>
 								</li>
 								<li>
-									<a href="/pages/product.html"
-										>Meat & Poultry</a
-									>
+									<a href="?category=spice">Spice</a>
 								</li>
 								<li>
-									<a href="/pages/product.html">Hot items</a>
+									<a href="?category=egg">Egg</a>
 								</li>
 								<li>
-									<a href="/pages/product.html">Grocery</a>
+									<a href="?category=noodle">Noodle</a>
 								</li>
 								<li>
-									<a href="/pages/product.html"
-										>Fruits Basket / Fruits
-										profile-form-box</a
-									>
+									<a href="?category=fruit">Fruit</a>
 								</li>
 							</ul>
 						</li>
@@ -142,7 +142,6 @@
 				</ul>
 			</div>
 		</div>
-
 		<section class="profile-info">
 			<div class="profile-details">
 				<a class="photo" href="/pages/profile.html"
