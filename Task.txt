@@ -52,4 +52,4 @@ Nguyễn Minh Tuấn - 3121410559
 
 Hoàng Gia Bảo - 3121410070
     Các chức năng cho người dùng cuối (end-user)
-        + Đăng kí (phải đăng kí trở thành khách hàng mới được phép mua hàng) 5% (InComing)
+        + Đăng kí (phải đăng kí trở thành khách hàng mới được phép mua hàng) 5%
