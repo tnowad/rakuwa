@@ -42,6 +42,12 @@ const getTotalPriceCart = async () => {
 		return previousValue + currentValue.price * currentValue.quantity
 	}, 0)
 }
+const getTotalQuantityCart = async () => {
+	const { currentCart } = await getDataFromLocal()
+	return currentCart.reduce((previousValue, currentValue) => {
+		return previousValue + currentValue.quantity
+	}, 0)
+}
 
 const cleanCart = async () => {
 	let { currentCart } = await getDataFromLocal()
@@ -56,4 +62,5 @@ export {
 	removeProductByIdFromCart,
 	getTotalPriceCart,
 	getTotalPriceProductIdInCart,
+	getTotalQuantityCart,
 }
