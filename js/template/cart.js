@@ -26,7 +26,7 @@ const cart = (product) => {
                 addProductIdToCart(${product.id}, this.value); updateCart()"
                 >
             </td>
-            <td>${product.quantity * product.price}</td>
+            <td>${product.quantity * product.price} VNĐ</td>
             <td>
                 <a onclick="removeProduct(${
 					product.id
