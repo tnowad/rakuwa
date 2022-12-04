@@ -3,7 +3,7 @@ import { addProductIdToCart } from '../util/cart.js'
 import { render } from '../render/cart-detail.js'
 
 const updateCart = () => {
-	setTimeout(render, 0)
+	render()
 }
 
 const cart = (product) => {
@@ -29,6 +29,7 @@ const cart = (product) => {
         </tr>
     `
 }
+
 window.updateCart = updateCart
 window.addProductIdToCart = addProductIdToCart
 
