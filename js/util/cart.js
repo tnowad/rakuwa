@@ -1,5 +1,6 @@
 import { getDataFromLocal } from './local-data.js'
 import { getProductById } from './product.js'
+import { loginRequired } from './account.js'
 
 const addProductIdToCart = async (productId, quantity) => {
 	let { currentCart } = await getDataFromLocal()
@@ -55,6 +56,26 @@ const cleanCart = async () => {
 	localStorage.setItem('currentCart', JSON.stringify(currentCart))
 }
 
+const payment = async () => {
+	await loginRequired()
+	let { carts } = await getDataFromLocal()
+	let { currentUser } = await getDataFromLocal()
+	let currentCart = await getCurrentCart()
+	const cart = {
+		userId: currentUser.id,
+		time: new Date().toISOString(),
+		cart: currentCart,
+		total: await getTotalPriceCart(),
+	}
+	if (cart.total == 0) {
+		return false
+	}
+	carts.push(cart)
+	cleanCart()
+	localStorage.setItem('carts', JSON.stringify(carts))
+	return true
+}
+
 export {
 	getCurrentCart,
 	cleanCart,
@@ -63,4 +84,5 @@ export {
 	getTotalPriceCart,
 	getTotalPriceProductIdInCart,
 	getTotalQuantityCart,
+	payment,
 }
