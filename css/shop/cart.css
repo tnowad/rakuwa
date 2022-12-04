@@ -18,7 +18,7 @@
 
 .container .cart-detail-table {
 	height: 100%;
-	width:100%;
+	width: 100%;
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
@@ -30,7 +30,6 @@
 	position: relative;
 	left: 120px;
 }
-
 
 .cart-detail-table tr {
 	border-bottom: 2px solid var(--green-light);
@@ -56,12 +55,12 @@
 	width: 30%;
 }
 
-.cart-detail-table th:nth-child(4) ,
+.cart-detail-table th:nth-child(4),
 .cart-detail-table td:nth-child(4) {
 	width: 15%;
 }
 
-.cart-detail-table th:nth-child(5){
+.cart-detail-table th:nth-child(5) {
 	width: 20%;
 }
 
@@ -76,8 +75,6 @@
 }
 
 .cart-detail-table tbody {
-	max-height: 300px;
-	overflow-y: scroll;
 	overflow-x: hidden;
 }
 
@@ -112,19 +109,19 @@
 }
 
 .action {
-	margin:20px;
+	margin: 20px;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 }
 
-.action .button-delete{
-	font-size:10px;
-	height:40px;
-	display:flex;
-	align-items:center;
+.action .button-delete {
+	font-size: 10px;
+	height: 40px;
+	display: flex;
+	align-items: center;
 }
 
 .action .group-form-option {
-	margin-top:20px;
+	margin-top: 20px;
 }
