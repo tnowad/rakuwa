@@ -8,3 +8,5 @@ const render = async () => {
 	}, '')
 }
 await render()
+
+export { render }
