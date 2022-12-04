@@ -25,7 +25,6 @@ Các chức năng cho người dùng cuối (end-user)
     + Tìm kiếm (kết quả tìm kiếm có phân trang)
         - nâng cao: theo tên sản phẩm, có chọn phân loại và khoảng giá 5%
     + Đăng kí (phải đăng kí trở thành khách hàng mới được phép mua hàng) 10%
-    + Khách hàng chọn mua sản phẩm 5%
     + Khách hàng xem lại các đơn hàng đã đặt 5%
 Các chức năng cho người quản trị web (web-admin) 40%
     + Giao diện admin (phân biệt logout; link thêm, sửa, xóa sản phẩm, quản lý user) 10%
@@ -48,8 +47,9 @@ Nguyễn Minh Tuấn - 3121410559
             - nâng cao: theo tên sản phẩm, có chọn phân loại và khoảng giá 3% / 5%
         + Đăng nhập / đăng xuất 10%
         + Đăng kí (phải đăng kí trở thành khách hàng mới được phép mua hàng) 5% (Đã code phần javascript chờ hoàn thiện UI để kết nối)
-        + Khách hàng chọn mua sản phẩm 2.5% (Thiếu UI cho giỏ hàng)
+        + Khách hàng chọn mua sản phẩm 2.5%
 
 Hoàng Gia Bảo - 3121410070
     Các chức năng cho người dùng cuối (end-user)
         + Đăng kí (phải đăng kí trở thành khách hàng mới được phép mua hàng) 5%
+        + Khách hàng chọn mua sản phẩm 2.5%

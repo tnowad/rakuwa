@@ -1,9 +1,13 @@
-import { getTotalPriceProductIdInCart } from '../util/cart.js'
-import { addProductIdToCart } from '../util/cart.js'
+import { addProductIdToCart, removeProductByIdFromCart } from '../util/cart.js'
 import { render } from '../render/cart-detail.js'
 
 const updateCart = () => {
 	render()
+}
+
+const removeProduct = (productId) => {
+	if (confirm('Bạn có muốn xóa sản phẩm này?'))
+		removeProductByIdFromCart(productId)
 }
 
 const cart = (product) => {
@@ -19,17 +23,20 @@ const cart = (product) => {
                 max = ${product.amount}
                 value = ${product.quantity}
                 onchange="
-                    addProductIdToCart(${product.id}, this.value); updateCart()"
+                addProductIdToCart(${product.id}, this.value); updateCart()"
                 >
             </td>
             <td>${product.quantity * product.price}</td>
             <td>
-                <button class="delete"><i class="fas fa-x"></i></button>
+                <a onclick="removeProduct(${
+					product.id
+				}); location.reload()"><i class="fa fa-trash"></i></a>
             </td>
         </tr>
-    `
+        `
 }
 
+window.removeProduct = removeProduct
 window.updateCart = updateCart
 window.addProductIdToCart = addProductIdToCart
 

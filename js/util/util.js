@@ -43,22 +43,23 @@ const createNewId = (list) => {
 }
 
 const splitArrayByPage = (array, elementPerPage, currentPage) => {
-    // const maxPage = array.length / elementPerPage
-    let newArray = []
-    for (
-        let i = (currentPage - 1) * elementPerPage;
-        i < elementPerPage * currentPage;
-        i++
-    ) {
-        newArray.push(array[i])
-    }
-    return newArray
+	// const maxPage = array.length / elementPerPage
+	let newArray = []
+	for (
+		let i = (currentPage - 1) * elementPerPage;
+		i < elementPerPage * currentPage;
+		i++
+	) {
+		newArray.push(array[i])
+	}
+	return newArray
 }
 const addUrlParameter = (name, value) => {
 	let searchParams = new URLSearchParams(window.location.search)
 	searchParams.set(name, value)
 	return '?' + searchParams.toString()
 }
+
 export {
 	fetchJson,
 	fetchHTML,
