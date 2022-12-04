@@ -17,4 +17,12 @@ const uploadImage = async (event) => {
 	return base64
 }
 
-export { convertBase64, uploadImage }
+const inputUploadImage = (element) => {
+	return new Promise((resolve, reject) => {
+		element.addEventListener('change', async (event) => {
+			resolve(await uploadImage(event))
+		})
+	})
+}
+
+export { convertBase64, uploadImage, inputUploadImage }
