@@ -28,9 +28,11 @@ const cart = (product) => {
             </td>
             <td>${product.quantity * product.price} VNĐ</td>
             <td>
-                <a onclick="removeProduct(${
-					product.id
-				}); location.reload()"><i class="fa fa-trash"></i></a>
+                <a
+                    class="cart-detail-remove"
+                    onclick="removeProduct(${
+						product.id
+					}); location.reload()"><i class="fa fa-trash"></i></a>
             </td>
         </tr>
         `

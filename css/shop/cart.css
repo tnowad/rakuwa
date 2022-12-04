@@ -84,6 +84,10 @@
 	background: rgb(248, 248, 248);
 }
 
+.cart-detail-remove {
+	color: var(--pink);
+	cursor: pointer;
+}
 .cart-detail-table img {
 	width: 100px;
 }
@@ -129,5 +133,7 @@
 }
 
 .action .group-form-option {
-	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	width: max-content;
 }

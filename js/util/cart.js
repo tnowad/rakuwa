@@ -11,6 +11,7 @@ const addProductIdToCart = async (productId, quantity) => {
 
 	if (quantity == undefined) {
 		product.quantity = product.quantity ? product.quantity + 1 : 1
+		if (product.quantity == 1) alert('Đã thêm sản phẩm vào giỏ hàng!')
 	} else {
 		product.quantity = quantity
 	}
