@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/css/shop/root.css" />
+		<script type="module">
+			import { getParams, addActive } from '/js/util/util.js'
+			window.onload = () => {
+				const page = getParams('page') || 'dashboard-home'
+				document
+					.querySelectorAll(`.${page}`)
+					.forEach((element) => addActive(element))
+			}
+		</script>
+	</head>
+	<body>
+		<style>
+			.dashboard {
+				display: flex;
+				justify-content: center;
+			}
+			.dashboard > .container {
+				min-height: 100vh;
+				background-color: aliceblue;
+				width: min(100%, 1400px);
+				display: grid;
+				grid-template-columns: 25% 75%;
+			}
+			.right-content > .content {
+				display: none;
+			}
+			.right-content > .content.active {
+				display: block;
+			}
+		</style>
+		<div class="dashboard">
+			<div class="container">
+				<div class="left-sidebar">
+					<div class="admin-profile">
+						<div class="profile-image"></div>
+						<h2 class="profile-name">Nguyễn Minh Tuấn</h2>
+					</div>
+					<ul class="sidebar-nav">
+						<li class="sidebar-nav-item dashboard-home">
+							<a href="?page=dashboard-home">Trang chủ</a>
+						</li>
+						<li class="sidebar-nav-item dashboard-products">
+							<a href="?page=dashboard-products"
+								>Quản lý sản phẩm</a
+							>
+						</li>
+						<li class="sidebar-nav-item dashboard-users">
+							<a href="?page=dashboard-users"
+								>Quản lý người dùng</a
+							>
+						</li>
+						<li class="sidebar-nav-item dashboard-carts">
+							<a href="?page=dashboard-carts">Quản lý đơn hàng</a>
+						</li>
+					</ul>
+				</div>
+				<div class="right-content">
+					<div class="content dashboard-home">
+						<h2 class="content-title">Trang chủ</h2>
+						<div class="content-body"></div>
+					</div>
+					<div class="content dashboard-products">
+						<h2 class="content-title">Quản lý sản phẩm</h2>
+						<div class="content-body"></div>
+					</div>
+					<div class="content dashboard-users">
+						<h2 class="content-title">Quản lý người dùng</h2>
+						<div class="content-body"></div>
+					</div>
+					<div class="content dashboard-carts">
+						<h2 class="content-title">Quản lý đơn hàng</h2>
+						<div class="content-body"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
