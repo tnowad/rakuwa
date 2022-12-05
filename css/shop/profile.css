@@ -209,8 +209,6 @@
 	}
 }
 
-<<<<<<< Updated upstream
-=======
 .change-pwd-layout {
 	visibility: hidden;
 	position: absolute;
@@ -248,4 +246,3 @@
 .change-pwd-layout>.container button.active {
 	visibility: hidden;
 }
->>>>>>> Stashed changes
