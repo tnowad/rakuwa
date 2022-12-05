@@ -65,6 +65,7 @@ const register = async (user) => {
 }
 
 const getUsers = (options) => {
+	// options = { name }
 	if (options != undefined) {
 		if (options.id != null) {
 			// todo filter data
