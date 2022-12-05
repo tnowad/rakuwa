@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="/css/shop/root.css" />
+		<link rel="stylesheet" href="/css/all.css">
 		<script type="module">
 			import { getParams, addActive } from '/js/util/util.js'
 			window.onload = () => {
@@ -67,9 +68,50 @@
 						<h2 class="content-title">Trang chủ</h2>
 						<div class="content-body"></div>
 					</div>
+					<style>
+						.table-head {
+							width: 100%;
+						}
+					</style>
 					<div class="content dashboard-products">
 						<h2 class="content-title">Quản lý sản phẩm</h2>
-						<div class="content-body"></div>
+						<div class="content-body">
+							<div class="dashboard-action">
+								<!-- search and add -->
+							<form action="">
+								<input type="text" name="name">
+								<input type="submit">
+							</form>
+							<button id="button-add-product">Thêm</button>
+							</div>
+							<div class="dashboard-table">
+								<div class="table-container">
+									<thead class="table-head">
+										<tr>
+											<th style="width:5%">Id</th>
+											<th style="width:20%">Tên sản phẩm</th>
+											<th style="width:20%">Hình ảnh</th>
+											<th style="width:10%">Số lượng</th>
+											<th style="width:10%">Giá</th>
+											<th style="width:20%">Hành động</th>
+										</tr>
+									</thead>
+									<div class="table-item">
+										<tbody class="table-item-top">
+											<tr>
+												<td>Id</td>
+												<td>Tên sản phẩm</td>
+												<td>Hình ảnh</td>
+												<td>Số lượng</td>
+												<td>Giá</td>
+												<td><button class="fas fa-edit"></button> <button class="fa fa-trash"></button> </td>
+											</tr>
+										</tbody>
+										<div class="table-item-bottom"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="content dashboard-users">
 						<h2 class="content-title">Quản lý người dùng</h2>
