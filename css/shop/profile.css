@@ -22,7 +22,7 @@
 	height: 150px;
 }
 
-.profile-details > .photo {
+.profile-details>.photo {
 	object-fit: cover;
 }
 
@@ -48,7 +48,7 @@
 	display: none;
 }
 
-.profile-nav-list > * {
+.profile-nav-list>* {
 	text-align: center;
 }
 
@@ -58,7 +58,7 @@
 	align-items: center;
 }
 
-.profile-nav-list.active > * {
+.profile-nav-list.active>* {
 	display: block;
 }
 
@@ -91,11 +91,11 @@
 	margin-top: 30px;
 }
 
-.profile-tabs > * {
+.profile-tabs>* {
 	display: none;
 }
 
-.profile-tabs > *.active {
+.profile-tabs>*.active {
 	display: block;
 }
 
@@ -164,12 +164,12 @@
 	background: var(--gray);
 }
 
-.profile-tab-nav > * {
+.profile-tab-nav>* {
 	height: 250px;
 	text-align: center;
 }
 
-#profile-payment-tab > .profile-tab-nav {
+#profile-payment-tab>.profile-tab-nav {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(2, 1fr);
@@ -186,10 +186,11 @@
 }
 
 .profile-order {
-    margin: 12px 0;
-    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
-    border-radius: 0.125rem;
+	margin: 12px 0;
+	box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+	border-radius: 0.125rem;
 }
+
 @media only screen and (max-width: 760px) {
 	.profile-info {
 		display: block;
@@ -208,3 +209,43 @@
 	}
 }
 
+<<<<<<< Updated upstream
+=======
+.change-pwd-layout {
+	visibility: hidden;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.change-pwd-layout.active {
+	visibility: visible;
+}
+
+.change-pwd-form {
+	position: fixed;
+	margin-top: -70px;
+	padding: 20px;
+	background: var(--gray);
+	border-radius: 25px;
+}
+
+.change-pwd-form>* {
+	color: var(--white);
+}
+
+.change-pwd-form button {
+	cursor: pointer;
+    background: none;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.change-pwd-layout>.container button.active {
+	visibility: hidden;
+}
+>>>>>>> Stashed changes
