@@ -1,3 +1,4 @@
+import { productForm } from './dashboard-product-update-form.js'
 const productRow = (product) => {
 	return /* html */ `
         <tbody class="table-item">
@@ -29,7 +30,7 @@ const productRow = (product) => {
 					class="table-item-bottom"
 					colspan="6"
 				>
-					<form action="">123</form>
+                    ${productForm(product)}
 				</td>
 			</tr>
 		</tbody>
