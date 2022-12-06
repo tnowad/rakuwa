@@ -1,4 +1,9 @@
 const productForm = (product) => {
-	return 'hiiiii'
+	return `
+        <form>
+            HIIIIIIIIIIIII
+        </form>
+    `
 }
+window.updateProduct = (productId) => {}
 export { productForm }
