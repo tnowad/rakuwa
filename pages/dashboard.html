@@ -77,21 +77,6 @@
 				<div class="right-content">
 					<div class="content dashboard-home">
 						<h2 class="content-title">Trang chủ</h2>
-						<div class="content-body"></div>
-					</div>
-					<style>
-						.table-head {
-							width: 100%;
-						}
-						.table-item-bottom {
-							display: none;
-						}
-						.table-item-bottom.active {
-							display: table-cell;
-						}
-					</style>
-					<div class="content dashboard-products">
-						<h2 class="content-title">Quản lý sản phẩm</h2>
 						<div class="content-body">
 							<div class="dashboard-action">
 								<!-- search and add -->
@@ -120,117 +105,155 @@
 											</th>
 										</tr>
 									</thead>
-									<style></style>
-									<tbody class="table-item">
-										<tr class="table-item-top">
-											<td>Id</td>
-											<td>Tên sản phẩm</td>
-											<td>Hình ảnh</td>
-											<td>Số lượng</td>
-											<td>Giá</td>
-											<td>
-												<button
-													onclick="
-														this
-															.parentElement
-															.parentElement
-															.parentElement
-															.querySelector('.table-item-bottom')
-															.classList
-															.toggle('active')"
-													class="fas fa-edit"
-												></button>
-												<button
-													class="fa fa-trash"
-												></button>
-											</td>
-										</tr>
+									
+								</table>
+							</div>
+						</div>
+					</div>
+					<style>
+						.table-head {
+							width: 100%;
+						}
+						.table-item-bottom {
+							display: none;
+						}
+						.table-item-bottom.active {
+							display: table-cell;
+						}
+					</style>
+					<div class="content dashboard-products">
+						<h2 class="content-title">Quản lý sản phẩm</h2>
+						<div class="content-body">
+							<!-- <div class="dashboard-action">
+								<form action="">
+									<input type="text" name="name" />
+									<input type="submit" value="Tìm kiếm" />
+								</form>
+								<button id="button-add-product">Thêm</button>
+							</div>
+							<div class="dashboard-table">
+								<table
+									style="width: 100%; text-align: center"
+									class="table-container"
+								>
+									<thead class="table-head">
 										<tr>
-											<td
-												class="table-item-bottom"
-												colspan="6"
-											>
-												<form action="">123</form>
-											</td>
+											<th style="width: 5%">Id</th>
+											<th style="width: 35%">
+												Tên sản phẩm
+											</th>
+											<th style="width: 15%">Hình ảnh</th>
+											<th style="width: 15%">Số lượng</th>
+											<th style="width: 15%">Giá</th>
+											<th style="width: 15%">
+												Hành động
+											</th>
 										</tr>
-									</tbody>
-									<tbody class="table-item">
-										<tr class="table-item-top">
-											<td>Id</td>
-											<td>Tên sản phẩm</td>
-											<td>Hình ảnh</td>
-											<td>Số lượng</td>
-											<td>Giá</td>
-											<td>
-												<button
-													onclick="
-														this
-															.parentElement
-															.parentElement
-															.parentElement
-															.querySelector('.table-item-bottom')
-															.classList
-															.toggle('active')"
-													class="fas fa-edit"
-												></button>
-												<button
-													class="fa fa-trash"
-												></button>
-											</td>
-										</tr>
+									</thead>
+									
+								</table>
+							</div> -->
+							<div class="dashboard-action">
+								<!-- search and add -->
+								<form action="">
+									<input type="text" name="name" />
+									<input type="submit" value="Tìm kiếm" />
+								</form>
+								<button id="button-add-product">Thêm</button>
+							</div>
+							<div class="dashboard-table">
+								<table
+									style="width: 100%; text-align: center"
+									class="table-container"
+								>
+									<thead class="table-head">
 										<tr>
-											<td
-												class="table-item-bottom"
-												colspan="6"
-											>
-												<form action="">123</form>
-											</td>
+											<th style="width: 5%">Id</th>
+											<th style="width: 35%">
+												Tên sản phẩm
+											</th>
+											<th style="width: 15%">Hình ảnh</th>
+											<th style="width: 15%">Số lượng</th>
+											<th style="width: 15%">Giá</th>
+											<th style="width: 15%">
+												Hành động
+											</th>
 										</tr>
-									</tbody>
-									<tbody class="table-item">
-										<tr class="table-item-top">
-											<td>Id</td>
-											<td>Tên sản phẩm</td>
-											<td>Hình ảnh</td>
-											<td>Số lượng</td>
-											<td>Giá</td>
-											<td>
-												<button
-													onclick="
-														this
-															.parentElement
-															.parentElement
-															.parentElement
-															.querySelector('.table-item-bottom')
-															.classList
-															.toggle('active')"
-													class="fas fa-edit"
-												></button>
-												<button
-													class="fa fa-trash"
-												></button>
-											</td>
-										</tr>
-										<tr>
-											<td
-												class="table-item-bottom"
-												colspan="6"
-											>
-												<form action="">123</form>
-											</td>
-										</tr>
-									</tbody>
+									</thead>
+									
 								</table>
 							</div>
 						</div>
 					</div>
 					<div class="content dashboard-users">
 						<h2 class="content-title">Quản lý người dùng</h2>
-						<div class="content-body"></div>
+						<div class="content-body">
+							<div class="dashboard-action">
+								<!-- search and add -->
+								<form action="">
+									<input type="text" name="name" />
+									<input type="submit" value="Tìm kiếm" />
+								</form>
+								<button id="button-add-product">Thêm</button>
+							</div>
+							<div class="dashboard-table">
+								<table
+									style="width: 100%; text-align: center"
+									class="table-container"
+								>
+									<thead class="table-head">
+										<tr>
+											<th style="width: 5%">Id</th>
+											<th style="width: 35%">
+												Tên sản phẩm
+											</th>
+											<th style="width: 15%">Hình ảnh</th>
+											<th style="width: 15%">Số lượng</th>
+											<th style="width: 15%">Giá</th>
+											<th style="width: 15%">
+												Hành động
+											</th>
+										</tr>
+									</thead>
+									
+								</table>
+							</div>
+						</div>
 					</div>
 					<div class="content dashboard-carts">
 						<h2 class="content-title">Quản lý đơn hàng</h2>
-						<div class="content-body"></div>
+						<div class="content-body">
+							<div class="dashboard-action">
+								<!-- search and add -->
+								<form action="">
+									<input type="text" name="name" />
+									<input type="submit" value="Tìm kiếm" />
+								</form>
+								<button id="button-add-product">Thêm</button>
+							</div>
+							<div class="dashboard-table">
+								<table
+									style="width: 100%; text-align: center"
+									class="table-container"
+								>
+									<thead class="table-head">
+										<tr>
+											<th style="width: 5%">Id</th>
+											<th style="width: 35%">
+												Tên người mua
+											</th>
+											<th style="width: 15%">Thời gian</th>
+											<th style="width: 15%">Tổng tiền</th>
+											<th style="width: 15%">Trạng thái</th>
+											<th style="width: 15%">
+												Hành động
+											</th>
+										</tr>
+									</thead>
+									
+								</table>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

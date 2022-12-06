@@ -18,6 +18,7 @@ const addProductIdToCart = async (productId, quantity) => {
 
 	currentCart = currentCart.filter((product) => product.id != productId)
 	currentCart.push(product)
+	currentCart.sort((a,b)=> a.id-b.id)
 	localStorage.setItem('currentCart', JSON.stringify(currentCart))
 	console.log(await getTotalPriceCart())
 }

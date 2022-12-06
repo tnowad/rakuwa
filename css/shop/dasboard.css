@@ -25,6 +25,30 @@
     border-radius: 20px;
 }
 
+.dashboard-action form {
+    margin: 20px;
+}
+
+.dashboard-action form input:first-child
+{
+    height: 40px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.dashboard-action form input:nth-child(2){
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dashboard-action #button-add-product{
+    height: 40px;
+    width: 50px;
+    margin-right: 20px;
+}
+
 .profile-image {
     display: flex;
     justify-content: center;

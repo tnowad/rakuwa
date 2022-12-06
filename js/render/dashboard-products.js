@@ -5,7 +5,7 @@ const render = async () => {
 		'.content.dashboard-products .table-container',
 	)
 	const products = await getProducts()
-	tableDashboardProduct.innerHTML = products.reduce(
+	tableDashboardProduct.innerHTML += products.reduce(
 		(previousValue, currentValue) =>
 			previousValue + productRow(currentValue),
 		'',
