@@ -15,7 +15,7 @@ const login = async (username, password) => {
 		} else if (statusUser == 'deleted') {
 			alert('Người dùng đã bị xóa!')
 		}
-	}
+	}	
 	logout()
 	return false
 }

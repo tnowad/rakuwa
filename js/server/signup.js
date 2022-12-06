@@ -27,10 +27,16 @@ window.onload = async () => {
 		username &&
 		password &&
 		confirmPassword &&
-		password == confirmPassword &&
-		(await register(user))
+		password == confirmPassword
 	) {
-		alert('Đăng kí thành công')
-		location.assign('/pages/login.html?loginSuccessfully=true')
+		if(await register(user)){
+			alert('Đăng kí thành công')
+			location.assign('/pages/login.html')
+		}
+		else {
+			alert('Đăng kí thất bại')
+			location.assign('/pages/signup.html')
+		}
 	}
+	
 }

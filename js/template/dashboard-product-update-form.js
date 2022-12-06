@@ -1,7 +1,7 @@
 const productForm = (product) => {
 	return `
         <form>
-            HIIIIIIIIIIIII
+            thong tin
         </form>
     `
 }

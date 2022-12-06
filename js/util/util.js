@@ -9,7 +9,7 @@ const fetchHTML = async (url) => {
 	return result
 }
 const getParams = (entries) => {
-	const queryString = window.location.search
+	const queryString = window.location.search 
 	const urlParams = new URLSearchParams(queryString)
 	return urlParams.get(entries)
 }
