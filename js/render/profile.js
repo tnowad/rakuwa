@@ -36,26 +36,22 @@ const changeTabs = async () => {
 	})
 }
 
-const showChangePwdForm = async () => {
+const changePwdForm = async () => {
 	const showChangePwd = document.querySelector('.show-change-pwd')
 	const changePwdForm = document.querySelector('.change-pwd-layout')
+	const closeChangePwd = document.querySelector('.close-pwd-form')
 	showChangePwd.addEventListener('click', () => {
 			addActive(changePwdForm)
 		}
 	)
-}
-
-const closeChangePwdForm = async () => {
-	const closeChangePwd = document.querySelector('.close-pwd-form')
-	const changePwdForm = document.querySelector('.change-pwd-layout')
-	removeActive(changePwdForm)
 	closeChangePwd.addEventListener('click', () => {
 			removeActive(changePwdForm)
 		}
 	)
+	
+	const fwd = document.querySelector()
 }
 
 showProfileMenu()
 changeTabs()
-showChangePwdForm()
-closeChangePwdForm()
+changePwdForm()
