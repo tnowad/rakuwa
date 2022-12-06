@@ -226,7 +226,6 @@
 }
 
 .change-pwd-form {
-	position: fixed;
 	margin-top: -70px;
 	padding: 20px;
 	background: var(--gray);
@@ -252,4 +251,8 @@
 
 .change-pwd-layout>.container button.active {
 	visibility: hidden;
+}
+
+#uploadBtn {
+	cursor: pointer;
 }

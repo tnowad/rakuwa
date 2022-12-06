@@ -16,7 +16,6 @@ const showProfileMenu = async () => {
 
 const changeTabs = async () => {
 	const profileTabLists = document.querySelectorAll('.profile-tab-item')
-
 	const profileNavListItems = document.querySelectorAll('.profile-nav-list-menu-item')
 
 	profileNavListItems.forEach((element) => {
@@ -30,7 +29,6 @@ const changeTabs = async () => {
 			})
 
 			addActive(document.querySelector(`#${element.id}-tab`))
-
 			addActive(element)
 		})
 	})
@@ -40,16 +38,16 @@ const changePwdForm = async () => {
 	const showChangePwd = document.querySelector('.show-change-pwd')
 	const changePwdForm = document.querySelector('.change-pwd-layout')
 	const closeChangePwd = document.querySelector('.close-pwd-form')
+
 	showChangePwd.addEventListener('click', () => {
 			addActive(changePwdForm)
 		}
 	)
+
 	closeChangePwd.addEventListener('click', () => {
 			removeActive(changePwdForm)
 		}
 	)
-	
-	const fwd = document.querySelector()
 }
 
 showProfileMenu()
