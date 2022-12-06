@@ -8,15 +8,7 @@
 		<link rel="stylesheet" href="/css/shop/root.css" />
 		<link rel="stylesheet" href="/css/all.css" />
 		<link rel="stylesheet" href="/css/shop/dasboard.css" />
-		<script type="module">
-			import { getParams, addActive } from '/js/util/util.js'
-			window.onload = () => {
-				const page = getParams('page') || 'dashboard-home'
-				document
-					.querySelectorAll(`.${page}`)
-					.forEach((element) => addActive(element))
-			}
-		</script>
+		<script type="module" src="/js/server/dashboard.js"></script>
 	</head>
 	<body>
 		<style>
