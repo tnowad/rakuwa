@@ -1,16 +1,28 @@
+.content-body{
+    margin-left:15px ;
+}
+
 .dashboard-action {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 }
 
+
 .content h2 {
-    text-align: center;
+    text-align: left;
+    margin: 15px 0 15px 15px;
 }
+
 
 .admin-profile{
     margin-left: 30px;
     margin-top: 15px;
+}
+
+.dashboard-action form{
+    margin-left: 10px;
+    border-radius: 20px;
 }
 
 .profile-image {
@@ -39,4 +51,22 @@
 .sidebar-nav .active{
     border-left:5px solid black;
     background: var(--green-light);
+}
+
+.table-item .table-item-top img {
+    width: 64px;
+}
+
+.table-item .table-item-top .fa-trash{
+    color: red;
+}
+
+.table-item .table-item-top .fa-edit{
+    color: rgb(0, 153, 255);
+}
+
+.dashboard table {
+    background-color: white;
+    overflow: 2;
+    border-radius: 20px;
 }
