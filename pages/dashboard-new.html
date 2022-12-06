@@ -49,20 +49,27 @@
 					</div>
 					<ul class="sidebar-nav">
 						<li class="sidebar-nav-item dashboard-home">
-							<a href="?page=dashboard-home"><i class="fa-regular fa-gauge"></i> Trang chủ</a>
+							<a href="?page=dashboard-home"
+								><i class="fa-regular fa-gauge"></i> Trang
+								chủ</a
+							>
 						</li>
 						<li class="sidebar-nav-item dashboard-products">
-							<a href="?page=dashboard-products"
-								> Quản lý sản phẩm</a
+							<a href="?page=dashboard-products">
+								Quản lý sản phẩm</a
 							>
 						</li>
 						<li class="sidebar-nav-item dashboard-users">
 							<a href="?page=dashboard-users"
-								><i class="fa-solid fa-cart-shopping"></i>Quản lý người dùng</a
+								><i class="fa-solid fa-cart-shopping"></i>Quản
+								lý người dùng</a
 							>
 						</li>
 						<li class="sidebar-nav-item dashboard-carts">
-							<a href="?page=dashboard-carts"><i class="fa-solid fa-cart-shopping"></i>Quản lý đơn hàng</a>
+							<a href="?page=dashboard-carts"
+								><i class="fa-solid fa-cart-shopping"></i>Quản
+								lý đơn hàng</a
+							>
 						</li>
 					</ul>
 				</div>
@@ -75,6 +82,12 @@
 						.table-head {
 							width: 100%;
 						}
+						.table-item-bottom {
+							display: none;
+						}
+						.table-item-bottom.active {
+							display: table-cell;
+						}
 					</style>
 					<div class="content dashboard-products">
 						<h2 class="content-title">Quản lý sản phẩm</h2>
@@ -83,7 +96,7 @@
 								<!-- search and add -->
 								<form action="">
 									<input type="text" name="name" />
-									<input type="submit" value="Tìm kiếm"	 />
+									<input type="submit" value="Tìm kiếm" />
 								</form>
 								<button id="button-add-product">Thêm</button>
 							</div>
@@ -106,26 +119,106 @@
 											</th>
 										</tr>
 									</thead>
-									<div class="table-item">
-										<tbody class="table-item-top">
-											<tr>
-												<td>Id</td>
-												<td>Tên sản phẩm</td>
-												<td>Hình ảnh</td>
-												<td>Số lượng</td>
-												<td>Giá</td>
-												<td>
-													<button
-														class="fas fa-edit"
-													></button>
-													<button
-														class="fa fa-trash"
-													></button>
-												</td>
-											</tr>
-										</tbody>
-										<div class="table-item-bottom"></div>
-									</div>
+									<style></style>
+									<tbody class="table-item">
+										<tr class="table-item-top">
+											<td>Id</td>
+											<td>Tên sản phẩm</td>
+											<td>Hình ảnh</td>
+											<td>Số lượng</td>
+											<td>Giá</td>
+											<td>
+												<button
+													onclick="
+														this
+															.parentElement
+															.parentElement
+															.parentElement
+															.querySelector('.table-item-bottom')
+															.classList
+															.toggle('active')"
+													class="fas fa-edit"
+												></button>
+												<button
+													class="fa fa-trash"
+												></button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="table-item-bottom"
+												colspan="6"
+											>
+												<form action="">123</form>
+											</td>
+										</tr>
+									</tbody>
+									<tbody class="table-item">
+										<tr class="table-item-top">
+											<td>Id</td>
+											<td>Tên sản phẩm</td>
+											<td>Hình ảnh</td>
+											<td>Số lượng</td>
+											<td>Giá</td>
+											<td>
+												<button
+													onclick="
+														this
+															.parentElement
+															.parentElement
+															.parentElement
+															.querySelector('.table-item-bottom')
+															.classList
+															.toggle('active')"
+													class="fas fa-edit"
+												></button>
+												<button
+													class="fa fa-trash"
+												></button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="table-item-bottom"
+												colspan="6"
+											>
+												<form action="">123</form>
+											</td>
+										</tr>
+									</tbody>
+									<tbody class="table-item">
+										<tr class="table-item-top">
+											<td>Id</td>
+											<td>Tên sản phẩm</td>
+											<td>Hình ảnh</td>
+											<td>Số lượng</td>
+											<td>Giá</td>
+											<td>
+												<button
+													onclick="
+														this
+															.parentElement
+															.parentElement
+															.parentElement
+															.querySelector('.table-item-bottom')
+															.classList
+															.toggle('active')"
+													class="fas fa-edit"
+												></button>
+												<button
+													class="fa fa-trash"
+												></button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="table-item-bottom"
+												colspan="6"
+											>
+												<form action="">123</form>
+											</td>
+										</tr>
+									</tbody>
 								</table>
 							</div>
 						</div>
@@ -142,4 +235,5 @@
 			</div>
 		</div>
 	</body>
+	<script src="/js/render/dashboard-products.js"></script>
 </html>
