@@ -10,7 +10,6 @@ Các chức năng cho người dùng cuối (end-user) 60%
     + Khách hàng chọn mua sản phẩm 5%
     + Khách hàng xem lại các đơn hàng đã đặt 5%
 Các chức năng cho người quản trị web (web-admin) 40%
-    + Giao diện admin (phân biệt logout; link thêm, sửa, xóa sản phẩm, quản lý user) 10%
     + Thêm sản phẩm: upload hình 5%
     + Sửa sản phẩm: hiển thị đúng thông tin trước khi sửa (gồm sửa &amp; bỏ hình) 5%
     + Xóa sản phẩm: hỏi trước khi xóa (js) 5%
@@ -53,3 +52,5 @@ Hoàng Gia Bảo - 3121410070
     Các chức năng cho người dùng cuối (end-user)
         + Đăng kí (phải đăng kí trở thành khách hàng mới được phép mua hàng) 5%
         + Khách hàng chọn mua sản phẩm 2.5%
+    Các chức năng cho người quản trị web (web-admin)
+        + Giao diện admin (phân biệt logout; link thêm, sửa, xóa sản phẩm, quản lý user) 10%

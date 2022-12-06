@@ -5,231 +5,236 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<!-- <link rel="stylesheet" href="/css/shop/root.css" /> -->
+		<!-- <link rel="stylesheet" href="/css/all.css" /> -->
+		<link rel="stylesheet" href="/css/shop/dasboard.css" />
 		<link rel="stylesheet" href="/css/all.css" />
-		<link rel="stylesheet" href="/css/shop/root.css" />
-		<link rel="stylesheet" href="/css/shop/header.css" />
-		<link rel="stylesheet" href="/css/shop/dashboard-detail.css" />
-		<link rel="stylesheet" href="/css/admin/dashboard.css" />
+	<link rel="stylesheet" href="/css/shop/root.css" />
+	<link rel="stylesheet" href="/css/shop/header.css" />
+	<link rel="stylesheet" href="/css/shop/slide-show-banner.css" />
+	<link rel="stylesheet" href="/css/shop/offer-banner.css" />
+	<link rel="stylesheet" href="/css/shop/product-category-area.css" />
+	<link rel="stylesheet" href="/css/shop/shop-area.css" />
+	<link rel="stylesheet" href="/css/shop/footer.css" />
+		<script type="module" src="/js/server/dashboard.js"></script>
 	</head>
-
 	<body>
-		<div class="wrapper">
+		<style>
+			.dashboard {
+				display: flex;
+				justify-content: center;
+			}
+			.dashboard > .container {
+				min-height: 100vh;
+				background-color: aliceblue;
+				width: min(100%, 1400px);
+				display: grid;
+				grid-template-columns: 25% 75%;
+			}
+			.right-content > .content {
+				display: none;
+			}
+			.right-content > .content.active {
+				display: block;
+			}
+		</style>
+		<div class="dashboard">
 			<div class="container">
-				<div class="content">
-					<div class="content-left">
-						<div class="content-left-top">
-							<a href="/index.html">
-							<div class="icon">
-								<!-- <i class="far fa-house-user"></i> -->
-								<i class="fa-solid fa-house"></i>
-							</div>
-<<<<<<< HEAD
-						</a>
-								<div class="img">
-									<img
-										src="../img/categories_img_01.jpg"
-										alt=""
-									/>
-=======
-							<div class="img">
-								<img src="../img/categories_img_01.jpg"  />
->>>>>>> 61ba227807919b1bfc57514ade9b6f6cfb2e2ce3
-							</div>
-							<div class="content-left-name">
-								<p>Nguyen Van A</p>
-							</div>
+				<div class="left-sidebar">
+					<div class="admin-profile">
+						<div class="profile-image">
+							<img src="../img/categories_img_01.jpg" alt="" />
 						</div>
-						<div class="content-left-middle">
-							<div class="content-left-middle-header">
-								<p>Main Statistics</p>
+						<h2 class="profile-name">Nguyễn Minh Tuấn</h2>
+					</div>
+					<ul class="sidebar-nav">
+						<li class="sidebar-nav-item dashboard-home">
+							<a href="?page=dashboard-home"
+								><i class="fa-regular fa-gauge"></i> 
+								Trang chủ</a
+							>
+						</li>
+						<li class="sidebar-nav-item dashboard-products">
+							<a href="?page=dashboard-products">
+								<i class="fa-solid fa-user"></i>
+								Quản lý sản phẩm</a
+							>
+						</li>
+						<li class="sidebar-nav-item dashboard-users">
+							<a href="?page=dashboard-users"
+								><i class="fa-solid fa-cart-shopping"></i> 
+								Quản lý người dùng</a
+							>
+						</li>
+						<li class="sidebar-nav-item dashboard-carts">
+							<a href="?page=dashboard-carts"
+								><i class="fa-light fa-calendar-lines"></i>
+								Quản lý đơn hàng</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="right-content">
+					<div class="content dashboard-home">
+						<h2 class="content-title">Trang chủ</h2>
+						<div class="content-body"></div>
+					</div>
+					<style>
+						.table-head {
+							width: 100%;
+						}
+						.table-item-bottom {
+							display: none;
+						}
+						.table-item-bottom.active {
+							display: table-cell;
+						}
+					</style>
+					<div class="content dashboard-products">
+						<h2 class="content-title">Quản lý sản phẩm</h2>
+						<div class="content-body">
+							<div class="dashboard-action">
+								<!-- search and add -->
+								<form action="">
+									<input type="text" name="name" />
+									<input type="submit" value="Tìm kiếm" />
+								</form>
+								<button id="button-add-product">Thêm</button>
 							</div>
-							<div class="content-left-middle-content">
-								<p class="active"><a href="#">Trang chủ</a></p>
-								<p><a href="#">Phân tích chung</a></p>
-								<p>
-									<a href="#">Thống kê phân tích sản phẩm</a>
-								</p>
-								<p>
-									<a href="#"
-										>Thống kê phân tích khách hàng</a
-									>
-								</p>
+							<div class="dashboard-table">
+								<table
+									style="width: 100%; text-align: center"
+									class="table-container"
+								>
+									<thead class="table-head">
+										<tr>
+											<th style="width: 5%">Id</th>
+											<th style="width: 35%">
+												Tên sản phẩm
+											</th>
+											<th style="width: 15%">Hình ảnh</th>
+											<th style="width: 15%">Số lượng</th>
+											<th style="width: 15%">Giá</th>
+											<th style="width: 15%">
+												Hành động
+											</th>
+										</tr>
+									</thead>
+									<style></style>
+									<tbody class="table-item">
+										<tr class="table-item-top">
+											<td>Id</td>
+											<td>Tên sản phẩm</td>
+											<td>Hình ảnh</td>
+											<td>Số lượng</td>
+											<td>Giá</td>
+											<td>
+												<button
+													onclick="
+														this
+															.parentElement
+															.parentElement
+															.parentElement
+															.querySelector('.table-item-bottom')
+															.classList
+															.toggle('active')"
+													class="fas fa-edit"
+												></button>
+												<button
+													class="fa fa-trash"
+												></button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="table-item-bottom"
+												colspan="6"
+											>
+												<form action="">123</form>
+											</td>
+										</tr>
+									</tbody>
+									<tbody class="table-item">
+										<tr class="table-item-top">
+											<td>Id</td>
+											<td>Tên sản phẩm</td>
+											<td>Hình ảnh</td>
+											<td>Số lượng</td>
+											<td>Giá</td>
+											<td>
+												<button
+													onclick="
+														this
+															.parentElement
+															.parentElement
+															.parentElement
+															.querySelector('.table-item-bottom')
+															.classList
+															.toggle('active')"
+													class="fas fa-edit"
+												></button>
+												<button
+													class="fa fa-trash"
+												></button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="table-item-bottom"
+												colspan="6"
+											>
+												<form action="">123</form>
+											</td>
+										</tr>
+									</tbody>
+									<tbody class="table-item">
+										<tr class="table-item-top">
+											<td>Id</td>
+											<td>Tên sản phẩm</td>
+											<td>Hình ảnh</td>
+											<td>Số lượng</td>
+											<td>Giá</td>
+											<td>
+												<button
+													onclick="
+														this
+															.parentElement
+															.parentElement
+															.parentElement
+															.querySelector('.table-item-bottom')
+															.classList
+															.toggle('active')"
+													class="fas fa-edit"
+												></button>
+												<button
+													class="fa fa-trash"
+												></button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												class="table-item-bottom"
+												colspan="6"
+											>
+												<form action="">123</form>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
-					<div class="content-right">
-						<p class="content-right-header">Dashboard</p>
-						<div class="content-right-grid">
-							<div
-								class="content-right-total-sales content-right-box"
-							>
-								<p class="title">Số lượng sản phẩm</p>
-								<p class="number">22,450</p>
-								<p class="date">Tháng</p>
-							</div>
-							<div
-								class="content-right-revuene content-right-box"
-							>
-								<p class="title">Tổng doanh thu</p>
-								<p class="number">123,456</p>
-								<p class="date">Monthly</p>
-							</div>
-							<div
-								class="content-right-new-user content-right-box"
-							>
-								<p class="title">Người dùng</p>
-								<p class="number">150</p>
-								<p class="date">Monthly</p>
-							</div>
-						</div>
-						<!-- <div class="content-right-spending content-right-box">
-                            <p class="title">Total Sales</p>
-                            <p class="number">600</p>
-                            <p class="date">Monthly</p>
-                        </div> -->
-						<div class="content-right-middle">
-							<div class="input-search">
-								<input type="text" />
-								<i class="fa-solid fa-magnifying-glass"></i>
-							</div>
-							<div class="btn">
-								<button class="add-btn">Add</button>
-							</div>
-						</div>
-						<div class="content-right-table">
-							<table class="table-container">
-								<thead class="head-table">
-									<th style="width: 25%">Customer</th>
-									<th style="width: 15%">Username</th>
-									<th style="width: 20%">Password</th>
-									<th style="width: 15%">Email</th>
-									<th style="width: 15%">Status</th>
-								</thead>
-								<tbody class="body-table">
-									<td>
-										<div class="img">
-											<img
-												src="../img/categories_img_01.jpg"
-												alt=""
-											/>
-										</div>
-										<p class="name">Nguyen Minh Tuan</p>
-									</td>
-									<td>
-										<p class="username">tuancc</p>
-									</td>
-									<td>
-										<p class="password">0123456789</p>
-									</td>
-									<td>
-										<p class="email">tuan@gmail.com</p>
-									</td>
-									<td>
-										<i class="fas fa-edit"></i>
-										<i class="fa fa-trash"></i>
-									</td>
-								</tbody>
-								<tbody class="body-table">
-									<td>
-										<div class="img">
-											<img
-												src="../img/categories_img_01.jpg"
-												alt=""
-											/>
-										</div>
-										<p class="name">Nguyen Minh Tuan</p>
-									</td>
-									<td>
-										<p class="username">tuancc</p>
-									</td>
-									<td>
-										<p class="password">0123456789</p>
-									</td>
-									<td>
-										<p class="email">tuan@gmail.com</p>
-									</td>
-									<td>
-										<i class="fas fa-edit"></i>
-										<i class="fa fa-trash"></i>
-									</td>
-								</tbody>
-								<tbody class="body-table">
-									<td>
-										<div class="img">
-											<img
-												src="../img/categories_img_01.jpg"
-												alt=""
-											/>
-										</div>
-										<p class="name">Nguyen Minh Tuan</p>
-									</td>
-									<td>
-										<p class="username">tuancc</p>
-									</td>
-									<td>
-										<p class="password">0123456789</p>
-									</td>
-									<td>
-										<p class="email">tuan@gmail.com</p>
-									</td>
-									<td>
-										<i class="fas fa-edit"></i>
-										<i class="fa fa-trash"></i>
-									</td>
-								</tbody>
-								<tbody class="body-table">
-									<td>
-										<div class="img">
-											<img
-												src="../img/categories_img_01.jpg"
-												alt=""
-											/>
-										</div>
-										<p class="name">Nguyen Minh Tuan</p>
-									</td>
-									<td>
-										<p class="username">tuancc</p>
-									</td>
-									<td>
-										<p class="password">0123456789</p>
-									</td>
-									<td>
-										<p class="email">tuan@gmail.com</p>
-									</td>
-									<td>
-										<i class="fas fa-edit"></i>
-										<i class="fa fa-trash"></i>
-									</td>
-								</tbody>
-								<tbody class="body-table">
-									<td>
-										<div class="img">
-											<img
-												src="../img/categories_img_01.jpg"
-												alt=""
-											/>
-										</div>
-										<p class="name">Nguyen Minh Tuan</p>
-									</td>
-									<td>
-										<p class="username">tuancc</p>
-									</td>
-									<td>
-										<p class="password">0123456789</p>
-									</td>
-									<td>
-										<p class="email">tuan@gmail.com</p>
-									</td>
-									<td>
-										<i class="fas fa-edit"></i>
-										<i class="fa fa-trash"></i>
-									</td>
-								</tbody>
-							</table>
-						</div>
+					<div class="content dashboard-users">
+						<h2 class="content-title">Quản lý người dùng</h2>
+						<div class="content-body"></div>
+					</div>
+					<div class="content dashboard-carts">
+						<h2 class="content-title">Quản lý đơn hàng</h2>
+						<div class="content-body"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script type="module" src="/js/render/dashboard-products.js"></script>
 </html>
