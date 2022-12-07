@@ -4,7 +4,7 @@ const productForm = (product) => {
         <form class="table-product-form">
             <div class="group-edit-product edit-name">
 				<label for="">Chỉnh sửa tên</label>
-				<input type="text" name="" id="">${product.title}
+				<input type="text" >${product.title}
 			</div>
 			<div class="group-edit-product edit-img">
 				<label for="">Chỉnh sửa ảnh</label>
