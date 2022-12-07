@@ -1,4 +1,4 @@
-// import { getDataFromLocal, updateLocalDataFromServer } from "../util/local-data"
+import { cartForm } from '../template/dashboard-cart-update-form.js'
 import { getUsers } from '../util/account.js'
 const cartRow = async (cart) => {
 	const users = await getUsers({ id: cart.userId })
@@ -21,9 +21,6 @@ const cartRow = async (cart) => {
 								.querySelector('.table-item-bottom')
 								.classList
 								.toggle('active')"
-						class="fas fa-edit"
-					></button>
-					<button
 						class="fa-duotone fa-eye"
 					></button>
 				</td>
@@ -33,6 +30,7 @@ const cartRow = async (cart) => {
 					class="table-item-bottom"
 					colspan="6"
 				>
+				${cartForm(cart)}
 				</td>
 			</tr>
 		</tbody>

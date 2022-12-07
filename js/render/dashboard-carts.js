@@ -6,9 +6,11 @@ const render = async () => {
 	)
 	const carts = await getCarts()
 	tableDashboardCart.innerHTML += await carts.reduce(
-        async (previousValue, currentValue) => previousValue + await cartRow(currentValue),
-		'',
-        )
+		async (previousValue, currentValue) => {
+			previousValue = await previousValue
+			return previousValue + (await cartRow(currentValue))
+		},
+		Promise.resolve(''),
+	)
 }
 render()
-
