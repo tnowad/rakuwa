@@ -5,7 +5,6 @@ const render = async () => {
 		'.content.dashboard-users .table-container',
 	)
 	const users = await getUsers()
-	console.log(users)
 	tableDashboardUser.innerHTML += users.reduce(
 		(previousValue, currentValue) => previousValue + userRow(currentValue),
 		'',
