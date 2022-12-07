@@ -25,7 +25,7 @@ const cartRow = async (cart) => {
 						class="fas fa-edit"
 					></button>
 					<button
-						class="fa fa-trash"
+						class="fa-duotone fa-eye"
 					></button>
 				</td>
 			</tr>
