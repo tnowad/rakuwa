@@ -98,6 +98,10 @@
     color: rgb(0, 153, 255);
 }
 
+.table-item .table-item-top .fa-ban{
+    color: rgb(238, 210, 0);
+}
+
 .dashboard-table {
     margin: 20px;
     padding: 20px;
