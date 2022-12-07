@@ -21,8 +21,12 @@ const productRow = (product) => {
 						class="fas fa-edit"
 					></button>
 					<button
+							class="fa-solid fa-ban"
+						></button>
+					<button
 						class="fa fa-trash"
 					></button>
+
 				</td>
 			</tr>
 			<tr>
