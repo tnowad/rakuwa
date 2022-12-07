@@ -6,6 +6,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -27,6 +28,14 @@
 
 .dashboard-action form {
     margin: 20px;
+}
+
+.dashboard-action input[type="submit"]{
+    cursor: pointer;
+}
+
+.dashboard-action #button-add-product{
+    cursor: pointer;
 }
 
 .dashboard-action form input:first-child
@@ -89,8 +98,31 @@
     color: rgb(0, 153, 255);
 }
 
-.dashboard table {
+.dashboard-table {
+    margin: 20px;
+    padding: 20px;
     background-color: white;
     overflow: 2;
     border-radius: 20px;
 }
+
+.dashboard-action .table-head {
+    /* border-bottom: 5px solid red; */
+}
+
+.dashboard-table .table-head th{
+    padding-bottom: 30px;
+}
+
+
+/* css js */
+
+.active form {
+    display: flex;
+
+}
+
+.active form input {
+    border:1px solid rgb(88, 88, 88)
+}
+
