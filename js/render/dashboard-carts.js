@@ -5,7 +5,6 @@ const render = async () => {
 		'.content.dashboard-carts .table-container',
 	)
 	const carts = await getCarts()
-    console.log(tableDashboardCart)
 	tableDashboardCart.innerHTML += await carts.reduce(
         async (previousValue, currentValue) => previousValue + await cartRow(currentValue),
 		'',

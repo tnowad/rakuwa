@@ -3,7 +3,6 @@ import { getUsers } from '../util/account.js'
 const cartRow = async (cart) => {
 	const users = await getUsers({ id: cart.userId })
 	const user = users[0]
-	console.log(cart.total)
 	return `
         <tbody class="table-item">
 			<tr class="table-item-top">
