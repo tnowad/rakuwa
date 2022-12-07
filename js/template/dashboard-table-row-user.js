@@ -7,7 +7,7 @@ const userRow = (user) => {
 				<td>${user.username}</td>
 				<td><img src="${user.image}" alt=""></td>
 				<td>${user.email}</td>
-				<!-- <td>${user.role}</td> -->
+				<td>${user.status}</td>
 				<td>
 					<button
 						onclick="
