@@ -7,7 +7,7 @@ const productRow = (product) => {
 				<td>${product.title}</td>
 				<td><img src="${product.image}" alt=""></td>
 				<td>${product.amount}</td>
-				<td>${product.price}</td>
+				<td>${product.price.replace(/\B(?=(\d{3})+(?!\d))/g, ',')} VNĐ</td>
 				<td>
 					<button
 						onclick="
