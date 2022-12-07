@@ -65,13 +65,13 @@ const register = async (user) => {
 }
 
 const getUsers = async (options) => {
+	let { users } = await getDataFromLocal()
 	// options = { name }
 	if (options != undefined) {
 		if (options.id != null) {
-			// todo filter data
+			users = users.filter((user) => user.id == options.id)
 		}
 	}
-	let { users } = await getDataFromLocal()
 	return users
 }
 

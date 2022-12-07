@@ -18,7 +18,7 @@ const addProductIdToCart = async (productId, quantity) => {
 
 	currentCart = currentCart.filter((product) => product.id != productId)
 	currentCart.push(product)
-	currentCart.sort((a,b)=> a.id-b.id)
+	currentCart.sort((a, b) => a.id - b.id)
 	localStorage.setItem('currentCart', JSON.stringify(currentCart))
 	console.log(await getTotalPriceCart())
 }
@@ -32,6 +32,11 @@ const removeProductByIdFromCart = async (productId) => {
 const getCurrentCart = async () => {
 	let { currentCart } = await getDataFromLocal()
 	return currentCart
+}
+
+const getCarts = async () => {
+	let { carts } = await getDataFromLocal()
+	return carts
 }
 
 const getTotalPriceProductIdInCart = async (productId) => {
@@ -87,4 +92,5 @@ export {
 	getTotalPriceProductIdInCart,
 	getTotalQuantityCart,
 	payment,
+	getCarts,
 }
