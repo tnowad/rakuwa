@@ -15,7 +15,7 @@ const login = async (username, password) => {
 		} else if (statusUser == 'deleted') {
 			alert('Người dùng đã bị xóa!')
 		}
-	}	
+	}
 	logout()
 	return false
 }
@@ -64,13 +64,15 @@ const register = async (user) => {
 	}
 }
 
-const getUsers = (options) => {
+const getUsers = async (options) => {
 	// options = { name }
 	if (options != undefined) {
 		if (options.id != null) {
 			// todo filter data
 		}
 	}
+	let { users } = await getDataFromLocal()
+	return users
 }
 
 const checkLoginAlert = () => {
