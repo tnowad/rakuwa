@@ -34,8 +34,9 @@ const productForm = (product) => {
 				<input type="text" name="" id="">
 			</div>
 			<div class="edit-option">
-				<button id="cancel">Hủy</button>
 				<button id="submit" onclick="updateProduct(this.parentElement.parentElement, ${product.id})" >Hoàn tất</button>
+				<button id="cancel" onclick="this.parentElement.parentElement.parentElement.classList
+								.toggle('active')">Hủy</button>
 			</div>
 		</form>
     `
