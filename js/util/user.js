@@ -16,4 +16,22 @@ const updateUser = async (user) => {
 	localStorage.setItem('users', JSON.stringify(users))
 }
 
-export { updateUser, getUserById }
+const searchUser = async (user) => { 
+	let { users } = await getDataFromLocal()
+    return users.filter((user) => user.username.toLowerCase().includes(user.username.toLowerCase()))
+}
+
+const removeUser = async (user) => { 
+	let { users } = await getDataFromLocal()
+	users =  users.filter((user) => user.id != user.id)
+	localStorage.setItem('users', JSON.stringify(users))
+}
+
+const addUser = async (user) => { 
+	let { users } = await getDataFromLocal()
+    users = users.concat(user)
+    localStorage.setItem('users', JSON.stringify(users))
+}
+
+export { updateUser, getUserById,searchUser,removeUser,addUser}
+
