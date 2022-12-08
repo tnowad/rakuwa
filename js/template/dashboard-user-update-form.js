@@ -69,6 +69,6 @@ window.updateUser = async (form,userId) => {
 	}
 	console.log(form)
 	updateUser(user)
-	// location.reload()
+	location.reload()
 }
 export { userForm }
