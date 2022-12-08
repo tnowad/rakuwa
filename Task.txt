@@ -52,7 +52,7 @@ Hoàng Gia Bảo - 3121410070
         + Khách hàng chọn mua sản phẩm 2.5%
     Các chức năng cho người quản trị web (web-admin)
         + Giao diện admin (phân biệt logout; link thêm, sửa, xóa sản phẩm, quản lý user) 10%
-    + Sửa sản phẩm: hiển thị đúng thông tin trước khi sửa (gồm sửa &amp; bỏ hình) 5%
+        + Sửa sản phẩm: hiển thị đúng thông tin trước khi sửa (gồm sửa &amp; bỏ hình) 5%
 
 Ngô Lê Huệ Ngân - 3121410339
     Các chức năng cho người dùng cuối (end-user)

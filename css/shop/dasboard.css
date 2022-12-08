@@ -200,10 +200,9 @@
 /* css quản lí user  */
 
 .form-action-user {
-	/* margin: 10% 0 10% 0; */
+	margin-top: 10% ;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	/* grid-template-rows: repeat(4, 1fr); */
 	grid-column-gap: 0px;
 	grid-row-gap: 20px;
 }
@@ -224,9 +223,12 @@
 }
 
 .edit-gender {
-grid-area: 1 / 4 / 2 / 5;
-width: 40%;
-height: 50%;
+	grid-area: 1 / 4 / 2 / 5;
+	width: 40%;
+	height: 60%;
+	cursor: pointer;
+	border-radius: 5px;
+
 }
 
 .edit-image {
@@ -239,19 +241,24 @@ height: 50%;
 
 .edit-address {
 	grid-area: 2 / 3 / 3 / 5;
-	width: 70%;
+	width: 90%;
+	border-radius: 5px;
 }
 
 .edit-status {
 	grid-area: 3 / 1 / 4 / 2;
 	width: 40%;
-	height: 50%;
+	height: 60%;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 .edit-role {
 	grid-area: 3 / 2 / 4 / 3;
 	width: 40%;
-	height: 50%;
+	height: 60%;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 .edit-password {
@@ -275,3 +282,11 @@ height: 50%;
 	background-color: rgb(185, 185, 185);
 	transition: all 0.3s linear;
 }
+
+
+/* quản lí trang chủ */
+
+.content-statistical{
+	display: flex;
+	justify-content: space-around;
+} 
