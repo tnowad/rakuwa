@@ -5,7 +5,7 @@ import {
 import { getProducts } from '../util/product.js'
 const productForm = (product) => {
 	return `
-		<form class="form-action">
+		<form class="form-action" onsubmit="return false">
 			<div class="group-form-edit edit-name" >
 				<label for="">Thay đổi tên</label>
 				<input type="text" id="name" value="${product.title}">
@@ -34,8 +34,9 @@ const productForm = (product) => {
 				<input type="text" name="" id="">
 			</div>
 			<div class="edit-option">
-				<button id="cancel">Hủy</button>
-				<button id="submit" onclick="${updateProduct(product.id,product)}">Hoàn tất</button>	
+				<button id="submit" onclick="updateProduct(this.parentElement.parentElement, ${product.id})" >Hoàn tất</button>
+				<button id="cancel" onclick="this.parentElement.parentElement.parentElement.classList
+								.toggle('active')">Hủy</button>
 			</div>
 		</form>
     `

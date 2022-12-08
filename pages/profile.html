@@ -219,22 +219,20 @@
 								<label>Tên đăng nhập</label>
 								<p>
 									<input
+										id="profile-user-username"
+										disabled
 										type="text"
 										class="profile-form-box"
 										placeholder="Username"
 										value=""
 									/>
 									<br />
-									<small
-										><i
-											>Tên đăng nhập chỉ thay đổi 1 lần</i
-										></small
-									>
 								</p>
 							</div>
 							<div class="profile-form-content">
 								<label>Name</label>
 								<input
+									id="profile-user-fullname"
 									type="text"
 									class="profile-form-box"
 									placeholder="Your full name"
@@ -244,6 +242,7 @@
 							<div class="profile-form-content">
 								<label>Email</label>
 								<input
+									id="profile-user-email"
 									type="email"
 									class="profile-form-box"
 									placeholder="Your email"
@@ -253,6 +252,7 @@
 							<div class="profile-form-content">
 								<label>Phone Number</label>
 								<input
+									id="profile-user-phone"
 									type="tel"
 									class="profile-form-box"
 									pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
@@ -263,7 +263,10 @@
 							<div class="profile-form-content">
 								<label>Gender</label>
 								<div class="profile-form-box input">
-									<select class="profile-form-box-gender">
+									<select 
+									
+									id="profile-user-gender"
+									class="profile-form-box-gender">
 										<option value="male">Male</option>
 										<option value="female">Female</option>
 										<option value="other">Other</option>
