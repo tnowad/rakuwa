@@ -232,7 +232,7 @@
 							<div class="profile-form-content">
 								<label>Name</label>
 								<input
-									id="profile-user-fullname"
+									id="profile-user-full-name"
 									type="text"
 									class="profile-form-box"
 									placeholder="Your full name"
@@ -250,9 +250,27 @@
 								/>
 							</div>
 							<div class="profile-form-content">
+								<label>Mật khẩu</label>
+								<input
+									id="profile-user-password"
+									type="password"
+									class="profile-form-box"
+									value=""
+								/>
+							</div>
+							<div class="profile-form-content">
+								<label>Địa chỉ</label>
+								<input
+									id="profile-user-address"
+									type="text"
+									class="profile-form-box"
+									value=""
+								/>
+							</div>
+							<div class="profile-form-content">
 								<label>Phone Number</label>
 								<input
-									id="profile-user-phone"
+									id="profile-user-phone-number"
 									type="tel"
 									class="profile-form-box"
 									pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
@@ -261,15 +279,23 @@
 								/>
 							</div>
 							<div class="profile-form-content">
+								<label>Ảnh cá nhân</label>
+								<input
+									id="profile-user-image"
+									type="file"
+									class="profile-form-box"
+								/>
+							</div>
+							<div class="profile-form-content">
 								<label>Gender</label>
 								<div class="profile-form-box input">
-									<select 
-									
+									<select
 									id="profile-user-gender"
+									selected
 									class="profile-form-box-gender">
-										<option value="male">Male</option>
-										<option value="female">Female</option>
-										<option value="other">Other</option>
+										<option value="Nam">Nam</option>
+										<option value="Nữ">Nữ</option>
+										<option value="Khác">Khác</option>
 									</select>
 								</div>
 							</div>
@@ -277,6 +303,7 @@
 								<label>Date of birth</label>
 								<div class="profile-form-box input">
 									<input
+										id="profile-user-date-of-birth"
 										type="date"
 										class="profile-form-box-date"
 									/>
@@ -503,8 +530,7 @@
 					.classList.toggle('active')
 			})
 		</script>
-		<script type="module" src="/js/context-menu.js"></script>
-		<script type="module" src="/js/add-product-to-cart.js"></script>
+		<script type="module" src="/js/render/context-menu.js"></script>
 		<script type="module" src="/js/render/profile.js"></script>
 		<script type="module" src="/js/render/profile-user.js"></script>
 	</body>

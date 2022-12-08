@@ -77,6 +77,7 @@ const payment = async () => {
 		time: new Date().toISOString(),
 		cart: currentCart,
 		total: await getTotalPriceCart(),
+		address: currentUser.address,
 	}
 	if (cart.total == 0) {
 		return false

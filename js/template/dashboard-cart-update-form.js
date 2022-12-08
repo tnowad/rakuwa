@@ -30,6 +30,7 @@ const cartForm = (cart) => {
 				return previousValue + productRow(currentValue)
 			}, '')}
         </table>
+		<a>Địa chỉ: ${cart.address}</a>
 		<form onsubmit="return false">
 			<div class="group-form-edit edit-status">
 				<label for="">Trạng thái đơn hàng</label>

@@ -23,10 +23,10 @@ const userForm = (user) => {
 				<label for="">Số điện thoại</label>
 				<input type="text" name="" id="phone" value="${user.phoneNumber}">
 			</div>
-			<select name="gender" class="group-form-editUser edit-gender">
-				<option value="male">Male</option>
-				<option value="female">Female</option>
-				<option value="order">Order</option>
+			<select name="gender" class="group-form-editUser edit-gender" value="${user.gender}" >
+				<option value="Nam">Nam</option>
+				<option value="Nữ">Nữ</option>
+				<option value="Khác">Khác</option>
  			</select>
 			<div class="group-form-editUser edit-address">
 			<label for="">Địa chỉ</label>
