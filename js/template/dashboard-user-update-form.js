@@ -1,5 +1,5 @@
-import { getUserById, updateUser } from "../util/user.js"
-
+import { getUserById, updateUser } from '../util/user.js'
+import { convertBase64 } from '../util/file-to-base64.js'
 const userForm = (user) => {
 	return `
 	<form class="form-action-user" onsubmit="return false">
@@ -52,22 +52,27 @@ const userForm = (user) => {
 		</form>
 	`
 }
-window.updateUser = async (form,userId) => {
-	let user = await getUserById(userId) 
+window.updateUser = async (form, userId) => {
+	let user = await getUserById(userId)
 	user = {
 		...user,
 		fullName: form.querySelector('#fullName').value,
 		dateOfBirth: form.querySelector('#dateOfBirth').value,
 		email: form.querySelector('#email').value,
 		phoneNumber: form.querySelector('#phone').value,
-		image: form.querySelector('#image').value,
 		gender: form.querySelector('.edit-gender').value,
 		address: form.querySelector('#address').value,
 		status: form.querySelector('.edit-status').value,
 		role: form.querySelector('.edit-role').value,
 		password: form.querySelector('#password').value,
 	}
-	console.log(form)
+	try {
+		user = {
+			...user,
+			image: await convertBase64(form.querySelector('#image').files[0]),
+		}
+		console.log(user)
+	} catch {}
 	updateUser(user)
 	location.reload()
 }
