@@ -2,6 +2,7 @@ import { updateUser } from '../util/user.js'
 import { getDataFromLocal } from '../util/local-data.js'
 import { addActive, removeActive } from '/js/util/util.js'
 import { convertBase64 } from '../util/file-to-base64.js'
+import { loginRequired } from '../util/account.js'
 
 const showProfileMenu = async () => {
 	const profileNavLists = document.querySelectorAll('.profile-nav-list')
@@ -58,6 +59,7 @@ changeTabs()
 changePwdForm()
 
 window.onload = async () => {
+	loginRequired()
 	let { currentUser } = await getDataFromLocal()
 	const profileForm = document.querySelector('.profile-tab-form')
 	const profileUsername = profileForm.querySelector('#profile-user-username')
