@@ -16,10 +16,9 @@ const removeProduct = async (productId) => {
 
 const updateProduct = async (product) => {
 	let { products } = await getDataFromLocal()
-	for (const i = 0; i < products.length; i++) {
+	for (let i = 0; i < products.length; i++) {
 		if (products[i].id == product.id) {
 			products[i] = product
-			console.log(products[i], product)
 			break
 		}
 	}

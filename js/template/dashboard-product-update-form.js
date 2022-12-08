@@ -1,4 +1,5 @@
 import { getProductById, getProducts, updateProduct } from '../util/product.js'
+import { convertBase64 } from '../util/file-to-base64.js'
 const productForm = (product) => {
 	return `
 		<form class="form-action" onsubmit="return false">
@@ -12,7 +13,7 @@ const productForm = (product) => {
 			</div>
 			<div class="group-form-edit edit-picture">
 				<label for="">Ảnh</label>
-				<input type="file" name="" id="" value="${product.image}">
+				<input type="file" name="" id="image" value="${product.image}">
 			</div>
 			<div class="group-form-edit edit-amount">
 				<label for="">Số lượng </label>
@@ -44,8 +45,14 @@ window.updateProduct = async (form, productId) => {
 		price: form.querySelector('#price').value,
 		description: form.querySelector('#description').value,
 	}
+	try {
+		product = {
+			...product,
+			image: await convertBase64(form.querySelector('#image').files[0]),
+		}
+	} catch {}
 	updateProduct(product)
-	location.reload()
+	// location.reload()
 }
 
 export { productForm }
