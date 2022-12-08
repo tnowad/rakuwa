@@ -3,27 +3,27 @@ const productForm = (product) => {
 	return `
 		<form class="form-action" onsubmit="return false">
 			<div class="group-form-edit edit-name" >
-				<label for="">Thay đổi tên</label>
+				<label for="">Tên sản phẩm</label>
 				<input type="text" id="title" value="${product.title}">
 			</div>
 			<div class="group-form-edit edit-tag">
-				<label onclick="updateProduct()" for="">Thay đổi thẻ</label>
+				<label  for="">Thẻ</label>
 				<input type="text" name="" id="category" value="${product.category}">
 			</div>
 			<div class="group-form-edit edit-picture">
-				<label for="">Thay đổi ảnh</label>
+				<label for="">Ảnh</label>
 				<input type="file" name="" id="" value="${product.image}">
 			</div>
 			<div class="group-form-edit edit-amount">
-				<label for="">Thay đổi số lượng </label>
+				<label for="">Số lượng </label>
 				<input type="text" name="" id="amount" value="${product.amount}">
 			</div>
 			<div class="group-form-edit edit price">
-					<label for="">Thay đổi giá</label>
+					<label for="">Giá</label>
 					<input type="text" name="" id="price" value="${product.price}">
 			</div>
 			<div class="edit-describe">
-				<label for="">Thay đổi miêu tả</label>
+				<label for="">Miêu tả</label>
 				<textarea id="description" name="w3review" rows="4" cols="50">${product.description}</textarea>
 				</div>
 			<div class="edit-option">
