@@ -17,6 +17,7 @@
 				"quantity": 1
 			}
 		],
+		"status": "Đang chờ",
 		"total": 90000
 	},
 	{
@@ -37,6 +38,7 @@
 				"quantity": 1
 			}
 		],
+		"status": "Thành công",
 		"total": 90000
 	}
 ]

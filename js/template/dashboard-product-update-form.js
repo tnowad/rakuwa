@@ -42,9 +42,8 @@ window.updateProduct = async (form, productId) => {
 		category: form.querySelector('#category').value,
 		amount: form.querySelector('#amount').value,
 		price: form.querySelector('#price').value,
-		description : form.querySelector('#description').value
+		description: form.querySelector('#description').value,
 	}
-	console.log(product)
 	updateProduct(product)
 	location.reload()
 }

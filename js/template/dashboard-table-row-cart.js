@@ -9,8 +9,8 @@ const cartRow = async (cart) => {
 				<td>${cart.id}</td>
 				<td>${user.fullName}</td>
 				<td>${cart.time}</td>
-				<td>${cart.total}</td>
-				<td>Thành công</td>
+				<td>${cart.total} VNĐ</td>
+				<td>${cart.status}</td>
 				<td>
 					<button
 						onclick="

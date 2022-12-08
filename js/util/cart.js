@@ -71,7 +71,7 @@ const payment = async () => {
 	const id = createNewId(carts)
 	let currentCart = await getCurrentCart()
 	const cart = {
-		status: 'đang chờ',
+		status: 'Đang chờ',
 		id: id,
 		userId: currentUser.id,
 		time: new Date().toISOString(),
@@ -87,6 +87,22 @@ const payment = async () => {
 	return true
 }
 
+const updateCart = async (cart) => {
+	let { carts } = await getDataFromLocal()
+	for (let i = 0; i < carts.length; i++) {
+		if (carts[i].id == cart.id) {
+			carts[i] = cart
+			break
+		}
+	}
+	localStorage.setItem('carts', JSON.stringify(carts))
+}
+
+const getCartById = async (cartId) => {
+	const { carts } = await getDataFromLocal()
+	return carts.find((cart) => cart.id == cartId)
+}
+
 export {
 	getCurrentCart,
 	cleanCart,
@@ -97,4 +113,6 @@ export {
 	getTotalQuantityCart,
 	payment,
 	getCarts,
+	updateCart,
+	getCartById,
 }
