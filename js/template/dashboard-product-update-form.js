@@ -5,7 +5,7 @@ import {
 import { getProducts } from '../util/product.js'
 const productForm = (product) => {
 	return `
-		<form class="form-action" action="">
+		<form class="form-action">
 			<div class="group-form-edit edit-name" >
 				<label for="">Thay đổi tên</label>
 				<input type="text" id="name" value="${product.title}">
@@ -14,7 +14,7 @@ const productForm = (product) => {
 				<input type="hidden" id="index" value="${product.id}">
 			</div>
 			<div class="group-form-edit edit-tag">
-				<label onclick="updateProduct()" for="">Thay đổi thẻ</label>
+				<label for="">Thay đổi thẻ</label>
 				<input type="text" name="" id="category" value="${product.category}">
 			</div>
 			<div class="group-form-edit edit-picture">
@@ -35,22 +35,22 @@ const productForm = (product) => {
 			</div>
 			<div class="edit-option">
 				<button id="cancel">Hủy</button>
-				<button id="submit" onclick="${updateProduct(product.id)} ">Hoàn tất</button>				
+				<button id="submit" onclick="${updateProduct(product.id,product)}">Hoàn tất</button>	
 			</div>
 		</form>
     `
 }
-window.updateProduct = async (product) => {
-	// const listProduct = await getProducts()
-	// const index = document.getElementById("index").value
-	// listProduct[index] = {
-	// 	title: document.getElementById("name").value,
-	// 	category: document.getElementById("category").value,
-	// 	amount: document.getElementById("amount").value,
-	// 	price: document.getElementById("price").value
-	// }
-	// console.log(index)
-	// localStorage.setItem('products', JSON.stringify(listProduct))
+window.updateProduct = async (index,product) => {
+	const listProduct = await getProducts()
+	const index = document.getElementById("index").value
+	listProduct[index] = {
+		title: document.getElementById("name").value,
+		category: document.getElementById("category").value,
+		amount: document.getElementById("amount").value,
+		price: document.getElementById("price").value
+	}
+	console.log(index)
+	localStorage.setItem('products', JSON.stringify(listProduct))
 }
 
 export { productForm }
