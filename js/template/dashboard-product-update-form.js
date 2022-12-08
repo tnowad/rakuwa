@@ -24,7 +24,7 @@ const productForm = (product) => {
 			</div>
 			<div class="edit-describe">
 				<label for="">Miêu tả</label>
-				<textarea id="description" name="w3review" rows="4" cols="50">${product.description}</textarea>
+				<textarea id="description" rows="4" cols="50">${product.description}</textarea>
 				</div>
 			<div class="edit-option">
 				<button id="cancel">Hủy</button>
