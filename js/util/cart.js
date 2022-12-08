@@ -71,6 +71,7 @@ const payment = async () => {
 	const id = createNewId(carts)
 	let currentCart = await getCurrentCart()
 	const cart = {
+		status: 'đang chờ',
 		id: id,
 		userId: currentUser.id,
 		time: new Date().toISOString(),
