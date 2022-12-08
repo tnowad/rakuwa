@@ -5,7 +5,7 @@ import {
 import { getProducts } from '../util/product.js'
 const productForm = (product) => {
 	return `
-		<form class="form-action" action="">
+		<form class="form-action" onsubmit="return false">
 			<div class="group-form-edit edit-name" >
 				<label for="">Thay đổi tên</label>
 				<input type="text" id="name" value="${product.title}">
@@ -35,22 +35,14 @@ const productForm = (product) => {
 			</div>
 			<div class="edit-option">
 				<button id="cancel">Hủy</button>
-				<button id="submit" onclick="${updateProduct(product.id)} ">Hoàn tất</button>				
+				<button id="submit" onclick="updateProduct(this.parentElement.parentElement, ${product.id})" >Hoàn tất</button>
 			</div>
 		</form>
     `
 }
-window.updateProduct = async (product) => {
-	// const listProduct = await getProducts()
-	// const index = document.getElementById("index").value
-	// listProduct[index] = {
-	// 	title: document.getElementById("name").value,
-	// 	category: document.getElementById("category").value,
-	// 	amount: document.getElementById("amount").value,
-	// 	price: document.getElementById("price").value
-	// }
-	// console.log(index)
-	// localStorage.setItem('products', JSON.stringify(listProduct))
+
+window.updateProduct = (form, productId) => {
+	console.log(form, productId)
 }
 
 export { productForm }
