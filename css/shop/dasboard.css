@@ -290,3 +290,14 @@
 	display: flex;
 	justify-content: space-around;
 } 
+
+.group-content-statistical{
+	border: 1px solid rgba(124, 124, 124, 0.342);
+	height: 100px;
+	width: 200px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+} 
