@@ -225,6 +225,8 @@
 
 .edit-gender {
 	grid-area: 2 / 1 / 3 / 2;
+	width: 40%;
+	height: 30%;
 }
 
 .edit-phoneNumber {
@@ -237,10 +239,14 @@
 
 .edit-status {
 	grid-area: 3 / 1 / 4 / 2;
+	width: 40%;
+	height: 50%;
 }
 
 .edit-role {
 	grid-area: 3 / 2 / 4 / 3;
+	width: 40%;
+	height: 50%;
 }
 
 .edit-password {

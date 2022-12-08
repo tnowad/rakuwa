@@ -29,8 +29,8 @@ const userForm = (user) => {
 				<option value="Khác">Khác</option>
  			</select>
 			<div class="group-form-editUser edit-address">
-			<label for="">Địa chỉ</label>
-				<textarea id="address" name="w3review" rows="4" cols="50">${user.address}</textarea>
+				<label for="">Địa chỉ</label>
+				<textarea id="address" name="address" rows="4" cols="50">${user.address}</textarea>
 			</div>
 			<select name="status" class="group-form-editUser edit-status">
 				<option value="active">Active</option>
