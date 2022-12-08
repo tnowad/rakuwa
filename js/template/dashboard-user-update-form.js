@@ -1,3 +1,5 @@
+import { getUserById, updateUser } from "../util/user.js"
+
 const userForm = (user) => {
 	return `
 	<form class="form-action-user" onsubmit="return false">
@@ -35,8 +37,8 @@ const userForm = (user) => {
 				<option value="ban">Ban</option>
 				<option value="deleted">Deleted</option>
 			 </select>			
-			<select name="role" class="group-form-editUser edit-role">
-				<option value="admin">Admin</option>
+			<select name="role" value="${user.role}" class="group-form-editUser edit-role">
+				<option  value="admin">Admin</option>
 				<option value="user">User</option>
  			</select>
 			<div class="group-form-editUser edit-password" >
@@ -50,7 +52,23 @@ const userForm = (user) => {
 		</form>
 	`
 }
-window.updateUser = async () => {
-	
+window.updateUser = async (form,userId) => {
+	let user = await getUserById(userId) 
+	user = {
+		...user,
+		fullName: form.querySelector('#fullName').value,
+		dateOfBirth: form.querySelector('#dateOfBirth').value,
+		email: form.querySelector('#email').value,
+		phoneNumber: form.querySelector('#phone').value,
+		image: form.querySelector('#image').value,
+		gender: form.querySelector('.edit-gender').value,
+		address: form.querySelector('#address').value,
+		status: form.querySelector('.edit-status').value,
+		role: form.querySelector('.edit-role').value,
+		password: form.querySelector('#password').value,
+	}
+	console.log(form)
+	updateUser(user)
+	// location.reload()
 }
 export { userForm }
