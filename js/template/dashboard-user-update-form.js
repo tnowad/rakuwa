@@ -21,8 +21,8 @@ const userForm = (user) => {
 				<label for="">Thay đổi ngày sinh </label>
 				<input type="date" name="" id="dateOfBirth" value="${product.dateOfBirth}">
 			</div>
-			<div class="group-form-edit edit price">
-					<label for="">Thay đổi giá</label>
+			<div class="group-form-edit edit-phone">
+					<label for="">Thay đổi </label>
 					<input type="text" name="" id="price" value="${product.price}">
 			</div>
 			<div class="edit-describe">
