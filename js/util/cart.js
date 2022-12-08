@@ -35,8 +35,13 @@ const getCurrentCart = async () => {
 	return currentCart
 }
 
-const getCarts = async () => {
+const getCarts = async (option) => {
 	let { carts } = await getDataFromLocal()
+	if (option != undefined && option != null) {
+		if (option.userId != undefined) {
+			carts = carts.filter((cart) => cart.userId == option.userId)
+		}
+	}
 	return carts
 }
 
@@ -68,6 +73,10 @@ const payment = async () => {
 	await loginRequired()
 	let { carts } = await getDataFromLocal()
 	let { currentUser } = await getDataFromLocal()
+	if (currentUser.address == '') {
+		alert('Vui lòng cập nhật địa chỉ')
+		return false
+	}
 	const id = createNewId(carts)
 	let currentCart = await getCurrentCart()
 	const cart = {

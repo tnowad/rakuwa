@@ -97,7 +97,7 @@
 					</button>
 				</div>
 			</div>
-			<!-- <div class="container">
+			<div class="container">
 				<ul class="navigation mobile-header">
 					<div class="container">
 						<li><a href="/index.html">Home</a></li>
@@ -130,7 +130,7 @@
 						<li><a href="/pages/contact.html">Liên hệ</a></li>
 					</div>
 				</ul>
-			</div> -->
+			</div>
 		</div>
 
 		<section class="layout-btn">
@@ -178,26 +178,26 @@
 					><img id="user-image" src="/img/profile/avt.png" alt=""
 				/></a>
 				<h3 id="user-full-name">Tên đăng nhập</h3>
-				<br>
+				<br />
 			</div>
 			<div class="profile-nav">
 				<ul class="container">
-					<li class="profile-nav-list active">
+					<ul class="profile-nav-list active">
 						<p id="profile-profile" class="show-menu">
 							Thông tin cá nhân
 						</p>
-							<li
-								class="profile-nav-list-menu-item active"
-								id="profile-profile"
-							>
-								Thông tin cá nhân
-							</li>
-					</li>
-					<li class="profile-nav-list">
-						<p id="profile-order-return" class="show-menu">
+						<li
+							class="profile-nav-list-menu-item active"
+							id="profile-profile"
+						>
 							Thông tin cá nhân
-						</p>
-							</li>
+						</li>
+					</ul>
+					<li
+						class="profile-nav-list profile-nav-list-menu-item"
+						id="profile-carts"
+					>
+						Đơn hàng đã đặt
 					</li>
 				</ul>
 			</div>
@@ -290,9 +290,10 @@
 								<label>Gender</label>
 								<div class="profile-form-box input">
 									<select
-									id="profile-user-gender"
-									selected
-									class="profile-form-box-gender">
+										id="profile-user-gender"
+										selected
+										class="profile-form-box-gender"
+									>
 										<option value="Nam">Nam</option>
 										<option value="Nữ">Nữ</option>
 										<option value="Khác">Khác</option>
@@ -318,98 +319,28 @@
 					</div>
 				</div>
 
-				<div id="profile-address-tab" class="profile-tab-item">
+				<div id="profile-carts-tab" class="profile-tab-item">
 					<div class="profile-tab-nav">
 						<div class="container">
 							<div class="profile-tab-heading">
-								<h1>My Addresses</h1>
+								<h1>Đơn hàng của tôi</h1>
 								<button type="submit">
 									<i class="fal fa-map-marker-alt"></i>
 								</button>
 							</div>
-							<p>
-								Save your shipping and billing addresses here.
-							</p>
 						</div>
-					</div>
-				</div>
-
-				<div id="profile-payment-tab" class="profile-tab-item">
-					<div class="profile-tab-nav">
-						<div class="profile-payment-card">
-							<div class="profile-tab-heading">
-								<h1>Credit / Debit Card</h1>
-								<button type="submit">
-									<i class="fal fa-plus"></i>
-								</button>
-							</div>
-							<p>You don't have cards yet.</p>
-						</div>
-						<div class="profile-payment-bank">
-							<div class="profile-tab-heading">
-								<h1>My Bank Accounts</h1>
-								<button type="submit">
-									<i class="fal fa-plus"></i>
-								</button>
-							</div>
-							<p>You don't have bank profiles yet.</p>
-						</div>
-					</div>
-				</div>
-
-				<div id="profile-order-completed-tab" class="profile-tab-item">
-					<div class="profile-tab-nav">
-						<div class="container">
-							<div class="profile-tab-heading">
-								<h1>Completed Orders</h1>
-							</div>
-
-							<div class="profile-order"></div>
-						</div>
-					</div>
-				</div>
-
-				<div id="profile-order-return-tab" class="profile-tab-item">
-					<div class="profile-tab-nav">
-						<div class="container">
-							<div class="profile-tab-heading">
-								<h1>Return Order</h1>
-							</div>
-							<img
-								src="/img/profile/order.png"
-								alt=""
-								width="150px"
-							/>
-							<p>You don't have any Return or Refund case.</p>
-						</div>
-					</div>
-				</div>
-
-				<div id="profile-order-cancel-tab" class="profile-tab-item">
-					<div class="profile-tab-nav">
-						<div class="container">
-							<div class="profile-tab-heading">
-								<h1>Canceled Orders</h1>
-							</div>
-							<img
-								src="/img/profile/order.png"
-								alt=""
-								width="150px"
-							/>
-							<p>You don't have any Canceled orders.</p>
-						</div>
-					</div>
-				</div>
-
-				<div id="profile-review-tab" class="profile-tab-item">
-					<div class="profile-tab-nav">
-						<div class="container">
-							<div class="profile-tab-heading">
-								<h1>Reviews</h1>
-							</div>
-							<img src="/img/profile/review.png" alt="" />
-							<p>You have not purchased any products to rate.</p>
-						</div>
+						<table class="table-container">
+							<thead class="table-head">
+								<tr>
+									<th style="width: 5%">Id</th>
+									<th style="width: 35%">Tên người mua</th>
+									<th style="width: 15%">Thời gian</th>
+									<th style="width: 15%">Tổng tiền</th>
+									<th style="width: 15%">Trạng thái</th>
+									<th style="width: 15%">Hành động</th>
+								</tr>
+							</thead>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -530,8 +461,10 @@
 					.classList.toggle('active')
 			})
 		</script>
+		<script type="module" src="/js/render/header-account.js"></script>
 		<script type="module" src="/js/render/context-menu.js"></script>
 		<script type="module" src="/js/render/profile.js"></script>
 		<script type="module" src="/js/render/profile-user.js"></script>
+		<script type="module" src="/js/render/profile-cart.js"></script>
 	</body>
 </html>
