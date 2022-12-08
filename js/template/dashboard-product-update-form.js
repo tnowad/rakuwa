@@ -1,4 +1,4 @@
-// import { getDataFromLocal, updateLocalDataFromServer } from "../util/local-data"
+import { getDataFromLocal, updateLocalDataFromServer } from "../util/local-data.js"
 const productForm = (product) => {
 	return `
     <form class="form-action" action="">
@@ -12,7 +12,7 @@ const productForm = (product) => {
 				</div>
 				<div class="group-form-edit edit-picture">
 				<label for="">Thay đổi ảnh</label>
-				<input type="file" name="" id="" value="">
+				<input type="file" name="" id="" value="${product.image}">
 				</div>
 				<div class="group-form-edit edit-amount">
 					<label for="">Thay đổi số lượng </label>
@@ -27,12 +27,15 @@ const productForm = (product) => {
 				<input type="text" name="" id="">
 			</div>
 			<div class="edit-option">
-				<button id="submit">Hoàn tất</button>				
+				<button id="submit" onclick="updateProduct()">Hoàn tất</button>				
 				<button id="cancel">Hủy</button>
 			</div>
 		</form>
     `
 }
-window.updateProduct = ()=>{}
+window.updateProduct = () => {
+	// console.log(54)
+	
+}
 
 export { productForm }
