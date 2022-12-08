@@ -1,33 +1,38 @@
 // import { getDataFromLocal, updateLocalDataFromServer } from "../util/local-data"
 const productForm = (product) => {
 	return `
-        <form class="table-product-form">
-            <div class="group-edit-product edit-name">
-				<label for="">Chỉnh sửa tên</label>
-				<input type="text" >${product.title}
+    <form class="form-action" action="">
+				<div class="group-form-edit edit-name" >
+					<label for="">Thay đổi tên</label>
+					<input type="text" value="${product.title}">
+				</div>
+				<div class="group-form-edit edit-tag">
+					<label for="">Thay đổi thẻ</label>
+					<input type="text" name="" id="" value="${product.category}">
+				</div>
+				<div class="group-form-edit edit-picture">
+				<label for="">Thay đổi ảnh</label>
+				<input type="file" name="" id="" value="">
+				</div>
+				<div class="group-form-edit edit-amount">
+					<label for="">Thay đổi số lượng </label>
+					<input type="text" name="" id="" value="${product.amount}">
+				</div>
+				<div class="group-form-edit edit price">
+					<label for="">Thay đổi giá</label>
+					<input type="text" name="" id="" value="${product.price}">
+				</div>
+			<div class="edit-describe">
+				<label for="">Thay đổi miêu tả</label>
+				<input type="text" name="" id="">
 			</div>
-			<div class="group-edit-product edit-img">
-				<label for="">Chỉnh sửa ảnh</label>
-				<input type="file">
+			<div class="edit-option">
+				<button id="submit">Hoàn tất</button>				
+				<button id="cancel">Hủy</button>
 			</div>
-			<div class="group-edit-product edit-amount">
-				<label for="">Chỉnh số lượng</label>
-				<input type="text">
-			</div>
-			<div class="group-edit-product edit-price">
-				<label for="">Chỉnh Giá</label>
-				<input type="text">
-			</div>
-            <div class="group-edit-product submit"> 
-                <button onclick="updateProduct()">Submit</button> 
-            </div>
-        </form>
+		</form>
     `
 }
 window.updateProduct = ()=>{}
-// const updateProduct = (productId) => {
-//     getDataFromLocal('products')
-//     updateLocalDataFromServer
-// }
 
 export { productForm }
