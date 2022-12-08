@@ -14,3 +14,4 @@ const render = async () => {
 	)
 }
 render()
+export{ render}

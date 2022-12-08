@@ -1,20 +1,13 @@
-import {
-	getDataFromLocal,
-	updateLocalDataFromServer,
-} from '../util/local-data.js'
-import { getProducts } from '../util/product.js'
+import { getProductById, getProducts, updateProduct } from '../util/product.js'
 const productForm = (product) => {
 	return `
 		<form class="form-action" onsubmit="return false">
 			<div class="group-form-edit edit-name" >
 				<label for="">Thay đổi tên</label>
-				<input type="text" id="name" value="${product.title}">
-			</div>
-			<div class="group-form-edit edit-name" >
-				<input type="hidden" id="index" value="${product.id}">
+				<input type="text" id="title" value="${product.title}">
 			</div>
 			<div class="group-form-edit edit-tag">
-				<label for="">Thay đổi thẻ</label>
+				<label onclick="updateProduct()" for="">Thay đổi thẻ</label>
 				<input type="text" name="" id="category" value="${product.category}">
 			</div>
 			<div class="group-form-edit edit-picture">
@@ -31,27 +24,29 @@ const productForm = (product) => {
 			</div>
 			<div class="edit-describe">
 				<label for="">Thay đổi miêu tả</label>
-				<input type="text" name="" id="">
-			</div>
+				<textarea id="description" name="w3review" rows="4" cols="50">${product.description}</textarea>
+				</div>
 			<div class="edit-option">
+				<button id="cancel">Hủy</button>
 				<button id="submit" onclick="updateProduct(this.parentElement.parentElement, ${product.id})" >Hoàn tất</button>
-				<button id="cancel" onclick="this.parentElement.parentElement.parentElement.classList
-								.toggle('active')">Hủy</button>
 			</div>
 		</form>
     `
 }
-window.updateProduct = async (index,product) => {
-	const listProduct = await getProducts()
-	const index = document.getElementById("index").value
-	listProduct[index] = {
-		title: document.getElementById("name").value,
-		category: document.getElementById("category").value,
-		amount: document.getElementById("amount").value,
-		price: document.getElementById("price").value
+
+window.updateProduct = async (form, productId) => {
+	let product = await getProductById(productId)
+	product = {
+		...product,
+		title: form.querySelector('#title').value,
+		category: form.querySelector('#category').value,
+		amount: form.querySelector('#amount').value,
+		price: form.querySelector('#price').value,
+		description : form.querySelector('#description').value
 	}
-	console.log(index)
-	localStorage.setItem('products', JSON.stringify(listProduct))
+	console.log(product)
+	updateProduct(product)
+	location.reload()
 }
 
 export { productForm }
