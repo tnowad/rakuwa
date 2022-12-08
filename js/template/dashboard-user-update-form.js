@@ -30,19 +30,19 @@ const userForm = (user) => {
 			<label for="">Địa chỉ</label>
 				<textarea id="address" name="w3review" rows="4" cols="50">${user.address}</textarea>
 			</div>
-			<div class="group-form-editUser edit-role" >
-				<label for="">Quyền truy cập</label>
-				<input type="option" id="role" value="${user.role}">
-			</div>
-			<div class="group-form-editUser edit-password" >
-				<label for="">Mật khẩu</label>
-				<input type="text" id="password" value="${user.password}">
-			</div>
 			<select name="status" class="group-form-editUser edit-status">
 				<option value="active">Active</option>
 				<option value="ban">Ban</option>
 				<option value="deleted">Deleted</option>
- 			</select>			
+			 </select>			
+			<select name="role" class="group-form-editUser edit-role">
+				<option value="admin">Admin</option>
+				<option value="user">User</option>
+ 			</select>
+			<div class="group-form-editUser edit-password" >
+				<label for="">Mật khẩu</label>
+				<input type="text" id="password" value="${user.password}">
+			</div>
 			<div class="group-form-editUser edit-option-user">
 				<button id="cancel">Hủy</button>
 				<button id="submit" onclick="updateUser(this.parentElement.parentElement, ${user.id})" >Hoàn tất</button>
@@ -51,6 +51,6 @@ const userForm = (user) => {
 	`
 }
 window.updateUser = async () => {
-	1	
+	
 }
 export { userForm }
