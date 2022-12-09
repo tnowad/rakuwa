@@ -1,4 +1,5 @@
-import { getCartById, updateCart } from '../util/cart.js'
+import { renderSearch } from '../render/dashboard-carts.js'
+import { getCartById, getCartBySearch, updateCart } from '../util/cart.js'
 const productRow = (product) => {
 	return `
         <tbody class="table-item">
@@ -27,16 +28,15 @@ const cartForm = (cart) => {
 				</tr>
 			</thead>
             ${cart.cart.reduce((previousValue, currentValue) => {
-				return previousValue + productRow(currentValue)
-			}, '')}
+		return previousValue + productRow(currentValue)
+	}, '')}
         </table>
 		<a>Địa chỉ: ${cart.address}</a>
 		<form onsubmit="return false">
 			<div class="group-form-edit edit-status">
 				<label for="">Trạng thái đơn hàng</label>
-				<select type="text" name="" id="status" value="${
-					cart.status
-				} selected disabled hidden">
+				<select type="text" name="" id="status" value="${cart.status
+		} selected disabled hidden">
 					<option value="Thành công">Thành công</option>
 					<option value="Thất bại">Thất bại</option>
 					<option value="Đang chờ">Đang chờ</option>
@@ -44,9 +44,8 @@ const cartForm = (cart) => {
 			</div>
 			<div class="edit-option">
 				<button id="cancel" onclick="">Hủy</button>
-				<button id="submit" onclick="updateCart(this.parentElement.parentElement, ${
-					cart.id
-				})" >Hoàn tất</button>
+				<button id="submit" onclick="updateCart(this.parentElement.parentElement, ${cart.id
+		})" >Hoàn tất</button>
 			</div>
 		</form>
     `
@@ -61,5 +60,10 @@ window.updateCart = async (form, cartId) => {
 	updateCart(cart)
 	location.reload()
 }
+
+window.searchCart = async () => {
+	let valueSearchCart = document.querySelector('.form-search-cart input').value
+	renderSearch(await getCartBySearch(valueSearchCart)) 
+}	
 
 export { cartForm }

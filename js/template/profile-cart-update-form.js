@@ -7,7 +7,7 @@ const productRow = (product) => {
 				<td>${product.title}</td>
 				<td><img src="${product.image}" alt=""></td>
 				<td>${product.quantity}</td>
-				<td>${product.quantity * product.price} VNĐ</td>
+				<td>${new Intl.NumberFormat('ja-JP').format(product.quantity * product.price)} VNĐ</td>
 			</tr>
 		</tbody>`
 }

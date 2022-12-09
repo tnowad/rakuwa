@@ -1,6 +1,6 @@
 import { getDataFromLocal } from './local-data.js'
 import { getProductById } from './product.js'
-import { loginRequired } from './account.js'
+import {  loginRequired } from './account.js'
 import { createNewId } from './util.js'
 
 const addProductIdToCart = async (productId, quantity) => {
@@ -113,6 +113,13 @@ const getCartById = async (cartId) => {
 	return carts.find((cart) => cart.id == cartId)
 }
 
+const getCartBySearch = async (cartSearch) => {
+	let { carts } = await getDataFromLocal()
+	return carts.filter((cart) =>
+		cart.userId == cartSearch
+	)
+}
+
 export {
 	getCurrentCart,
 	cleanCart,
@@ -125,4 +132,5 @@ export {
 	getCarts,
 	updateCart,
 	getCartById,
+	getCartBySearch,
 }

@@ -218,14 +218,14 @@
 								<div
 									class="group-content-statistical center-statistical"
 								>
-									<h3>Số Tổng số sản phẩm</h3>
+									<h3>Tổng số sản phẩm</h3>
 									<span id="amountProduct"></span>
 								</div>
 								<div
 									class="group-content-statistical right-statistical"
 								>
 									<h3>Người dùng</h3>
-									<p>6</p>
+									<span id="amountUser"></span>
 								</div>
 							</div>
 						</div>
@@ -382,9 +382,9 @@
 						<div class="content-body">
 							<div class="dashboard-action">
 								<!-- search and add -->
-								<form action="" onsubmit="return false">
-									<input type="text" name="name" />
-									<input type="submit" value="Tìm kiếm" />
+								<form action="" onsubmit="return false" class="form-search-cart" >
+									<input type="text" name="name" oninput="searchCart()"/>
+									<input type="submit" value="Tìm kiếm" onclick="searchCart()" />
 								</form>
 								<button id="button-add-product">Thêm</button>
 							</div>

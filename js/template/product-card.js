@@ -23,7 +23,7 @@ const productCart = (product) => /* html */ `
             <div class="product-item-bottom">
                 <div class="product-price">
                     <span class="price">
-                        ${new Intl.NumberFormat().format(product.price)} VND
+                        ${new Intl.NumberFormat('ja-JP').format(product.price)} VND
                     </span>
                     ${
 						product.oldPrice
