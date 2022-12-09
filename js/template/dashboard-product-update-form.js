@@ -1,4 +1,8 @@
-import { getProductById,getProductBySearch, updateProduct } from '../util/product.js'
+import {
+	getProductById,
+	getProductBySearch,
+	updateProduct,
+} from '../util/product.js'
 import { convertBase64 } from '../util/file-to-base64.js'
 import { renderSearch } from '../render/dashboard-products.js'
 const productForm = (product) => {
@@ -54,11 +58,14 @@ window.updateProduct = async (form, productId) => {
 		}
 	} catch {}
 	updateProduct(product)
+	location.reload()
 }
 
 window.searchProduct = async () => {
-	let valueSearchProduct = document.querySelector('.form-search-product input').value
-	renderSearch( await getProductBySearch(valueSearchProduct))
+	let valueSearchProduct = document.querySelector(
+		'.form-search-product input',
+	).value
+	renderSearch(await getProductBySearch(valueSearchProduct))
 }
 
 export { productForm }
