@@ -10,7 +10,8 @@ const productForm = (product) => {
 			</div>
 			<div class="group-form-edit edit-tag">
 				<label  for="">Thẻ</label>
-				<input type="text" name="" id="category" value="${product.category}">
+				<input type="text" name="" list="category-list" id="category" value="${product.category}">
+				<datalist id="category-list">
 			</div>
 			<div class="group-form-edit edit-picture">
 				<label for="">Ảnh</label>
