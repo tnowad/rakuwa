@@ -29,7 +29,7 @@ let productDetail = (product) => /* html */ `
         <div action="" class="product-add-to-cart">
             <input
                 type="submit"
-                value="Add to cart"
+                value="Thêm vào giỏ hàng"
                 onclick="addProductIdToCart(${product.id})">
         </div>
         <h2>Thông tin sản phẩm</h2>

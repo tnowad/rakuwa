@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.form-action {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.edit-name {
+	grid-area: 1 / 1 / 2 / 2;
+}
+.edit-amount {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.edit-tag {
+	grid-area: 1 / 3 / 2 / 4;
+}
+.edit-picture {
+	grid-area: 1 / 4 / 2 / 5;
+}
+.edit-price {
+	grid-area: 1 / 5 / 2 / 6;
+}
+.edit-describe {
+	grid-area: 2 / 1 / 3 / 6;
+    width: 100%;
+}
+.edit-describe input {
+    width: 100%;
+    height: 100px;
+}
+.edit-option {
+	grid-area: 3 / 4 / 4 / 6;
+}

@@ -1,6 +1,4 @@
 .table-container {
-	/* border: 1px solid black; */
-	/* width: 100%; */
 	text-align: center;
 	background-color: rgba(255, 255, 255, 0.719);
 	border-radius: 10px;
@@ -11,7 +9,6 @@ th {
 }
 
 .table-container .head-table th {
-	/* width: 90%; */
 	font-size: 20px;
 	padding: 15px 0;
 	font-weight: 200;

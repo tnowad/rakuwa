@@ -1,13 +1,14 @@
-import { productForm } from './dashboard-product-update-form.js'
-const productRow = (product) => {
+import { userForm } from './dashboard-user-update-form.js'
+
+const userRow = (user) => {
 	return /* html */ `
         <tbody class="table-item">
 			<tr class="table-item-top">
-				<td>${product.id}</td>
-				<td>${product.title}</td>
-				<td><img src="${product.image}" alt=""></td>
-				<td>${product.amount}</td>
-				<td>${product.price.replace(/\B(?=(\d{3})+(?!\d))/g, ',')} VNĐ</td>
+				<td>${user.id}</td>
+				<td>${user.fullName}</td>
+				<td><img src="${user.image}" alt=""></td>
+				<td>${user.email}</td>
+				<td>${user.status}</td>
 				<td>
 					<button
 						onclick="
@@ -21,9 +22,11 @@ const productRow = (product) => {
 						class="fas fa-edit"
 					></button>
 					<button
+							class="fa-solid fa-ban"
+						></button>
+					<button
 						class="fa fa-trash"
 					></button>
-
 				</td>
 			</tr>
 			<tr>
@@ -31,10 +34,10 @@ const productRow = (product) => {
 					class="table-item-bottom"
 					colspan="6"
 				>
-                    ${productForm(product)}
+                    ${userForm(user)}
 				</td>
 			</tr>
 		</tbody>
     `
 }
-export { productRow }
+export { userRow }

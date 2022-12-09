@@ -1,5 +1,6 @@
 import { getDataFromLocal } from './local-data.js'
 import { createNewId } from '../util/util.js'
+import { removeVietnameseTones } from '../util/util.js'
 
 const createProduct = async (product) => {
 	let { products } = await getDataFromLocal()
@@ -16,10 +17,9 @@ const removeProduct = async (productId) => {
 
 const updateProduct = async (product) => {
 	let { products } = await getDataFromLocal()
-	for (const i = 0; i < products.length; i++) {
+	for (let i = 0; i < products.length; i++) {
 		if (products[i].id == product.id) {
 			products[i] = product
-			console.log(products[i], product)
 			break
 		}
 	}
@@ -29,6 +29,15 @@ const updateProduct = async (product) => {
 const getProductById = async (productId) => {
 	let { products } = await getDataFromLocal()
 	return products.find((product) => product.id == productId)
+}
+
+const getProductBySearch = async (productName) => {
+	let { products } = await getDataFromLocal()
+	return products.filter((product) =>
+		product.title.toLowerCase().includes(productName.toLowerCase()) || 
+		product.id == productName ||
+		removeVietnameseTones(product.title).toLowerCase().includes(productName.toLowerCase())
+	)
 }
 
 const getProducts = async (options) => {
@@ -95,4 +104,5 @@ export {
 	getCategories,
 	removeProduct,
 	getProductById,
+	getProductBySearch,
 }

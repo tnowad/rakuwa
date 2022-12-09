@@ -57,10 +57,7 @@
 								</li>
 							</ul>
 						</li>
-						<li><a href="/pages/contact.html">Contact Us</a></li>
-						<li class="dropdown">
-							<a>Liên hệ</a>
-						</li>
+						<li><a href="/pages/contact.html">Liên hệ</a></li>
 					</ul>
 				</div>
 				<div class="menu-icon">
@@ -100,80 +97,74 @@
 					</button>
 				</div>
 			</div>
-			<div class="container">
-				<ul class="navigation mobile-header">
-					<div class="container">
-						<li><a href="/index.html">Home</a></li>
-						<li class="dropdown-mobile">
-							<a href="/pages/product.html">Products</a>
-							<ul>
-								<li>
-									<a href="?category=all">All</a>
-								</li>
-								<li>
-									<a href="?category=meat">Meat</a>
-								</li>
-								<li>
-									<a href="?category=vegetable">Vegetable</a>
-								</li>
-								<li>
-									<a href="?category=spice">Spice</a>
-								</li>
-								<li>
-									<a href="?category=egg">Egg</a>
-								</li>
-								<li>
-									<a href="?category=noodle">Noodle</a>
-								</li>
-								<li>
-									<a href="?category=fruit">Fruit</a>
-								</li>
-							</ul>
-						</li>
-						<li><a href="/pages/contact.html">Contact Us</a></li>
-						<li class="dropdown-mobile">
-							<a>About Us</a>
-							<ul>
-								<li><a href="">Privacy Policy</a></li>
-								<li><a href="">Terms & Conditions</a></li>
-							</ul>
-						</li>
-					</div>
-				</ul>
-			</div>
+			<!-- <div class="container">
+			<ul class="navigation mobile-header">
+				<div class="container">
+					<li><a href="/index.html">Home</a></li>
+					<li class="dropdown-mobile">
+						<a href="/pages/product.html">Products</a>
+						<ul>
+							<li>
+								<a href="?category=all">All</a>
+							</li>
+							<li>
+								<a href="?category=meat">Meat</a>
+							</li>
+							<li>
+								<a href="?category=vegetable">Vegetable</a>
+							</li>
+							<li>
+								<a href="?category=spice">Spice</a>
+							</li>
+							<li>
+								<a href="?category=egg">Egg</a>
+							</li>
+							<li>
+								<a href="?category=noodle">Noodle</a>
+							</li>
+							<li>
+								<a href="?category=fruit">Fruit</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="/pages/contact.html">Liên hệ</a></li>
+				</div>
+			</ul>
+		</div> -->
 		</div>
 
 		<section class="sign-up">
 			<div class="container">
 				<form action="">
-					<h3>Sign up</h3>
+					<h3>Đăng kí</h3>
 					<div class="group-form group-form-phone">
 						<i class="fa fa-phone" aria-hidden="true"></i>
 						<input
 							type="text"
+							name="phone"
 							id="phone"
 							placeholder="Số điện thoại"
-							required=""
-							maxlength="10"
-							pattern="[0-9]"
+							required
+							pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b"
 						/>
 					</div>
 					<div class="group-form group-form-fullName">
 						<i></i>
 						<input
-							type="name"
+							type="fullName"
 							id="fullName"
 							placeholder="Họ tên"
-							required=""
+							required
 						/>
 					</div>
 					<div class="group-form group-form-email">
 						<i
 							class="fa fa-envelope"
-							required=""
+							required
 							aria-hidden="true"
 						></i>
 						<input
+							name="email"
 							type="email"
 							id="email"
 							placeholder="Email...."
@@ -183,30 +174,33 @@
 						<i class="fa fa-user" aria-hidden="true"></i>
 						<input
 							type="text"
+							name="username"
 							id="username"
-							required=""
+							required
 							placeholder="Tên đăng nhập"
 						/>
 					</div>
 					<div class="group-form group-form-password">
 						<i class="fa fa-lock"></i>
 						<input
+							name="password"
 							type="password"
 							id="password"
-							required=""
+							required
 							placeholder="Mật khẩu"
 						/>
 					</div>
 					<div class="group-form group-form-confirmpassword">
 						<input
+							name="confirm-password"
 							type="password"
-							id="confirmpassword"
-							required=""
+							id="confirm-password"
+							required
 							placeholder="Nhập lại mật khẩu"
 						/>
 					</div>
 					<div class="group-form-accept">
-						<input type="checkbox" required="" />
+						<input type="checkbox" required />
 						<span
 							>Tôi đồng ý với các điều khoản về quyền riêng
 							tư</span
