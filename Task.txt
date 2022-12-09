@@ -57,3 +57,7 @@ Hoàng Gia Bảo - 3121410070
 Ngô Lê Huệ Ngân - 3121410339
     Các chức năng cho người dùng cuối (end-user)
     Các chức năng cho người quản trị web (web-admin)
+
+Hồ Duy Phúc - 3121410390 
+    Các chức năng cho người dùng cuối (end-user)
+    Các chức năng cho người quản trị web (web-admin)
