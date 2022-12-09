@@ -1,4 +1,4 @@
-import { getProducts } from '../util/product.js'
+import { getCategories, getProducts } from '../util/product.js'
 import { productRow } from '../template/dashboard-table-row-product.js'
 const render = async () => {
 	const tableDashboardProduct = document.querySelector(
@@ -11,7 +11,17 @@ const render = async () => {
 		'',
 	)
 }
-
+const renderCategory = async () => {
+	const categories = Object.keys(await getCategories())
+	const categoryData = document.querySelectorAll('#category-list')
+	categoryData.forEach((element) => {
+		element.innerHTML += categories.reduce(
+			(previousValue, currentValue) => {
+				return previousValue + `<option>${currentValue}</option>`
+			},
+		)
+	})
+}
 const renderSearch = async (productSearch) => {
 	const tableDashboardProducts = document.querySelector(
 		'.content.dashboard-products .table-container',
@@ -38,6 +48,6 @@ const renderSearch = async (productSearch) => {
 		'',
 	)
 }
-render()
-
+await render()
+renderCategory()
 export { render, renderSearch }
