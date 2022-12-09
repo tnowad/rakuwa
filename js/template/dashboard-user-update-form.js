@@ -24,35 +24,45 @@ const userForm = (user) => {
 				<label for="">Số điện thoại</label>
 				<input type="text" name="" id="phone" value="${user.phoneNumber}">
 			</div>
-			<select name="gender" class="group-form-editUser edit-gender" value="${user.gender}" >
-				<option value="Nam">Nam</option>
-				<option value="Nữ">Nữ</option>
-				<option value="Khác">Khác</option>
+			<div class="group-form-editUser edit-gender">
+				<label for="">Giới tính </label>
+				<select name="gender" id="gender" value="${user.gender} selected disabled hidden" >
+					<option value="Nam">Nam</option>
+					<option value="Nữ">Nữ</option>
+					<option value="Khác">Khác</option>
  			</select>
+			</div>
 			<div class="group-form-editUser edit-address">
 				<label for="">Địa chỉ</label>
 				<textarea id="address" name="address" rows="4" cols="50">${user.address}</textarea>
 			</div>
-			<select name="status" class="group-form-editUser edit-status">
-				<option value="active">Active</option>
-				<option value="ban">Ban</option>
-				<option value="deleted">Deleted</option>
+			<div  class="group-form-editUser edit-status" >
+			<label for="">Trạng thái người dùng </label>
+			<select name="status" id ="status" > 
+				<option value="active">active</option>
+				<option value="ban">ban</option>
+				<option value="deleted">deleted</option>
 			 </select>			
-			<select name="role" value="${user.role}" class="group-form-editUser edit-role">
-				<option  value="admin">Admin</option>
-				<option value="user">User</option>
- 			</select>
+			</div>
+			<div class="group-form-editUser edit-role"> 
+				<label>Quyền</label>
+				<select name="role" value="${user.role}" id="role">
+					<option  value="admin">admin</option>
+					<option value="user">user</option>
+ 				</select>
+			</div>
 			<div class="group-form-editUser edit-password" >
 				<label for="">Mật khẩu</label>
 				<input type="text" id="password" value="${user.password}">
 			</div>
 			<div class="group-form-editUser edit-option-user">
 				<button id="cancel">Hủy</button>
-				<button id="submit" onclick="updateUser(this.parentElement.parentElement, ${user.id})" >Hoàn tất</button>
-				</div>
+				<button id="submit"  onclick="updateUser(this.parentElement.parentElement, ${user.id})" >Hoàn tất</button>
+			</div>
 		</form>
 	`
 }
+
 window.updateUser = async (form, userId) => {
 	let user = await getUserById(userId)
 	user = {
@@ -61,10 +71,10 @@ window.updateUser = async (form, userId) => {
 		dateOfBirth: form.querySelector('#dateOfBirth').value,
 		email: form.querySelector('#email').value,
 		phoneNumber: form.querySelector('#phone').value,
-		gender: form.querySelector('.edit-gender').value,
+		gender: form.querySelector('#gender').value,
 		address: form.querySelector('#address').value,
-		status: form.querySelector('.edit-status').value,
-		role: form.querySelector('.edit-role').value,
+		status: form.querySelector('#status').value,
+		role: form.querySelector('#role').value,
 		password: form.querySelector('#password').value,
 	}
 	try {
@@ -72,14 +82,16 @@ window.updateUser = async (form, userId) => {
 			...user,
 			image: await convertBase64(form.querySelector('#image').files[0]),
 		}
-		console.log(user)
-	} catch {}
+		// console.log(user)
+	} catch { }
 	updateUser(user)
 	location.reload()
 }
 
 window.searchUser = async () => {
-	let valueSearchUser = document.querySelector('.form-search-user input').value
+	let valueSearchUser = document.querySelector(
+		'.form-search-user input',
+	).value
 	renderSearch(await getUserBySearch(valueSearchUser))
 }
 

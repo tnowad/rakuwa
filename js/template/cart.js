@@ -2,20 +2,22 @@ import { addProductIdToCart, removeProductByIdFromCart } from '../util/cart.js'
 import { render } from '../render/cart-detail.js'
 
 const updateCart = () => {
-	render()
+    render()
 }
 
 const removeProduct = (productId) => {
-	if (confirm('Bạn có muốn xóa sản phẩm này?'))
-		removeProductByIdFromCart(productId)
+    if (confirm('Bạn có muốn xóa sản phẩm này?'))
+        removeProductByIdFromCart(productId)
 }
 
+
 const cart = (product) => {
-	return /* html */ `
+    // product.price = product.quantity * product.price
+    return /* html */ `
         <tr>
             <td><img src="${product.image}"></td>
             <td>${product.title}</td>
-            <td>${product.price} VND</td>
+            <td>${new Intl.NumberFormat('ja-JP').format(product.price)}  VND</td>
             <td>
             <input
                 type="number"
@@ -26,13 +28,12 @@ const cart = (product) => {
                 addProductIdToCart(${product.id}, this.value); updateCart()"
                 >
             </td>
-            <td>${product.quantity * product.price} VNĐ</td>
+            <td> ${new Intl.NumberFormat('ja-JP').format(product.price*product.quantity)} VNĐ</td>
             <td>
                 <a
                     class="cart-detail-remove"
-                    onclick="removeProduct(${
-						product.id
-					}); location.reload()"><i class="fa fa-trash"></i></a>
+                    onclick="removeProduct(${product.id
+        }); location.reload()"><i class="fa fa-trash"></i></a>
             </td>
         </tr>
         `
