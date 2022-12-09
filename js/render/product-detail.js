@@ -2,14 +2,13 @@ import { renderHTML, getParams } from '../util/util.js'
 import { productDetail } from '../template/product-detail.js'
 import { getProductById } from '../util/product.js'
 import { addProductIdToCart } from '../util/cart.js'
-import { productForm } from '../template/dashboard-product-update-form.js'
 
 const render = async () => {
 	let productId = getParams('id')
 	const product = await getProductById(productId)
 
 	let productDetailsTop = document.querySelector('.product-details-top')
-	console.log(product)
+	console.log('run')
 	renderHTML(productDetailsTop, productDetail(product))
 }
 
