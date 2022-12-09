@@ -59,6 +59,12 @@
 	padding: 10px;
 }
 
+.dashboard-action form input[type="submit"]:hover,
+.dashboard-action button:hover {
+	background-color: rgb(185, 185, 185);
+	transition: all 0.3s linear;
+}
+
 .profile-image {
 	display: flex;
 	justify-content: center;
@@ -200,7 +206,7 @@
 /* css quản lí user  */
 
 .form-action-user {
-	margin-top: 10% ;
+	margin-top: 10%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-column-gap: 0px;
@@ -264,6 +270,7 @@
 .edit-password {
 	grid-area: 3 / 3 / 4 / 4;
 }
+
 .edit-option-user {
 	grid-area: 4 / 3 / 5 / 5;
 }
@@ -286,12 +293,12 @@
 
 /* quản lí trang chủ */
 
-.content-statistical{
+.content-statistical {
 	display: flex;
 	justify-content: space-around;
-} 
+}
 
-.group-content-statistical{
+.group-content-statistical {
 	border: 1px solid rgba(124, 124, 124, 0.342);
 	height: 100px;
 	width: 200px;
@@ -300,4 +307,4 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-} 
+}

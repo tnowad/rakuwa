@@ -5,7 +5,7 @@ const userRow = (user) => {
         <tbody class="table-item">
 			<tr class="table-item-top">
 				<td>${user.id}</td>
-				<td>${user.username}</td>
+				<td>${user.fullName}</td>
 				<td><img src="${user.image}" alt=""></td>
 				<td>${user.email}</td>
 				<td>${user.status}</td>
