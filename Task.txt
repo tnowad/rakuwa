@@ -18,12 +18,6 @@ Các chức năng cho người quản trị web (web-admin) 40%
         - đánh dấu đơn hàng: chưa xử lý (khách hàng mới đặt) và đã xử lý 5%
     + Thống kê tình hình kinh doanh trong một khoảng thời gian của các sản phẩm thuộc một loại / tất cả sản phẩm. 5%
 
-Còn lại
-
-    Các chức năng cho người dùng cuối (end-user)
-    Các chức năng cho người quản trị web (web-admin) 40%
-
-
 Tiến độ hoàn thành:
 Nguyễn Minh Tuấn - 3121410559
     Các chức năng cho người dùng cuối (end-user)
