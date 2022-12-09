@@ -33,7 +33,8 @@ const getProductById = async (productId) => {
 const getProductByName = async (productName) => {
 	let { products } = await getDataFromLocal()
 	return products.filter((product) =>
-		product.title.toLowerCase().includes(productName.toLowerCase()),
+		product.title.toLowerCase().includes(productName.toLowerCase()) || 
+		product.id == productName
 	)
 }
 

@@ -193,7 +193,7 @@
 						<div class="content-statistical">
 							<div class="group-content-statistical left-statistical">
 								<h3>Tổng doanh thu</h3>
-								<span> 264 500 $</span>
+								<span> 264500 VNĐ</span>
 							</div>
 							<div class="group-content-statistical center-statistical">
 								<h3>Số Tổng số sản phẩm</h3>
@@ -260,8 +260,9 @@
 					<div class="content-body">
 						<div class="dashboard-action">
 							<!-- search and add -->
-							<form class="form-search-product" action="">
+							<form class="form-search-product" action="" onsubmit="return false">
 								<input type="text" name="name" oninput="searchProduct()" />
+								<!-- <button></button> -->
 								<input type="submit" value="Tìm kiếm" onclick="searchProduct()" />
 							</form>
 							<button id="button-add-product">Thêm</button>
