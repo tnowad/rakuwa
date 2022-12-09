@@ -30,21 +30,24 @@
                 "date": "2022-12-05",
                 "id":"abc123",
                 "row":
-                [
+                    [
                     
-                    {
-                        "id":12,
-                        "product": "Dầu ăn Cái Lân",
-                        "quantity": 3,
-                        "subtotal": 45000
-                    },
-                    {
-                        "id":14,
-                        "product": "Nước mắm cần nam ngư",
-                        "quantity": 2,
-                        "subtotal": 38000
-                    }
-                ]
+                        {
+                            "id":12,
+                            "product": "Dầu ăn Cái Lân",
+                            "price": 15000,
+                            "quantity": 3,
+                            "subtotal": 45000
+                        },
+                        {
+                            "id":14,
+                            "product": "Nước mắm cần nam ngư",
+                            "price":19000,
+                            "quantity": 3,
+                            "subtotal": 57000
+                        }
+                    ],
+                    "total": 102000
+                }
             }
-        }
 ]
