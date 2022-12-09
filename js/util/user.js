@@ -1,4 +1,5 @@
 import { getDataFromLocal } from './local-data.js'
+import { removeVietnameseTones } from './util.js'
 
 const getUserById = async (userId) => {
 	let { users } = await getDataFromLocal()
@@ -26,18 +27,19 @@ const updateUser = async (user) => {
 	localStorage.setItem('users', JSON.stringify(users))
 }
 
-const getUserByName = async (userSearch) => {
+const getUserBySearch = async (userSearch) => {
 	let { users } = await getDataFromLocal()
 	return users.filter((user) =>
 		user.fullName.toLowerCase().includes(userSearch.toLowerCase()) ||
-		user.id == userSearch
+		user.id == userSearch ||
+		removeVietnameseTones(user.fullName).toLowerCase().includes(userSearch.toLowerCase())
 	)
 }
 
 export {
 	updateUser,
 	getUserById,
-	getUserByName,
+	getUserBySearch,
 	removeUser,
 	addUser
 }

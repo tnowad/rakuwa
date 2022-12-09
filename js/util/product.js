@@ -1,5 +1,6 @@
 import { getDataFromLocal } from './local-data.js'
 import { createNewId } from '../util/util.js'
+import { removeVietnameseTones } from '../util/util.js'
 
 const createProduct = async (product) => {
 	let { products } = await getDataFromLocal()
@@ -30,11 +31,12 @@ const getProductById = async (productId) => {
 	return products.find((product) => product.id == productId)
 }
 
-const getProductByName = async (productName) => {
+const getProductBySearch = async (productName) => {
 	let { products } = await getDataFromLocal()
 	return products.filter((product) =>
 		product.title.toLowerCase().includes(productName.toLowerCase()) || 
-		product.id == productName
+		product.id == productName ||
+		removeVietnameseTones(product.title).toLowerCase().includes(productName.toLowerCase())
 	)
 }
 
@@ -102,5 +104,5 @@ export {
 	getCategories,
 	removeProduct,
 	getProductById,
-	getProductByName,
+	getProductBySearch,
 }
