@@ -4,6 +4,16 @@ const getUserById = async (userId) => {
 	let { users } = await getDataFromLocal()
 	return users.find((user) => user.id == userId)
 }
+const addUser = async (user) => {
+	let { users } = await getDataFromLocal()
+	users = users.concat(user)
+	localStorage.setItem('users', JSON.stringify(users))
+}
+const removeUser = async (userId) => {
+	let { users } = await getDataFromLocal()
+	users = users.filter((user) => user.id != userId)
+	localStorage.setItem('users', JSON.stringify(users))
+}
 
 const updateUser = async (user) => {
 	let { users } = await getDataFromLocal()
@@ -16,22 +26,17 @@ const updateUser = async (user) => {
 	localStorage.setItem('users', JSON.stringify(users))
 }
 
-const searchUser = async (user) => { 
+const searchUser = async (userSearch) => {
 	let { users } = await getDataFromLocal()
-    return users.filter((user) => user.username.toLowerCase().includes(user.username.toLowerCase()))
+	return users.filter((user) =>
+		user.username.toLowerCase().includes(userSearch.username.toLowerCase()),
+	)
 }
 
-const removeUser = async (user) => { 
-	let { users } = await getDataFromLocal()
-	users =  users.filter((user) => user.id != user.id)
-	localStorage.setItem('users', JSON.stringify(users))
+export {
+	updateUser,
+	getUserById,
+	searchUser,
+	removeUser,
+	addUser
 }
-
-const addUser = async (user) => { 
-	let { users } = await getDataFromLocal()
-    users = users.concat(user)
-    localStorage.setItem('users', JSON.stringify(users))
-}
-
-export { updateUser, getUserById,searchUser,removeUser,addUser}
-
