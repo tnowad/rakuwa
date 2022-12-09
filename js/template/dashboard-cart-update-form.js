@@ -8,7 +8,7 @@ const productRow = (product) => {
 				<td>${product.title}</td>
 				<td><img src="${product.image}" alt=""></td>
 				<td>${product.quantity}</td>
-				<td>${product.quantity * product.price} VNĐ</td>
+				<td>${new Intl.NumberFormat('ja-JP').format(product.quantity * product.price)}  VNĐ</td>
 			</tr>
 		</tbody>`
 }
@@ -62,7 +62,7 @@ window.updateCart = async (form, cartId) => {
 }
 
 window.searchCart = async () => {
-	let valueSearchCart = document.querySelector('.form-search-cart input').value
+	let valueSearchCart = document.querySelector('.form-search-cart #search-cart').value-1
 	renderSearch(await getCartBySearch(valueSearchCart)) 
 }	
 
