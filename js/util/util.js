@@ -60,6 +60,32 @@ const addUrlParameter = (name, value) => {
 	return '?' + searchParams.toString()
 }
 
+const removeVietnameseTones = (string) => {
+	string = string.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, 'a')
+	string = string.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, 'e')
+	string = string.replace(/ì|í|ị|ỉ|ĩ/g, 'i')
+	string = string.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, 'o')
+	string = string.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, 'u')
+	string = string.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, 'y')
+	string = string.replace(/đ/g, 'd')
+	string = string.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, 'A')
+	string = string.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, 'E')
+	string = string.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, 'I')
+	string = string.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, 'O')
+	string = string.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, 'U')
+	string = string.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, 'Y')
+	string = string.replace(/Đ/g, 'D')
+	string = string.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, '')
+	string = string.replace(/\u02C6|\u0306|\u031B/g, '') // ˆ ̆ ̛  Â, Ê, Ă, Ơ, Ư
+	string = string.replace(/ + /g, ' ')
+	string = string.trim()
+	string = string.replace(
+		/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g,
+		' ',
+	)
+	return string
+}
+
 export {
 	fetchJson,
 	fetchHTML,
@@ -72,4 +98,5 @@ export {
 	createNewId,
 	splitArrayByPage,
 	addUrlParameter,
+	removeVietnameseTones,
 }
