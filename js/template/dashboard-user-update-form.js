@@ -1,5 +1,6 @@
-import { getUserById, updateUser } from '../util/user.js'
+import { getUserById, getUserByName, updateUser } from '../util/user.js'
 import { convertBase64 } from '../util/file-to-base64.js'
+import { renderSearch } from '../render/dashboard-users.js'
 const userForm = (user) => {
 	return `
 	<form class="form-action-user" onsubmit="return false">
@@ -76,4 +77,10 @@ window.updateUser = async (form, userId) => {
 	updateUser(user)
 	location.reload()
 }
+
+window.searchUser = async () => {
+	let valueSearchUser = document.querySelector('.form-search-user input').value
+	renderSearch(await getUserByName(valueSearchUser))
+}
+
 export { userForm }

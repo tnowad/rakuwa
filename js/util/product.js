@@ -30,6 +30,13 @@ const getProductById = async (productId) => {
 	return products.find((product) => product.id == productId)
 }
 
+const getProductByName = async (productName) => {
+	let { products } = await getDataFromLocal()
+	return products.filter((product) =>
+		product.title.toLowerCase().includes(productName.toLowerCase()),
+	)
+}
+
 const getProducts = async (options) => {
 	let { products } = await getDataFromLocal()
 	if (options != undefined && options != null) {
@@ -94,4 +101,5 @@ export {
 	getCategories,
 	removeProduct,
 	getProductById,
+	getProductByName,
 }

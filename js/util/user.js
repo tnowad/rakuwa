@@ -26,7 +26,7 @@ const updateUser = async (user) => {
 	localStorage.setItem('users', JSON.stringify(users))
 }
 
-const searchUser = async (userSearch) => {
+const getUserByName = async (userSearch) => {
 	let { users } = await getDataFromLocal()
 	return users.filter((user) =>
 		user.fullName.toLowerCase().includes(userSearch.toLowerCase()),
@@ -36,7 +36,7 @@ const searchUser = async (userSearch) => {
 export {
 	updateUser,
 	getUserById,
-	searchUser,
+	getUserByName,
 	removeUser,
 	addUser
 }

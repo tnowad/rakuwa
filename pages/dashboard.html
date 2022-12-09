@@ -146,9 +146,9 @@
 					<div class="content-body">
 						<div class="dashboard-action">
 							<!-- search and add -->
-							<form class="form-search" action="">
-								<input type="text" name="name" />
-								<input type="submit" value="Tìm kiếm" />
+							<form class="form-search-product" action="">
+								<input type="text" name="name" oninput="searchProduct()" />
+								<input type="submit" value="Tìm kiếm" onclick="searchProduct()" />
 							</form>
 							<button id="button-add-product">Thêm</button>
 						</div>
