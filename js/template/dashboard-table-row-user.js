@@ -1,4 +1,6 @@
 import { userForm } from './dashboard-user-update-form.js'
+import { searchUser } from '../util/user.js'
+import {renderSearch,render} from '../render/dashboard-users.js'
 const userRow = (user) => {
 	return /* html */ `
         <tbody class="table-item">
@@ -38,5 +40,12 @@ const userRow = (user) => {
 			</tr>
 		</tbody>
     `
+}
+
+window.searchUser = async () => {
+	let valueSearchUser = document.querySelector('.form-search-user input').value
+	let userSearch = await searchUser(valueSearchUser)
+	renderSearch(userSearch)
+	console.log(userSearch)
 }
 export { userRow }

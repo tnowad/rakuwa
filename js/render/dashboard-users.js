@@ -10,4 +10,16 @@ const render = async () => {
 		'',
 	)
 }
+
+const renderSearch = async (array) => { 
+	const tableDashboardUsers = document.querySelector(
+		'.content.dashboard-users .table-container',
+	)
+	console.log(tableDashboardUsers)
+	tableDashboardUsers.innerHTML += array.reduce(
+		(previousValues, currentValues) => previousValues + userRow(currentValues),
+		'',
+	)
+}
 render()
+export { render,renderSearch }

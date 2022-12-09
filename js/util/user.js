@@ -29,7 +29,7 @@ const updateUser = async (user) => {
 const searchUser = async (userSearch) => {
 	let { users } = await getDataFromLocal()
 	return users.filter((user) =>
-		user.username.toLowerCase().includes(userSearch.username.toLowerCase()),
+		user.fullName.toLowerCase().includes(userSearch.toLowerCase()),
 	)
 }
 
