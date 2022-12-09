@@ -15,6 +15,7 @@ const renderSearch = async (array) => {
 	const tableDashboardUsers = document.querySelector(
 		'.content.dashboard-users .table-container',
 	)
+	tableDashboardUsers.innerHTML ="";
 	console.log(tableDashboardUsers)
 	tableDashboardUsers.innerHTML += array.reduce(
 		(previousValues, currentValues) => previousValues + userRow(currentValues),
