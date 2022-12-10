@@ -1,4 +1,5 @@
 import { getDataFromLocal } from '../util/local-data.js'
+import { getUserById } from '../util/user.js'
 
 const render = async () => {
 	let totalPrice = document.querySelector(
@@ -24,6 +25,12 @@ const render = async () => {
 	amountUser.innerHTML = users.length
 }
 
+const renderForm = async () => {
+	let { carts } = await getDataFromLocal()
+	user = await getUserById(carts.userId)
+	
+}
+
 render()
 
-export { render }
+export { render,renderForm }
