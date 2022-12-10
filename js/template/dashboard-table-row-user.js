@@ -22,9 +22,6 @@ const userRow = (user) => {
 								.toggle('active')"
 						class="fas fa-edit"
 					></button>
-					<button
-							class="fa-solid fa-ban"
-						></button>
 						<button
 						onclick="removeUser(${user.id})"
 						class="fa fa-trash"
