@@ -29,7 +29,8 @@ const render = async () => {
 const renderForm = async () => {
 	const tableDashboardMenu = document.querySelector('.dashboard-table-user .table-container',)
 	let carts = await getCarts()
-	
+	carts = carts.filter((cart) => cart.status == 'Đang chờ')
+
 	tableDashboardMenu.innerHTML += await carts.reduce(
 		async (previousValue, currentValue) => {
 			previousValue = await previousValue

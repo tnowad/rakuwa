@@ -3,7 +3,7 @@ import { getUsers } from '../util/account.js'
 const menuRowUser = async (cart) => {
     const users = await getUsers({ id: cart.userId })
     const user = users[0]
-    console.log(cart.cart)
+    // console.log(cart.cart().id)
     return `
         <tbody class="table-item">
 			<tr class="table-item-top">
