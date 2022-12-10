@@ -1,5 +1,6 @@
+import { menuRow } from '../template/dashboard-menu-row.js'
+import { getCarts } from '../util/cart.js'
 import { getDataFromLocal } from '../util/local-data.js'
-import { getUserById } from '../util/user.js'
 
 const render = async () => {
 	let totalPrice = document.querySelector(
@@ -26,8 +27,15 @@ const render = async () => {
 }
 
 const renderForm = async () => {
-	let { carts } = await getDataFromLocal()
-	
+	const tableDashboardMenu = document.querySelector('.dashboard-table-cart .dashboard-table-user .table-container')
+	let carts = await getCarts()
+	// carts = await carts.filter((cart) => cart.status == "đang chờ")
+	tableDashboardMenu.innerHTML += carts.reduce(
+		(previousValue, currentValue) =>
+			previousValue + menuRow(currentValue),
+		'',
+	)
+
 }
 
 render() // statistical
