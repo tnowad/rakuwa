@@ -12,7 +12,6 @@ const render = async () => {
 	)
 	let { carts, products, users } = await getDataFromLocal()
 	let turnover = 0
-	// carts.map((carts) => (turnover += carts.total))
 	turnover = carts.reduce(
 		(previousValue, currentValue) =>
 			previousValue +
