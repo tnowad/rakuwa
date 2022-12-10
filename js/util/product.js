@@ -33,10 +33,13 @@ const getProductById = async (productId) => {
 
 const getProductBySearch = async (productName) => {
 	let { products } = await getDataFromLocal()
-	return products.filter((product) =>
-		product.title.toLowerCase().includes(productName.toLowerCase()) || 
-		product.id == productName ||
-		removeVietnameseTones(product.title).toLowerCase().includes(productName.toLowerCase())
+	return products.filter(
+		(product) =>
+			product.title.toLowerCase().includes(productName.toLowerCase()) ||
+			product.id == productName ||
+			removeVietnameseTones(product.title)
+				.toLowerCase()
+				.includes(productName.toLowerCase()),
 	)
 }
 

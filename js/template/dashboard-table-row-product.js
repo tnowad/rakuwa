@@ -1,3 +1,4 @@
+import { removeProduct } from '../util/product.js'
 import { productForm } from './dashboard-product-update-form.js'
 const productRow = (product) => {
 	return /* html */ `
@@ -21,6 +22,7 @@ const productRow = (product) => {
 						class="fas fa-edit"
 					></button>
 					<button
+						onclick="deleteProduct(${product.id})"
 						class="fa fa-trash"
 					></button>
 
@@ -37,4 +39,13 @@ const productRow = (product) => {
 		</tbody>
     `
 }
+
+window.deleteProduct = async (productId) => {
+	if (confirm('Bạn có muốn xóa sản phẩm này không ?')) {
+		await removeProduct(productId)
+		alert('Xóa thành công!')
+		location.reload()
+	}
+}
+
 export { productRow }
