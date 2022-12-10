@@ -263,7 +263,7 @@
 								<!-- <button></button> -->
 								<input type="submit" value="Tìm kiếm" onclick="searchProduct()" />
 							</form>
-							<button id="button-add-product" onclick="openForm()" >Thêm</button>
+							<button id="button-add-product" onclick="openForm()">Thêm</button>
 						</div>
 						<form class="form-action form-group-add" onsubmit="return false">
 							<div class="group-form-option add-name">
@@ -272,8 +272,7 @@
 							</div>
 							<div class="group-form-option add-tag">
 								<label for="">Thẻ</label>
-								<input type="text" name="" list="category-list" id="category"
-									value="" required="">
+								<input type="text" name="" list="category-list" id="category" value="" required="">
 								<datalist id="category-list">
 							</div>
 							<div class="group-form-option add-picture">
@@ -328,6 +327,67 @@
 							</form>
 							<button id="button-add-product">Thêm</button>
 						</div>
+
+
+						<form class="form-action-user" onsubmit="return false">
+								<div class="group-form-option add-fullName" >
+									<label for="" id="fullName-Text" >Họ tên</label>
+									<input type="text" id="fullName" value="">
+								</div>
+								<div class="group-form-option add-dateOfBirth">
+									<label for="">Ngày sinh </label>
+									<input type="date" name="" id="dateOfBirth" value="">
+								</div>
+								<div class="group-form-option add-email">
+									<label for="">Email</label>
+									<input type="text" name="" id="email" value="">
+									</div>
+								<div class="group-form-option add-image">
+									<label for="">Ảnh</label>
+									<input type="file" name="" id="image" value="">
+								</div>
+								<div class="group-form-option add-phoneNumber">
+									<label for="">Số điện thoại</label>
+									<input type="text" name="" id="phone" value="">
+								</div>
+								<div class="group-form-option add-gender">
+									<label for="">Giới tính </label>
+									<select name="gender" id="gender" value="" >
+										<option value="Nam">Nam</option>
+										<option value="Nữ">Nữ</option>
+										<option value="Khác">Khác</option>
+									</select>
+								</div>
+								<div class="group-form-option add-address">
+									<label for="">Địa chỉ</label>
+									<textarea id="address" name="address" rows="4" cols="50"></textarea>
+							</div>
+							<div class="group-form-option add-status">
+								<label for="">Trạng thái người dùng </label>
+								<select name="status" id="status">
+									<option value="active">active</option>
+									<option value="ban">ban</option>
+									<option value="deleted">deleted</option>
+								</select>
+							</div>
+							<div class="group-form-option add-role">
+								<label>Quyền</label>
+								<select name="role" value="${user.role}" id="role">
+									<option value="admin">admin</option>
+									<option value="user">user</option>
+								</select>
+							</div>
+							<div class="group-form-option add-password">
+								<label for="">Mật khẩu</label>
+								<input type="text" id="password" value="">
+							</div>
+							<div class="group-form-option add-option-user">
+								<button id="cancel">Hủy</button>
+								<button id="submit" onclick="">Hoàn tất</button>
+							</div>
+						</form>
+
+
 						<div class="dashboard-table">
 							<table style="width: 100%; text-align: center" class="table-container">
 								<thead class="table-head">
@@ -396,5 +456,6 @@
 <script type="module" src="/js/render/dashboard-users.js"></script>
 <script type="module" src="/js/render/dashboard-products.js"></script>
 <script type="module" src="/js/render/dashboard-carts.js"></script>
-<script type="module" src="/js/template/dashboard-product-option.js" ></script>
+<script type="module" src="/js/template/dashboard-product-option.js"></script>
+
 </html>
