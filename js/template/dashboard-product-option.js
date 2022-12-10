@@ -1,17 +1,17 @@
-import { createProduct } from "../util/product.js"
+import { createProduct } from '../util/product.js'
 import { convertBase64 } from '../util/file-to-base64.js'
 
-const optionForm = document.querySelector('.content-body .form-group-add')
+var optionForm = document.querySelector('.content-body .form-group-add')
 
 window.openForm = async () => {
-    optionForm.style = 'display: inline'
-} 
+	optionForm.style = 'display: inline'
+	optionForm.style.transition = 'all 5s ease-in-out'
+}
 window.cancelForm = async () => {
-    optionForm.style = 'display: none'
-} 
+	optionForm.style = 'display: none'
+}
 
 window.addProductToDashboard = async () => {
-    
 	let product = {
 		title: optionForm.querySelector('#title').value,
 		category: optionForm.querySelector('#category').value,
@@ -19,11 +19,25 @@ window.addProductToDashboard = async () => {
 		price: optionForm.querySelector('#price').value,
 		description: optionForm.querySelector('#description').value,
 	}
-	try {
+    try {
 		product = {
+			...product,
 			image: await convertBase64(optionForm.querySelector('#image').files[0]),
 		}
-    } catch { }
-    createProduct(product)
-    // createProduct(product)    
+	} catch {}
+
+	if (
+		product.title == "" ||
+		product.category == "" ||
+		product.amount == 0 ||
+		product.price == 0 ||
+        product.description == "" ||
+        product.image == null
+	) {
+        alert('Không được để trống!')
+        return
+	} else {
+        createProduct(product)
+        location.reload()
+	}
 }

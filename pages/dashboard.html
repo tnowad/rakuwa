@@ -268,29 +268,29 @@
 						<form class="form-action form-group-add" onsubmit="return false">
 							<div class="group-form-option add-name">
 								<label for="">Tên sản phẩm</label>
-								<input type="text" id="title" value="">
+								<input type="text" id="title" value="" required="">
 							</div>
 							<div class="group-form-option add-tag">
 								<label for="">Thẻ</label>
 								<input type="text" name="" list="category-list" id="category"
-									value="">
+									value="" required="">
 								<datalist id="category-list">
 							</div>
 							<div class="group-form-option add-picture">
 								<label for="">Ảnh</label>
-								<input type="file" name="" id="image" value="">
+								<input type="file" name="" id="image" value="" required="">
 							</div>
 							<div class="group-form-option add-amount">
 								<label for="">Số lượng </label>
-								<input type="text" name="" id="amount" value="">
+								<input type="text" name="" id="amount" value="" required="">
 							</div>
 							<div class="group-form-option edit-price">
 								<label for="">Giá</label>
-								<input type="text" name="" id="price" value="">
+								<input type="text" name="" id="price" value="" required="">
 							</div>
 							<div class="group-form-option add-describe">
 								<label for="">Miêu tả</label>
-								<textarea id="description" rows="4" cols="50"></textarea>
+								<textarea id="description" rows="4" cols="50"></textarea required="">
 							</div>
 							<div class="group-form-option edit-option">
 								<button id="cancel" onclick="cancelForm()" >Hủy</button>
