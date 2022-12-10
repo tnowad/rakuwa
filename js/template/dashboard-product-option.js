@@ -1,13 +1,29 @@
+import { createProduct } from "../util/product.js"
+import { convertBase64 } from '../util/file-to-base64.js'
 
+const optionForm = document.querySelector('.content-body .form-group-add')
 
-window.addProductToDashboard = async () => {
-    let addProductForm = document.querySelector('.content-body .form-group-add')
-    addProductForm.style = 'display: inline'
-    // cancelOption.style = 'display: none'
+window.openForm = async () => {
+    optionForm.style = 'display: inline'
 } 
 window.cancelForm = async () => {
-    let cancelForm = document.querySelector('.content-body .form-group-add')
-    cancelForm.style = 'display: none'
-    // cancelOption.style = 'display: none'
+    optionForm.style = 'display: none'
 } 
-// export {addProductToDashboard}
+
+window.addProductToDashboard = async () => {
+    
+	let product = {
+		title: optionForm.querySelector('#title').value,
+		category: optionForm.querySelector('#category').value,
+		amount: optionForm.querySelector('#amount').value,
+		price: optionForm.querySelector('#price').value,
+		description: optionForm.querySelector('#description').value,
+	}
+	try {
+		product = {
+			image: await convertBase64(optionForm.querySelector('#image').files[0]),
+		}
+    } catch { }
+    createProduct(product)
+    // createProduct(product)    
+}
