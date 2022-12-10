@@ -121,7 +121,13 @@
 	padding-bottom: 30px;
 }
 
-/* css js quản lí sản phẩm */
+/*****************************************************************************     thêm sản phẩm       *****************************************************************/
+
+.form-group-add{
+	display: none;
+}
+
+/***************************************************************************** css js quản lí sản phẩm **************************************************************************/
 
 .table-item .table-item-bottom .form-action {
 	text-align: start;
@@ -133,18 +139,18 @@
 	grid-row-gap: 0px;
 }
 
-.form-action .group-form-edit {
+.form-action .group-form-option {
 	margin: 10px;
 }
 
-.group-form-edit input {
+.group-form-option input {
 	padding: 10px;
 	width: 100%;
 	border: 1px solid rgba(230, 230, 230, 0.726);
 	border-radius: 5px;
 }
 
-.group-form-edit label {
+.group-form-option label {
 	display: block;
 }
 
@@ -203,7 +209,7 @@
 	transition: all 0.3s linear;
 }
 
-/* css quản lí user  */
+/******************************************************************* css quản lí user *****************************************************************************/
 
 .form-action-user {
 	margin-top: 10%;
@@ -291,7 +297,7 @@
 }
 
 
-/* quản lí trang chủ */
+/********************************************************************** quản lí trang chủ ************************************************************************/
 
 .content-statistical {
 	display: flex;

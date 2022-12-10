@@ -48,6 +48,9 @@ const renderSearch = async (productSearch) => {
 		'',
 	)
 }
+
+
+
 await render()
 renderCategory()
 export { render, renderSearch }

@@ -8,32 +8,32 @@ import { renderSearch } from '../render/dashboard-products.js'
 const productForm = (product) => {
 	return `
 		<form class="form-action" onsubmit="return false">
-			<div class="group-form-edit edit-name" >
+			<div class="group-form-option edit-name" >
 				<label for="">Tên sản phẩm</label>
 				<input type="text" id="title" value="${product.title}">
 			</div>
-			<div class="group-form-edit edit-tag">
+			<div class="group-form-option edit-tag">
 				<label  for="">Thẻ</label>
 				<input type="text" name="" list="category-list" id="category" value="${product.category}">
 				<datalist id="category-list">
 			</div>
-			<div class="group-form-edit edit-picture">
+			<div class="group-form-option edit-picture">
 				<label for="">Ảnh</label>
 				<input type="file" name="" id="image" value="${product.image}">
 			</div>
-			<div class="group-form-edit edit-amount">
+			<div class="group-form-option edit-amount">
 				<label for="">Số lượng </label>
 				<input type="text" name="" id="amount" value="${product.amount}">
 			</div>
-			<div class="group-form-edit edit price">
+			<div class="group-form-option edit price">
 					<label for="">Giá</label>
 					<input type="text" name="" id="price" value="${product.price}">
 			</div>
-			<div class="edit-describe">
+			<div class="group-form-option edit-describe">
 				<label for="">Miêu tả</label>
 				<textarea id="description" rows="4" cols="50">${product.description}</textarea>
 				</div>
-			<div class="edit-option">
+			<div class="group-form-option edit-option">
 				<button id="cancel">Hủy</button>
 				<button id="submit" onclick="updateProduct(this.parentElement.parentElement, ${product.id})" >Hoàn tất</button>
 			</div>
