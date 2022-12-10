@@ -56,7 +56,7 @@ window.updateCart = async (form, cartId) => {
 		...cart,
 		status: form.querySelector('#status').value,
 	}
-	console.log(cart)
+	// console.log(cart)
 	updateCart(cart)
 	location.reload()
 }

@@ -1,4 +1,4 @@
-import { menuRow } from '../template/dashboard-menu-row.js'
+import { menuRowUser } from '../template/dashboard-menu-row.js'
 import { getCarts } from '../util/cart.js'
 import { getDataFromLocal } from '../util/local-data.js'
 
@@ -27,15 +27,16 @@ const render = async () => {
 }
 
 const renderForm = async () => {
-	const tableDashboardMenu = document.querySelector('.dashboard-table-cart .dashboard-table-user .table-container')
+	const tableDashboardMenu = document.querySelector('.dashboard-table-user .table-container',)
 	let carts = await getCarts()
-	// carts = await carts.filter((cart) => cart.status == "đang chờ")
-	tableDashboardMenu.innerHTML += carts.reduce(
-		(previousValue, currentValue) =>
-			previousValue + menuRow(currentValue),
-		'',
+	
+	tableDashboardMenu.innerHTML += await carts.reduce(
+		async (previousValue, currentValue) => {
+			previousValue = await previousValue
+			return previousValue + (await menuRowUser(currentValue))
+		},
+		Promise.resolve(''),
 	)
-
 }
 
 render() // statistical
