@@ -4,7 +4,7 @@
 	grid-template-rows: repeat(6, 1fr);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
-	padding: 70px;
+	padding: 100px;
 	font-family: 'Livvic', sans-serif;
 	font-size: 18px;
 }
@@ -165,11 +165,12 @@
 }
 
 .profile-tab-nav>* {
-	height: 250px;
+	height: 10vh;
 	text-align: center;
 }
 
 #profile-payment-tab>.profile-tab-nav {
+	line-height: 35px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(2, 1fr);
@@ -255,4 +256,12 @@
 
 #uploadBtn {
 	cursor: pointer;
+}
+
+
+/********* *******/
+
+
+.table-item-top td img {
+	width: 60%;
 }
