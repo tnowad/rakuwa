@@ -27,10 +27,10 @@ const render = async () => {
 
 const renderForm = async () => {
 	let { carts } = await getDataFromLocal()
-	user = await getUserById(carts.userId)
 	
 }
 
-render()
+render() // statistical
+renderForm() //table
 
 export { render,renderForm }

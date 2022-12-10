@@ -1,169 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Quản lí</title>
-		<link rel="stylesheet" href="/css/all.css" />
-		<link rel="stylesheet" href="/css/shop/dasboard.css" />
-		<link rel="stylesheet" href="/css/shop/root.css" />
-		<link rel="stylesheet" href="/css/shop/header.css" />
-		<link rel="stylesheet" href="/css/shop/slide-show-banner.css" />
-		<link rel="stylesheet" href="/css/shop/offer-banner.css" />
-		<link rel="stylesheet" href="/css/shop/product-category-area.css" />
-		<link rel="stylesheet" href="/css/shop/shop-area.css" />
-		<link rel="stylesheet" href="/css/shop/footer.css" />
-		<script type="module" src="/js/server/dashboard.js"></script>
-	</head>
 
-	<body>
-		<div class="header">
-			<div class="container">
-				<div class="logo">
-					<a href="/index.html"
-						><img src="/img/logo1.png" class="desktop" alt="logo"
-					/></a>
-					<a href="/index.html"
-						><img src="/img/logo2.png" class="mobile" alt="RAKUWA"
-					/></a>
-				</div>
-				<div class="menu-icon">
-					<div class="search-box">
-						<form class="search-form">
-							<input
-								type="search"
-								class="search-text"
-								name="name"
-								placeholder="Search product"
-								required
-							/>
-							<button type="submit" class="search-button">
-								<em class="fas fa-search"></em>
-							</button>
-						</form>
-					</div>
-					<button class="menu-sidebar">
-						<em class="fas fa-bars"></em>
-					</button>
-					<button class="user dropdown">
-						<em class="fas fa-user-circle"></em>
-						<ul class="user-menu dropdown-content">
-							<li>
-								<a href="/pages/login.html">Đăng nhập</a>
-							</li>
-							<li>
-								<a href="/pages/signup.html">Đăng kí</a>
-							</li>
-						</ul>
-					</button>
-				</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Quản lí</title>
+	<link rel="stylesheet" href="/css/all.css" />
+	<link rel="stylesheet" href="/css/shop/dasboard.css" />
+	<link rel="stylesheet" href="/css/shop/root.css" />
+	<link rel="stylesheet" href="/css/shop/header.css" />
+	<link rel="stylesheet" href="/css/shop/slide-show-banner.css" />
+	<link rel="stylesheet" href="/css/shop/offer-banner.css" />
+	<link rel="stylesheet" href="/css/shop/product-category-area.css" />
+	<link rel="stylesheet" href="/css/shop/shop-area.css" />
+	<link rel="stylesheet" href="/css/shop/footer.css" />
+	<script type="module" src="/js/server/dashboard.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="logo">
+				<a href="/index.html"><img src="/img/logo1.png" class="desktop" alt="logo" /></a>
+				<a href="/index.html"><img src="/img/logo2.png" class="mobile" alt="RAKUWA" /></a>
 			</div>
-		</div>
-
-		<style>
-			.dashboard {
-				display: flex;
-				justify-content: center;
-			}
-
-			.dashboard > .container {
-				min-height: 100vh;
-				background-color: aliceblue;
-				width: min(100%, 1400px);
-				display: grid;
-				grid-template-columns: 25% 75%;
-			}
-
-			.right-content > .content {
-				display: none;
-			}
-
-			.right-content > .content.active {
-				display: block;
-			}
-		</style>
-		<div class="dashboard">
-			<div class="container">
-				<div class="left-sidebar">
-					<div class="admin-profile">
-						<div class="profile-image">
-							<img
-								id="admin-profile-image"
-								src="../img/categories_img_01.jpg"
-								alt=""
-							/>
-						</div>
-						<h2 id="admin-profile-name" class="profile-name">
-							Nguyễn Minh Tuấn
-						</h2>
-					</div>
-					<ul class="sidebar-nav">
-						<li class="sidebar-nav-item dashboard-home">
-							<a href="?page=dashboard-home"
-								><i class="fa-regular fa-gauge"></i> Trang
-								chủ</a
-							>
+			<div class="menu-icon">
+				<div class="search-box">
+					<form class="search-form">
+						<input type="search" class="search-text" name="name" placeholder="Search product" required />
+						<button type="submit" class="search-button">
+							<em class="fas fa-search"></em>
+						</button>
+					</form>
+				</div>
+				<button class="menu-sidebar">
+					<em class="fas fa-bars"></em>
+				</button>
+				<button class="user dropdown">
+					<em class="fas fa-user-circle"></em>
+					<ul class="user-menu dropdown-content">
+						<li>
+							<a href="/pages/login.html">Đăng nhập</a>
 						</li>
-						<li class="sidebar-nav-item dashboard-products">
-							<a href="?page=dashboard-products">
-								<i class="fa-solid fa-cart-shopping"></i>
-								Quản lý sản phẩm</a
-							>
-						</li>
-						<li class="sidebar-nav-item dashboard-users">
-							<a href="?page=dashboard-users"
-								><i class="fa-solid fa-user"></i> Quản lý người
-								dùng</a
-							>
-						</li>
-						<li class="sidebar-nav-item dashboard-carts">
-							<a href="?page=dashboard-carts"
-								><i class="fa-light fa-calendar-lines"></i> Quản
-								lý đơn hàng</a
-							>
+						<li>
+							<a href="/pages/signup.html">Đăng kí</a>
 						</li>
 					</ul>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		.dashboard {
+			display: flex;
+			justify-content: center;
+		}
+
+		.dashboard>.container {
+			min-height: 100vh;
+			background-color: aliceblue;
+			width: min(100%, 1400px);
+			display: grid;
+			grid-template-columns: 25% 75%;
+		}
+
+		.right-content>.content {
+			display: none;
+		}
+
+		.right-content>.content.active {
+			display: block;
+		}
+	</style>
+	<div class="dashboard">
+		<div class="container">
+			<div class="left-sidebar">
+				<div class="admin-profile">
+					<div class="profile-image">
+						<img id="admin-profile-image" src="../img/categories_img_01.jpg" alt="" />
+					</div>
+					<h2 id="admin-profile-name" class="profile-name">
+						Nguyễn Minh Tuấn
+					</h2>
 				</div>
-				<div class="right-content">
-					<div class="content dashboard-home">
-						<h2 class="content-title">Trang chủ</h2>
-						<div class="form-statistical">
-							<div class="content-statistical">
-								<div
-									class="group-content-statistical left-statistical"
-								>
-									<h3>Tổng doanh thu</h3>
-									<span id="turnover"></span>
-								</div>
-								<div
-									class="group-content-statistical center-statistical"
-								>
-									<h3>Tổng số sản phẩm</h3>
-									<span id="amountProduct"></span>
-								</div>
-								<div
-									class="group-content-statistical right-statistical"
-								>
-									<h3>Người dùng</h3>
-									<span id="amountUser"></span>
-								</div>
+				<ul class="sidebar-nav">
+					<li class="sidebar-nav-item dashboard-home">
+						<a href="?page=dashboard-home"><i class="fa-regular fa-gauge"></i> Trang
+							chủ</a>
+					</li>
+					<li class="sidebar-nav-item dashboard-products">
+						<a href="?page=dashboard-products">
+							<i class="fa-solid fa-cart-shopping"></i>
+							Quản lý sản phẩm</a>
+					</li>
+					<li class="sidebar-nav-item dashboard-users">
+						<a href="?page=dashboard-users"><i class="fa-solid fa-user"></i> Quản lý người
+							dùng</a>
+					</li>
+					<li class="sidebar-nav-item dashboard-carts">
+						<a href="?page=dashboard-carts"><i class="fa-light fa-calendar-lines"></i> Quản
+							lý đơn hàng</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right-content">
+				<div class="content dashboard-home">
+					<h2 class="content-title">Trang chủ</h2>
+					<div class="form-statistical">
+						<div class="content-statistical">
+							<div class="group-content-statistical left-statistical">
+								<h3>Tổng doanh thu</h3>
+								<span id="turnover"></span>
+							</div>
+							<div class="group-content-statistical center-statistical">
+								<h3>Tổng số sản phẩm</h3>
+								<span id="amountProduct"></span>
+							</div>
+							<div class="group-content-statistical right-statistical">
+								<h3>Người dùng</h3>
+								<span id="amountUser"></span>
 							</div>
 						</div>
-						<div class="content-body">
-							<div class="dashboard-action">
-								<!-- search and add -->
-								<form action="" onsubmit="return false">
-									<input type="text" name="name" />
-									<input type="submit" value="Tìm kiếm" />
-								</form>
-								<button id="button-add-product">Thêm</button>
-							</div>
-							<div class="dashboard-table">
-								<table
-									style="width: 100%; text-align: center"
-									class="table-container"
-								>
+					</div>
+					<div class="content-body">
+						<div class="dashboard-action">
+							<!-- search and add -->
+							<form action="" onsubmit="return false">
+								<input type="text" name="name" />
+								<input type="submit" value="Tìm kiếm" />
+							</form>
+							<button id="button-add-product">Thêm</button>
+						</div>
+						<div class="dashboard-table-cart">
+							<div class="dashboard-table dashboard-table-user">
+							<table style="width: 100%; text-align: center" class="table-container">
+								<thead class="table-head">
+									<tr>
+										<th style="width: 5%">Id</th>
+										<th style="width: 35%">
+											Tên người mua
+										</th>
+										<th style="width: 15%">
+											Thời gian
+										</th>
+										<th style="width: 15%">
+											Tổng tiền
+										</th>
+										<th style="width: 15%">
+											Trạng thái
+										</th>
+										<th style="width: 15%">
+											Hành động
+										</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+							<div class="dashboard-table dashboard-table-product">
+								<table style="width: 100%; text-align: center" class="table-container">
 									<thead class="table-head">
 										<tr>
 											<th style="width: 5%">Id</th>
@@ -173,127 +169,73 @@
 											<th style="width: 15%">Hình ảnh</th>
 											<th style="width: 15%">Số lượng</th>
 											<th style="width: 15%">Giá</th>
-											<th style="width: 15%">
-												Hành động
-											</th>
 										</tr>
 									</thead>
 								</table>
 							</div>
 						</div>
 					</div>
-					<style>
-						.table-head {
-							width: 100%;
-						}
+				</div>
+				<style>
+					.table-head {
+						width: 100%;
+					}
 
-						.table-item-bottom {
-							display: none;
-						}
+					.table-item-bottom {
+						display: none;
+					}
 
-						.table-item-bottom.active {
-							display: table-cell;
-							text-align: start;
-						}
+					.table-item-bottom.active {
+						display: table-cell;
+						text-align: start;
+					}
 
-						textarea {
-							display: block;
-							width: 100%;
-							box-shadow: 0px 0px 2px rgb(184, 184, 184);
-							border-radius: 5px;
-						}
-					</style>
-					<div class="content dashboard-products">
-						<h2 class="content-title">Quản lý sản phẩm</h2>
-						<div class="content-body">
-							<div class="dashboard-action">
-								<!-- search and add -->
-								<form
-									class="form-search-product"
-									action=""
-									onsubmit="return false"
-								>
-									<input
-										type="text"
-										name="name"
-										oninput="searchProduct()"
-									/>
-									<!-- <button></button> -->
-									<input
-										type="submit"
-										value="Tìm kiếm"
-										onclick="searchProduct()"
-									/>
-								</form>
-								<button
-									id="button-add-product"
-									onclick="openForm()"
-								>
-									Thêm
-								</button>
+					textarea {
+						display: block;
+						width: 100%;
+						box-shadow: 0px 0px 2px rgb(184, 184, 184);
+						border-radius: 5px;
+					}
+				</style>
+				<div class="content dashboard-products">
+					<h2 class="content-title">Quản lý sản phẩm</h2>
+					<div class="content-body">
+						<div class="dashboard-action">
+							<!-- search and add -->
+							<form class="form-search-product" action="" onsubmit="return false">
+								<input type="text" name="name" oninput="searchProduct()" />
+								<!-- <button></button> -->
+								<input type="submit" value="Tìm kiếm" onclick="searchProduct()" />
+							</form>
+							<button id="button-add-product" onclick="openForm()">
+								Thêm
+							</button>
+						</div>
+						<form class="form-action form-group-product" onsubmit="return false">
+							<div class="group-form-option add-name">
+								<label for="">Tên sản phẩm</label>
+								<input type="text" id="title" value="" required="" />
 							</div>
-							<form
-								class="form-action form-group-product"
-								onsubmit="return false"
-							>
-								<div class="group-form-option add-name">
-									<label for="">Tên sản phẩm</label>
-									<input
-										type="text"
-										id="title"
-										value=""
-										required=""
-									/>
-								</div>
-								<div class="group-form-option add-tag">
-									<label for="">Thẻ</label>
-									<input
-										type="text"
-										name=""
-										list="category-list"
-										id="category"
-										value=""
-										required=""
-									/>
-									<datalist id="category-list"> </datalist>
-								</div>
-								<div class="group-form-option add-picture">
-									<label for="">Ảnh</label>
-									<input
-										type="file"
-										name=""
-										id="image"
-										value=""
-										required=""
-									/>
-								</div>
-								<div class="group-form-option add-amount">
-									<label for="">Số lượng </label>
-									<input
-										type="text"
-										name=""
-										id="amount"
-										value=""
-										required=""
-									/>
-								</div>
-								<div class="group-form-option edit-price">
-									<label for="">Giá</label>
-									<input
-										type="text"
-										name=""
-										id="price"
-										value=""
-										required=""
-									/>
-								</div>
-								<div class="group-form-option add-describe">
-									<label for="">Miêu tả</label>
-									<textarea
-										id="description"
-										rows="4"
-										cols="50"
-									>
+							<div class="group-form-option add-tag">
+								<label for="">Thẻ</label>
+								<input type="text" name="" list="category-list" id="category" value="" required="" />
+								<datalist id="category-list"> </datalist>
+							</div>
+							<div class="group-form-option add-picture">
+								<label for="">Ảnh</label>
+								<input type="file" name="" id="image" value="" required="" />
+							</div>
+							<div class="group-form-option add-amount">
+								<label for="">Số lượng </label>
+								<input type="text" name="" id="amount" value="" required="" />
+							</div>
+							<div class="group-form-option edit-price">
+								<label for="">Giá</label>
+								<input type="text" name="" id="price" value="" required="" />
+							</div>
+							<div class="group-form-option add-describe">
+								<label for="">Miêu tả</label>
+								<textarea id="description" rows="4" cols="50">
 </textarea required="">
 							</div>
 							<div class="group-form-option edit-option">
@@ -363,150 +305,112 @@
 							</div>
 							<div class="group-form-option-user group-address">
 								<label for="">Địa chỉ</label>
-								<textarea id="address" name="address" rows="4" cols="50"></textarea
-									>
-								</div>
-								<div
-									class="group-form-option-user group-status"
-								>
-									<label for="">Trạng thái người dùng </label>
-									<select name="status" id="status">
-										<option value="active">active</option>
-										<option value="ban">ban</option>
-										<option value="deleted">deleted</option>
-									</select>
-								</div>
-								<div class="group-form-option-user group-role">
-									<label>Quyền</label>
-									<select
-										name="role"
-										value="${user.role}"
-										id="role"
-									>
-										<option value="admin">admin</option>
-										<option value="user">user</option>
-									</select>
-								</div>
-								<!-- <div class="group-form-option-user group-username">
+								<textarea id="address" name="address" rows="4" cols="50"></textarea>
+							</div>
+							<div class="group-form-option-user group-status">
+								<label for="">Trạng thái người dùng </label>
+								<select name="status" id="status">
+									<option value="active">active</option>
+									<option value="ban">ban</option>
+									<option value="deleted">deleted</option>
+								</select>
+							</div>
+							<div class="group-form-option-user group-role">
+								<label>Quyền</label>
+								<select name="role" value="${user.role}" id="role">
+									<option value="admin">admin</option>
+									<option value="user">user</option>
+								</select>
+							</div>
+							<!-- <div class="group-form-option-user group-username">
 								<label for="">Tên đăng nhập</label>
 								<input type="text" id="username" value="">
 							</div> -->
-								<div
-									class="group-form-option-user group-password"
-								>
-									<label for="">Tên đăng nhập</label>
-									<input type="text" id="username" value="" />
-									<label for="">Mật khẩu</label>
-									<input type="text" id="password" value="" />
-								</div>
-								<div
-									class="group-form-option-user group-option-user"
-								>
-									<button id="cancel" onclick="cancelFormUserAdd()">
-										Hủy
-									</button>
-									<button
-										id="submit"
-										onclick="addUserToDashboard()"
-									>
-										Hoàn tất
-									</button>
-								</div>
-							</form>
-							<div class="dashboard-table">
-								<table
-									style="width: 100%; text-align: center"
-									class="table-container"
-								>
-									<thead class="table-head">
-										<tr>
-											<th style="width: 5%">Id</th>
-											<th style="width: 35%">
-												Tên người dùng
-											</th>
-											<th style="width: 15%">Hình ảnh</th>
-											<th style="width: 15%">Email</th>
-											<th style="width: 15%">
-												Trạng thái
-											</th>
-											<th style="width: 15%">
-												Hành động
-											</th>
-										</tr>
-									</thead>
-								</table>
+							<div class="group-form-option-user group-password">
+								<label for="">Tên đăng nhập</label>
+								<input type="text" id="username" value="" />
+								<label for="">Mật khẩu</label>
+								<input type="text" id="password" value="" />
 							</div>
+							<div class="group-form-option-user group-option-user">
+								<button id="cancel" onclick="cancelFormUserAdd()">
+									Hủy
+								</button>
+								<button id="submit" onclick="addUserToDashboard()">
+									Hoàn tất
+								</button>
+							</div>
+						</form>
+						<div class="dashboard-table">
+							<table style="width: 100%; text-align: center" class="table-container">
+								<thead class="table-head">
+									<tr>
+										<th style="width: 5%">Id</th>
+										<th style="width: 35%">
+											Tên người dùng
+										</th>
+										<th style="width: 15%">Hình ảnh</th>
+										<th style="width: 15%">Email</th>
+										<th style="width: 15%">
+											Trạng thái
+										</th>
+										<th style="width: 15%">
+											Hành động
+										</th>
+									</tr>
+								</thead>
+							</table>
 						</div>
 					</div>
-					<div class="content dashboard-carts">
-						<h2 class="content-title">Quản lý đơn hàng</h2>
-						<div class="content-body">
-							<div class="dashboard-action">
-								<!-- search and add -->
-								<form
-									action=""
-									onsubmit="return false"
-									class="form-search-cart"
-								>
-									<input
-										id="search-cart"
-										type="text"
-										name="name"
-										oninput="searchCart()"
-									/>
-									<input
-										type="submit"
-										value="Tìm kiếm"
-										onclick="searchCart()"
-									/>
-								</form>
-								<button id="button-add-product">Thêm</button>
-							</div>
-							<div class="dashboard-table">
-								<table
-									style="width: 100%; text-align: center"
-									class="table-container"
-								>
-									<thead class="table-head">
-										<tr>
-											<th style="width: 5%">Id</th>
-											<th style="width: 35%">
-												Tên người mua
-											</th>
-											<th style="width: 15%">
-												Thời gian
-											</th>
-											<th style="width: 15%">
-												Tổng tiền
-											</th>
-											<th style="width: 15%">
-												Trạng thái
-											</th>
-											<th style="width: 15%">
-												Hành động
-											</th>
-										</tr>
-									</thead>
-								</table>
-							</div>
+				</div>
+				<div class="content dashboard-carts">
+					<h2 class="content-title">Quản lý đơn hàng</h2>
+					<div class="content-body">
+						<div class="dashboard-action">
+							<!-- search and add -->
+							<form action="" onsubmit="return false" class="form-search-cart">
+								<input id="search-cart" type="text" name="name" oninput="searchCart()" />
+								<input type="submit" value="Tìm kiếm" onclick="searchCart()" />
+							</form>
+							<button id="button-add-product">Thêm</button>
+						</div>
+						<div class="dashboard-table">
+							<table style="width: 100%; text-align: center" class="table-container">
+								<thead class="table-head">
+									<tr>
+										<th style="width: 5%">Id</th>
+										<th style="width: 35%">
+											Tên người mua
+										</th>
+										<th style="width: 15%">
+											Thời gian
+										</th>
+										<th style="width: 15%">
+											Tổng tiền
+										</th>
+										<th style="width: 15%">
+											Trạng thái
+										</th>
+										<th style="width: 15%">
+											Hành động
+										</th>
+									</tr>
+								</thead>
+							</table>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="module" src="/js/render/dashboard.js"></script>
-		<script type="module" src="/js/render/dashboard-menu.js"></script>
-		<script type="module" src="/js/render/dashboard-users.js"></script>
-		<script type="module" src="/js/render/dashboard-products.js"></script>
-		<script type="module" src="/js/render/dashboard-carts.js"></script>
-		<script
-			type="module"
-			src="/js/template/dashboard-product-option.js"
-		></script>
-		<script
-			type="module"
-			src="/js/template/dashboard-user-option.js"
-		></script>
-		<script type="module" src="/js/render/header-account.js"></script>
-	</body>
+	</div>
+	<script type="module" src="/js/render/dashboard.js"></script>
+	<script type="module" src="/js/render/dashboard-menu.js"></script>
+	<script type="module" src="/js/render/dashboard-users.js"></script>
+	<script type="module" src="/js/render/dashboard-products.js"></script>
+	<script type="module" src="/js/render/dashboard-carts.js"></script>
+	<script type="module" src="/js/template/dashboard-product-option.js"></script>
+	<script type="module" src="/js/template/dashboard-user-option.js"></script>
+	<script type="module" src="/js/render/header-account.js"></script>
+</body>
+
 </html>
