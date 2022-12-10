@@ -1,7 +1,7 @@
 import { createProduct } from '../util/product.js'
 import { convertBase64 } from '../util/file-to-base64.js'
 
-var optionForm = document.querySelector('.content-body .form-group-add')
+var optionForm = document.querySelector('.content-body .form-group-product')
 
 window.openForm = async () => {
 	optionForm.style = 'display: inline'

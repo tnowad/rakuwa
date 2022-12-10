@@ -1,5 +1,5 @@
 import { getDataFromLocal } from './local-data.js'
-import { removeVietnameseTones } from './util.js'
+import { createNewId, removeVietnameseTones } from './util.js'
 
 const getUserById = async (userId) => {
 	let { users } = await getDataFromLocal()
@@ -7,6 +7,7 @@ const getUserById = async (userId) => {
 }
 const addUser = async (user) => {
 	let { users } = await getDataFromLocal()
+	user.id = createNewId(users)
 	users = users.concat(user)
 	localStorage.setItem('users', JSON.stringify(users))
 }

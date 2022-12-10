@@ -3,7 +3,7 @@ import { convertBase64 } from '../util/file-to-base64.js'
 import { renderSearch } from '../render/dashboard-users.js'
 const userForm = (user) => {
 	return `
-	<form class="form-action-user" onsubmit="return false">
+	<form class="form-action form-group-user" onsubmit="return false">
 			<div class="group-form-option-user group-fullName" >
 				<label for="" id="fullName-Text" >Họ tên</label>
 				<input type="text" id="fullName" value="${user.fullName}">
@@ -82,7 +82,6 @@ window.updateUser = async (form, userId) => {
 			...user,
 			image: await convertBase64(form.querySelector('#image').files[0]),
 		}
-		// console.log(user)
 	} catch {}
 	updateUser(user)
 	location.reload()

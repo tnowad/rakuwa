@@ -265,7 +265,7 @@
 							</form>
 							<button id="button-add-product" onclick="openForm()">Thêm</button>
 						</div>
-						<form class="form-action form-group-add" onsubmit="return false">
+						<form class="form-action form-group-product" onsubmit="return false">
 							<div class="group-form-option add-name">
 								<label for="">Tên sản phẩm</label>
 								<input type="text" id="title" value="" required="">
@@ -325,42 +325,40 @@
 								<input type="text" name="name" oninput="searchUser()" />
 								<input type="submit" value="Tìm kiếm" onclick="searchUser()" />
 							</form>
-							<button id="button-add-product">Thêm</button>
+							<button id="button-add-product" onclick="openForm()" >Thêm</button>
 						</div>
-
-
-						<form class="form-action-user" onsubmit="return false">
-								<div class="group-form-option-user group-fullName" >
-									<label for="" id="fullName-Text" >Họ tên</label>
-									<input type="text" id="fullName" value="">
-								</div>
-								<div class="group-form-option-user group-dateOfBirth">
-									<label for="">Ngày sinh </label>
-									<input type="date" name="" id="dateOfBirth" value="">
-								</div>
-								<div class="group-form-option-user group-email">
-									<label for="">Email</label>
-									<input type="text" name="" id="email" value="">
-									</div>
-								<div class="group-form-option-user group-image">
-									<label for="">Ảnh</label>
-									<input type="file" name="" id="image" value="">
-								</div>
-								<div class="group-form-option-user group-phoneNumber">
-									<label for="">Số điện thoại</label>
-									<input type="text" name="" id="phone" value="">
-								</div>
-								<div class="group-form-option-user group-gender">
-									<label for="">Giới tính </label>
-									<select name="gender" id="gender" value="" >
-										<option value="Nam">Nam</option>
-										<option value="Nữ">Nữ</option>
-										<option value="Khác">Khác</option>
-									</select>
-								</div>
-								<div class="group-form-option-user group-address">
-									<label for="">Địa chỉ</label>
-									<textarea id="address" name="address" rows="4" cols="50"></textarea>
+						<form class="form-action form-group-user" onsubmit="return false">
+							<div class="group-form-option-user group-fullName" >
+								<label for="" id="fullName-Text" >Họ tên</label>
+								<input type="text" id="fullName" value="">
+							</div>
+							<div class="group-form-option-user group-dateOfBirth">
+								<label for="">Ngày sinh </label>
+								<input type="date" name="" id="dateOfBirth" value="">
+							</div>
+							<div class="group-form-option-user group-email">
+								<label for="">Email</label>
+								<input type="text" name="" id="email" value="">
+							</div>
+							<div class="group-form-option-user group-image">
+								<label for="">Ảnh</label>
+								<input type="file" name="" id="image" value="">
+							</div>
+							<div class="group-form-option-user group-phoneNumber">
+								<label for="">Số điện thoại</label>
+								<input type="text" name="" id="phone" value="">
+							</div>
+							<div class="group-form-option-user group-gender">
+								<label for="">Giới tính </label>
+								<select name="gender" id="gender" value="" >
+									<option value="Nam">Nam</option>
+									<option value="Nữ">Nữ</option>
+									<option value="Khác">Khác</option>
+								</select>
+							</div>
+							<div class="group-form-option-user group-address">
+								<label for="">Địa chỉ</label>
+								<textarea id="address" name="address" rows="4" cols="50"></textarea>
 							</div>
 							<div class="group-form-option-user group-status">
 								<label for="">Trạng thái người dùng </label>
@@ -377,17 +375,21 @@
 									<option value="user">user</option>
 								</select>
 							</div>
+							<!-- <div class="group-form-option-user group-username">
+								<label for="">Tên đăng nhập</label>
+								<input type="text" id="username" value="">
+							</div> -->
 							<div class="group-form-option-user group-password">
+								<label for="">Tên đăng nhập</label>
+								<input type="text" id="username" value="">
 								<label for="">Mật khẩu</label>
 								<input type="text" id="password" value="">
 							</div>
 							<div class="group-form-option-user group-option-user">
-								<button id="cancel">Hủy</button>
-								<button id="submit" onclick="">Hoàn tất</button>
+								<button id="cancel" onclick="cancelForm()">Hủy</button>
+								<button id="submit" onclick="addUserToDashboard()">Hoàn tất</button>
 							</div>
 						</form>
-
-
 						<div class="dashboard-table">
 							<table style="width: 100%; text-align: center" class="table-container">
 								<thead class="table-head">
@@ -457,5 +459,6 @@
 <script type="module" src="/js/render/dashboard-products.js"></script>
 <script type="module" src="/js/render/dashboard-carts.js"></script>
 <script type="module" src="/js/template/dashboard-product-option.js"></script>
+<script type="module" src="/js/template/dashboard-user-option.js"></script>
 
 </html>
