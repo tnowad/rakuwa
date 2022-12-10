@@ -3,12 +3,12 @@ import { addUser } from '../util/user.js'
 
 var optionForm = document.querySelector('.content-body .form-group-user')
 
-window.openForm = async () => {
+window.openFormUserAdd = async () => {
 	optionForm.style = 'display: grid'
 	optionForm.style.transition = 'all 5s ease-in-out'
 }
 
-window.cancelForm = async () => {
+window.cancelFormUserAdd = async () => {
 	optionForm.style = 'display: none'
 }
 
