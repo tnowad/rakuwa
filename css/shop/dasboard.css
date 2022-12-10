@@ -223,22 +223,30 @@
 	grid-row-gap: 20px;
 }
 
-.edit-fullName {
+.group-form-option-user {
+	margin: 10px;
+}
+
+.group-form-option-user input {
+	height: 50%;
+}
+
+.group-fullName {
 	grid-area: 1 / 1 / 2 / 2;
 	width: 50%;
 }
 
-.edit-dateOfBirth {
+.group-dateOfBirth {
 	grid-area: 1 / 2 / 2 / 3;
 	width: 50%;
 }
 
-.edit-email {
+.group-email {
 	grid-area: 1 / 3 / 2 / 4;
-	width: 20%;
+	width: 100%;
 }
 
-.edit-gender {
+.group-gender {
 	grid-area: 1 / 4 / 2 / 5;
 	width: 40%;
 	height: 60%;
@@ -247,21 +255,21 @@
 
 }
 
-.edit-image {
+.group-image {
 	grid-area: 2 / 1 / 3 / 2;
 }
 
-.edit-phoneNumber {
+.group-phoneNumber {
 	grid-area: 2 / 2 / 3 / 3;
 }
 
-.edit-address {
+.group-address {
 	grid-area: 2 / 3 / 3 / 5;
 	width: 90%;
 	border-radius: 5px;
 }
 
-.edit-status {
+.group-status {
 	grid-area: 3 / 1 / 4 / 2;
 	width: 40%;
 	height: 60%;
@@ -269,7 +277,7 @@
 	border-radius: 5px;
 }
 
-.edit-role {
+.group-role {
 	grid-area: 3 / 2 / 4 / 3;
 	width: 40%;
 	height: 60%;
@@ -277,16 +285,16 @@
 	border-radius: 5px;
 }
 
-.edit-password {
+.group-password {
 	grid-area: 3 / 3 / 4 / 4;
 }
 
-.edit-option-user {
+.group-option-user {
 	grid-area: 4 / 3 / 5 / 5;
 }
 
-.edit-option-user #submit,
-.edit-option-user #cancel {
+.group-option-user #submit,
+.group-option-user #cancel {
 	border-radius: 5px;
 	cursor: pointer;
 	padding: 10px;
@@ -294,8 +302,8 @@
 	border: 0.1px solid rgba(223, 223, 223, 0.781);
 }
 
-.edit-option-user #submit:hover,
-.edit-option-user #cancel:hover {
+.group-option-user #submit:hover,
+.group-option-user #cancel:hover {
 	background-color: rgb(185, 185, 185);
 	transition: all 0.3s linear;
 }
