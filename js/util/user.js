@@ -29,17 +29,18 @@ const updateUser = async (user) => {
 
 const getUserBySearch = async (userSearch) => {
 	let { users } = await getDataFromLocal()
-	return users.filter((user) =>
-		user.fullName.toLowerCase().includes(userSearch.toLowerCase()) ||
-		user.id == userSearch ||
-		removeVietnameseTones(user.fullName).toLowerCase().includes(userSearch.toLowerCase())
+	if (userSearch.includes('deleted')) {
+		return users.filter((user) => user.status == 'deleted')
+	}
+	users = users.filter((user) => user.status != 'deleted')
+	return users.filter(
+		(user) =>
+			user.fullName.toLowerCase().includes(userSearch.toLowerCase()) ||
+			user.id == userSearch ||
+			removeVietnameseTones(user.fullName)
+				.toLowerCase()
+				.includes(userSearch.toLowerCase()),
 	)
 }
 
-export {
-	updateUser,
-	getUserById,
-	getUserBySearch,
-	removeUser,
-	addUser
-}
+export { updateUser, getUserById, getUserBySearch, removeUser, addUser }

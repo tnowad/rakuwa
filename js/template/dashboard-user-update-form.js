@@ -83,7 +83,7 @@ window.updateUser = async (form, userId) => {
 			image: await convertBase64(form.querySelector('#image').files[0]),
 		}
 		// console.log(user)
-	} catch { }
+	} catch {}
 	updateUser(user)
 	location.reload()
 }

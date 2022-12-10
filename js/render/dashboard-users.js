@@ -4,7 +4,10 @@ const render = async () => {
 	const tableDashboardUser = document.querySelector(
 		'.content.dashboard-users .table-container',
 	)
-	const users = await getUsers()
+	let users = await getUsers()
+
+	users = users.filter((user) => user.status != 'deleted')
+
 	tableDashboardUser.innerHTML += users.reduce(
 		(previousValue, currentValue) => previousValue + userRow(currentValue),
 		'',
@@ -31,9 +34,10 @@ const renderSearch = async (array) => {
 											Hành động
 										</th>
 									</tr>
-								</thead>`;
+								</thead>`
 	tableDashboardUsers.innerHTML += array.reduce(
-		(previousValues, currentValues) => previousValues + userRow(currentValues),
+		(previousValues, currentValues) =>
+			previousValues + userRow(currentValues),
 		'',
 	)
 }
