@@ -57,8 +57,22 @@ window.updateProduct = async (form, productId) => {
 			image: await convertBase64(form.querySelector('#image').files[0]),
 		}
 	} catch {}
-	updateProduct(product)
-	location.reload()
+
+	if (
+		product.title == "" ||
+		product.category == "" ||
+		product.amount == 0 ||
+		product.price == 0 ||
+        product.description == "" ||
+        product.image == null
+	) {
+        alert('Không được để trống!')
+        return
+	} else {
+		updateProduct(product)
+		location.reload()
+	}
+
 }
 
 window.searchProduct = async () => {

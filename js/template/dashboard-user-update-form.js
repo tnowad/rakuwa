@@ -83,8 +83,25 @@ window.updateUser = async (form, userId) => {
 			image: await convertBase64(form.querySelector('#image').files[0]),
 		}
 	} catch {}
-	updateUser(user)
-	location.reload()
+	
+	if (
+		user.fullName == "" ||
+		user.dateOfBirth == null ||
+		user.email == "" ||
+		user.phoneNumber == "" ||
+		user.gender == "" ||
+		user.address == "" ||
+		user.status == "" ||
+        user.role == "" ||
+		user.password == "" ||
+		user.image == null
+		) {
+			alert('Không được để trống')
+			return
+		} else {
+		updateUser(user)
+		location.reload()
+	}
 }
 
 window.searchUser = async () => {
