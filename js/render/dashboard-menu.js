@@ -42,8 +42,16 @@ const renderForm = async () => {
 	)
 }
 
-const renderSearchMenu = async () => { 
-		
+const renderSearchMenu = async (cartSearch) => { 
+	const tableDashboardSearchMenu = document.querySelector('.dashboard-table-user')
+	tableDashboardSearchMenu.innerHTML = ""
+	tableDashboardSearchMenu.innerHTML += await cartSearch.reduce(
+		async (previousValue, currentValue) => {
+			previousValue = await previousValue
+			return previousValue + (await menuRowUser(currentValue))
+		},
+		Promise.resolve(''),
+	)
 }
 render() // statistical
 renderForm() //table

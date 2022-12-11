@@ -43,7 +43,6 @@ const menuRowUser = async (cart) => {
 					</tr>
 					<tr>
 						<td class="table-item-bottom" colspan="6">
-
 						</td>
 					</tr>
 				</tbody>
@@ -66,15 +65,13 @@ const menuRowUser = async (cart) => {
 					}, '')}
 				</table>
 			</div>
-		</div>
-
-
-			
+		</div>	
     `
 }
 
 window.searchMenu = async () => {
 	const searchMenu = document.querySelector('.dashboard-action .form-search-menu input').value
+	console.log(searchMenu)
 	renderSearchMenu(await searchCart(searchMenu))
 }
 
