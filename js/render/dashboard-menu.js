@@ -27,7 +27,7 @@ const render = async () => {
 }
 
 const renderForm = async () => {
-	const tableDashboardMenu = document.querySelector('.dashboard-table-user .table-container',)
+	const tableDashboardMenu = document.querySelector('.dashboard-table-user',)
 	let carts = await getCarts()
 	carts = carts.filter((cart) => cart.status == 'Đang chờ')
 
