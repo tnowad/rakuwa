@@ -42,7 +42,10 @@ const renderForm = async () => {
 	)
 }
 
+const renderSearchMenu = async () => { 
+		
+}
 render() // statistical
 renderForm() //table
 
-export { render, renderForm }
+export { render, renderForm,renderSearchMenu }

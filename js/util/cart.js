@@ -2,6 +2,7 @@ import { getDataFromLocal } from './local-data.js'
 import { getProductById } from './product.js'
 import {  loginRequired } from './account.js'
 import { createNewId } from './util.js'
+import { getUserById, getUserBySearch } from './user.js'
 
 const addProductIdToCart = async (productId, quantity) => {
 	let { currentCart } = await getDataFromLocal()
@@ -120,6 +121,18 @@ const getCartBySearch = async (cartSearch) => {
 	)
 }
 
+const searchCart = async (searchCart) => {
+	let { carts } = await getDataFromLocal()
+	
+	carts = carts.filter((cart) => cart.status == 'Đang chờ')
+	let user = await getUserBySearch(searchCart)
+	
+	return carts.filter((cart) => 	
+		cart.userId == searchCart ||
+		user.id == cart.userId
+	)
+}
+
 export {
 	getCurrentCart,
 	cleanCart,
@@ -133,4 +146,5 @@ export {
 	updateCart,
 	getCartById,
 	getCartBySearch,
+	searchCart,
 }

@@ -153,11 +153,11 @@
 						<div class="content-body" style="padding: 15px">
 							<div class="dashboard-action">
 								<!-- search and add -->
-								<form action="" onsubmit="return false">
-									<input type="text" name="name" />
-									<input type="submit" value="Tìm kiếm" />
+								<form action="" class="form-search-menu" onsubmit="return false">
+									<input type="text" name="name"  oninput="searchMenu()"/>
+									<input type="submit" id="menu-search" value="Tìm kiếm" />
 								</form>
-								<button id="button-add-product">Thêm</button>
+								<!-- <button id="button-add-product">Thêm</button> -->
 							</div>
 							<div
 								class="dashboard-table-cart"
@@ -382,10 +382,6 @@
 										<option value="user">user</option>
 									</select>
 								</div>
-								<!-- <div class="group-form-option-user group-username">
-								<label for="">Tên đăng nhập</label>
-								<input type="text" id="username" value="">
-							</div> -->
 								<div
 									class="group-form-option-user group-password"
 								>

@@ -1,4 +1,6 @@
+import { renderSearchMenu } from '../render/dashboard-menu.js'
 import { getUsers } from '../util/account.js'
+import { getCartBySearch, searchCart } from '../util/cart.js'
 import { productRow } from './profile-cart-update-form.js'
 
 const menuRowUser = async (cart) => {
@@ -69,6 +71,11 @@ const menuRowUser = async (cart) => {
 
 			
     `
+}
+
+window.searchMenu = async () => {
+	const searchMenu = document.querySelector('.dashboard-action .form-search-menu input').value
+	renderSearchMenu(await searchCart(searchMenu))
 }
 
 export { menuRowUser }
