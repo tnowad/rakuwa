@@ -14,12 +14,12 @@
 				"price": "90000",
 				"rating": 5,
 				"title": "Thịt Heo",
-				"quantity": 1
+				"quantity": 3
 			}
 		],
 		"address": "Bình Chánh, Việt Nam",
 		"status": "Đang chờ",
-		"total": 90000
+		"total": 270000
 	},
 	{
 		"id": 1,

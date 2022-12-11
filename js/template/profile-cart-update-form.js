@@ -47,4 +47,4 @@ window.updateCart = async (form, cartId) => {
 	location.reload()
 }
 
-export { cartForm }
+export { cartForm,productRow }

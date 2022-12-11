@@ -3,7 +3,6 @@ const render = async () => {
 	let userMenu = document.querySelector('.user-menu.dropdown-content')
 	const loginStatus = await checkLogin()
 	if (loginStatus) {
-		console.log('run')
 		userMenu.innerHTML = /* html */ `
             <li><a href="/pages/profile.html">Thông tin cá nhân</a></li>
             ${
