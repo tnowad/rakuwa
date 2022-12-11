@@ -29,8 +29,10 @@ const render = async () => {
 const renderForm = async () => {
 	const tableDashboardMenu = document.querySelector('.dashboard-table-user',)
 	let carts = await getCarts()
+	carts.sort((a, b) => {
+		return new Date(b.time) - new Date(a.time)
+	})
 	carts = carts.filter((cart) => cart.status == 'Đang chờ')
-
 	tableDashboardMenu.innerHTML += await carts.reduce(
 		async (previousValue, currentValue) => {
 			previousValue = await previousValue
@@ -43,4 +45,4 @@ const renderForm = async () => {
 render() // statistical
 renderForm() //table
 
-export { render,renderForm }
+export { render, renderForm }

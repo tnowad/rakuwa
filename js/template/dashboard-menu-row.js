@@ -38,17 +38,6 @@ const menuRowUser = async (cart) => {
 						<td>${cart.time}</td>
 						<td>${new Intl.NumberFormat('ja-JP').format(cart.total)}</td>
 						<td>${cart.status}</td>
-						<td>
-							<button onclick="
-										this
-											.parentElement
-											.parentElement
-											.parentElement
-											.querySelector('.table-item-bottom')
-											.classList
-											.toggle('active')" class="fas fa-edit"></button>
-							<button onclick="" class="fa fa-trash"></button>
-						</td>
 					</tr>
 					<tr>
 						<td class="table-item-bottom" colspan="6">
