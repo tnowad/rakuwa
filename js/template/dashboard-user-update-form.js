@@ -83,7 +83,11 @@ window.updateUser = async (form, userId) => {
 			image: await convertBase64(form.querySelector('#image').files[0]),
 		}
 	} catch {}
-	
+	var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	if (!validRegex.test(user.email)) { 
+		alert("Email không chính xác")
+		return
+	}
 	if (
 		user.fullName == "" ||
 		user.dateOfBirth == null ||

@@ -34,7 +34,11 @@ window.addUserToDashboard = async () => {
 			),
 		}
 	} catch {}
-
+		var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	if (!validRegex.test(user.email)) { 
+		alert("Email không chính xác")
+		return
+	}
 	if (
 		user.fullName == "" ||
 		user.dateOfBirth == null ||
