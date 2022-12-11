@@ -5,7 +5,6 @@ var optionForm = document.querySelector('.content-body .form-group-product')
 
 window.openForm = async () => {
 	optionForm.style = 'display: inline'
-	optionForm.style.transition = 'all 5s ease-in-out'
 }
 window.cancelForm = async () => {
 	optionForm.style = 'display: none'

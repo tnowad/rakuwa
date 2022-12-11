@@ -15,8 +15,14 @@
 }
 
 .admin-profile {
+	position: fixed;
 	margin-left: 30px;
 	margin-top: 15px;
+}
+
+.sidebar-nav {
+	position: fixed;
+	top: 250px;
 }
 
 .dashboard-action form {
