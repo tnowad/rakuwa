@@ -145,6 +145,14 @@
 	grid-row-gap: 0px;
 }
 
+.dashboard-table-product
+{
+	display: none;
+}
+
+.active {
+	display: inline;
+}
 .form-action .group-form-option {
 	margin: 10px;
 }
@@ -344,4 +352,15 @@
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid rgba(124, 124, 124, 0.342);
+}
+
+.table-item .table-item-top .fa-eye{
+	border-radius:5px ;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.table-item .table-item-top .fa-eye:hover{
+	background-color:rgba(148, 148, 148, 0.788);
+	transition: all 0.3s linear;
 }

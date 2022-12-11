@@ -39,6 +39,9 @@ const cart = (product) => {
         `
 }
 
+
+
+
 window.removeProduct = removeProduct
 window.updateCart = updateCart
 window.addProductIdToCart = addProductIdToCart

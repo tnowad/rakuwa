@@ -18,7 +18,7 @@ const cartRow = async (cart) => {
 								.parentElement
 								.parentElement
 								.parentElement
-								.querySelector('.table-item-bottom')
+								.querySelector('.table-item-top')
 								.classList
 								.toggle('active')"
 						class="fa-duotone fa-eye"
