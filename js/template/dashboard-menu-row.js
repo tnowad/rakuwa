@@ -55,26 +55,4 @@ const menuRowUser = async (cart) => {
     `
 }
 
-const renderProduct = async (cart) => { 
-	 for (let i = 0; i < cart.cart.length; i++) {
-		const product = await getProductById(cart.cart[i].id)
-		console.log(product.img)
-		menuRowProduct(product)
-	} 
-}
-
-const menuRowProduct = async (product) => {
-		return `
-			 <tbody class="table-item">
-				<tr class="table-item-top">
-					<td>${product.id}</td>
-					<td>${product.title}</td>
-					<td><img src="${product.image}" alt=""></td>
-					<td>${product.amount}</td>
-					<td>${new Intl.NumberFormat('ja-JP').format(product.price)} VNĐ</td>
-				</tr>
-			</tbody>        
-		`
-}
-
 export { menuRowUser }
