@@ -53,7 +53,7 @@ const renderSearchMenu = async (cartSearch) => {
 		Promise.resolve(''),
 	)
 }
-render() // statistical
 renderForm() //table
+render() // statistical
 
 export { render, renderForm,renderSearchMenu }
