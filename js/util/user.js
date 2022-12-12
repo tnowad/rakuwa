@@ -44,4 +44,5 @@ const getUserBySearch = async (userSearch) => {
 	)
 }
 
+
 export { updateUser, getUserById, getUserBySearch, removeUser, addUser }
