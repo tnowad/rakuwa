@@ -50,7 +50,22 @@ let productDetail = (product) => /* html */ `
 const commentRow = async (comment) => {
     const user = await getUserById(comment.userId)
     if(user == undefined) return ''
-    comment.time = await handleTime(comment)
+    let time = await handleTime(comment)
+    let timeUnit = ''
+    if (time > 60) {
+        time = Math.floor(time / 60)
+        timeUnit = ' giờ'
+    }
+    else if (time > 60 * 24) {
+        time = Math.floor(time/(60*24))
+        timeUnit = ' ngày'
+    }
+    else if (time > 60 * 24 * 30) {
+        time = Math.floor(time/(60*24*30))
+        timeUnit ='ngày'
+        timeUnit = ' tháng'
+    }
+    else timeUnit = ' phút'
     return `
     <div class="comment">
 							<div class="comment-top">
@@ -74,7 +89,7 @@ const commentRow = async (comment) => {
 								<a href="" class="comment-like"
 									><i class="fas fa-thumbs-up"></i> Thích</a
 								>
-								<a>hơn ${comment.time} phút trước</a>
+								<a>hơn ${time} ${timeUnit} trước</a>
 							</div>
 						</div>`
 }
