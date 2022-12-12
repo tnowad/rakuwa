@@ -141,10 +141,10 @@
 			<div class="container">
 				<div class="product-details-top"></div>
 				<div class="product-details-bottom">
-					<div class="product-comments">
+					<div class="product-comments">	
 						<div class="comment">
 							<div class="comment-top">
-								<a class="comment-name">Quách Tĩnh</a>
+								<a class="comment-name">Hoàng Gia Bảo</a>
 								<a class="comment-rating">
 									<a class="product-rate">
 										<em class="fas fa-star active"></em
@@ -173,7 +173,7 @@
 						</div>
 						<div class="comment">
 							<div class="comment-top">
-								<a class="comment-name">Trương Vô Dụng</a>
+								<a class="comment-name">Nguyễn Minh Tuấn</a>
 								<a class="comment-rating">
 									<a class="product-rate">
 										<em class="fas fa-star active"></em
@@ -207,6 +207,8 @@
 							name=""
 							id=""
 							class="comment-input"
+							required
+							oninput="productComments()"
 						></textarea>
 						<div class="comment-form-box">
 							<input
@@ -215,6 +217,7 @@
 								id=""
 								placeholder="Nhập tên của bạn"
 								class="comment-form-name"
+								required
 							/>
 							<input
 								type="text"
@@ -222,6 +225,7 @@
 								id=""
 								placeholder="Nhập số điện thoại"
 								class="comment-form-name"
+								required
 							/>
 							<input
 								type="text"
@@ -229,12 +233,15 @@
 								id=""
 								placeholder="Nhập email"
 								class="comment-form-name"
+								required
 							/>
-							<input type="submit" value="Gửi" />
+							<input type="submit" value="Gửi" onclick="addProductComments()"/>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+	<script type="module" src="/js/util/product-detail.js"></script>
+	<script type="module" src="/js/template/product-detail.js"></script>
 	</body>
 </html>

@@ -24,7 +24,7 @@ window.addProductToDashboard = async () => {
 			image: await convertBase64(optionForm.querySelector('#image').files[0]),
 		}
 	} catch {}
-
+	
 	if (
 		product.title == "" ||
 		product.category == "" ||
