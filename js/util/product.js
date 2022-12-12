@@ -101,11 +101,7 @@ const getCategories = async () => {
 }
 
 const handleTime = async (comment) => { 
-	// const time = Date.now() - comment.time
 	const time = Math.floor((Date.now()-comment.time) / (1000*60))
-	console.log(time)
-	// if (comment.time > 60 * 60) return comment.time / 3600
-	// if (time > 60) return time/60
 	return time 
 }
 

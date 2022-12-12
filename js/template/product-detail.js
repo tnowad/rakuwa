@@ -49,7 +49,7 @@ let productDetail = (product) => /* html */ `
 
 const commentRow = async (comment) => {
     const user = await getUserById(comment.userId)
-    if(user == undefined) return ''
+    if (user == undefined) return ''
     let time = await handleTime(comment)
     let timeUnit = ''
     if (time > 60) {
@@ -57,8 +57,12 @@ const commentRow = async (comment) => {
         timeUnit = ' giờ'
     }
     else if (time > 60 * 24) {
-        time = Math.floor(time/(60*24))
+        time = Math.floor(time / (60 * 24))
         timeUnit = ' ngày'
+    }
+    else if (time > 60 * 24 * 7) {
+        time = Math.floor(time / (60 * 24 * 7))
+        timeUnit =' tuần'
     }
     else if (time > 60 * 24 * 30) {
         time = Math.floor(time/(60*24*30))
@@ -99,7 +103,6 @@ window.addProductComments = async () => {
     let { currentUser } = await getDataFromLocal()
     const cartId = getParams()
     console.log(cartId)
-    console.log(commentText)
     let comment = {
         body: commentText,
         time: Date.now(),
@@ -117,7 +120,27 @@ const screenComment = async (comment) => {
 
 const newComments = async (comment) => {
     const user = await getUserById(comment.userId)
-    if(user == undefined) return ''
+    if (user == undefined) return ''
+    let time = await handleTime(comment)
+    let timeUnit = ''
+    if (time > 60) {
+        time = Math.floor(time / 60)
+        timeUnit = ' giờ'
+    }
+    else if (time > 60 * 24) {
+        time = Math.floor(time / (60 * 24))
+        timeUnit = ' ngày'
+    }
+    else if (time > 60 * 24 * 7) {
+        time = Math.floor(time / (60 * 24 * 7))
+        timeUnit =' tuần'
+    }
+    else if (time > 60 * 24 * 30) {
+        time = Math.floor(time/(60*24*30))
+        timeUnit ='ngày'
+        timeUnit = ' tháng'
+    }
+    else timeUnit = ' phút'
     return `
     <div class="comment">
 							<div class="comment-top">
@@ -141,7 +164,7 @@ const newComments = async (comment) => {
 								<a href="" class="comment-like"
 									><i class="fas fa-thumbs-up"></i> Thích</a
                                     >
-                                    <a>hơn ${ Date.now() - comment.time} phút trước</a>
+                                    <a>hơn ${ time } ${timeUnit} phút trước</a>
 							</div>
 						</div>`
 }
