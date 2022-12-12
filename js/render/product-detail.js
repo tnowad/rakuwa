@@ -10,7 +10,6 @@ const render = async () => {
 	const product = await getProductById(productId)
 
 	let productDetailsTop = document.querySelector('.product-details-top')
-	console.log('run')
 	renderHTML(productDetailsTop, productDetail(product))
 }
 
@@ -19,8 +18,7 @@ const renderComments = async () => {
 	let { comments } = await getDataFromLocal()
 	commentsTable.innerHTML += await comments.reduce( async (previousValue, currentValue) => {
 		previousValue = await previousValue
-		console.log(currentValue)
-		return previousValue +  commentRow(currentValue)
+		return previousValue +  await commentRow(currentValue)
 	},
 		Promise.resolve(''),
 	)
@@ -29,4 +27,4 @@ const renderComments = async () => {
 render()
 renderComments()
 
-window.addProductIdToCart = addProductIdToCart
+// window.addProductIdToCart = addProductIdToCart

@@ -2,8 +2,8 @@
     {
         "id":0,
         "productId":1,
-        "fullName":"Chinh",
-        "comments": "Thơm Ngon đến từng tế bào",
+        "userId":1,
+        "body": "Thơm Ngon đến từng tế bào",
         "time": "2022-12-07T09:39:57.556Z"
     }
 ]

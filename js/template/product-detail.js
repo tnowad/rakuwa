@@ -1,6 +1,8 @@
 import { getDataFromLocal } from '../util/local-data.js'
 import { createNewComment } from '../util/product-detail.js'
+import { handleTime } from '../util/product.js'
 import { getUserById } from '../util/user.js'
+import { getParams } from '../util/util.js'
 import { rate } from './rate.js'
 
 
@@ -48,6 +50,7 @@ let productDetail = (product) => /* html */ `
 const commentRow = async (comment) => {
     const user = await getUserById(comment.userId)
     if(user == undefined) return ''
+    comment.time = await handleTime(comment)
     return `
     <div class="comment">
 							<div class="comment-top">
@@ -71,7 +74,7 @@ const commentRow = async (comment) => {
 								<a href="" class="comment-like"
 									><i class="fas fa-thumbs-up"></i> Thích</a
 								>
-								<a>${comment.time}</a>
+								<a>hơn ${comment.time} phút trước</a>
 							</div>
 						</div>`
 }
@@ -79,13 +82,13 @@ const commentRow = async (comment) => {
 window.addProductComments = async () => {
     const commentText = document.querySelector('.comment-input').value
     let { currentUser } = await getDataFromLocal()
-    let { currentCart} = await getDataFromLocal()
-    console.log(currentUser)
+    const cartId = getParams()
+    console.log(cartId)
     console.log(commentText)
     let comment = {
-        comment: commentText,
+        body: commentText,
         time: Date.now(),
-        fullName: currentUser.fullName ,
+        userId: currentUser.id ,
         cartId: 1
     }
     createNewComment(comment)
@@ -98,10 +101,12 @@ const screenComment = async (comment) => {
 }
 
 const newComments = async (comment) => {
+    const user = await getUserById(comment.userId)
+    if(user == undefined) return ''
     return `
     <div class="comment">
 							<div class="comment-top">
-								<a class="comment-name">${comment.fullName}</a>
+								<a class="comment-name">${user.fullName}</a>
 								<a class="comment-rating">
 									<a class="product-rate">
 										<em class="fas fa-star active"></em
@@ -113,7 +118,7 @@ const newComments = async (comment) => {
 								</a>
 							</div>
 							<div class="comment-center">
-								<a class="comment-content">${comment.comment}</a
+								<a class="comment-content">${comment.body}</a
 								>
 							</div>
 							<div class="comment-bottom">
@@ -121,7 +126,7 @@ const newComments = async (comment) => {
 								<a href="" class="comment-like"
 									><i class="fas fa-thumbs-up"></i> Thích</a
                                     >
-                                    <a>hơn ${comment.time} phút trước</a>
+                                    <a>hơn ${ Date.now() - comment.time} phút trước</a>
 							</div>
 						</div>`
 }

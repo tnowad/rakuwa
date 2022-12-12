@@ -100,6 +100,13 @@ const getCategories = async () => {
 	return category
 }
 
+const handleTime = async (comment) => { 
+	comment.time = Date.now() - comment.time
+	console.log(comment.time)
+	if (comment.time > 60 * 60) return comment.time / 3600
+	if (comment.time > 60) return comment.time/60
+}
+
 export {
 	createProduct,
 	updateProduct,
@@ -108,4 +115,5 @@ export {
 	removeProduct,
 	getProductById,
 	getProductBySearch,
+	handleTime
 }
