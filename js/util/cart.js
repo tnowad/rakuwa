@@ -116,8 +116,9 @@ const getCartById = async (cartId) => {
 
 const getCartBySearch = async (cartSearch) => {
 	let { carts } = await getDataFromLocal()
+	console.log(cartSearch)
 	return carts.filter((cart) =>
-		cart.userId == cartSearch
+		cart.id == cartSearch
 	)
 }
 

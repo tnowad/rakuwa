@@ -9,7 +9,7 @@ const cartRow = async (cart) => {
 				<td>${cart.id}</td>
 				<td>${user.fullName}</td>
 				<td>${cart.time}</td>
-				<td>${cart.total} VNĐ</td>
+				<td>${ new Intl.NumberFormat('ja-JP').format(cart.total)} VNĐ</td>
 				<td>${cart.status}</td>
 				<td>
 					<button
@@ -18,7 +18,7 @@ const cartRow = async (cart) => {
 								.parentElement
 								.parentElement
 								.parentElement
-								.querySelector('.table-item-top')
+								.querySelector('.table-item-bottom')
 								.classList
 								.toggle('active')"
 						class="fa-duotone fa-eye"

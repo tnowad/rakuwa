@@ -1,4 +1,4 @@
-import { renderSearch } from '../render/dashboard-carts.js'
+import { render, renderSearch } from '../render/dashboard-carts.js'
 import { getCartById, getCartBySearch, updateCart } from '../util/cart.js'
 const productRow = (product) => {
 	return `
@@ -61,7 +61,8 @@ window.updateCart = async (form, cartId) => {
 }
 
 window.searchCart = async () => {
-	let valueSearchCart = document.querySelector('.form-search-cart #search-cart').value-1
+	let valueSearchCart = document.querySelector('.form-search-cart #search-cart').value
+	if (valueSearchCart == '') render() 
 	renderSearch(await getCartBySearch(valueSearchCart)) 
 }	
 
