@@ -28,6 +28,7 @@ const render = async () => {
 
 const renderForm = async () => {
 	const tableDashboardMenu = document.querySelector('.dashboard-table-user',)
+	tableDashboardMenu.innerHTML = ''
 	let carts = await getCarts()
 	carts.sort((a, b) => {
 		return new Date(b.time) - new Date(a.time)
