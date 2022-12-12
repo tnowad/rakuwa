@@ -100,6 +100,10 @@ const commentRow = async (comment) => {
 
 window.addProductComments = async () => {
     const commentText = document.querySelector('.comment-input').value
+    if (commentText == '') {
+        alert('Vui lòng nhập nội dung bình luận')
+        return
+    }
     let { currentUser } = await getDataFromLocal()
     const cartId = getParams()
     console.log(cartId)
