@@ -13,18 +13,28 @@
 	text-align: left;
 	margin: 15px 0 15px 15px;
 }
-
 .admin-profile {
 	position: fixed;
-	margin-left: 30px;
-	margin-top: 15px;
+	width: 300px;
+	text-align: center;
+	display: flex;
+	height: 200px;
+	justify-content: space-between;
+	flex-direction: column;
 }
-
+.left-sidebar {
+	color: #9faec1;
+	background-color: #1f2937 !important;
+}
 .sidebar-nav {
 	position: fixed;
-	top: 250px;
+	top: 300px;
+	width: 300px;
 }
-
+.sidebar-nav-item:hover {
+	color: white;
+	background-color: #1f2531;
+}
 .dashboard-action form {
 	margin-left: 10px;
 	border-radius: 20px;
@@ -48,7 +58,7 @@
 	width: 50px;
 	margin-right: 20px;
 	cursor: pointer;
-	border: 1px solid rgb(211, 211, 211);
+	/* border: 1px solid rgb(211, 211, 211); */
 	border-radius: 5px;
 }
 
@@ -65,7 +75,7 @@
 	padding: 10px;
 }
 
-.dashboard-action form input[type="submit"]:hover,
+.dashboard-action form input[type='submit']:hover,
 .dashboard-action button:hover {
 	background-color: rgb(185, 185, 185);
 	transition: all 0.3s linear;
@@ -96,7 +106,8 @@
 
 .sidebar-nav .active {
 	border-left: 5px solid black;
-	background: var(--green-light);
+	color: white;
+	background: #1f2531;
 }
 
 .table-item .table-item-top img {
@@ -129,7 +140,7 @@
 
 /*****************************************************************************     thêm sản phẩm       *****************************************************************/
 
-.form-group-product{
+.form-group-product {
 	display: none;
 }
 
@@ -145,8 +156,7 @@
 	grid-row-gap: 0px;
 }
 
-.dashboard-table-product
-{
+.dashboard-table-product {
 	display: none;
 }
 
@@ -268,7 +278,6 @@
 	height: 60%;
 	cursor: pointer;
 	border-radius: 5px;
-
 }
 
 .group-image {
@@ -324,10 +333,7 @@
 	transition: all 0.3s linear;
 }
 
-
 /********************************************************************** quản lí trang chủ ************************************************************************/
-
-
 
 .content-statistical {
 	display: flex;
@@ -345,28 +351,43 @@
 	flex-direction: column;
 }
 
-
-.dashboard-receipt{
+.dashboard-receipt {
 	margin: 10px;
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid rgba(124, 124, 124, 0.342);
 }
 
-.table-item .table-item-top .fa-eye{
-	border-radius:5px ;
+.table-item .table-item-top .fa-eye {
+	border-radius: 5px;
 	padding: 10px;
 	cursor: pointer;
 }
 
-.table-item .table-item-top .fa-eye:hover{
-	background-color:rgba(148, 148, 148, 0.788);
+.table-item .table-item-top .fa-eye:hover {
+	background-color: rgba(148, 148, 148, 0.788);
 	transition: all 0.3s linear;
 }
-
 
 /******************************************************************** Quản lí đơn hàng **********************************************************************/
 
 .table-item-bottom {
 	display: inline;
+}
+
+.right-content {
+	background: #f6f7fb;
+}
+
+.dashboard-action form {
+	border-radius: 3px;
+	background-color: white;
+}
+.dashboard-action form input {
+	border: none;
+}
+button[onclick]:hover,
+.dashboard-action form input[type='submit']:hover {
+	color: #f6f7fb;
+	background: #222936 !important;
 }
