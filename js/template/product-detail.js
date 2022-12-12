@@ -49,6 +49,7 @@ let productDetail = (product) => /* html */ `
 
 const commentRow = async (comment) => {
     const user = await getUserById(comment.userId)
+    if (comment.cartId != getParams('id')) return
     if (user == undefined) return ''
     let time = await handleTime(comment)
     let timeUnit = ''
@@ -105,13 +106,13 @@ window.addProductComments = async () => {
         return
     }
     let { currentUser } = await getDataFromLocal()
-    const cartId = getParams()
+    const cartId = getParams('id')
     console.log(cartId)
     let comment = {
         body: commentText,
         time: Date.now(),
         userId: currentUser.id ,
-        cartId: 1
+        cartId: cartId
     }
     createNewComment(comment)
     screenComment(comment)
