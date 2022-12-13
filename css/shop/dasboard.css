@@ -138,6 +138,8 @@
 	padding-bottom: 30px;
 }
 
+
+
 /*****************************************************************************     thêm sản phẩm       *****************************************************************/
 
 .form-group-product {
@@ -146,7 +148,7 @@
 
 /***************************************************************************** css js quản lí sản phẩm **************************************************************************/
 
-.table-item .table-item-bottom .form-action {
+.table-item .table-item-bottom .form-group-product {
 	text-align: start;
 	padding: 10px;
 	display: grid;
@@ -241,20 +243,32 @@
 
 /******************************************************************* css quản lí user *****************************************************************************/
 
-.form-group-user {
+.table-item .table-item-bottom .form-action {
+	text-align: start;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: repeat(1, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+
+/* .form-group-user {
 	margin-top: 10%;
-	/* display: grid; */
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 0px;
 	grid-row-gap: 20px;
-}
+} */
 
 .group-form-option-user {
 	margin: 10px;
+	width: 100%;
 }
 
 .group-form-option-user input {
 	height: 50%;
+	border: 0.5px solid rgb(128, 128, 128);
 }
 
 .group-fullName {
@@ -296,7 +310,7 @@
 
 .group-status {
 	grid-area: 3 / 1 / 4 / 2;
-	width: 40%;
+	width: 70%;
 	height: 60%;
 	cursor: pointer;
 	border-radius: 5px;
@@ -414,5 +428,8 @@ button[onclick]:hover,
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid;
+	border: 1px solid rgba(134, 134, 134, 0.308);
+	border-radius: 3px;
+	box-sizing: border-box;
+	padding:10px;
 }

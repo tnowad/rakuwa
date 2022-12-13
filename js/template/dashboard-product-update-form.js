@@ -10,11 +10,11 @@ const productForm = (product) => {
 		<form class="form-action" onsubmit="return false">
 			<div class="group-form-option edit-name" >
 				<label for="">Tên sản phẩm</label>
-				<input type="text" id="title" value="${product.title}">
+				<input type="text" id="title" value="${product.title} " required>
 			</div>
 			<div class="group-form-option edit-tag">
 				<label  for="">Thẻ</label>
-				<input type="text" name="" list="category-list" id="category" value="${product.category}">
+				<input type="text" name="" list="category-list" id="category" value="${product.category}" required>
 				<datalist id="category-list">
 			</div>
 			<div class="group-form-option edit-picture">
@@ -23,15 +23,15 @@ const productForm = (product) => {
 			</div>
 			<div class="group-form-option edit-amount">
 				<label for="">Số lượng </label>
-				<input type="text" name="" id="amount" value="${product.amount}">
+				<input type="text" name="" id="amount" value="${product.amount}" required>
 			</div>
 			<div class="group-form-option edit price">
 					<label for="">Giá</label>
-					<input type="text" name="" id="price" value="${product.price}">
+					<input type="text" name="" id="price" value="${product.price}" required>
 			</div>
 			<div class="group-form-option edit-describe">
 				<label for="">Miêu tả</label>
-				<textarea id="description" rows="4" cols="50">${product.description}</textarea>
+				<textarea id="description" rows="4" cols="50" required>${product.description}</textarea>
 				</div>
 			<div class="group-form-option edit-option">
 				<button id="cancel">Hủy</button>

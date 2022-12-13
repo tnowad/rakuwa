@@ -6,15 +6,15 @@ const userForm = (user) => {
 	<form class="form-action form-group-user" onsubmit="return false">
 			<div class="group-form-option-user group-fullName" >
 				<label for="" id="fullName-Text" >Họ tên</label>
-				<input type="text" id="fullName" value="${user.fullName}">
+				<input type="text" id="fullName" value="${user.fullName}" required>
 			</div>
 			<div class="group-form-option-user group-dateOfBirth">
 				<label for="">Ngày sinh </label>
-				<input type="date" name="" id="dateOfBirth" value="${user.dateOfBirth}">
+				<input type="date" name="" id="dateOfBirth" value="${user.dateOfBirth}" required>
 			</div>
 			<div class="group-form-option-user group-email">
 				<label for="">Email</label>
-				<input type="text" name="" id="email" value="${user.email}">
+				<input type="email" name="" id="email" value="${user.email}" required>
 				</div>
 			<div class="group-form-option-user group-image">
 				<label for="">Ảnh</label>
@@ -22,11 +22,11 @@ const userForm = (user) => {
 			</div>
 			<div class="group-form-option-user group-phoneNumber">
 				<label for="">Số điện thoại</label>
-				<input type="text" name="" id="phone" value="${user.phoneNumber}">
+				<input type="number" name="" id="phone" value="${user.phoneNumber}" required >   
 			</div>
 			<div class="group-form-option-user group-gender">
 				<label for="">Giới tính </label>
-				<select name="gender" id="gender" value="${user.gender} selected disabled hidden" >
+				<select name="gender" id="gender" value="${user.gender} selected disabled hidden" required>
 					<option value="Nam">Nam</option>
 					<option value="Nữ">Nữ</option>
 					<option value="Khác">Khác</option>
@@ -34,11 +34,11 @@ const userForm = (user) => {
 			</div>
 			<div class="group-form-option-user group-address">
 				<label for="">Địa chỉ</label>
-				<textarea id="address" name="address" rows="4" cols="50">${user.address}</textarea>
+				<textarea id="address" name="address" rows="4" cols="50" required="" >${user.address}</textarea>
 			</div>
 			<div  class="group-form-option-user group-status" >
-			<label for="">Trạng thái người dùng </label>
-			<select name="status" id ="status" > 
+			<p> Trạng thái người dùng
+			<select name="status" id ="status" required="" > 
 				<option value="active">active</option>
 				<option value="ban">ban</option>
 				<option value="deleted">deleted</option>
@@ -46,14 +46,14 @@ const userForm = (user) => {
 			</div>
 			<div class="group-form-option-user group-role"> 
 				<label>Quyền</label>
-				<select name="role" value="${user.role}" id="role">
+				<select name="role" value="${user.role}" id="role"required="" >
 					<option  value="admin">admin</option>
 					<option value="user">user</option>
  				</select>
 			</div>
 			<div class="group-form-option-user group-password" >
 				<label for="">Mật khẩu</label>
-				<input type="text" id="password" value="${user.password}">
+				<input type="password" id="password" value="${user.password}">
 			</div>
 			<div class="group-form-option-user group-option-user">
 				<button id="cancel">Hủy</button>
@@ -64,7 +64,11 @@ const userForm = (user) => {
 }
 
 window.updateUser = async (form, userId) => {
-	let user = await getUserById(userId)
+	let user = await getUserById(userId) 
+	if (!user.phoneNumber.match("(84|0[3|5|7|8|9])+([0-9]{8})\b")) {
+		alert("Số điện thoại không chính xác")
+		return ''
+	}
 	user = {
 		...user,
 		fullName: form.querySelector('#fullName').value,
