@@ -23,11 +23,13 @@ const render = async () => {
 	totalPrice.innerHTML =
 		new Intl.NumberFormat('ja-JP').format(turnover) + ' VNĐ'
 	amountProduct.innerHTML = products.length
-	amountUser.innerHTML = users.length
+	amountUser.innerHTML = users.filter(
+		(user) => user.status != 'deleted',
+	).length
 }
 
 const renderForm = async () => {
-	const tableDashboardMenu = document.querySelector('.dashboard-table-user',)
+	const tableDashboardMenu = document.querySelector('.dashboard-table-user')
 	tableDashboardMenu.innerHTML = ''
 	let carts = await getCarts()
 	carts.sort((a, b) => {
@@ -43,9 +45,11 @@ const renderForm = async () => {
 	)
 }
 
-const renderSearchMenu = async (cartSearch) => { 
-	const tableDashboardSearchMenu = document.querySelector('.dashboard-table-user')
-	tableDashboardSearchMenu.innerHTML = ""
+const renderSearchMenu = async (cartSearch) => {
+	const tableDashboardSearchMenu = document.querySelector(
+		'.dashboard-table-user',
+	)
+	tableDashboardSearchMenu.innerHTML = ''
 	tableDashboardSearchMenu.innerHTML += await cartSearch.reduce(
 		async (previousValue, currentValue) => {
 			previousValue = await previousValue
@@ -57,4 +61,4 @@ const renderSearchMenu = async (cartSearch) => {
 renderForm() //table
 render() // statistical
 
-export { render, renderForm,renderSearchMenu }
+export { render, renderForm, renderSearchMenu }
