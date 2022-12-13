@@ -129,22 +129,66 @@
 					<div class="content dashboard-home">
 						<h2 class="content-title">Trang chủ</h2>
 						<div class="form-statistical">
+							<style>
+								.content-statistical {
+									color: #495057;
+								}
+								.group-content-statistical {
+									background: white;
+									position: relative;
+									box-sizing: border-box;
+									padding: 10px;
+									height: unset;
+								}
+								.content-statistical i {
+									border-radius: 50%;
+									padding: 10px;
+									font-size: 30px;
+									display: flex;
+									height: 50px;
+									width: 50px;
+									justify-content: center;
+									align-items: center;
+								}
+								.left-statistical i {
+									background-color: var(--green-light);
+									color: var(--green);
+								}
+								.center-statistical i {
+									background-color: var(--yellow-light);
+									color: var(--yellow);
+								}
+								.right-statistical i {
+									background-color: var(--blue-light);
+									color: var(--blue);
+								}
+							</style>
 							<div class="content-statistical">
 								<div
 									class="group-content-statistical left-statistical"
 								>
+									<i
+										class="fa-regular fa-money-check-dollar-pen"
+									></i>
+
 									<h3>Tổng doanh thu</h3>
 									<span id="turnover"></span>
 								</div>
 								<div
 									class="group-content-statistical center-statistical"
 								>
+									<i
+										class="fa-regular fa-credit-card-blank"
+									></i>
 									<h3>Tổng số sản phẩm</h3>
 									<span id="amountProduct"></span>
 								</div>
 								<div
 									class="group-content-statistical right-statistical"
 								>
+									<i
+										class="fa-regular fa-users-rectangle"
+									></i>
 									<h3>Người dùng</h3>
 									<span id="amountUser"></span>
 								</div>
@@ -153,19 +197,32 @@
 						<div class="content-body" style="padding: 15px">
 							<div class="dashboard-action">
 								<!-- search and add -->
-								<form action="" class="form-search-menu" onsubmit="return false">
-									<input type="text" name="name"  oninput="searchMenu()"/>
-									<input type="submit" id="menu-search" value="Tìm kiếm" />
+								<form
+									action=""
+									class="form-search-menu"
+									onsubmit="return false"
+								>
+									<input
+										type="text"
+										name="name"
+										oninput="searchMenu()"
+									/>
+									<input
+										type="submit"
+										id="menu-search"
+										value="Tìm kiếm"
+									/>
 								</form>
 								<!-- <button id="button-add-product">Thêm</button> -->
 							</div>
 							<div
 								class="dashboard-table-cart"
-								style="border-radius: 5px;">
+								style="border-radius: 5px"
+							>
 								<div
-								class="dashboard-table dashboard-table-user"
+									class="dashboard-table dashboard-table-user"
 								>
-								<h2>Những đơn hàng gần đây</h2>
+									<h2>Những đơn hàng gần đây</h2>
 								</div>
 							</div>
 						</div>
@@ -204,10 +261,7 @@
 						<div class="content-body">
 							<div class="dashboard-action">
 								<!-- search and add -->
-								<form
-									class="form-search-product"
-									action=""
-								>
+								<form class="form-search-product" action="">
 									<input
 										type="text"
 										name="name"
@@ -289,7 +343,7 @@
 										rows="4"
 										cols="50"
 									>
-</textarea required="">
+									</textarea required="">
 							</div>
 							<div class="group-form-option edit-option">
 								<button id="cancel" onclick="cancelForm()" >Hủy</button>
@@ -501,8 +555,11 @@
 			type="module"
 			src="/js/template/dashboard-user-option.js"
 		></script>
-		<script type="module" src="/js/render/dashboard-cart-option.js
-		"></script>
+		<script
+			type="module"
+			src="/js/render/dashboard-cart-option.js
+		"
+		></script>
 		<script type="module" src="/js/render/header-account.js"></script>
 	</body>
 </html>

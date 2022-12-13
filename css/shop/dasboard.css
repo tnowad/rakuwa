@@ -356,7 +356,7 @@
 }
 
 .group-content-statistical {
-	border: 1px solid rgba(124, 124, 124, 0.342);
+	/* border: 1px solid rgba(124, 124, 124, 0.342); */
 	height: 100px;
 	width: 200px;
 	border-radius: 10px;
