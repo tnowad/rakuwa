@@ -104,6 +104,19 @@ window.onload = async () => {
 			}
 		} catch (error) {}
 
+		if (currentUser.fullName == '' ||
+			currentUser.email == '' ||
+			currentUser.password == '' ||
+			currentUser.address == '' ||
+			currentUser.gender == '' ||
+			currentUser.phoneNumber == '' ||
+			currentUser.dateOfBirth == ''
+		)
+		{
+			alert(' Không được để trống')
+			return
+		}
+
 		updateUser(currentUser)
 		localStorage.setItem('currentUser', JSON.stringify(currentUser))
 		location.reload()
