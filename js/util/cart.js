@@ -1,6 +1,6 @@
 import { getDataFromLocal } from './local-data.js'
 import { getProductById } from './product.js'
-import {  loginRequired } from './account.js'
+import { loginRequired } from './account.js'
 import { createNewId } from './util.js'
 import { getUserById, getUserBySearch } from './user.js'
 
@@ -117,21 +117,24 @@ const getCartById = async (cartId) => {
 const getCartBySearch = async (cartSearch) => {
 	let { carts } = await getDataFromLocal()
 	console.log(cartSearch)
-	return carts.filter((cart) =>
-		cart.id == cartSearch
-	)
+	return carts.filter((cart) => cart.id == cartSearch)
 }
 
 const searchCart = async (searchCart) => {
 	let { carts } = await getDataFromLocal()
-	
+
 	carts = carts.filter((cart) => cart.status == 'Đang chờ')
 	let user = await getUserBySearch(searchCart)
-	
-	return carts.filter((cart) => 	
-		cart.userId == searchCart ||
-		user.id == cart.userId
+
+	return carts.filter(
+		(cart) => cart.userId == searchCart || user.id == cart.userId,
 	)
+}
+
+const removeCartById = async (cartId) => {
+	let { carts } = await getDataFromLocal()
+	carts = carts.filter((cart) => cart.id != cartId)
+	localStorage.setItem('carts', JSON.stringify(carts))
 }
 
 export {
@@ -148,4 +151,5 @@ export {
 	getCartById,
 	getCartBySearch,
 	searchCart,
+	removeCartById,
 }

@@ -1,5 +1,6 @@
 import { cartForm } from '../template/dashboard-cart-update-form.js'
 import { getUsers } from '../util/account.js'
+import { removeCartById } from '../util/cart.js'
 const cartRow = async (cart) => {
 	const users = await getUsers({ id: cart.userId })
 	const user = users[0]
@@ -9,7 +10,7 @@ const cartRow = async (cart) => {
 				<td>${cart.id}</td>
 				<td>${user.fullName}</td>
 				<td>${cart.time}</td>
-				<td>${ new Intl.NumberFormat('ja-JP').format(cart.total)} VNĐ</td>
+				<td>${new Intl.NumberFormat('ja-JP').format(cart.total)} VNĐ</td>
 				<td>${cart.status}</td>
 				<td>
 					<button
@@ -24,6 +25,9 @@ const cartRow = async (cart) => {
 						class="fa-duotone fa-eye"
 					></button >
 					<button
+						onclick="
+							removeCart(${cart.id})
+						"
 						class="fa fa-trash"
 					></button>
 				</td>
@@ -38,5 +42,12 @@ const cartRow = async (cart) => {
 			</tr>
 		</tbody>
     `
+}
+window.removeCart = async (cartId) => {
+	if (confirm('Bạn có muốn xóa đơn hàng này không ?')) {
+		await removeCartById(cartId)
+		alert('Đã xóa đơn hàng này!')
+		location.reload()
+	}
 }
 export { cartRow }
