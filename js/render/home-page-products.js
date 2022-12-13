@@ -20,7 +20,6 @@ const renderShopArea = async () => {
 		price: price,
 		name: name,
 	}
-	console.log(option.category == null || option.name != null)
 	if (option.category != null || option.name != null) {
 		document.querySelector('.slideshow-banners').style.display = 'none'
 		document.querySelector('.offer-banners-area').style.display = 'none'
