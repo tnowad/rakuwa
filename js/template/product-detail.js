@@ -1,11 +1,10 @@
 import { getDataFromLocal } from '../util/local-data.js'
+import { addProductIdToCart } from '../util/cart.js'
 import { createNewComment } from '../util/product-detail.js'
 import { handleTime } from '../util/product.js'
 import { getUserById } from '../util/user.js'
 import { getParams } from '../util/util.js'
 import { rate } from './rate.js'
-
-
 
 let productDetail = (product) => /* html */ `
     <div class="product-details-top-right">
@@ -48,30 +47,26 @@ let productDetail = (product) => /* html */ `
 `
 
 const commentRow = async (comment) => {
-    const user = await getUserById(comment.userId)
-    if (comment.cartId != getParams('id')) return ''
-    if (user == undefined) return ''
-    let time = await handleTime(comment)
-    let timeUnit = ''
-    if (time > 60) {
-        time = Math.floor(time / 60)
-        timeUnit = ' giờ'
-    }
-    else if (time > 60 * 24) {
-        time = Math.floor(time / (60 * 24))
-        timeUnit = ' ngày'
-    }
-    else if (time > 60 * 24 * 7) {
-        time = Math.floor(time / (60 * 24 * 7))
-        timeUnit =' tuần'
-    }
-    else if (time > 60 * 24 * 30) {
-        time = Math.floor(time/(60*24*30))
-        timeUnit ='ngày'
-        timeUnit = ' tháng'
-    }
-    else timeUnit = ' phút'
-    return `
+	const user = await getUserById(comment.userId)
+	if (comment.cartId != getParams('id')) return ''
+	if (user == undefined) return ''
+	let time = await handleTime(comment)
+	let timeUnit = ''
+	if (time > 60) {
+		time = Math.floor(time / 60)
+		timeUnit = ' giờ'
+	} else if (time > 60 * 24) {
+		time = Math.floor(time / (60 * 24))
+		timeUnit = ' ngày'
+	} else if (time > 60 * 24 * 7) {
+		time = Math.floor(time / (60 * 24 * 7))
+		timeUnit = ' tuần'
+	} else if (time > 60 * 24 * 30) {
+		time = Math.floor(time / (60 * 24 * 30))
+		timeUnit = 'ngày'
+		timeUnit = ' tháng'
+	} else timeUnit = ' phút'
+	return `
     <div class="comment">
 							<div class="comment-top">
 								<a class="comment-name">${user.fullName}</a>
@@ -100,53 +95,49 @@ const commentRow = async (comment) => {
 }
 
 window.addProductComments = async () => {
-    const commentText = document.querySelector('.comment-input').value
-    if (commentText == '') {
-        alert('Vui lòng nhập nội dung bình luận')
-        return
-    }
-    let { currentUser } = await getDataFromLocal()
-    const cartId = getParams('id')
-    console.log(cartId)
-    let comment = {
-        body: commentText,
-        time: Date.now(),
-        userId: currentUser.id ,
-        cartId: cartId
-    }
-    createNewComment(comment)
-    screenComment(comment)
+	const commentText = document.querySelector('.comment-input').value
+	if (commentText == '') {
+		alert('Vui lòng nhập nội dung bình luận')
+		return
+	}
+	let { currentUser } = await getDataFromLocal()
+	const cartId = getParams('id')
+	console.log(cartId)
+	let comment = {
+		body: commentText,
+		time: Date.now(),
+		userId: currentUser.id,
+		cartId: cartId,
+	}
+	createNewComment(comment)
+	screenComment(comment)
 }
 
-const screenComment = async (comment) => { 
-    const tableComment = document.querySelector('.product-comments')
-    tableComment.innerHTML += await newComments(comment)
+const screenComment = async (comment) => {
+	const tableComment = document.querySelector('.product-comments')
+	tableComment.innerHTML += await newComments(comment)
 }
 
 const newComments = async (comment) => {
-    const user = await getUserById(comment.userId)
-    if (user == undefined) return ''
-    let time = await handleTime(comment)
-    let timeUnit = ''
-    if (time > 60) {
-        time = Math.floor(time / 60)
-        timeUnit = ' giờ'
-    }
-    else if (time > 60 * 24) {
-        time = Math.floor(time / (60 * 24))
-        timeUnit = ' ngày'
-    }
-    else if (time > 60 * 24 * 7) {
-        time = Math.floor(time / (60 * 24 * 7))
-        timeUnit =' tuần'
-    }
-    else if (time > 60 * 24 * 30) {
-        time = Math.floor(time/(60*24*30))
-        timeUnit ='ngày'
-        timeUnit = ' tháng'
-    }
-    else timeUnit = ' phút'
-    return `
+	const user = await getUserById(comment.userId)
+	if (user == undefined) return ''
+	let time = await handleTime(comment)
+	let timeUnit = ''
+	if (time > 60) {
+		time = Math.floor(time / 60)
+		timeUnit = ' giờ'
+	} else if (time > 60 * 24) {
+		time = Math.floor(time / (60 * 24))
+		timeUnit = ' ngày'
+	} else if (time > 60 * 24 * 7) {
+		time = Math.floor(time / (60 * 24 * 7))
+		timeUnit = ' tuần'
+	} else if (time > 60 * 24 * 30) {
+		time = Math.floor(time / (60 * 24 * 30))
+		timeUnit = 'ngày'
+		timeUnit = ' tháng'
+	} else timeUnit = ' phút'
+	return `
     <div class="comment">
 							<div class="comment-top">
 								<a class="comment-name">${user.fullName}</a>
@@ -169,10 +160,11 @@ const newComments = async (comment) => {
 								<a href="" class="comment-like"
 									><i class="fas fa-thumbs-up"></i> Thích</a
                                     >
-                                    <a>hơn ${ time } ${timeUnit} phút trước</a>
+                                    <a>hơn ${time} ${timeUnit} phút trước</a>
 							</div>
 						</div>`
 }
 
+window.addProductIdToCart = addProductIdToCart
 
-export { productDetail,screenComment,newComments,commentRow } 
+export { productDetail, screenComment, newComments, commentRow }

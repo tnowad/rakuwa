@@ -37,7 +37,7 @@ const userForm = (user) => {
 				<textarea id="address" name="address" rows="4" cols="50" required="" >${user.address}</textarea>
 			</div>
 			<div  class="group-form-option-user group-status" >
-			<p> Trạng thái người dùng
+			<p> Trạng thái người dùng </p>
 			<select name="status" id ="status" required="" > 
 				<option value="active">active</option>
 				<option value="ban">ban</option>
@@ -64,10 +64,14 @@ const userForm = (user) => {
 }
 
 window.updateUser = async (form, userId) => {
-	let user = await getUserById(userId) 
-	if (!user.phoneNumber.match("(84|0[3|5|7|8|9])+([0-9]{8})\b")) {
-		alert("Số điện thoại không chính xác")
-		return ''
+	let user = await getUserById(userId)
+	if (
+		!form
+			.querySelector('#phone')
+			.value.match('(84|0[3|5|7|8|9])+([0-9]{8})\b')
+	) {
+		alert('Số điện thoại không chính xác')
+		return false
 	}
 	user = {
 		...user,
@@ -87,26 +91,27 @@ window.updateUser = async (form, userId) => {
 			image: await convertBase64(form.querySelector('#image').files[0]),
 		}
 	} catch {}
-	var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-	if (!validRegex.test(user.email)) { 
-		alert("Email không chính xác")
+	var validRegex =
+		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+	if (!validRegex.test(user.email)) {
+		alert('Email không chính xác')
 		return
 	}
 	if (
-		user.fullName == "" ||
+		user.fullName == '' ||
 		user.dateOfBirth == null ||
-		user.email == "" ||
-		user.phoneNumber == "" ||
-		user.gender == "" ||
-		user.address == "" ||
-		user.status == "" ||
-        user.role == "" ||
-		user.password == "" ||
+		user.email == '' ||
+		user.phoneNumber == '' ||
+		user.gender == '' ||
+		user.address == '' ||
+		user.status == '' ||
+		user.role == '' ||
+		user.password == '' ||
 		user.image == null
-		) {
-			alert('Không được để trống')
-			return
-		} else {
+	) {
+		alert('Không được để trống')
+		return
+	} else {
 		updateUser(user)
 		location.reload()
 	}

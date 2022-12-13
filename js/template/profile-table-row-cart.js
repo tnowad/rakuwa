@@ -23,9 +23,6 @@ const cartRow = async (cart) => {
 								.toggle('active')"
 						class="fa-duotone fa-eye"
 					></button >
-					<button
-						class="fa fa-trash"
-					></button>
 				</td>
 			</tr>
 			<tr>
