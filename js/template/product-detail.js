@@ -49,7 +49,7 @@ let productDetail = (product) => /* html */ `
 
 const commentRow = async (comment) => {
     const user = await getUserById(comment.userId)
-    if (comment.cartId != getParams('id')) return
+    if (comment.cartId != getParams('id')) return ''
     if (user == undefined) return ''
     let time = await handleTime(comment)
     let timeUnit = ''
