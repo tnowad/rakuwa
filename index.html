@@ -195,7 +195,7 @@
 								padding: 20px;
 								box-shadow: 0px 0px 10px rgb(209, 209, 209);
 							}
-							.product-filter:is(:hover, :focus, :active) form {
+							.product-filter form.active {
 								display: block;
 							}
 							.product-filter input {
@@ -204,7 +204,10 @@
 							}
 						</style>
 						<a class="product-filter">
-							<i class="fa-light fa-filter"></i>
+							<i
+								class="fa-light fa-filter"
+								onclick="this.parentElement.querySelector('#product-filter-form').classList.toggle('active')"
+							></i>
 							<div class="drop-down">
 								<form id="product-filter-form">
 									<p>Tên sản phẩm</p>
