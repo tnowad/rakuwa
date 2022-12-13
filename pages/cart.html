@@ -14,11 +14,6 @@
 		<link rel="stylesheet" href="/css/shop/shop-area.css" />
 		<link rel="stylesheet" href="/css/shop/footer.css" />
 		<link rel="stylesheet" href="/css/shop/cart.css" />
-		<script
-			type="module"
-			src="/js/render/auto-update-cart-quantity.js"
-		></script>
-		<script type="module" src="/js/render/cart-detail.js"></script>
 	</head>
 
 	<body>
@@ -163,6 +158,26 @@
 				</div>
 			</div>
 		</section>
+		<style>
+			.cart-not-found {
+				text-align: center;
+				display: none;
+			}
+		</style>
+		<section class="cart-not-found">
+			<div class="container">
+				<img src="/img/cart-not-found.png" alt="" srcset="" />
+				<p>
+					Bạn chưa có gì trong giỏ hàng hết, thêm rồi quay lại sau
+					nhé!
+				</p>
+			</div>
+		</section>
 	</body>
 	<script type="module" src="/js/render/header-account.js"></script>
+	<script
+		type="module"
+		src="/js/render/auto-update-cart-quantity.js"
+	></script>
+	<script type="module" src="/js/render/cart-detail.js"></script>
 </html>

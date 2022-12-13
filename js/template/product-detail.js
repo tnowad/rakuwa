@@ -5,6 +5,7 @@ import { handleTime } from '../util/product.js'
 import { getUserById } from '../util/user.js'
 import { getParams } from '../util/util.js'
 import { rate } from './rate.js'
+import { loginRequired } from '../util/account.js'
 
 let productDetail = (product) => /* html */ `
     <div class="product-details-top-right">
@@ -95,6 +96,7 @@ const commentRow = async (comment) => {
 }
 
 window.addProductComments = async () => {
+	loginRequired()
 	const commentText = document.querySelector('.comment-input').value
 	if (commentText == '') {
 		alert('Vui lòng nhập nội dung bình luận')

@@ -10,11 +10,16 @@ const render = async () => {
 	await loginRequired()
 	const cartBody = document.querySelector('.cart-detail-body')
 	const currentCart = await getCurrentCart()
+	if (currentCart.length == 0) {
+		document.querySelector('.cart-detail').style.display = 'none'
+		document.querySelector('.cart-not-found').style.display = 'block'
+
+	}
 	cartBody.innerHTML = /* html */ `<tr>
-							<th class="group-form group-form-image">
-								Hình ảnh
-							</th>
-							<th class="group-form group-form-name">
+		<th class="group-form group-form-image">
+			Hình ảnh
+		</th>
+		<th class="group-form group-form-name">
 								Tên sản phẩm
 							</th>
 							<th class="group-form group-form-price">Giá</th>
