@@ -386,8 +386,33 @@
 .dashboard-action form input {
 	border: none;
 }
+
+button[onclick],
+.dashboard-action form input[type='submit'] {
+	background: none;
+	min-width: 30px;
+	min-height: 30px;
+}
+
 button[onclick]:hover,
 .dashboard-action form input[type='submit']:hover {
 	color: #f6f7fb;
+	border-radius: 5px;
 	background: #222936 !important;
+	display: inline-block;
+	min-width: 30px;
+	min-height: 30px;
+}
+.dashboard-action input[type='submit'] {
+	background: #ececec !important;
+}
+.dashboard-action button {
+	background: #ffffff !important;
+}
+
+.table-item-bottom input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid;
 }
