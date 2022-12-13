@@ -34,8 +34,7 @@ const productForm = (product) => {
 				<textarea id="description" rows="4" cols="50" required>${product.description}</textarea>
 				</div>
 			<div class="group-form-option edit-option">
-				<button id="cancel">Hủy</button>
-				<button id="submit" onclick="updateProduct(this.parentElement.parentElement, ${product.id})" >Hoàn tất</button>
+				<button id="submit" onclick="updateProduct(this.parentElement.parentElement, ${product.id})" >Lưu thay đổi</button>
 			</div>
 		</form>
     `

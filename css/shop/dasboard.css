@@ -431,3 +431,11 @@ button[onclick]:hover,
 	box-sizing: border-box;
 	padding: 10px;
 }
+.edit-option,
+.group-form-option-user.group-option-user,
+.group-form-option.edit-option {
+	text-align: end;
+}
+.table-item-bottom.active {
+	background-color: #fafafabd;
+}

@@ -22,7 +22,7 @@ const userForm = (user) => {
 			</div>
 			<div class="group-form-option-user group-phoneNumber">
 				<label for="">Số điện thoại</label>
-				<input type="number" name="" id="phone" value="${user.phoneNumber}" required >   
+				<input type="number" name="" id="phone" value="${user.phoneNumber}" required >
 			</div>
 			<div class="group-form-option-user group-gender">
 				<label for="">Giới tính </label>
@@ -30,7 +30,7 @@ const userForm = (user) => {
 					<option value="Nam">Nam</option>
 					<option value="Nữ">Nữ</option>
 					<option value="Khác">Khác</option>
- 			</select>
+			</select>
 			</div>
 			<div class="group-form-option-user group-address">
 				<label for="">Địa chỉ</label>
@@ -38,26 +38,25 @@ const userForm = (user) => {
 			</div>
 			<div  class="group-form-option-user group-status" >
 			<p> Trạng thái người dùng </p>
-			<select name="status" id ="status" required="" > 
+			<select name="status" id ="status" required="" >
 				<option value="active">active</option>
 				<option value="ban">ban</option>
 				<option value="deleted">deleted</option>
-			 </select>			
+			</select>
 			</div>
-			<div class="group-form-option-user group-role"> 
+			<div class="group-form-option-user group-role">
 				<label>Quyền</label>
 				<select name="role" value="${user.role}" id="role"required="" >
 					<option  value="admin">admin</option>
 					<option value="user">user</option>
- 				</select>
+				</select>
 			</div>
 			<div class="group-form-option-user group-password" >
 				<label for="">Mật khẩu</label>
 				<input type="password" id="password" value="${user.password}">
 			</div>
 			<div class="group-form-option-user group-option-user">
-				<button id="cancel">Hủy</button>
-				<button id="submit"  onclick="updateUser(this.parentElement.parentElement, ${user.id})" >Hoàn tất</button>
+				<button id="submit"  onclick="updateUser(this.parentElement.parentElement, ${user.id})" >Lưu thay đổi</button>
 			</div>
 		</form>
 	`
