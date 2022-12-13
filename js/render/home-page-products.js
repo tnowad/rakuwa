@@ -13,13 +13,20 @@ const renderShopArea = async () => {
 		high: parseInt(getParams('priceHigh')) || 999999999,
 	}
 	// todo: use in search encodeURIComponent()
-	const name = decodeURIComponent(getParams('name'))
+	const name = getParams('name')
 
-	let products = await getProducts({
+	const option = {
 		category: category,
 		price: price,
 		name: name,
-	})
+	}
+	console.log(option.category == null || option.name != null)
+	if (option.category != null || option.name != null) {
+		document.querySelector('.slideshow-banners').style.display = 'none'
+		document.querySelector('.offer-banners-area').style.display = 'none'
+	}
+	console.log(option)
+	let products = await getProducts(option)
 	const productPagination = document.querySelector('.product-pagination')
 
 	const currentPage = getParams('page') ? getParams('page') : 1
