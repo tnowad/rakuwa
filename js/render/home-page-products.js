@@ -24,7 +24,6 @@ const renderShopArea = async () => {
 		document.querySelector('.slideshow-banners').style.display = 'none'
 		document.querySelector('.offer-banners-area').style.display = 'none'
 	}
-	console.log(option)
 	let products = await getProducts(option)
 	const productPagination = document.querySelector('.product-pagination')
 

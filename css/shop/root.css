@@ -68,3 +68,8 @@ a {
 body > * > .container {
 	width: min(100%, 1200px) !important;
 }
+*[onclick],
+button,
+input[type='submit'] {
+	cursor: pointer;
+}
