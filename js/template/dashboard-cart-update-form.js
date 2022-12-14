@@ -37,9 +37,9 @@ const cartForm = (cart) => {
 		<form onsubmit="return false">
 			<div class="group-form-edit edit-status">
 				<label for="">Trạng thái đơn hàng</label>
-				<select type="text" name="" id="status" value="${
-					cart.status
-				} selected disabled hidden">
+				<select type="text" name="" id="status" value="${cart.status}" ${
+		cart.status != 'Thành công' ? '' : 'disabled'
+	} >
 					<option value="Thành công">Thành công</option>
 					<option value="Thất bại">Thất bại</option>
 					<option value="Đang chờ">Đang chờ</option>
@@ -59,8 +59,15 @@ window.updateCart = async (form, cartId) => {
 		...cart,
 		status: form.querySelector('#status').value,
 	}
-	updateCart(cart)
-	location.reload()
+	if (
+		cart.status == 'Thành công' &&
+		confirm(
+			'Bạn có muốn xác nhận đơn hàng này thành công không (Không thể chỉnh sửa lại) ?',
+		)
+	) {
+		updateCart(cart)
+		location.reload()
+	}
 }
 
 window.searchCart = async () => {
