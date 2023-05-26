@@ -11,7 +11,7 @@ const renderSlideShow = async () => {
 	let dotSlides = []
 	const listSlide = document.querySelector('.list-slide')
 	const listDotSlide = document.querySelector('.list-dot-slide')
-	const slideShowData = await fetchJson('/api/v1/banners.json')
+	const slideShowData = await fetchJson('../api/v1/banners.json')
 
 	for (let i = 0; i < slideShowData.length; i++) {
 		let slide = document.createElement('a')
