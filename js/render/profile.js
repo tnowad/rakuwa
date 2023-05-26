@@ -1,6 +1,6 @@
 import { updateUser } from '../util/user.js'
 import { getDataFromLocal } from '../util/local-data.js'
-import { addActive, removeActive } from '/js/util/util.js'
+import { addActive, removeActive } from '../util/util.js'
 import { convertBase64 } from '../util/file-to-base64.js'
 import { loginRequired } from '../util/account.js'
 
@@ -104,15 +104,15 @@ window.onload = async () => {
 			}
 		} catch (error) {}
 
-		if (currentUser.fullName == '' ||
+		if (
+			currentUser.fullName == '' ||
 			currentUser.email == '' ||
 			currentUser.password == '' ||
 			currentUser.address == '' ||
 			currentUser.gender == '' ||
 			currentUser.phoneNumber == '' ||
 			currentUser.dateOfBirth == ''
-		)
-		{
+		) {
 			alert(' Không được để trống')
 			return
 		}

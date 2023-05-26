@@ -6,7 +6,7 @@ const main = async () => {
 
 	document.body.appendChild(contextMenu)
 
-	const contextMenuHTML = await fetchHTML('/pages/context-menu.html')
+	const contextMenuHTML = await fetchHTML('../pages/context-menu.html')
 
 	renderHTML(contextMenu, contextMenuHTML)
 

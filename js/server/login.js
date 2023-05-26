@@ -8,7 +8,7 @@ window.onload = async () => {
 	if (isLogout == 'true') {
 		logout()
 		alert('Đăng xuất thành công !')
-		location.assign('/pages/login.html')
+		location.assign('../pages/login.html')
 	}
 	let direction = getParams('direction')
 	if (!direction) {
@@ -19,7 +19,7 @@ window.onload = async () => {
 		if ((await login(username, password)) || (await checkLogin())) {
 			location.assign(`/${direction}?loginSuccessfully=true`)
 		} else {
-			location.assign('/pages/login.html?loginSuccessfully=false')
+			location.assign('../pages/login.html?loginSuccessfully=false')
 		}
 	}
 }

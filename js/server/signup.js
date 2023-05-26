@@ -31,10 +31,10 @@ window.onload = async () => {
 	) {
 		if (await register(user)) {
 			alert('Đăng kí thành công')
-			location.assign('/pages/login.html')
+			location.assign('../pages/login.html')
 		} else {
 			alert('Đăng kí thất bại')
-			location.assign('/pages/signup.html')
+			location.assign('../pages/signup.html')
 		}
 	}
 }

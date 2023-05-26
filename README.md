@@ -1,17 +1,41 @@
-# RaKuWa
+# RaKuWa (らくわ) - E-commerce Store
 
-らくわ (RaKuWa): The main mission of the project is to bring a new wave of peace to the world,
-through healthy eating, promote health, end war, and bring independence to the new world.
+RaKuWa (らくわ) is an e-commerce store with a frontend implemented using pure CSS, HTML, and vanilla JavaScript. It allows users to browse and purchase products, with the ability to save data locally using localStorage.
 
-## What application does?
+The initial data for the store is fetched from the /api/v1/ folder.
 
-This app is only for getting points of web frontend :))))
+## Features
 
-## Technology
+- Browse and search products
+- Add products to the shopping cart
+- Update the quantity of products in the shopping cart
+- Remove products from the shopping cart
+- Checkout and place an order
+- Save user data locally using localStorage
+- Fetch initial data from the /api/v1/ folder
 
-HTML, CSS, Javascript
-We are masochistic coders, who don't use any framework
+## Technologies Used
 
-## Looking for help?
+- HTML
+- CSS
+- JavaScript
 
-Bro, I'm stuck with this shit too :((
+## Getting Started
+
+To get started with the RaKuWa (らくわ) e-commerce store project, follow the steps below:
+
+- Clone the repository: git clone https://github.com/your-username/ra-ku-wa.git
+- Open the project directory: cd rakuwa
+- Launch the project in a web browser.
+
+## Usage
+
+- Open index.html in a web browser.
+- Browse the products and add desired items to the shopping cart.
+- Update the quantity of products or remove them from the shopping cart.
+- Proceed to checkout to place an order.
+- User data will be saved locally using localStorage.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions, please open an issue or submit a pull request.

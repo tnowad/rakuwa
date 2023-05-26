@@ -60,7 +60,7 @@
 		"role": "user",
 		"dateOfBirth": "2003-08-29",
 		"phoneNumber": "0379713541",
-		"image": "/img/users/flo.jpg",
+		"image": "img/users/flo.jpg",
 		"status": "active"
 	}
 ]

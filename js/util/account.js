@@ -88,7 +88,7 @@ const loginRequired = async () => {
 	const { currentUser } = await getDataFromLocal()
 	if (currentUser.id == undefined) {
 		alert('Bạn chưa đăng nhập!')
-		location.assign('/pages/login.html')
+		location.assign('../pages/login.html')
 	}
 }
 
